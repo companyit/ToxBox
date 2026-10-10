@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { inject, ref } from 'vue'
+import { interactionReadyKey } from '@/interactionReady'
+const ready = inject(interactionReadyKey, ref(false))
 import { RouterLink } from 'vue-router'
 import { getPage } from '@/data/pages'
 import type { ToolPageName } from '@/data/pages'
@@ -14,7 +17,7 @@ const category = props.pageName === 'text-statistics' ? 'office' : 'developer'
       <RouterLink :to="{ name: category }">{{ category === 'office' ? '办公工具' : '开发者工具' }}</RouterLink>
     </nav>
     <header class="page-heading"><h1 tabindex="-1">{{ page.heading }}</h1><p>{{ page.description }}</p></header>
-    <slot />
+    <fieldset class="hydration-controls" :disabled="!ready" aria-label="工具操作"><slot /></fieldset>
     <aside class="related-tools" aria-labelledby="related-heading">
       <h2 id="related-heading">相关工具</h2>
       <ul><template v-for="tool in tools" :key="tool.id"><li v-if="tool.status === 'preview' && tool.routeName !== pageName"><RouterLink :to="{ name: tool.routeName }">{{ tool.name }}</RouterLink></li></template></ul>
@@ -22,3 +25,7 @@ const category = props.pageName === 'text-statistics' ? 'office' : 'developer'
     </aside>
   </div>
 </template>
+
+<style scoped>
+.hydration-controls { border: 0; padding: 0; margin: 0; min-width: 0; }
+</style>

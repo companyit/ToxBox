@@ -77,7 +77,7 @@ hash 路由、Pinia、立即接入 Playwright、SSR 和后端不是当前方案�
 
 预渲染具体工具、@vue/server-renderer直接依赖、SSR/SSG入口、托管配置、正式域名、sitemap/robots产物和生产部署仍未批准。本轮不扩大002～004算法范围、不追认其完整发布验证。
 
-## ADR-018：原生Vue构建时SSR与自定义SSG（草案，待批准）
+## ADR-018：原生Vue构建时SSR与自定义SSG（正式批准）
 
 起草日期：2026-10-10；批准日期/批准者：未批准。来源M1-06A仅设计与只读研究授权；不改变ADR-017“预渲染具体实现仍待授权”边界。
 
@@ -97,7 +97,7 @@ hash 路由、Pinia、立即接入 Playwright、SSR 和后端不是当前方案�
 
 CI建议PR类型/回归→SSG完整性→核心浏览器，夜间/手动扩展引擎与发布检查；同一静态产物摘要贯穿、失败不放行、无部署步骤。核心Hydration/安全失败不能藏入后续优化；发布验证继续按RR门禁。备选继续Node自定义renderer/CDP无需测试包，但维护与标准DOM覆盖成本较高，可作为迁移对照。影响测试目录、未来配置/package/锁文件、CI与证据留存；依赖、迁移范围及GitHub接入均需后续授权，当前未实施。[006任务](../specs/006-ssg-testing/tasks.md)有追溯和固定用例。
 
-## ADR-020：静态产物、404 Hydration与SEO环境一致性（草案，待批准）
+## ADR-020：静态产物、404 Hydration与SEO环境一致性（本轮实施范围批准）
 
 起草日期：2026-10-10；批准日期/批准者：未批准。关联ADR-016、017、018。
 
@@ -106,3 +106,7 @@ CI建议PR类型/回归→SSG完整性→核心浏览器，夜间/手动扩展�
 构建/客户端共用SeoEnvironment与PageHead；未批域名preview无canonical/sitemap/robots且noindex，正式origin/索引白名单获批后才生成正式产物，缺失/非法正式配置失败，不能复制旧正式文件到preview。不承诺收录，正式发布独立授权。
 
 必要适配提案：Hydration完成前原生fieldset禁用工具表单，首棵树一致；数字显示固定zh-CN，不改工具计算语义；noscript位于Hydration根外。构建并发1、每页30秒/总300秒，证据留存14天/失败trace7天均为待批准参数，非性能实测值。备选静态404不Hydration可降低该页风险，但与统一应用体验分叉；全站SPA回退会产生软404，均不优先。影响见[006规格](../specs/006-ssg-testing/spec.md)，本轮只设计，未授权实施或部署。
+
+## M1-06B批准记录（2026-10-10）
+
+项目负责人正式批准ADR-018原生Vue SSR/Vite/自定义SSG，不新增依赖；ADR-020中的8页+404、共享静态head、preview noindex、Hydration交互保护与必要一致性适配获批。前述未批准描述为起草历史。正式域名、生产索引文件、托管验证和发布仍未批准；ADR-019测试框架迁移及CI仍为草案，本轮排除。生成目录采用dist-ssg，中间构建位于.ssg-build；CSR仅显式开发回退，不能冒充SSG候选。

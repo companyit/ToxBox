@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build"
+    "preview": "vite preview --outDir dist-ssg",
+    "build-only": "node scripts/ssg.mjs",
+    "type-check": "vue-tsc --build",
+    "build:csr": "vite build"
   },
   "dependencies": {
     "vue": "^3.5.42",

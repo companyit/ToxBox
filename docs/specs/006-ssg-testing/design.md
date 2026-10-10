@@ -1,3 +1,9 @@
+> M1-06B授权更新（2026-10-10）：负责人批准原生SSG及必要Hydration/SEO适配；以下待批描述保留为M1-06A历史。仅实施SSG，保留原Node/CDP测试；不实施ADR-019的框架迁移或CI。正式域名与托管发布仍待批准。实际状态以文末实施记录为准。
+
+当前实际设计：app.ts每次创建应用和路由，interactionReady.ts仅共享不可变注入键；entry-server.ts使用memory history返回body/head/modules，main.ts按SSG标记createSSRApp并等待路由。ToolPageLayout以fieldset保护首次交互，App.onMounted启用，导航DOM钩子只在客户端挂载后注册。数字固定zh-CN展示，404高亮依据已知route.name。
+
+scripts/ssg.mjs通过Vite双构建，使用SSR manifest补CSS，复用客户端模板与Vue正文；清理旧目录、路径/资源/结构/head校验、超时和完整候选移动保证失败非零。公开目录dist-ssg，中间目录.ssg-build；build执行类型+SSG，build-only执行SSG，build:csr仅显式开发回退。当前仅preview，其他SEO模式拒绝，正式产物待批准。本地preview静态HTML优先，未知404，已知无斜杠308；不代表Cloudflare行为。详见[验收归档](../../verification/M1-06-ssg-testing.md)。
+
 # 006 静态预渲染与测试架构技术设计
 
 日期：2026-10-10，待批准设计；只有文档和只读研究，没有运行SSR/SSG验证。关联[spec](spec.md)、[tasks](tasks.md)、[ADR草案](../../architecture/decisions.md)018～020。

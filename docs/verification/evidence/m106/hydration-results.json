@@ -1,0 +1,724 @@
+{
+  "date": "2026-10-10T14:19:04.768Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.98",
+    "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.20"
+  },
+  "results": [
+    {
+      "name": "E01 JavaScript disabled /",
+      "status": "pass",
+      "detail": {
+        "title": "WorkDev Tools — 办公与开发者在线工具",
+        "h1": "让日常工作，轻松一点。",
+        "main": 1,
+        "body": 543,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /office/",
+      "status": "pass",
+      "detail": {
+        "title": "办公工具｜WorkDev Tools",
+        "h1": "办公工具",
+        "main": 1,
+        "body": 96,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /office/text-statistics/",
+      "status": "pass",
+      "detail": {
+        "title": "文本统计｜WorkDev Tools",
+        "h1": "文本统计",
+        "main": 1,
+        "body": 689,
+        "ready": false,
+        "disabled": true,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /developer/",
+      "status": "pass",
+      "detail": {
+        "title": "开发者工具｜WorkDev Tools",
+        "h1": "开发者工具",
+        "main": 1,
+        "body": 169,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /developer/json-formatter/",
+      "status": "pass",
+      "detail": {
+        "title": "JSON 格式化与校验｜WorkDev Tools",
+        "h1": "JSON 格式化与校验",
+        "main": 1,
+        "body": 423,
+        "ready": false,
+        "disabled": true,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /developer/url-encoder/",
+      "status": "pass",
+      "detail": {
+        "title": "URL 编解码｜WorkDev Tools",
+        "h1": "URL 编解码",
+        "main": 1,
+        "body": 515,
+        "ready": false,
+        "disabled": true,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /about/",
+      "status": "pass",
+      "detail": {
+        "title": "关于 WorkDev Tools｜WorkDev Tools",
+        "h1": "关于 WorkDev Tools",
+        "main": 1,
+        "body": 169,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /privacy/",
+      "status": "pass",
+      "detail": {
+        "title": "隐私说明｜WorkDev Tools",
+        "h1": "隐私说明",
+        "main": 1,
+        "body": 267,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /office/missing/",
+      "status": "pass",
+      "detail": {
+        "title": "页面不存在｜WorkDev Tools",
+        "h1": "页面不存在",
+        "main": 1,
+        "body": 49,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /developer/missing/",
+      "status": "pass",
+      "detail": {
+        "title": "页面不存在｜WorkDev Tools",
+        "h1": "页面不存在",
+        "main": 1,
+        "body": 49,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E01 JavaScript disabled /404.html",
+      "status": "pass",
+      "detail": {
+        "title": "页面不存在｜WorkDev Tools",
+        "h1": "页面不存在",
+        "main": 1,
+        "body": 49,
+        "ready": false,
+        "canonical": 0,
+        "robots": "noindex,follow"
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /office/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /office/text-statistics/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "preDisabled": true,
+        "postDisabled": false,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /developer/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /developer/json-formatter/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "preDisabled": true,
+        "postDisabled": false,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /developer/url-encoder/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "preDisabled": true,
+        "postDisabled": false,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /about/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /privacy/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /office/missing/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /developer/missing/",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E02/E03 hydration identity /404.html",
+      "status": "pass",
+      "detail": {
+        "h1Same": true,
+        "mainSame": true,
+        "main": 1
+      }
+    },
+    {
+      "name": "E08 negative control detects hydration mismatch",
+      "status": "pass",
+      "detail": {
+        "expectedMismatchDetected": true,
+        "warnings": [
+          {
+            "method": "Runtime.consoleAPICalled",
+            "params": {
+              "type": "warning",
+              "args": [
+                {
+                  "type": "string",
+                  "value": "[Vue warn]: Hydration node mismatch:\n- rendered on server:"
+                },
+                {
+                  "type": "object",
+                  "subtype": "node",
+                  "className": "HTMLElement",
+                  "description": "aside",
+                  "objectId": "3258379337745433647.128.1",
+                  "preview": {
+                    "type": "object",
+                    "subtype": "node",
+                    "description": "aside",
+                    "overflow": true,
+                    "properties": [
+                      {
+                        "name": "title",
+                        "type": "string",
+                        "value": ""
+                      },
+                      {
+                        "name": "lang",
+                        "type": "string",
+                        "value": ""
+                      },
+                      {
+                        "name": "translate",
+                        "type": "boolean",
+                        "value": "true"
+                      },
+                      {
+                        "name": "dir",
+                        "type": "string",
+                        "value": ""
+                      },
+                      {
+                        "name": "hidden",
+                        "type": "boolean",
+                        "value": "false"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "type": "string",
+                  "value": "\n- expected on client:"
+                },
+                {
+                  "type": "string",
+                  "value": "a"
+                }
+              ],
+              "executionContextId": 128,
+              "timestamp": 1791641944505.724,
+              "stackTrace": {
+                "callFrames": [
+                  {
+                    "functionName": "hn",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 2,
+                    "columnNumber": 20
+                  },
+                  {
+                    "functionName": "g",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 11,
+                    "columnNumber": 322
+                  },
+                  {
+                    "functionName": "x",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 3,
+                    "columnNumber": 6759
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 568
+                  },
+                  {
+                    "functionName": "m",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 10,
+                    "columnNumber": 846
+                  },
+                  {
+                    "functionName": "h",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 11,
+                    "columnNumber": 194
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 463
+                  },
+                  {
+                    "functionName": "t",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20478
+                  },
+                  {
+                    "functionName": "s",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20548
+                  },
+                  {
+                    "functionName": "run",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 0,
+                    "columnNumber": 10030
+                  },
+                  {
+                    "functionName": "ae",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 21021
+                  },
+                  {
+                    "functionName": "j",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 19643
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 705
+                  },
+                  {
+                    "functionName": "m",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 10,
+                    "columnNumber": 846
+                  },
+                  {
+                    "functionName": "h",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 11,
+                    "columnNumber": 194
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 463
+                  },
+                  {
+                    "functionName": "t",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20478
+                  },
+                  {
+                    "functionName": "s",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20548
+                  },
+                  {
+                    "functionName": "run",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 0,
+                    "columnNumber": 10030
+                  },
+                  {
+                    "functionName": "ae",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 21021
+                  },
+                  {
+                    "functionName": "j",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 19643
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 705
+                  },
+                  {
+                    "functionName": "d",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 3,
+                    "columnNumber": 6502
+                  },
+                  {
+                    "functionName": "mount",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 9343
+                  },
+                  {
+                    "functionName": "t.mount",
+                    "scriptId": "7",
+                    "url": "http://127.0.0.1:4177/assets/index-WB_wQp3P.js",
+                    "lineNumber": 1,
+                    "columnNumber": 7121
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "7",
+                    "url": "http://127.0.0.1:4177/assets/index-WB_wQp3P.js",
+                    "lineNumber": 1,
+                    "columnNumber": 14600
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "method": "Runtime.consoleAPICalled",
+            "params": {
+              "type": "error",
+              "args": [
+                {
+                  "type": "string",
+                  "value": "Hydration completed but contains mismatches."
+                }
+              ],
+              "executionContextId": 128,
+              "timestamp": 1791641944505.808,
+              "stackTrace": {
+                "callFrames": [
+                  {
+                    "functionName": "ur",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 3,
+                    "columnNumber": 6093
+                  },
+                  {
+                    "functionName": "g",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 13,
+                    "columnNumber": 31
+                  },
+                  {
+                    "functionName": "x",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 3,
+                    "columnNumber": 6759
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 568
+                  },
+                  {
+                    "functionName": "m",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 10,
+                    "columnNumber": 846
+                  },
+                  {
+                    "functionName": "h",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 11,
+                    "columnNumber": 194
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 463
+                  },
+                  {
+                    "functionName": "t",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20478
+                  },
+                  {
+                    "functionName": "s",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20548
+                  },
+                  {
+                    "functionName": "run",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 0,
+                    "columnNumber": 10030
+                  },
+                  {
+                    "functionName": "ae",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 21021
+                  },
+                  {
+                    "functionName": "j",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 19643
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 705
+                  },
+                  {
+                    "functionName": "m",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 10,
+                    "columnNumber": 846
+                  },
+                  {
+                    "functionName": "h",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 11,
+                    "columnNumber": 194
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 463
+                  },
+                  {
+                    "functionName": "t",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20478
+                  },
+                  {
+                    "functionName": "s",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 20548
+                  },
+                  {
+                    "functionName": "run",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 0,
+                    "columnNumber": 10030
+                  },
+                  {
+                    "functionName": "ae",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 21021
+                  },
+                  {
+                    "functionName": "j",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 19643
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 5,
+                    "columnNumber": 705
+                  },
+                  {
+                    "functionName": "d",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 3,
+                    "columnNumber": 6502
+                  },
+                  {
+                    "functionName": "mount",
+                    "scriptId": "3",
+                    "url": "http://127.0.0.1:4177/assets/vue-router-wC1Mx9LN.js",
+                    "lineNumber": 17,
+                    "columnNumber": 9343
+                  },
+                  {
+                    "functionName": "t.mount",
+                    "scriptId": "7",
+                    "url": "http://127.0.0.1:4177/assets/index-WB_wQp3P.js",
+                    "lineNumber": 1,
+                    "columnNumber": 7121
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "7",
+                    "url": "http://127.0.0.1:4177/assets/index-WB_wQp3P.js",
+                    "lineNumber": 1,
+                    "columnNumber": 14600
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -84,7 +84,7 @@ onBeforeUnmount(() => { disposed = true; revision++ })
       <p>编码孤立 UTF-16 代理项会失败；解码原样存在的孤立代理项会保留，但其非法 UTF-8 百分号编码会失败。解码成功不等于 Unicode 有效性校验。不可见字符及换行可能受显示或系统剪贴板规范化影响。</p>
       <p>最多 100,000 个 UTF-16 码元。仅在当前浏览器内存中处理，不上传或保存；刷新或收起工具后清空。</p>
     </div>
-    <div class="editor-heading"><label for="url-input">输入或粘贴文本</label><span>{{ input.length.toLocaleString() }} / {{ URL_INPUT_LIMIT.toLocaleString() }} UTF-16 码元</span></div>
+    <div class="editor-heading"><label for="url-input">输入或粘贴文本</label><span>{{ input.length.toLocaleString('zh-CN') }} / {{ URL_INPUT_LIMIT.toLocaleString('zh-CN') }} UTF-16 码元</span></div>
     <textarea id="url-input" ref="editor" :value="input" rows="10" aria-describedby="url-rules url-status" :aria-invalid="error ? 'true' : undefined" autocomplete="off" autocapitalize="off" :spellcheck="false" placeholder="例如：你好 world 😀" @input="onInput" @compositionstart="onCompositionStart" @compositionend="onCompositionEnd" />
     <div class="actions">
       <label for="url-mode">处理模式</label>

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { inject, onMounted } from 'vue'
+import { interactionReadyKey } from './interactionReady'
+const ready = inject(interactionReadyKey)
+onMounted(() => { if (ready) ready.value = true })
 import { RouterView, useRoute, useRouter } from 'vue-router'
 import SiteHeader from '@/components/layout/SiteHeader.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'

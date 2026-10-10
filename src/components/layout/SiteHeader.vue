@@ -15,8 +15,8 @@ function focusMain() {
         <span>WorkDev Tools</span>
       </RouterLink>
       <nav aria-label="主导航">
-        <RouterLink :to="{ name: 'office' }" :aria-current="route.path.startsWith('/office/') ? 'page' : undefined">办公工具</RouterLink>
-        <RouterLink :to="{ name: 'developer' }" :aria-current="route.path.startsWith('/developer/') ? 'page' : undefined">开发者工具</RouterLink>
+        <RouterLink :to="{ name: 'office' }" :aria-current="['office', 'text-statistics'].includes(String(route.name)) ? 'page' : undefined">办公工具</RouterLink>
+        <RouterLink :to="{ name: 'developer' }" :aria-current="['developer', 'json-formatter', 'url-encoder'].includes(String(route.name)) ? 'page' : undefined">开发者工具</RouterLink>
         <RouterLink :to="{ name: 'privacy' }">隐私说明</RouterLink>
       </nav>
     </div>

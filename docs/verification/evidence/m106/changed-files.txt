@@ -1,0 +1,25 @@
+ M .gitignore
+ M docs/architecture/decisions.md
+ M docs/architecture/frontend.md
+ M docs/specs/006-ssg-testing/design.md
+ M docs/specs/006-ssg-testing/spec.md
+ M docs/specs/006-ssg-testing/tasks.md
+ M index.html
+ M package.json
+ M src/App.vue
+ M src/components/layout/SiteHeader.vue
+ M src/components/layout/ToolPageLayout.vue
+ M src/composables/useRouteAccessibility.ts
+ M src/main.ts
+ M src/router/index.ts
+ M src/views/JsonFormatterView.vue
+ M src/views/TextStatisticsView.vue
+ M src/views/UrlEncoderView.vue
+ M vite.config.ts
+?? docs/verification/M1-06-ssg-testing.md
+?? docs/verification/evidence/m106/
+?? scripts/
+?? src/app.ts
+?? src/entry-server.ts
+?? src/interactionReady.ts
+?? tests/ssg.test.mjs

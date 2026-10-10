@@ -1,5 +1,11 @@
 # 前端技术架构
 
+## M1-06B当前基线（2026-10-10，优先于历史盘点）
+
+ADR-018与ADR-020本轮范围获批。app/router工厂、构建端memory history与客户端web history隔离；现有8页及404通过Vue原生SSR生成，客户端createSSRApp Hydration。PageHead和页面目录共用，SSR manifest补齐CSS，最终dist-ssg仅静态文件，不需要常驻服务器。工具仅适配交互准备保护与固定数字展示locale，不改计算规则。
+
+npm run build为类型检查+SSG，preview读取dist-ssg；build:csr为显式开发回退，不能作为本阶段发布候选。当前产物noindex，无canonical/sitemap/robots；正式域名和Cloudflare验证仍待批准。无新增依赖、框架迁移或CI；原151项测试保留，新增3项SSG检查。证据见[本轮验收](../verification/M1-06-ssg-testing.md)。
+
 ## M0历史盘点（当前基线见文末M1-05A修订）
 
 目录为 ToxBox，package.json 名称为 toxbox。npm ls --depth=0 读取到：Vue 3.5.43、Vite 8.3.4、TypeScript 6.0.3、vue-tsc 3.3.12、@vitejs/plugin-vue 6.0.10、vite-plugin-vue-devtools 8.2.1；另有 @vue/tsconfig、@tsconfig/node24、@types/node、npm-run-all2。声明版本范围以 package.json 为准，锁定解析以 package-lock.json 为准。

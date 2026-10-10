@@ -1,3 +1,7 @@
+> M1-06B授权更新（2026-10-10）：负责人批准原生SSG及必要Hydration/SEO适配；以下待批描述保留为M1-06A历史。仅实施SSG，保留原Node/CDP测试；不实施ADR-019的框架迁移或CI。正式域名与托管发布仍待批准。实际状态以文末实施记录为准。
+
+当前实施状态：8个正式页面与404已生成静态正文和head，真实Chrome完成禁JS、节点保留、准备状态及工具回归。SSG-11/13框架迁移与CI不属于本轮；SSG-12核心采用已有Node/CDP，不安装Playwright。当前只批准preview产物；非preview SEO构建明确拒绝，正式索引产物尚未实施。Dev Done开发条件满足、提交负责人审阅；Release Ready未完成。实际证据与未测范围见[本轮验收](../../verification/M1-06-ssg-testing.md)。
+
 # 006 静态预渲染与测试架构需求规格
 
 日期：2026-10-10。阶段：M1-06A / Specify + Plan，待人工审批。只授权规范与只读可行性研究；没有实施SSG、迁移测试、安装依赖或修改业务/配置。负责人已确认M1-05B Dev Done；Release Ready及001～005原未测事项继续保留。

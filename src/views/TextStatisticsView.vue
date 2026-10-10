@@ -22,7 +22,7 @@ const fields: readonly { key: keyof TextStatistics; label: string }[] = [
 ]
 const tooLong = computed(() => text.value.length > TEXT_CODE_UNIT_LIMIT)
 const error = computed(() => tooLong.value
-  ? `输入超过 ${TEXT_CODE_UNIT_LIMIT.toLocaleString()} 个 UTF-16 码元，原文本已保留，请缩短后继续统计。`
+  ? `输入超过 ${TEXT_CODE_UNIT_LIMIT.toLocaleString('zh-CN')} 个 UTF-16 码元，原文本已保留，请缩短后继续统计。`
   : calculationError.value ? '暂时无法统计，原文本已保留，请修改文本后重试。' : '')
 const status = computed(() => [error.value, composing.value ? '输入中，完成后更新统计。' : message.value].filter(Boolean).join(' '))
 const statistics = computed(() => !composing.value && !tooLong.value && analysis.value?.status === 'ok'
@@ -97,7 +97,7 @@ onBeforeUnmount(() => { disposed = true; revision++ })
   <div class="text-tool">
     <div class="editor-heading">
       <label for="statistics-input">输入或粘贴文本</label>
-      <span>{{ text.length.toLocaleString() }} / {{ TEXT_CODE_UNIT_LIMIT.toLocaleString() }} UTF-16 码元</span>
+      <span>{{ text.length.toLocaleString('zh-CN') }} / {{ TEXT_CODE_UNIT_LIMIT.toLocaleString('zh-CN') }} UTF-16 码元</span>
     </div>
     <textarea
       id="statistics-input"
@@ -123,7 +123,7 @@ onBeforeUnmount(() => { disposed = true; revision++ })
     <dl class="statistics" aria-label="文本统计结果">
       <div v-for="field in fields" :key="field.key">
         <dt>{{ field.label }}</dt>
-        <dd>{{ statistics ? statistics[field.key].toLocaleString() : '—' }}</dd>
+        <dd>{{ statistics ? statistics[field.key].toLocaleString('zh-CN') : '—' }}</dd>
       </div>
     </dl>
     <div id="statistics-rules" class="rules">
