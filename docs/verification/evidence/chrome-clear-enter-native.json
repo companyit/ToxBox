@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-10T11:33:52.386Z",
+  "observations": [
+    {
+      "step": "before",
+      "detail": {
+        "value": "clear verification",
+        "focus": "<button data-v-6d4acfbd=\"\" type=\"button\">清空</button>",
+        "disabled": false
+      }
+    },
+    {
+      "step": "after Enter with native carriage-return text",
+      "detail": {
+        "value": "",
+        "focus": "TEXTAREA",
+        "focusId": "statistics-input",
+        "disabled": true,
+        "status": "文本已清空。",
+        "counts": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    {
+      "step": "after mouse",
+      "detail": {
+        "value": "",
+        "focus": "TEXTAREA",
+        "focusId": "statistics-input",
+        "status": "文本已清空。",
+        "counts": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    }
+  ]
+}

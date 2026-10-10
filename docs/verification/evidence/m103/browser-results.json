@@ -1,0 +1,267 @@
+{
+  "date": "2026-10-10T12:14:02.242Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.98",
+    "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.20"
+  },
+  "system": {
+    "platform": "darwin",
+    "release": "27.0.0",
+    "arch": "arm64",
+    "cpu": "Apple M4"
+  },
+  "url": "http://127.0.0.1:4174/",
+  "mode": "real installed headless Chrome/CDP; desktop viewports mobile=false DPR1; not IME, phone, screenreader or external application",
+  "results": [
+    {
+      "name": "B01 context.source feature probe (not required)",
+      "status": "pass",
+      "detail": {
+        "source": "9007199254740993",
+        "supported": true
+      }
+    },
+    {
+      "name": "B01 six top-level values and exact native output",
+      "status": "pass",
+      "detail": [
+        {
+          "input": "{\"a\":1}",
+          "output": "{\"a\":1}"
+        },
+        {
+          "input": "[1,true,null]",
+          "output": "[1,true,null]"
+        },
+        {
+          "input": "\"你好\"",
+          "output": "\"你好\""
+        },
+        {
+          "input": "42",
+          "output": "42"
+        },
+        {
+          "input": "true",
+          "output": "true"
+        },
+        {
+          "input": "false",
+          "output": "false"
+        },
+        {
+          "input": "null",
+          "output": "null"
+        },
+        {
+          "input": "0",
+          "output": "0"
+        }
+      ]
+    },
+    {
+      "name": "B01 syntax vs numeric safety, representation and duplicate keys",
+      "status": "pass",
+      "detail": [
+        {
+          "input": "9007199254740993",
+          "message": "存在超出安全整数范围的数字，无法安全转换；如需精确保留，请在原数据中使用字符串。"
+        },
+        {
+          "input": "1e400",
+          "message": "数字超出 JavaScript 有限数范围，无法安全转换；请保留原文并检查数字。"
+        },
+        {
+          "input": "1.0000000000000001",
+          "output": "1"
+        },
+        {
+          "input": "1e-400",
+          "output": "0"
+        },
+        {
+          "input": "-0",
+          "output": "0"
+        },
+        {
+          "input": "1e2",
+          "output": "100"
+        },
+        {
+          "input": "{\"a\":1,\"a\":2}",
+          "output": "{\"a\":2}"
+        },
+        {
+          "input": "\"\\u4F60\"",
+          "output": "\"你\""
+        }
+      ]
+    },
+    {
+      "name": "B01 exact 2/4 indent, edit invalidation and errors",
+      "status": "pass",
+      "detail": {
+        "twoAndFour": true,
+        "editClears": true,
+        "invalidClears": true
+      }
+    },
+    {
+      "name": "B01 input/depth/output resource limits and recovery",
+      "status": "pass",
+      "detail": {
+        "rows": [
+          {
+            "length": 100000,
+            "outputLength": 100000,
+            "status": "已压缩，请留意数字精度与重复键提示。"
+          },
+          {
+            "length": 100001,
+            "outputLength": 0,
+            "status": "输入超过 100,000 个 UTF-16 码元，原文已保留，请缩短后重试。"
+          },
+          {
+            "length": 201,
+            "outputLength": 201,
+            "status": "已压缩，请留意数字精度与重复键提示。"
+          },
+          {
+            "length": 203,
+            "outputLength": 0,
+            "status": "JSON 嵌套超过 100 层，请减少嵌套后重试。"
+          }
+        ],
+        "outputLimit": true,
+        "recovery": true
+      }
+    },
+    {
+      "name": "B02 sample guard, keyboard Enter clear and focus",
+      "status": "pass",
+      "detail": {
+        "input": "",
+        "output": "",
+        "focus": "json-input",
+        "indent": "2"
+      }
+    },
+    {
+      "name": "B02 shared structure, navigation and text statistics regression",
+      "status": "pass",
+      "detail": {
+        "main": 1,
+        "h1": 1,
+        "textCounts": [
+          "10",
+          "8",
+          "3",
+          "2",
+          "2"
+        ]
+      }
+    },
+    {
+      "name": "B03 actual Clipboard API roundtrip in browser, not external app",
+      "status": "pass",
+      "detail": {
+        "copied": "{\"s\":\" a  b \"}",
+        "output": "{\"s\":\" a  b \"}",
+        "status": "结果已复制。"
+      }
+    },
+    {
+      "name": "B03 unavailable and rejected Clipboard runtime fault injection",
+      "status": "pass",
+      "detail": [
+        {
+          "denied": false,
+          "focus": "json-output",
+          "start": 0,
+          "end": 14,
+          "length": 14,
+          "status": "无法自动复制，请选中结果后手动复制。"
+        },
+        {
+          "denied": true,
+          "focus": "json-output",
+          "start": 0,
+          "end": 14,
+          "length": 14,
+          "status": "无法自动复制，请选中结果后手动复制。"
+        }
+      ]
+    },
+    {
+      "name": "B03 delayed copy stale feedback, runtime Promise injection",
+      "status": "pass",
+      "detail": {
+        "output": "false",
+        "status": "已压缩，请留意数字精度与重复键提示。"
+      }
+    },
+    {
+      "name": "B04 desktop viewport 375",
+      "status": "pass",
+      "detail": {
+        "width": 375,
+        "scroll": 360,
+        "client": 360
+      }
+    },
+    {
+      "name": "B04 desktop viewport 768",
+      "status": "pass",
+      "detail": {
+        "width": 768,
+        "scroll": 753,
+        "client": 753
+      }
+    },
+    {
+      "name": "B04 desktop viewport 1440",
+      "status": "pass",
+      "detail": {
+        "width": 1440,
+        "scroll": 1425,
+        "client": 1425
+      }
+    },
+    {
+      "name": "B04 dark media response and AX semantics (not actual reader)",
+      "status": "pass",
+      "detail": {
+        "dark": true,
+        "readonly": true,
+        "live": "polite"
+      }
+    },
+    {
+      "name": "B05 input/output/error observation privacy",
+      "status": "pass",
+      "detail": {
+        "storage": {
+          "url": "http://127.0.0.1:4174/#json-formatter",
+          "local": {},
+          "session": {},
+          "cookie": "",
+          "dbs": []
+        },
+        "events": []
+      }
+    },
+    {
+      "name": "B05 collapse reopen and real reload reset",
+      "status": "pass",
+      "detail": {
+        "input": "",
+        "output": "",
+        "indent": "2"
+      }
+    }
+  ],
+  "exceptions": []
+}

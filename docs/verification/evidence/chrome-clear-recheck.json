@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-10T11:33:37.770Z",
+  "observations": [
+    {
+      "step": "before",
+      "detail": {
+        "value": "clear verification",
+        "focus": "<button data-v-6d4acfbd=\"\" type=\"button\">清空</button>",
+        "disabled": false
+      }
+    },
+    {
+      "step": "after Enter without text",
+      "detail": {
+        "value": "clear verification",
+        "focus": "BUTTON",
+        "focusId": "",
+        "disabled": false,
+        "status": "",
+        "counts": [
+          "18",
+          "17",
+          "2",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "step": "after mouse",
+      "detail": {
+        "value": "",
+        "focus": "TEXTAREA",
+        "focusId": "statistics-input",
+        "status": "文本已清空。",
+        "counts": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    }
+  ]
+}

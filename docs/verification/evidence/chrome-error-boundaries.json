@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-10T11:35:08.383Z",
+  "results": [
+    {
+      "name": "MAN-09 excess input clipboard fallback",
+      "status": "pass",
+      "detail": {
+        "length": 100001,
+        "start": 0,
+        "end": 100001,
+        "status": "输入超过 100,000 个 UTF-16 码元，原文本已保留，请缩短后继续统计。 无法自动复制，请选中文本后手动复制。"
+      }
+    },
+    {
+      "name": "MAN-09 runtime calculation exception preserves input and recovers",
+      "status": "pass",
+      "detail": {
+        "value": "WORKDEV_CALC_FAILURE",
+        "status": "暂时无法统计，原文本已保留，请修改文本后重试。",
+        "counts": [
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ],
+        "recovered": [
+          "3",
+          "3",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    }
+  ]
+}

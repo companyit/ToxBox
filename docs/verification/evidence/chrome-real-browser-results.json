@@ -1,0 +1,1070 @@
+{
+  "date": "2026-10-10T11:31:11.436Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.98",
+    "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.20"
+  },
+  "system": {
+    "platform": "darwin",
+    "release": "27.0.0",
+    "arch": "arm64",
+    "cpu": "Apple M4"
+  },
+  "url": "http://127.0.0.1:4173/",
+  "mode": "installed Chrome headless; real DOM/CDP; desktop emulated viewports; not phone/IME/screenreader",
+  "results": [
+    {
+      "name": "MAN-16 initial semantics",
+      "status": "pass",
+      "detail": {
+        "main": 1,
+        "h1": 1,
+        "expanded": "false",
+        "title": "WorkDev Tools - 办公与开发者在线工具",
+        "lang": "zh-CN"
+      }
+    },
+    {
+      "name": "MAN-12 skip link real keyboard",
+      "status": "pass",
+      "detail": {
+        "first": "跳转到主内容",
+        "target": "main-content"
+      }
+    },
+    {
+      "name": "MAN-16 shared navigation and card anchor",
+      "status": "pass",
+      "detail": [
+        {
+          "hash": "#office-tools",
+          "top": 23.671875
+        },
+        {
+          "hash": "#developer-tools",
+          "top": 23.703125
+        },
+        {
+          "hash": "#privacy",
+          "top": 481.421875
+        }
+      ]
+    },
+    {
+      "name": "MAN-03 empty sample then nonempty disabled",
+      "status": "pass",
+      "detail": {
+        "sample": "你好 world\nVue 3",
+        "nonemptyDisabled": true
+      }
+    },
+    {
+      "name": "MAN-04 clear using actual keyboard Enter",
+      "status": "fail",
+      "error": "Error: clear/focus"
+    },
+    {
+      "name": "MAN-02 U01 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "",
+        "actual": "",
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U02 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": " \t",
+        "actual": " \t",
+        "counts": [
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        "expected": [
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U03 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "a\r\nb\rc\n",
+        "actual": "a\nb\nc\n",
+        "counts": [
+          6,
+          3,
+          3,
+          4,
+          3
+        ],
+        "expected": [
+          6,
+          3,
+          3,
+          4,
+          3
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U04 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "\n",
+        "actual": "\n",
+        "counts": [
+          1,
+          0,
+          0,
+          2,
+          0
+        ],
+        "expected": [
+          1,
+          0,
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U05 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "a\n",
+        "actual": "a\n",
+        "counts": [
+          2,
+          1,
+          1,
+          2,
+          1
+        ],
+        "expected": [
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U06 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "你好 world",
+        "actual": "你好 world",
+        "counts": [
+          8,
+          7,
+          2,
+          1,
+          1
+        ],
+        "expected": [
+          8,
+          7,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U07 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "你好world",
+        "actual": "你好world",
+        "counts": [
+          7,
+          7,
+          1,
+          1,
+          1
+        ],
+        "expected": [
+          7,
+          7,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U08 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "hello, world!",
+        "actual": "hello, world!",
+        "counts": [
+          13,
+          12,
+          2,
+          1,
+          1
+        ],
+        "expected": [
+          13,
+          12,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U09 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "😀",
+        "actual": "😀",
+        "counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "expected": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U10 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "👨‍👩‍👧‍👦",
+        "actual": "👨‍👩‍👧‍👦",
+        "counts": [
+          7,
+          7,
+          1,
+          1,
+          1
+        ],
+        "expected": [
+          7,
+          7,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U11 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "é é",
+        "actual": "é é",
+        "counts": [
+          4,
+          3,
+          2,
+          1,
+          1
+        ],
+        "expected": [
+          4,
+          3,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U12 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "a b　c﻿",
+        "actual": "a b　c﻿",
+        "counts": [
+          6,
+          3,
+          3,
+          1,
+          1
+        ],
+        "expected": [
+          6,
+          3,
+          3,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U13 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "a b ",
+        "actual": "a b ",
+        "counts": [
+          4,
+          2,
+          2,
+          3,
+          2
+        ],
+        "expected": [
+          4,
+          2,
+          2,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U14 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "​‍",
+        "actual": "​‍",
+        "counts": [
+          3,
+          3,
+          1,
+          1,
+          1
+        ],
+        "expected": [
+          3,
+          3,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U15 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "... 😀",
+        "actual": "... 😀",
+        "counts": [
+          5,
+          4,
+          2,
+          1,
+          1
+        ],
+        "expected": [
+          5,
+          4,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U16 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": " \n\t\r\n",
+        "actual": " \n\t\n",
+        "counts": [
+          4,
+          0,
+          0,
+          3,
+          0
+        ],
+        "expected": [
+          4,
+          0,
+          0,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U17 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "👍🏽 🇨🇳",
+        "actual": "👍🏽 🇨🇳",
+        "counts": [
+          5,
+          4,
+          2,
+          1,
+          1
+        ],
+        "expected": [
+          5,
+          4,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U18 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "\ud800",
+        "actual": "�",
+        "counts": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "expected": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-02 U19 real input",
+      "status": "pass",
+      "detail": {
+        "inserted": "a\u000b\fb",
+        "actual": "a\u000b\fb",
+        "counts": [
+          4,
+          2,
+          2,
+          1,
+          1
+        ],
+        "expected": [
+          4,
+          2,
+          2,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "MAN-08 browser size limits",
+      "status": "pass",
+      "detail": [
+        {
+          "length": 100000,
+          "status": "",
+          "invalid": null,
+          "counts": [
+            "100,000",
+            "100,000",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "length": 100001,
+          "status": "输入超过 100,000 个 UTF-16 码元，原文本已保留，请缩短后继续统计。",
+          "invalid": "true",
+          "counts": [
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ]
+        },
+        {
+          "length": 100000,
+          "status": "",
+          "invalid": null,
+          "counts": [
+            "50,000",
+            "50,000",
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "length": 100001,
+          "status": "输入超过 100,000 个 UTF-16 码元，原文本已保留，请缩短后继续统计。",
+          "invalid": "true",
+          "counts": [
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ]
+        },
+        {
+          "length": 3,
+          "status": "",
+          "invalid": null,
+          "counts": [
+            "3",
+            "3",
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MAN-06 API missing real selection (runtime fault injection)",
+      "status": "pass",
+      "detail": {
+        "focus": "statistics-input",
+        "start": 0,
+        "end": 8,
+        "length": 8,
+        "status": "无法自动复制，请选中文本后手动复制。"
+      }
+    },
+    {
+      "name": "MAN-07 delayed clipboard then clear (real DOM/runtime injected Promise)",
+      "status": "pass",
+      "detail": {
+        "status": "文本已清空。"
+      }
+    },
+    {
+      "name": "MAN-16 collapse reopen and reload",
+      "status": "pass",
+      "detail": {
+        "reopenEmpty": true,
+        "reloadEmpty": true
+      }
+    },
+    {
+      "name": "MAN-10 viewport 375",
+      "status": "pass",
+      "detail": {
+        "width": 375,
+        "scroll": 360,
+        "client": 360,
+        "textareaWidth": 328,
+        "counts": [
+          "1,800",
+          "1,800",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "MAN-10 viewport 768",
+      "status": "pass",
+      "detail": {
+        "width": 768,
+        "scroll": 753,
+        "client": 753,
+        "textareaWidth": 721,
+        "counts": [
+          "1,800",
+          "1,800",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "MAN-10 viewport 1440",
+      "status": "pass",
+      "detail": {
+        "width": 1440,
+        "scroll": 1425,
+        "client": 1425,
+        "textareaWidth": 1200,
+        "counts": [
+          "1,800",
+          "1,800",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "MAN-11 dark theme screenshot (zoom not tested)",
+      "status": "pass",
+      "detail": {
+        "dark": true,
+        "bg": "rgb(17, 27, 34)"
+      }
+    },
+    {
+      "name": "MAN-14 actual computed text contrast",
+      "status": "pass",
+      "detail": [
+        {
+          "mode": "light",
+          "data": [
+            {
+              "tag": "A",
+              "text": "办公工具",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(255, 255, 255)",
+              "ratio": 6.560425476211859,
+              "min": 4.5
+            },
+            {
+              "tag": "A",
+              "text": "开发者工具",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(255, 255, 255)",
+              "ratio": 6.560425476211859,
+              "min": 4.5
+            },
+            {
+              "tag": "A",
+              "text": "隐私说明",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(255, 255, 255)",
+              "ratio": 6.560425476211859,
+              "min": 4.5
+            },
+            {
+              "tag": "H2",
+              "text": "文本统计",
+              "fg": "rgb(23, 43, 54)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 13.76917358249014,
+              "min": 3
+            },
+            {
+              "tag": "BUTTON",
+              "text": "收起工具并清空文本",
+              "fg": "rgb(23, 99, 79)",
+              "bg": "rgb(255, 255, 255)",
+              "ratio": 7.157292511801385,
+              "min": 4.5
+            },
+            {
+              "tag": "LABEL",
+              "text": "输入或粘贴文本",
+              "fg": "rgb(23, 43, 54)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 13.76917358249014,
+              "min": 4.5
+            },
+            {
+              "tag": "BUTTON",
+              "text": "复制文本",
+              "fg": "rgb(23, 99, 79)",
+              "bg": "rgb(255, 255, 255)",
+              "ratio": 7.157292511801385,
+              "min": 4.5
+            },
+            {
+              "tag": "BUTTON",
+              "text": "清空",
+              "fg": "rgb(23, 99, 79)",
+              "bg": "rgb(255, 255, 255)",
+              "ratio": 7.157292511801385,
+              "min": 4.5
+            },
+            {
+              "tag": "DT",
+              "text": "字符总数",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1,800",
+              "fg": "rgb(23, 43, 54)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 13.76917358249014,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "去空白字符数",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1,800",
+              "fg": "rgb(23, 43, 54)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 13.76917358249014,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "词段数（按空白分隔）",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1",
+              "fg": "rgb(23, 43, 54)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 13.76917358249014,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "总行数",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1",
+              "fg": "rgb(23, 43, 54)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 13.76917358249014,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "非空行数",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1",
+              "fg": "rgb(23, 43, 54)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 13.76917358249014,
+              "min": 3
+            },
+            {
+              "tag": "P",
+              "text": "字符按 Unicode 码点计数，Emoji 组合可能包含多个字符。去空",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "词段按空白分隔，不是准确中文分词，也不是自然语言词数。CRLF 算一次换",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "上限为 100,000 个 UTF-16 码元，与字符数不同。超过上限不",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "所有文本仅在当前浏览器内存中处理，不上传或保存；收起工具或刷新页面后清空",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "空白集合：U+0009～000D、U+0020、U+00A0、U+168",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "CRLF 的两个码点都计入字符总数；行数只增加一次。LF、CR、U+20",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "😀 为 1，👍🏽 为 2，家庭 Emoji 👨‍👩‍👧‍👦",
+              "fg": "rgb(77, 96, 107)",
+              "bg": "rgb(247, 248, 250)",
+              "ratio": 6.173740737764103,
+              "min": 4.5
+            }
+          ]
+        },
+        {
+          "mode": "dark",
+          "data": [
+            {
+              "tag": "A",
+              "text": "办公工具",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(25, 40, 49)",
+              "ratio": 8.61476785464232,
+              "min": 4.5
+            },
+            {
+              "tag": "A",
+              "text": "开发者工具",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(25, 40, 49)",
+              "ratio": 8.61476785464232,
+              "min": 4.5
+            },
+            {
+              "tag": "A",
+              "text": "隐私说明",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(25, 40, 49)",
+              "ratio": 8.61476785464232,
+              "min": 4.5
+            },
+            {
+              "tag": "H2",
+              "text": "文本统计",
+              "fg": "rgb(238, 244, 246)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 15.706880979773524,
+              "min": 3
+            },
+            {
+              "tag": "BUTTON",
+              "text": "收起工具并清空文本",
+              "fg": "rgb(142, 220, 189)",
+              "bg": "rgb(25, 40, 49)",
+              "ratio": 9.445901522053017,
+              "min": 4.5
+            },
+            {
+              "tag": "LABEL",
+              "text": "输入或粘贴文本",
+              "fg": "rgb(238, 244, 246)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 15.706880979773524,
+              "min": 4.5
+            },
+            {
+              "tag": "BUTTON",
+              "text": "复制文本",
+              "fg": "rgb(142, 220, 189)",
+              "bg": "rgb(25, 40, 49)",
+              "ratio": 9.445901522053017,
+              "min": 4.5
+            },
+            {
+              "tag": "BUTTON",
+              "text": "清空",
+              "fg": "rgb(142, 220, 189)",
+              "bg": "rgb(25, 40, 49)",
+              "ratio": 9.445901522053017,
+              "min": 4.5
+            },
+            {
+              "tag": "DT",
+              "text": "字符总数",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1,800",
+              "fg": "rgb(238, 244, 246)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 15.706880979773524,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "去空白字符数",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1,800",
+              "fg": "rgb(238, 244, 246)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 15.706880979773524,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "词段数（按空白分隔）",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1",
+              "fg": "rgb(238, 244, 246)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 15.706880979773524,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "总行数",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1",
+              "fg": "rgb(238, 244, 246)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 15.706880979773524,
+              "min": 3
+            },
+            {
+              "tag": "DT",
+              "text": "非空行数",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "DD",
+              "text": "1",
+              "fg": "rgb(238, 244, 246)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 15.706880979773524,
+              "min": 3
+            },
+            {
+              "tag": "P",
+              "text": "字符按 Unicode 码点计数，Emoji 组合可能包含多个字符。去空",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "词段按空白分隔，不是准确中文分词，也不是自然语言词数。CRLF 算一次换",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "上限为 100,000 个 UTF-16 码元，与字符数不同。超过上限不",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "所有文本仅在当前浏览器内存中处理，不上传或保存；收起工具或刷新页面后清空",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "空白集合：U+0009～000D、U+0020、U+00A0、U+168",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "CRLF 的两个码点都计入字符总数；行数只增加一次。LF、CR、U+20",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            },
+            {
+              "tag": "P",
+              "text": "😀 为 1，👍🏽 为 2，家庭 Emoji 👨‍👩‍👧‍👦",
+              "fg": "rgb(182, 198, 207)",
+              "bg": "rgb(17, 27, 34)",
+              "ratio": 9.942335842017648,
+              "min": 4.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MAN-15 page network/storage privacy observation",
+      "status": "pass",
+      "detail": {
+        "storage": {
+          "url": "http://127.0.0.1:4173/#text-statistics",
+          "local": {},
+          "session": {},
+          "cookie": "",
+          "dbs": []
+        },
+        "events": []
+      }
+    }
+  ],
+  "exceptions": []
+}
