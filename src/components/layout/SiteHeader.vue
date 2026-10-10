@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { RouterLink, useRoute } from 'vue-router'
+const route = useRoute()
 function focusMain() {
   document.getElementById('main-content')?.focus()
 }
@@ -8,14 +10,14 @@ function focusMain() {
   <a class="skip-link" href="#main-content" @click="focusMain">跳转到主内容</a>
   <header id="top" class="site-header">
     <div class="container header-content">
-      <a class="brand" href="#top" aria-label="WorkDev Tools，返回页首">
+      <RouterLink class="brand" :to="{ name: 'home' }" aria-label="WorkDev Tools，返回首页">
         <span class="brand-mark" aria-hidden="true">W</span>
         <span>WorkDev Tools</span>
-      </a>
+      </RouterLink>
       <nav aria-label="主导航">
-        <a href="#office-tools">办公工具</a>
-        <a href="#developer-tools">开发者工具</a>
-        <a href="#privacy">隐私说明</a>
+        <RouterLink :to="{ name: 'office' }" :aria-current="route.path.startsWith('/office/') ? 'page' : undefined">办公工具</RouterLink>
+        <RouterLink :to="{ name: 'developer' }" :aria-current="route.path.startsWith('/developer/') ? 'page' : undefined">开发者工具</RouterLink>
+        <RouterLink :to="{ name: 'privacy' }">隐私说明</RouterLink>
       </nav>
     </div>
   </header>

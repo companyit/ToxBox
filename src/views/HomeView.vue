@@ -1,42 +1,22 @@
 <script setup lang="ts">
-import { nextTick, ref } from 'vue'
-import TextStatisticsView from '@/views/TextStatisticsView.vue'
-import JsonFormatterView from '@/views/JsonFormatterView.vue'
+import { RouterLink } from 'vue-router'
 import ToolCard from '@/components/tools/ToolCard.vue'
 import { tools } from '@/data/tools'
-import type { ToolCategory } from '@/types/tool'
-
-const toolOpen = ref(false)
-const toolToggle = ref<HTMLButtonElement | null>(null)
-async function toggleTextTool() {
-  toolOpen.value = !toolOpen.value
-  await nextTick()
-  toolToggle.value?.focus()
-}
-
-const jsonOpen = ref(false)
-const jsonToggle = ref<HTMLButtonElement | null>(null)
-async function toggleJsonTool() {
-  jsonOpen.value = !jsonOpen.value
-  await nextTick()
-  jsonToggle.value?.focus()
-}
-
-const categories: readonly { id: string; category: ToolCategory; title: string; description: string }[] = [
+const categories = [
   { id: 'office-tools', category: 'office', title: '办公工具', description: '从文字整理开始，减少日常重复操作。' },
   { id: 'developer-tools', category: 'developer', title: '开发者工具', description: '面向数据与编码处理，让开发中的小事更简单。' },
-]
+] as const
 </script>
 
 <template>
   <section class="hero" aria-labelledby="home-title">
     <p class="eyebrow">WorkDev Tools · 办公与开发者在线工具</p>
-    <h1 id="home-title">让日常工作，<br>轻松一点。</h1>
+    <h1 id="home-title" tabindex="-1">让日常工作，<br>轻松一点。</h1>
     <p class="hero-description">在浏览器里，找到顺手的办公与开发者工具。<br>免费、免登录，优先在本地处理数据。</p>
     <ul class="principles" aria-label="产品特点">
       <li>免费使用</li><li>无需登录</li><li>本地处理优先</li>
     </ul>
-    <p class="release-note">文本统计与 JSON 工具已提供本页试用，更多工具正在准备中。</p>
+    <p class="release-note">文本统计、JSON 与 URL 编解码已提供独立试用页面。</p>
   </section>
 
   <section v-for="section in categories" :id="section.id" :key="section.id" class="tool-section" :aria-labelledby="`${section.id}-title`">
@@ -52,37 +32,21 @@ const categories: readonly { id: string; category: ToolCategory; title: string; 
     <p v-else class="empty-state">暂无工具，敬请期待</p>
   </section>
 
-  <section id="text-statistics" class="tool-section" aria-labelledby="text-statistics-title">
-    <div class="section-heading">
-      <h2 id="text-statistics-title">文本统计</h2>
-      <p>本页试用 · 输入文本，实时查看字符、词段与行数。</p>
-    </div>
-    <button ref="toolToggle" class="tool-toggle" type="button" :aria-expanded="toolOpen" aria-controls="text-statistics-panel" @click="toggleTextTool">
-      {{ toolOpen ? '收起工具并清空文本' : '展开文本统计' }}
-    </button>
-    <div id="text-statistics-panel" :hidden="!toolOpen">
-      <TextStatisticsView v-if="toolOpen" />
-    </div>
-  </section>
-
-  <section id="json-formatter" class="tool-section" aria-labelledby="json-formatter-title">
-    <div class="section-heading">
-      <h2 id="json-formatter-title">JSON 格式化与校验</h2>
-      <p>本页试用 · 校验语法、格式化或压缩 JSON，注意数字精度与重复键限制。</p>
-    </div>
-    <button ref="jsonToggle" class="tool-toggle" type="button" :aria-expanded="jsonOpen" aria-controls="json-formatter-panel" @click="toggleJsonTool">
-      {{ jsonOpen ? '收起 JSON 工具并清空内容' : '展开 JSON 工具' }}
-    </button>
-    <div id="json-formatter-panel" :hidden="!jsonOpen">
-      <JsonFormatterView v-if="jsonOpen" />
+  <section class="tool-section" aria-labelledby="migration-title">
+    <h2 id="migration-title">工具入口已迁移</h2>
+    <p>原首页试用区域已移至独立工具页面，旧书签仍可在这里找到入口。</p>
+    <div v-for="tool in tools" :key="tool.id">
+      <p v-if="tool.status === 'preview'" :id="tool.routeName" class="migration-entry" tabindex="-1">
+        {{ tool.name }}已移至独立工具页面。<RouterLink :to="{ name: tool.routeName }">打开{{ tool.name }}</RouterLink>
+      </p>
     </div>
   </section>
 
   <section id="privacy" class="privacy-section" aria-labelledby="privacy-title">
     <p class="eyebrow">数据处理原则</p>
     <h2 id="privacy-title">你的内容，优先留在你的浏览器。</h2>
-    <p>文本统计与 JSON 工具在浏览器本地处理，基础布局不采集工具输入。输入仅保存在当前页面内存中，收起工具或刷新后清空，不接入广告或分析服务。</p>
-    <p>后续工具上线时，将分别说明处理范围与使用限制。</p>
+    <p>文本统计、JSON 与 URL 工具在浏览器本地处理，基础布局不采集工具输入。输入仅保存在当前页面内存中，离开工具页面或刷新后清空，不接入广告或分析服务。</p>
+    <p><RouterLink :to="{ name: 'privacy' }">查看完整隐私说明</RouterLink></p>
   </section>
 </template>
 

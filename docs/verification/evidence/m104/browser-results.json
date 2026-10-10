@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-10T12:50:54.509Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.98",
+    "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.20"
+  },
+  "system": {
+    "platform": "darwin",
+    "release": "27.0.0",
+    "arch": "arm64",
+    "cpu": "Apple M4"
+  },
+  "url": "http://127.0.0.1:4175/",
+  "mode": "real installed headless Chrome/CDP; desktop viewports mobile=false DPR1; not physical phone/system IME/screenreader/external editor; no performance measurement",
+  "results": [
+    {
+      "name": "B01 empty is not an error, whitespace is content",
+      "status": "pass",
+      "detail": {
+        "emptyNoError": true,
+        "space": "%20"
+      }
+    },
+    {
+      "name": "B01 four operations, Unicode, separators, plus and case",
+      "status": "pass",
+      "detail": [
+        {
+          "mode": "component",
+          "input": "你好 😀 /?+",
+          "actual": "%E4%BD%A0%E5%A5%BD%20%F0%9F%98%80%20%2F%3F%2B"
+        },
+        {
+          "mode": "uri",
+          "input": "https://example.com/你?q=a+b#好",
+          "actual": "https://example.com/%E4%BD%A0?q=a+b#%E5%A5%BD"
+        },
+        {
+          "mode": "component",
+          "input": "%2f%3f%23%41+%20%2B",
+          "actual": "/?#A+ +"
+        },
+        {
+          "mode": "uri",
+          "input": "%2f%3f%23%41+%20%2B",
+          "actual": "%2f%3f%23A+ %2B"
+        }
+      ]
+    },
+    {
+      "name": "B01 single-pass and action/mode/edit invalidation",
+      "status": "pass",
+      "detail": {
+        "singlePass": true,
+        "invalidation": true
+      }
+    },
+    {
+      "name": "B01 malformed percent and invalid UTF8 preserve input clear output",
+      "status": "pass",
+      "detail": [
+        {
+          "mode": "component",
+          "input": "%",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "component",
+          "input": "%2",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "component",
+          "input": "%GG",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "component",
+          "input": "%E4%BD",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "component",
+          "input": "%C0%AF",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "component",
+          "input": "%ED%A0%80",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "component",
+          "input": "%F4%90%80%80",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "uri",
+          "input": "%",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "uri",
+          "input": "%2",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "uri",
+          "input": "%GG",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "uri",
+          "input": "%E4%BD",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "uri",
+          "input": "%C0%AF",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "uri",
+          "input": "%ED%A0%80",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        },
+        {
+          "mode": "uri",
+          "input": "%F4%90%80%80",
+          "output": "",
+          "status": "无法解码：百分号转义或 UTF-8 编码无效；原文已保留。"
+        }
+      ]
+    },
+    {
+      "name": "B01 raw surrogate fault input and native semantics",
+      "status": "pass",
+      "detail": {
+        "injectedInput": true,
+        "length": 1,
+        "code": 55296
+      }
+    },
+    {
+      "name": "B01 size boundary excess and recovery",
+      "status": "pass",
+      "detail": [
+        {
+          "length": 100000,
+          "outputLength": 100000,
+          "disabled": false,
+          "status": "已编码一次。"
+        },
+        {
+          "length": 100001,
+          "outputLength": 0,
+          "disabled": true,
+          "status": "输入超过 100,000 个 UTF-16 码元，原文已保留，请缩短后重试。"
+        },
+        {
+          "length": 100000,
+          "outputLength": 600000,
+          "disabled": false,
+          "status": "已编码一次。"
+        },
+        {
+          "length": 100001,
+          "outputLength": 0,
+          "disabled": true,
+          "status": "输入超过 100,000 个 UTF-16 码元，原文已保留，请缩短后重试。"
+        }
+      ]
+    },
+    {
+      "name": "B02 example guard keyboard Space encode Enter clear focus",
+      "status": "pass",
+      "detail": {
+        "value": "",
+        "output": "",
+        "focus": "url-input",
+        "mode": "component"
+      }
+    },
+    {
+      "name": "B02 actual Tab navigation to mode and encoding button",
+      "status": "pass",
+      "detail": {
+        "modeFocus": "url-mode",
+        "button": "编码",
+        "output": "a%20b"
+      }
+    },
+    {
+      "name": "B03 actual browser clipboard roundtrip, not external app",
+      "status": "pass",
+      "detail": {
+        "copied": "a%20b",
+        "output": "a%20b",
+        "status": "结果已复制。"
+      }
+    },
+    {
+      "name": "B03 missing/rejected API runtime injection real selection",
+      "status": "pass",
+      "detail": [
+        {
+          "denied": false,
+          "focus": "url-output",
+          "start": 0,
+          "end": 5,
+          "length": 5,
+          "status": "无法自动复制，请选中结果后手动复制。"
+        },
+        {
+          "denied": true,
+          "focus": "url-output",
+          "start": 0,
+          "end": 5,
+          "length": 5,
+          "status": "无法自动复制，请选中结果后手动复制。"
+        }
+      ]
+    },
+    {
+      "name": "B03 pending copy mode change cannot write stale success",
+      "status": "pass",
+      "detail": {
+        "output": "new%20value",
+        "status": "已编码一次。"
+      }
+    },
+    {
+      "name": "B04 navigation structure and previous tools regression",
+      "status": "pass",
+      "detail": {
+        "main": 1,
+        "h1": 1,
+        "counts": [
+          "10",
+          "8",
+          "3",
+          "2",
+          "2"
+        ],
+        "json": "{\n  \"a\": 1\n}"
+      }
+    },
+    {
+      "name": "B04 collapse/reopen and reload reset",
+      "status": "pass",
+      "detail": {
+        "input": "",
+        "output": "",
+        "mode": "component"
+      }
+    },
+    {
+      "name": "B05 desktop responsive viewport 375",
+      "status": "pass",
+      "detail": {
+        "width": 375,
+        "scroll": 360,
+        "client": 360
+      }
+    },
+    {
+      "name": "B05 desktop responsive viewport 768",
+      "status": "pass",
+      "detail": {
+        "width": 768,
+        "scroll": 753,
+        "client": 753
+      }
+    },
+    {
+      "name": "B05 desktop responsive viewport 1440",
+      "status": "pass",
+      "detail": {
+        "width": 1440,
+        "scroll": 1425,
+        "client": 1425
+      }
+    },
+    {
+      "name": "B05 dark response and accessibility semantics",
+      "status": "pass",
+      "detail": {
+        "dark": true,
+        "readonly": true,
+        "live": "polite"
+      }
+    },
+    {
+      "name": "B06 HTML and URL-looking text never execute or navigate",
+      "status": "pass",
+      "detail": {
+        "storage": {
+          "url": "http://127.0.0.1:4175/#url-encoder",
+          "executed": false,
+          "local": {},
+          "session": {},
+          "cookie": "",
+          "dbs": []
+        },
+        "events": []
+      }
+    }
+  ],
+  "exceptions": []
+}

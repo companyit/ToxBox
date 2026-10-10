@@ -1,3 +1,5 @@
+import type { ToolPageName } from '../data/pages.ts'
+
 export type ToolCategory = 'office' | 'developer'
 
 interface ToolBase {
@@ -9,5 +11,5 @@ interface ToolBase {
 
 export type Tool = ToolBase & (
   | { readonly status: 'planned' }
-  | { readonly status: 'preview'; readonly anchor: '#text-statistics' | '#json-formatter' }
+  | { readonly status: 'preview'; readonly routeName: ToolPageName }
 )

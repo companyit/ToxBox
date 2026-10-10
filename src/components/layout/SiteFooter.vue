@@ -1,8 +1,12 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+</script>
 <template>
   <footer class="site-footer">
     <div class="container footer-content">
       <span class="footer-brand">WorkDev Tools</span>
       <p>为日常办公与开发，准备顺手的小工具。</p>
+      <nav aria-label="页脚导航"><RouterLink :to="{ name: 'about' }">关于</RouterLink> · <RouterLink :to="{ name: 'privacy' }">隐私说明</RouterLink></nav>
     </div>
   </footer>
 </template>

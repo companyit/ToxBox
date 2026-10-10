@@ -1,0 +1,116 @@
+// 已安装Chrome的CDP真实浏览器检查，无新依赖；所有输入为合成测试文本。
+import fs from 'node:fs/promises';
+import os from 'node:os';
+const dir=new URL('.',import.meta.url).pathname;
+const base='http://127.0.0.1:4176';
+const tabs=await(await fetch('http://127.0.0.1:9226/json')).json();
+const ws=new WebSocket(tabs.find(t=>t.type==='page').webSocketDebuggerUrl);
+await new Promise((r,j)=>{ws.onopen=r;ws.onerror=j});
+let id=0;const pending=new Map(),events=[],results=[];
+ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const p=pending.get(m.id);if(p){pending.delete(m.id);m.error?p.reject(m.error):p.resolve(m.result)}}else if(['Runtime.exceptionThrown','Log.entryAdded','Network.requestWillBeSent'].includes(m.method))events.push(m)};
+function send(method,params={}){return new Promise((resolve,reject)=>{const n=++id;pending.set(n,{resolve,reject});ws.send(JSON.stringify({id:n,method,params}));setTimeout(()=>{if(pending.has(n)){pending.delete(n);reject(Error('timeout '+method))}},15000).unref()})}
+async function run(expression){const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value}
+const tick=()=>run('new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))');
+async function wait(expression){for(let i=0;i<100;i++){if(await run(expression)){await tick();return}await new Promise(r=>setTimeout(r,50))}throw Error('condition timeout '+expression)}
+function assert(x,msg){if(!x)throw Error(msg)}
+async function check(name,fn){try{results.push({name,status:'pass',detail:await fn()})}catch(e){results.push({name,status:'fail',error:String(e)})}}
+async function direct(path,selector='h1'){await send('Page.navigate',{url:base+path});await wait(`document.readyState==='complete' && !!document.querySelector(${JSON.stringify(selector)})`)}
+async function route(path){await run(`document.querySelector('#app').__vue_app__.config.globalProperties.$router.push(${JSON.stringify(path)})`);await tick()}
+async function click(selector){await run(`document.querySelector(${JSON.stringify(selector)}).scrollIntoView({block:'center'})`);const r=await run(`(()=>{const r=document.querySelector(${JSON.stringify(selector)}).getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()`);await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...r});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...r});await tick()}
+async function button(label){const index=await run(`[...document.querySelectorAll('button')].findIndex(b=>b.textContent.trim()===${JSON.stringify(label)})`);assert(index>=0,'button '+label);await run(`document.querySelectorAll('button')[${index}].setAttribute('data-cdp-target','true')`);await click('[data-cdp-target]');await run(`document.querySelector('[data-cdp-target]')?.removeAttribute('data-cdp-target')`)}
+async function fill(selector,text){await run(`document.querySelector(${JSON.stringify(selector)}).focus();document.querySelector(${JSON.stringify(selector)}).select()`);await send('Input.insertText',{text});await tick()}
+async function value(selector){return run(`document.querySelector(${JSON.stringify(selector)}).value`)}
+async function shot(name){const r=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await fs.writeFile(dir+name+'.png',Buffer.from(r.data,'base64'))}
+await send('Page.enable');await send('Runtime.enable');await send('Network.enable');await send('Log.enable');
+const browser=await send('Browser.getVersion');
+await send('Emulation.setDeviceMetricsOverride',{width:1440,height:900,deviceScaleFactor:1,mobile:false});
+const pages=[['/','WorkDev Tools — 办公与开发者在线工具'],['/office/','办公工具'],['/office/text-statistics/','文本统计'],['/developer/','开发者工具'],['/developer/json-formatter/','JSON 格式化与校验'],['/developer/url-encoder/','URL 编解码'],['/about/','关于 WorkDev Tools'],['/privacy/','隐私说明']];
+for(const [path,title]of pages)await check('B01/B06 direct + refresh '+path,async()=>{
+ await direct(path);const inspect=()=>run(`({path:location.pathname,title:document.title,descriptions:[...document.querySelectorAll('meta[name="description"]')].map(n=>n.content),robots:document.querySelector('meta[name="robots"]').content,canonical:document.querySelectorAll('link[rel="canonical"]').length,h1:document.querySelectorAll('h1').length,main:document.querySelectorAll('main').length,lang:document.documentElement.lang,focus:document.activeElement.tagName})`);
+ const before=await inspect();assert(before.path===path&&before.title===(path==='/'?title:title+'｜WorkDev Tools')&&before.descriptions.length===1&&before.descriptions[0]&&before.h1===1&&before.main===1&&before.lang==='zh-CN'&&before.canonical===0&&before.robots==='noindex,follow','direct metadata '+JSON.stringify(before));
+ await send('Page.reload');await wait(`document.readyState==='complete'&&!!document.querySelector('h1')`);const after=await inspect();assert(after.title===before.title&&after.path===path,'reload');return {before,after};
+});
+await check('B01 homepage cards open three independent tools',async()=>{
+ const rows=[];for(const [path,selector]of [['/office/text-statistics/','#statistics-input'],['/developer/json-formatter/','#json-input'],['/developer/url-encoder/','#url-input']]){await direct('/');assert(await run('document.querySelectorAll("textarea").length')===0,'home tool instance');await click(`.tool-card a[href="${path}"]`);await wait(`!!document.querySelector('${selector}')`);rows.push(await run('({path:location.pathname,focus:document.activeElement.tagName,h1:document.querySelector("h1").textContent})'));assert(rows.at(-1).path===path,'card path')}return rows;
+});
+await check('B01 new tabs for all eight URLs',async()=>{
+ const rows=[];
+ for(const [path,title]of pages){
+  const {targetId}=await send('Target.createTarget',{url:base+path});
+  try {
+   const targets=await(await fetch('http://127.0.0.1:9226/json')).json();
+   const connection=new WebSocket(targets.find(t=>t.id===targetId).webSocketDebuggerUrl);
+   await new Promise((r,j)=>{connection.onopen=r;connection.onerror=j});let requestId=0;const waiting=new Map();
+   connection.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){waiting.get(m.id)?.(m.result);waiting.delete(m.id)}};
+   const evaluate=expression=>new Promise(resolve=>{const id=++requestId;waiting.set(id,resolve);connection.send(JSON.stringify({id,method:'Runtime.evaluate',params:{expression,returnByValue:true}}))});
+   let actual;for(let i=0;i<100;i++){const result=await evaluate('({ready:!!document.querySelector("h1"),title:document.title,path:location.pathname})');actual=result.result.value;if(actual.ready)break;await new Promise(r=>setTimeout(r,50))}
+   connection.close();assert(actual.ready&&actual.path===path&&actual.title===(path==='/'?title:title+'｜WorkDev Tools'),'new tab');rows.push(actual);
+  }finally{await send('Target.closeTarget',{targetId})}
+ }
+ return rows;
+});
+await check('C08/C11 rapid navigation only applies final page head and announcement',async()=>{
+ await direct('/');await run(`(async()=>{const r=document.querySelector('#app').__vue_app__.config.globalProperties.$router;await Promise.all([r.push('/about/'),r.push('/office/'),r.push('/privacy/')])})()`);await tick();
+ const d=await run('({path:location.pathname,title:document.title,focus:document.activeElement.tagName,live:document.querySelector("#app > .sr-only").textContent})');assert(d.path==='/privacy/'&&d.title==='隐私说明｜WorkDev Tools'&&d.live==='已进入：隐私说明','stale navigation');return d;
+});
+await check('B02 six old hashes and tool migration links',async()=>{
+ const rows=[];for(const hash of ['office-tools','developer-tools','privacy','text-statistics','json-formatter','url-encoder']){await direct('/#'+hash);rows.push(await run(`({hash:location.hash,target:!!document.getElementById('${hash}'),count:document.querySelectorAll('#${hash}').length,editors:document.querySelectorAll('textarea').length,links:[...document.getElementById('${hash}').querySelectorAll('a')].map(n=>n.getAttribute('href'))})`));assert(rows.at(-1).target&&rows.at(-1).count===1&&rows.at(-1).editors===0,'hash target')}
+ await click('#url-encoder a');assert(await run('location.pathname')==='/developer/url-encoder/','migration link');return rows;
+});
+await check('B04 no-slash normalization preserves query/hash and back source',async()=>{
+ await direct('/about/');await route('/office/text-statistics?x=1#help');assert(await run('location.pathname+location.search+location.hash')==='/office/text-statistics/?x=1#help','normalize');await run('history.back()');await wait('location.pathname==="/about/"');return {back:await run('location.pathname')};
+});
+await check('B04 saved scroll + forward/back + preventScroll focus',async()=>{
+ await direct('/');await run('scrollTo(0,650)');await tick();const saved=await run('scrollY');await route('/office/text-statistics/');const target=await run('({scroll:scrollY,focus:document.activeElement.tagName,live:document.querySelector("#app > .sr-only").textContent})');assert(target.scroll===0&&target.focus==='H1','new page focus/scroll');await run('history.back()');await wait('location.pathname==="/"');await tick();const back=await run('({scroll:scrollY,focus:document.activeElement.tagName})');assert(Math.abs(back.scroll-saved)<3&&back.focus==='H1','saved scroll '+JSON.stringify({saved,back}));await run('history.forward()');await wait('location.pathname==="/office/text-statistics/"');return {saved,target,back,forward:await run('location.pathname')};
+});
+await check('B04 hash focus and missing target fallback',async()=>{
+ await direct('/about/');await route('/#url-encoder');const hash=await run('({id:document.activeElement.id,scroll:scrollY})');assert(hash.id==='url-encoder'&&hash.scroll>0,'hash focus');await route('/#missing');assert(await run('scrollY')===0,'missing hash scroll');return hash;
+});
+await check('B05 client and direct 404 + no echo/canonical',async()=>{
+ await route('/missing-SECRET/');const client=await run('({path:location.pathname,title:document.title,h1:document.querySelector("h1").textContent,robots:document.querySelector("meta[name=robots]").content,canonical:document.querySelectorAll("link[rel=canonical]").length,echo:document.body.textContent.includes("SECRET")})');assert(client.h1==='页面不存在'&&client.robots==='noindex,follow'&&client.canonical===0&&!client.echo,'404');await click('main a[href="/"]');assert(await run('location.pathname')==='/','404 return');await direct('/missing-SECRET/');const response=await fetch(base+'/missing-SECRET/');assert(await run('document.querySelector("h1").textContent')==='页面不存在','direct 404 UI');return {client,localPreviewHttpStatus:response.status,hostingTested:false};
+});
+await check('C08 simulated lazy navigation failure retry and recovery',async()=>{
+ await direct('/about/');const detail=await run(`(async()=>{const r=document.querySelector('#app').__vue_app__.config.globalProperties.$router;let attempts=0;r.addRoute({path:'/test-load-failure/',name:'test-failure',component:()=>{attempts++;return attempts===1?Promise.reject(Error('synthetic load error')):Promise.resolve(r.getRoutes().find(x=>x.name==='about').components.default)}});await r.push('/test-load-failure/').catch(()=>{});return {path:location.pathname,error:!!document.querySelector('[role=alert]'),title:document.title}})()`);assert(detail.path==='/about/'&&detail.error&&detail.title==='关于 WorkDev Tools｜WorkDev Tools','failure state');await button('重试加载');await wait('location.pathname==="/test-load-failure/"');assert(await run('!document.querySelector("[role=alert]")'),'retry');await route('/privacy/');return {...detail,retryPassed:true};
+});
+await check('C08 late failed navigation cannot overwrite newer successful page',async()=>{
+ await direct('/about/');await run(`(()=>{const r=document.querySelector('#app').__vue_app__.config.globalProperties.$router;r.addRoute({path:'/synthetic-delayed-failure/',name:'delayed-failure',component:()=>new Promise((_resolve,reject)=>window.__rejectRoute=reject)});window.__oldRoute=r.push('/synthetic-delayed-failure/').catch(()=>{});})()`);await wait('typeof window.__rejectRoute==="function"');await route('/privacy/');await run('window.__rejectRoute(Error("synthetic late failure"));window.__oldRoute');await tick();
+ const d=await run('({path:location.pathname,error:!!document.querySelector("[role=alert]"),title:document.title})');assert(d.path==='/privacy/'&&!d.error&&d.title==='隐私说明｜WorkDev Tools','stale load failure');return d;
+});
+await check('R01 text calculation, limits, clear + copy fallback',async()=>{
+ await direct('/office/text-statistics/','#statistics-input');await fill('#statistics-input','你好 world\n😀');const counts=await run('[...document.querySelectorAll("dd")].map(n=>n.textContent.trim())');assert(JSON.stringify(counts)===JSON.stringify(['10','8','3','2','2']),'counts');await fill('#statistics-input','a'.repeat(100001));assert(await value('#statistics-input')==='a'.repeat(100001),'retained');assert(await run('[...document.querySelectorAll("dd")].every(n=>!/^100000$/.test(n.textContent))'),'stale count');await button('清空');assert(await value('#statistics-input')===''&&await run('document.activeElement.id')==='statistics-input','clear');await fill('#statistics-input','local text');await run('window.__clipboardOriginal=navigator.clipboard.writeText.bind(navigator.clipboard);navigator.clipboard.writeText=async()=>{throw Error("synthetic denied")}');await button('复制文本');const selection=await run('({id:document.activeElement.id,start:document.activeElement.selectionStart,end:document.activeElement.selectionEnd})');assert(selection.id==='statistics-input'&&selection.end===10,'copy fallback');await run('navigator.clipboard.writeText=window.__clipboardOriginal');return {counts,selection};
+});
+await check('R02 JSON all top-level, indent, compress, safety + errors',async()=>{
+ await direct('/developer/json-formatter/','#json-input');const rows=[];for(const input of ['{"a":1}','[1]','"你好😀"','1.5','true','null']){await fill('#json-input',input);await button('压缩');const output=await value('#json-output');assert(output===input,'json '+input);rows.push({input,output})}await fill('#json-input','{"a":1}');await button('格式化');assert(await value('#json-output')==='{\n  "a": 1\n}','indent2');await run('document.querySelector("#json-indent").value="4";document.querySelector("#json-indent").dispatchEvent(new Event("change",{bubbles:true}))');await button('格式化');assert(await value('#json-output')==='{\n    "a": 1\n}','indent4');for(const input of ['{"a":','9007199254740993','1e400']){await fill('#json-input',input);assert(await value('#json-output')==='','edit stale');await button('格式化');assert(await value('#json-output')==='','unsafe output')}await fill('#json-input','{"a":1,"a":2}');await button('压缩');assert(await value('#json-output')==='{"a":2}','duplicate');return rows;
+});
+await check('R03 URL four operations, invalid UTF8, invalidation + limit',async()=>{
+ await direct('/developer/url-encoder/','#url-input');const rows=[];for(const [mode,action,input,expected]of [['component','编码','你好 😀 /?+','%E4%BD%A0%E5%A5%BD%20%F0%9F%98%80%20%2F%3F%2B'],['component','解码','%2F+%20','/+ '],['uri','编码','/?+ ','/?+%20'],['uri','解码','%2f+%20','%2f+ ']]){await run(`document.querySelector('#url-mode').value=${JSON.stringify(mode)};document.querySelector('#url-mode').dispatchEvent(new Event('change',{bubbles:true}))`);await fill('#url-input',input);await button(action);const actual=await value('#url-output');assert(actual===expected,'URL '+JSON.stringify({actual,expected}));rows.push({mode,action,input,actual})}await fill('#url-input','%E4%BD');await button('解码');assert(await value('#url-output')==='','invalid');await fill('#url-input','a'.repeat(100001));assert((await value('#url-input')).length===100001&&await value('#url-output')==='','limit');await button('清空');assert(await run('document.activeElement.id')==='url-input','focus');return rows;
+});
+await check('B03 tools leave/re-enter and refresh clear memory',async()=>{
+ const rows=[];for(const [path,input,output]of [['/office/text-statistics/','#statistics-input',null],['/developer/json-formatter/','#json-input','#json-output'],['/developer/url-encoder/','#url-input','#url-output']]){await direct(path,input);await fill(input,'"synthetic reset"');await route('/office/');assert(await run('document.querySelectorAll("textarea").length')===0,'unmount');await run('history.back()');await wait(`!!document.querySelector('${input}')`);assert(await value(input)==='','back reset');await fill(input,'reset');await send('Page.reload');await wait(`document.readyState==='complete'&&!!document.querySelector('${input}')`);assert(await value(input)===''&&(!output||await value(output)===''),'refresh');rows.push({path,reset:true})}return rows;
+});
+await check('B03 actual Clipboard API roundtrip on all tools',async()=>{
+ await send('Browser.grantPermissions',{origin:base,permissions:['clipboardReadWrite','clipboardSanitizedWrite']});const rows=[];for(const [path,input,copy,expected]of [['/office/text-statistics/','#statistics-input','复制文本','你好 😀'],['/developer/json-formatter/','#json-input','复制结果','"你好 😀"'],['/developer/url-encoder/','#url-input','复制结果','%E4%BD%A0%E5%A5%BD%20%F0%9F%98%80']]){await direct(path,input);await fill(input,path.includes('json')?'"你好 😀"':'你好 😀');if(path.includes('json'))await button('压缩');if(path.includes('url-encoder'))await button('编码');await button(copy);const actual=await run('navigator.clipboard.readText()');assert(actual===expected,'clipboard');rows.push({path,actual})}return {rows,externalApp:false};
+});
+await check('B03 pending clipboard completion after route unmount is ignored',async()=>{
+ await direct('/developer/url-encoder/','#url-input');await fill('#url-input','a b');await button('编码');await run('window.__clipboardOriginal=navigator.clipboard.writeText.bind(navigator.clipboard);navigator.clipboard.writeText=()=>new Promise(r=>window.__copyFinish=r)');await button('复制结果');await route('/developer/json-formatter/');await run('window.__copyFinish();navigator.clipboard.writeText=window.__clipboardOriginal');await tick();assert(await value('#json-input')===''&&!(await run('document.body.textContent')).includes('结果已复制'),'late callback');return {newPageEmpty:true};
+});
+await check('B07 real Tab/Enter skip-link and route keyboard navigation',async()=>{
+ await direct('/');await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});assert(await run('document.activeElement.className')==='skip-link','first tab');await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13,text:'\r'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await tick();assert(await run('document.activeElement.id')==='main-content','skip');await run(`document.querySelector('header nav a[href="/office/"]').focus()`);await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13,text:'\r'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await wait('location.pathname==="/office/"');return {focus:await run('document.activeElement.tagName'),screenreader:false};
+});
+await check('B08 shared nav current state and footer regression',async()=>{
+ const rows=[];for(const [path,category]of [['/office/text-statistics/','office'],['/developer/json-formatter/','developer']]){await direct(path);const current=await run('[...document.querySelectorAll("header nav a[aria-current=page]")].map(n=>n.getAttribute("href"))');assert(current.includes('/'+category+'/'),'current category');await click('footer a[href="/about/"]');assert(await run('location.pathname')==='/about/','footer');await click('header .brand');assert(await run('location.pathname')==='/','brand');rows.push({path,current})}return rows;
+});
+for(const [width,height,mobile]of [[375,812,false],[768,1024,false],[1440,900,false],[375,812,true]])await check('B08 simulated viewport '+width+' mobile='+mobile,async()=>{
+ await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile});const rows=[];for(const [path]of pages){await direct(path);const d=await run('({path:location.pathname,width:innerWidth,scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth})');assert(d.scroll<=d.client,'overflow '+JSON.stringify(d));rows.push(d)}await direct('/developer/url-encoder/','#url-input');await fill('#url-input','你好😀'.repeat(100));await button('编码');await shot('url-'+width+'-mobile-'+mobile);return {physicalDevice:false,rows};
+});
+await check('B08 dark CSS and accessibility tree (not screenreader)',async()=>{
+ await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-color-scheme',value:'dark'}]});await tick();await shot('url-dark');await send('Accessibility.enable');await fs.writeFile(dir+'accessibility.json',JSON.stringify(await send('Accessibility.getFullAXTree'),null,2));assert(await run('matchMedia("(prefers-color-scheme: dark)").matches'),'dark');return {dark:true,screenreader:false};
+});
+await check('privacy input marker not in requests, URL, storage or HTML execution',async()=>{
+ const marker='M105_SYNTHETIC_INPUT_ONLY';await direct('/developer/url-encoder/','#url-input');const start=events.length;await fill('#url-input',encodeURIComponent('<img src="https://example.invalid/'+marker+'">'));await button('解码');assert(await run('document.querySelectorAll("main img").length')===0,'html injection');await route('/about/');const state=await run('(async()=>({url:location.href,local:{...localStorage},session:{...sessionStorage},cookie:document.cookie,dbs:await indexedDB.databases()}))()');assert(!JSON.stringify(state).includes(marker)&&!JSON.stringify(events.slice(start)).includes(marker),'marker leak');return {state,observedEvents:events.slice(start)};
+});
+await check('raw HTML has homepage head and no route body (CSR limitation)',async()=>{
+ const response=await fetch(base+'/developer/json-formatter/');const html=await response.text();assert(!html.includes('<h1')&&html.includes('WorkDev Tools — 办公与开发者在线工具'),'raw HTML');await fs.writeFile(dir+'raw-tool-response.html',html);return {http:response.status,routeBodyInRawHtml:false,dynamicMetadataOnly:true};
+});
+const record={date:new Date().toISOString(),browser,system:{platform:os.platform(),release:os.release(),arch:os.arch(),cpu:os.cpus()[0]?.model},base,environment:'本地生产构建预览；真实headless Chrome；模拟视口不是真实手机；无托管、真实读屏、性能或系统IME验收',results,exceptions:events.filter(e=>e.method==='Runtime.exceptionThrown')};
+await fs.writeFile(dir+'browser-results.json',JSON.stringify(record,null,2));await fs.writeFile(dir+'browser-events.json',JSON.stringify(events,null,2));console.log(JSON.stringify({browser,passed:results.filter(r=>r.status==='pass').length,failures:results.filter(r=>r.status==='fail'),exceptions:record.exceptions.length},null,2));ws.close();

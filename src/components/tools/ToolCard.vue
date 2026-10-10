@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import type { Tool } from '@/types/tool'
 
 defineProps<{ tool: Tool }>()
 
 const categoryLabels = { office: '办公工具', developer: '开发者工具' }
-const statusLabels = { planned: '规划中', preview: '本页试用' }
+const statusLabels = { planned: '规划中', preview: '试用' }
 </script>
 
 <template>
@@ -16,7 +17,7 @@ const statusLabels = { planned: '规划中', preview: '本页试用' }
     <h3 :id="`tool-${tool.id}`">{{ tool.name }}</h3>
     <p>{{ tool.description }}</p>
     <p v-if="tool.status === 'planned'" class="availability">尚未开放使用</p>
-    <p v-else class="availability"><a :href="tool.anchor">前往本页试用</a></p>
+    <p v-else class="availability"><RouterLink :to="{ name: tool.routeName }">试用工具<span class="sr-only">：{{ tool.name }}</span></RouterLink></p>
   </article>
 </template>
 

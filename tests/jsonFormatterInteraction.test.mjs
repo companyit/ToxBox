@@ -123,5 +123,8 @@ test('C08 unmount ignores late callbacks and remount empty; source text tool unc
   await tool.input('true');await tool.click('压缩');const pending=tool.button('复制结果').props.onClick();await nextTick();tool.app.unmount();fail(new Error('late'));await pending
   assert.equal(tool.selected(),false)
   const fresh=mountTool(t);assert.equal(fresh.editor().props.value,'');assert.equal(fresh.output(),'');assert.equal(fresh.indent().props.value,2)
-  const home=await readFile(new URL('../src/views/HomeView.vue',import.meta.url),'utf8');assert.match(home,/<TextStatisticsView v-if="toolOpen"/);assert.match(home,/<JsonFormatterView v-if="jsonOpen"/)
+  for(const c of ['TextStatistics','JsonFormatter']) {
+    const page=await readFile(new URL('../src/views/pages/'+c+'Page.vue',import.meta.url),'utf8');assert.ok(page.includes('<'+c+'View'))
+  }
+  const home=await readFile(new URL('../src/views/HomeView.vue',import.meta.url),'utf8');assert.ok(!home.includes('v-if="toolOpen"'))
 })

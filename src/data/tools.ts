@@ -7,7 +7,7 @@ export const tools: readonly Tool[] = [
     description: '了解文本的字符数量与行数，让日常内容整理更轻松。',
     category: 'office',
     status: 'preview',
-    anchor: '#text-statistics',
+    routeName: 'text-statistics',
   },
   {
     id: 'json-formatter',
@@ -15,13 +15,14 @@ export const tools: readonly Tool[] = [
     description: '整理 JSON 结构、检查格式，让数据更易阅读。',
     category: 'developer',
     status: 'preview',
-    anchor: '#json-formatter',
+    routeName: 'json-formatter',
   },
   {
     id: 'url-codec',
     name: 'URL 编解码',
-    description: '处理 URL 组件中的编码文本，辅助日常开发与调试。',
+    description: '按 URI 组件或完整 URI 模式，手动编码与解码文本。',
     category: 'developer',
-    status: 'planned',
+    status: 'preview',
+    routeName: 'url-encoder',
   },
 ]
