@@ -1,0 +1,66 @@
+[
+  {
+    "command": "npm run type-check",
+    "evidence": "type-check-final.txt",
+    "startedUtc": "2026-10-11T04:18:59.375Z",
+    "exitCode": 0
+  },
+  {
+    "command": "/usr/bin/time -l npm test",
+    "evidence": "npm-test-final.txt",
+    "startedUtc": "2026-10-11T04:19:01.217Z",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run build",
+    "evidence": "build-final.txt",
+    "startedUtc": "2026-10-11T04:19:22.100Z",
+    "exitCode": 0
+  },
+  {
+    "command": "/usr/bin/time -l npm run test",
+    "evidence": "test-final-1.txt",
+    "startedUtc": "2026-10-11T04:19:24.111Z",
+    "exitCode": 0
+  },
+  {
+    "command": "/usr/bin/time -l npm run test",
+    "evidence": "test-final-2.txt",
+    "startedUtc": "2026-10-11T04:19:38.669Z",
+    "exitCode": 0
+  },
+  {
+    "command": "/usr/bin/time -l npm run test:e2e",
+    "evidence": "three-engines-final.txt",
+    "startedUtc": "2026-10-11T04:19:53.856Z",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run test:vitest",
+    "evidence": "vitest-final.txt",
+    "startedUtc": "2026-10-11T04:20:37.230Z",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run test:ssg",
+    "evidence": "ssg-final.txt",
+    "startedUtc": "2026-10-11T04:20:39.317Z",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run test:inventory",
+    "evidence": "inventory-final.txt",
+    "startedUtc": "2026-10-11T04:20:39.796Z",
+    "exitCode": 0
+  },
+  {
+    "command": "npm audit",
+    "evidence": "audit.txt",
+    "exitCode": 0
+  },
+  {
+    "command": "git diff --check",
+    "evidence": "diff-check-final.txt",
+    "exitCode": 0
+  }
+]

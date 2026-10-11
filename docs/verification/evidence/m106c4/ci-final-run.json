@@ -1,0 +1,11 @@
+{
+  "projects": [
+    "chromium"
+  ],
+  "startedUtc": "2026-10-11T04:43:26.920Z",
+  "buildExitCode": null,
+  "testExitCode": 0,
+  "portReleased": true,
+  "buildMode": "verified-artifact",
+  "durationSeconds": 10.402
+}

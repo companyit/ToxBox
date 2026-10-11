@@ -1,0 +1,150 @@
+
+> toxbox@0.0.0 test:ci:e2e
+> node scripts/e2e-run.mjs --prepared chromium firefox webkit
+
+[WebServer] (node:12699) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 126 tests using 1 worker
+
+(node:12700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[2/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[3/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[4/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[5/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[6/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[7/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[8/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[9/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[10/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[11/126] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[12/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[13/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[14/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[15/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[16/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[17/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[18/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[19/126] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[20/126] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[21/126] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[22/126] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[23/126] [chromium] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[24/126] [chromium] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[25/126] [chromium] › e2e/pages.spec.ts:96:1 › E06 无斜杠308与旧hash
+[26/126] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /missing/
+[27/126] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /office/missing/
+[28/126] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /developer/missing/
+[29/126] [chromium] › e2e/pages.spec.ts:123:1 › E08 实际静态资源与禁止泄漏文件
+[30/126] [chromium] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[31/126] [chromium] › e2e/tools.spec.ts:33:1 › E05 JSON格式压缩语法与安全边界
+[32/126] [chromium] › e2e/tools.spec.ts:74:1 › E05 URL两模式四操作单轮与错误恢复
+[33/126] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 text
+[34/126] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 json
+[35/126] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 url
+[36/126] [chromium] › e2e/tools.spec.ts:174:1 › E09 键盘跳转焦点与基础语义
+[37/126] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 375
+[38/126] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 768
+[39/126] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 1440
+[40/126] [chromium] › e2e/tools.spec.ts:227:5 › E10 locale en-US › E10 固定数字展示
+[41/126] [chromium] › e2e/tools.spec.ts:227:5 › E10 locale zh-CN › E10 固定数字展示
+[42/126] [chromium] › e2e/tools.spec.ts:239:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+(node:12752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[43/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[44/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[45/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[46/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[47/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[48/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[49/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[50/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[51/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[52/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[53/126] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[54/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[55/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[56/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[57/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[58/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[59/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[60/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[61/126] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[62/126] [firefox] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[63/126] [firefox] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[64/126] [firefox] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[65/126] [firefox] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[66/126] [firefox] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[67/126] [firefox] › e2e/pages.spec.ts:96:1 › E06 无斜杠308与旧hash
+[68/126] [firefox] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /missing/
+[69/126] [firefox] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /office/missing/
+[70/126] [firefox] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /developer/missing/
+[71/126] [firefox] › e2e/pages.spec.ts:123:1 › E08 实际静态资源与禁止泄漏文件
+[72/126] [firefox] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[73/126] [firefox] › e2e/tools.spec.ts:33:1 › E05 JSON格式压缩语法与安全边界
+[74/126] [firefox] › e2e/tools.spec.ts:74:1 › E05 URL两模式四操作单轮与错误恢复
+[75/126] [firefox] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 text
+[76/126] [firefox] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 json
+[77/126] [firefox] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 url
+[78/126] [firefox] › e2e/tools.spec.ts:174:1 › E09 键盘跳转焦点与基础语义
+[79/126] [firefox] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 375
+[80/126] [firefox] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 768
+[81/126] [firefox] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 1440
+[82/126] [firefox] › e2e/tools.spec.ts:227:5 › E10 locale en-US › E10 固定数字展示
+[83/126] [firefox] › e2e/tools.spec.ts:227:5 › E10 locale zh-CN › E10 固定数字展示
+[84/126] [firefox] › e2e/tools.spec.ts:239:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+(node:12814) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[85/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[86/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[87/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[88/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[89/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[90/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[91/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[92/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[93/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[94/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[95/126] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[96/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[97/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[98/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[99/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[100/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[101/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[102/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[103/126] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[104/126] [webkit] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[105/126] [webkit] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[106/126] [webkit] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[107/126] [webkit] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[108/126] [webkit] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[109/126] [webkit] › e2e/pages.spec.ts:96:1 › E06 无斜杠308与旧hash
+[110/126] [webkit] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /missing/
+[111/126] [webkit] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /office/missing/
+[112/126] [webkit] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /developer/missing/
+[113/126] [webkit] › e2e/pages.spec.ts:123:1 › E08 实际静态资源与禁止泄漏文件
+[114/126] [webkit] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[115/126] [webkit] › e2e/tools.spec.ts:33:1 › E05 JSON格式压缩语法与安全边界
+[116/126] [webkit] › e2e/tools.spec.ts:74:1 › E05 URL两模式四操作单轮与错误恢复
+[117/126] [webkit] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 text
+[118/126] [webkit] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 json
+[119/126] [webkit] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 url
+[120/126] [webkit] › e2e/tools.spec.ts:174:1 › E09 键盘跳转焦点与基础语义
+[121/126] [webkit] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 375
+[122/126] [webkit] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 768
+[123/126] [webkit] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 1440
+[124/126] [webkit] › e2e/tools.spec.ts:227:5 › E10 locale en-US › E10 固定数字展示
+[125/126] [webkit] › e2e/tools.spec.ts:227:5 › E10 locale zh-CN › E10 固定数字展示
+[126/126] [webkit] › e2e/tools.spec.ts:239:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+  126 passed (37.6s)
+本地E2E证据：.ci/run

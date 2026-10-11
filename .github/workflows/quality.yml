@@ -1,0 +1,181 @@
+name: WorkDev quality
+
+'on':
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # UTC19:17 = 北京时间次日03:17；定时仅在默认分支执行。
+    - cron: '17 19 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}-${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.run_id || 'latest' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' || github.event_name == 'push' }}
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+
+jobs:
+  quality:
+    name: Type, Vitest, audit and SSG
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      receipt: ${{ steps.artifact.outputs.receipt }}
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0, Node24
+        with:
+          persist-credentials: false
+      - name: Check tracked lockfile and Node pin
+        run: |
+          git ls-files --error-unmatch package-lock.json
+          test "$(cat .node-version)" = '24.21.0'
+      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0, Node24
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: test "$(node -v)" = 'v24.21.0'
+      - run: npm ci
+        id: install
+      - run: npm run type-check
+        id: types
+      - run: npm run test:inventory
+        id: inventory
+      - run: npm run test:vitest
+        id: vitest
+      - run: npm audit
+        id: audit
+      - run: npm run build
+        id: build
+      - run: npm run test:ssg
+        id: ssg
+      - run: node scripts/ci-build.mjs prepare
+        id: artifact
+      - run: python3 scripts/ci-evidence.py build
+        id: scan
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0, Node24
+        with:
+          name: ssg-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .ci/build/
+          retention-days: 1
+          if-no-files-found: error
+      - name: Quality summary
+        id: summary
+        if: ${{ always() }}
+        env:
+          STEPS_JSON: ${{ toJSON(steps) }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          import importlib.util
+          spec = importlib.util.spec_from_file_location('evidence', 'scripts/ci-evidence.py')
+          evidence = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(evidence)
+          content = os.environ['STEPS_JSON'].encode()
+          evidence.scan(content)
+          pathlib.Path('.ci/quality').mkdir(parents=True, exist_ok=True)
+          pathlib.Path('.ci/quality/summary.json').write_bytes(content)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('### Quality steps\n\n')
+              for name, result in json.loads(os.environ['STEPS_JSON']).items():
+                  f.write(f"- {name}: {result['outcome']}\n")
+          PY
+      - name: Upload quality summary
+        if: ${{ always() && steps.summary.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: quality-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .ci/quality/
+          retention-days: 14
+          if-no-files-found: error
+
+  browsers:
+    name: E2E (${{ matrix.browser }})
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: ${{ fromJSON((github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && '["chromium","firefox","webkit"]' || '["chromium"]') }}
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+      - run: |
+          git ls-files --error-unmatch package-lock.json
+          test "$(cat .node-version)" = '24.21.0'
+      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0, Node24
+        with:
+          name: ssg-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .ci/build/
+      - name: Install pinned browser and Ubuntu dependencies
+        env:
+          BROWSER: ${{ matrix.browser }}
+        run: node node_modules/@playwright/test/cli.js install --with-deps "$BROWSER"
+      - name: Test the verified SSG artifact
+        id: e2e
+        env:
+          BROWSER: ${{ matrix.browser }}
+          WORKDEV_CI_RECEIPT_SHA: ${{ needs.quality.outputs.receipt }}
+        run: npm run test:ci:e2e -- "$BROWSER"
+      - name: Scan and prepare evidence
+        id: evidence
+        if: ${{ always() }}
+        env:
+          E2E_OUTCOME: ${{ steps.e2e.outcome }}
+        run: python3 scripts/ci-evidence.py "$E2E_OUTCOME"
+      - name: Upload summary (14 days)
+        if: ${{ always() && steps.evidence.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: summary-${{ matrix.browser }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .ci/evidence/summary/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Upload HTML, screenshots and traces (7 days)
+        if: ${{ always() && steps.evidence.outcome == 'success' && steps.e2e.outcome != 'skipped' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: diagnostics-${{ matrix.browser }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .ci/evidence/diagnostics/
+          retention-days: 7
+          if-no-files-found: error
+      - name: Browser summary
+        if: ${{ always() }}
+        env:
+          BROWSER: ${{ matrix.browser }}
+          E2E_OUTCOME: ${{ steps.e2e.outcome }}
+          EVIDENCE_OUTCOME: ${{ steps.evidence.outcome }}
+        run: |
+          printf '### %s\n\nE2E: %s\n\nEvidence: %s\n' "$BROWSER" "$E2E_OUTCOME" "$EVIDENCE_OUTCOME" >> "$GITHUB_STEP_SUMMARY"
+
+  gate:
+    name: Quality gate
+    needs: [quality, browsers]
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Require every quality layer
+        env:
+          QUALITY: ${{ needs.quality.result }}
+          BROWSERS: ${{ needs.browsers.result }}
+        run: |
+          printf 'Quality: %s\nBrowsers: %s\n' "$QUALITY" "$BROWSERS" >> "$GITHUB_STEP_SUMMARY"
+          test "$QUALITY" = 'success'
+          test "$BROWSERS" = 'success'

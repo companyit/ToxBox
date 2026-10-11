@@ -1,0 +1,28 @@
+{
+  "gitDiffCheck": 0,
+  "newTextAndLinksCheck": true,
+  "preexistingFilesDeleted": 0,
+  "onlyAuthorizedExistingFilesChanged": [
+    "docs/specs/007-testing-ci/design.md",
+    "docs/specs/007-testing-ci/spec.md",
+    "docs/specs/007-testing-ci/tasks.md",
+    "e2e/tools.spec.ts",
+    "scripts/e2e-run.mjs",
+    ".gitignore",
+    "docs/architecture/decisions.md",
+    "package.json"
+  ],
+  "productionAndLockUnchanged": true,
+  "html": [
+    "404.html",
+    "about/index.html",
+    "developer/index.html",
+    "developer/json-formatter/index.html",
+    "developer/url-encoder/index.html",
+    "index.html",
+    "office/index.html",
+    "office/text-statistics/index.html",
+    "privacy/index.html"
+  ],
+  "remoteGithubRun": false
+}

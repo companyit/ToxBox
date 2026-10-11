@@ -1,0 +1,246 @@
+[
+  {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:12:39.107Z",
+    "buildExitCode": 0,
+    "testExitCode": 1,
+    "portReleased": true,
+    "durationSeconds": 72.263,
+    "stats": {
+      "startTime": "2026-10-11T04:12:41.305Z",
+      "duration": 70004.11899999999,
+      "expected": 30,
+      "skipped": 0,
+      "unexpected": 11,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 30,
+        "failed": 11,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-12-39.107Z-8414"
+  },
+  {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:14:19.618Z",
+    "buildExitCode": 1,
+    "testExitCode": null,
+    "portReleased": false,
+    "error": "本次完整构建失败，禁止使用旧产物",
+    "durationSeconds": 1.955,
+    "folder": "runs/2026-10-11T04-14-19.618Z-8804"
+  },
+  {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:14:45.198Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.203,
+    "stats": {
+      "startTime": "2026-10-11T04:14:47.332Z",
+      "duration": 9040.496000000001,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-14-45.198Z-8921"
+  },
+  {
+    "projects": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "startedUtc": "2026-10-11T04:15:23.487Z",
+    "buildExitCode": 0,
+    "testExitCode": 1,
+    "portReleased": true,
+    "durationSeconds": 58.251,
+    "stats": {
+      "startTime": "2026-10-11T04:15:25.638Z",
+      "duration": 56034.346000000005,
+      "expected": 123,
+      "skipped": 0,
+      "unexpected": 3,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      },
+      "firefox": {
+        "passed": 40,
+        "failed": 2,
+        "skipped": 0
+      },
+      "webkit": {
+        "passed": 41,
+        "failed": 1,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-15-23.487Z-9117"
+  },
+  {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:18:20.341Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.794,
+    "stats": {
+      "startTime": "2026-10-11T04:18:22.606Z",
+      "duration": 9495.335000000001,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-18-20.341Z-9645"
+  },
+  {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:19:10.401Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.692,
+    "stats": {
+      "startTime": "2026-10-11T04:19:12.545Z",
+      "duration": 9518.374000000002,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-19-10.401Z-9875"
+  },
+  {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:19:27.404Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.259,
+    "stats": {
+      "startTime": "2026-10-11T04:19:29.538Z",
+      "duration": 9095.801000000001,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-19-27.404Z-10138"
+  },
+  {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:19:42.413Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.438,
+    "stats": {
+      "startTime": "2026-10-11T04:19:44.584Z",
+      "duration": 9236.574999999999,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-19-42.413Z-10327"
+  },
+  {
+    "projects": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "startedUtc": "2026-10-11T04:19:56.458Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 40.766,
+    "stats": {
+      "startTime": "2026-10-11T04:19:58.611Z",
+      "duration": 38563.835999999996,
+      "expected": 126,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "engines": {
+      "chromium": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      },
+      "firefox": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      },
+      "webkit": {
+        "passed": 42,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    "folder": "runs/2026-10-11T04-19-56.458Z-10524"
+  }
+]

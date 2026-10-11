@@ -1,0 +1,26 @@
+{
+  "checkout": {
+    "tag": "v5.0.0",
+    "sha": "08c6903cd8c0fde910a37f88322edcfb5dd907a8",
+    "reference": "https://api.github.com/repos/actions/checkout/git/ref/tags/v5.0.0",
+    "runtime": "runs:\r\n  using: node24\r\n  main: dist/index.js\r\n  post: dist/index.js\r\n"
+  },
+  "setup-node": {
+    "tag": "v6.0.0",
+    "sha": "2028fbc5c25fe9cf00d9f06a71cc4710d4507903",
+    "reference": "https://api.github.com/repos/actions/setup-node/git/ref/tags/v6.0.0",
+    "runtime": "runs:\n  using: 'node24'\n  main: 'dist/setup/index.js'\n  post: 'dist/cache-save/index.js'\n  post-if: success()\n"
+  },
+  "upload-artifact": {
+    "tag": "v6.0.0",
+    "sha": "b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+    "reference": "https://api.github.com/repos/actions/upload-artifact/git/ref/tags/v6.0.0",
+    "runtime": "runs:\n  using: 'node24'\n  main: 'dist/upload/index.js'\n"
+  },
+  "download-artifact": {
+    "tag": "v7.0.0",
+    "sha": "37930b1c2abaa49bbe596cd826c3c89aef350131",
+    "reference": "https://api.github.com/repos/actions/download-artifact/git/ref/tags/v7.0.0",
+    "runtime": "runs:\n  using: 'node24'\n  main: 'dist/index.js'\n"
+  }
+}

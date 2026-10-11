@@ -1,0 +1,22 @@
+
+> toxbox@0.0.0 type-check
+> vue-tsc --build && vue-tsc --noEmit -p tsconfig.tests.json
+
+tests/components/jsonFormatter.test.ts(45,28): error TS2345: Argument of type 'boolean | { writeText: () => Promise<never>; } | undefined' is not assignable to parameter of type 'ClipboardStub | undefined'.
+  Type 'boolean' is not assignable to type 'ClipboardStub'.
+tests/components/jsonFormatter.test.ts(58,5): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/components/jsonFormatter.test.ts(63,142): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/components/jsonFormatter.test.ts(67,121): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/components/textStatistics.test.ts(85,3): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/components/textStatistics.test.ts(97,3): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/components/urlEncoder.test.ts(30,189): error TS2345: Argument of type 'boolean | { writeText: () => Promise<never>; } | undefined' is not assignable to parameter of type 'ClipboardStub | undefined'.
+  Type 'boolean' is not assignable to type 'ClipboardStub'.
+tests/components/urlEncoder.test.ts(33,244): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/components/urlEncoder.test.ts(36,629): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/components/urlEncoder.test.ts(39,284): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+tests/unit/routingSeo.test.ts(11,86): error TS2322: Type '({ component: { render: () => null; }; components?: undefined; children?: undefined; redirect?: undefined; props?: _RouteRecordProps<string | symbol> | undefined; path: string; ... 6 more ...; strict?: boolean | undefined; } | { ...; } | { ...; } | { ...; } | { ...; })[]' is not assignable to type 'readonly RouteRecordRaw[]'.
+  Type '{ component: { render: () => null; }; components?: undefined; children?: undefined; redirect?: undefined; props?: _RouteRecordProps<string | symbol> | undefined; path: string; ... 6 more ...; strict?: boolean | undefined; } | { ...; } | { ...; } | { ...; } | { ...; }' is not assignable to type 'RouteRecordRaw'.
+    Type '{ component: { render: () => null; }; components: Record<string, RawRouteComponent>; children?: never; redirect?: never; props?: Record<string, _RouteRecordProps> | boolean; ... 7 more ...; strict?: boolean | undefined; }' is not assignable to type 'RouteRecordRaw'.
+      Type '{ component: { render: () => null; }; components: Record<string, RawRouteComponent>; children?: never; redirect?: never; props?: Record<string, _RouteRecordProps> | boolean; ... 7 more ...; strict?: boolean | undefined; }' is not assignable to type 'RouteRecordSingleView'.
+        Types of property 'components' are incompatible.
+          Type 'Record<string, RawRouteComponent>' is not assignable to type 'undefined'.

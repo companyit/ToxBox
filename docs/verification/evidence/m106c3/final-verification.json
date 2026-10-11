@@ -1,0 +1,23 @@
+{
+  "changedExistingFiles": [
+    "docs/architecture/decisions.md",
+    "docs/specs/007-testing-ci/design.md",
+    "docs/specs/007-testing-ci/spec.md",
+    "docs/specs/007-testing-ci/tasks.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.tests.json"
+  ],
+  "otherExistingFilesUnchanged": 222,
+  "oldTestsAndC2EvidenceUnchanged": true,
+  "missingRelativeLinks": [],
+  "finalSsgMatchesRun": true,
+  "htmlCount": 9,
+  "finalDiffCheckExitCode": 0,
+  "allFinalCommandExitCodesZero": true,
+  "currentLogicalE2ECases": 42,
+  "currentThreeEngineExecutions": 126,
+  "originalVitestAndSsgIdentities": 154,
+  "manualC3DevDoneReviewPending": true,
+  "releaseReady": false
+}

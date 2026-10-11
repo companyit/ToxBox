@@ -1,3 +1,5 @@
+> M1-06C1承接（2026-10-11）：负责人已确认M1-06B Dev Done，Release Ready未完成。未实施的SSG-11/13与SSG-12 Playwright部分由[007测试与CI规格](../007-testing-ci/spec.md)、[设计](../007-testing-ci/design.md)、[任务](../007-testing-ci/tasks.md)细化，基线更新为154项（原151+3SSG）；ADR-019仍待审批，未授权迁移/安装/CI。下方M1-06A/B状态和证据保留为历史，不自动关闭任务。
+
 > M1-06B授权更新（2026-10-10）：负责人批准原生SSG及必要Hydration/SEO适配；以下待批描述保留为M1-06A历史。仅实施SSG，保留原Node/CDP测试；不实施ADR-019的框架迁移或CI。正式域名与托管发布仍待批准。实际状态以文末实施记录为准。
 
 当前实际设计：app.ts每次创建应用和路由，interactionReady.ts仅共享不可变注入键；entry-server.ts使用memory history返回body/head/modules，main.ts按SSG标记createSSRApp并等待路由。ToolPageLayout以fieldset保护首次交互，App.onMounted启用，导航DOM钩子只在客户端挂载后注册。数字固定zh-CN展示，404高亮依据已知route.name。

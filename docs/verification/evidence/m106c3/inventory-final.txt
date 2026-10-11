@@ -1,0 +1,5 @@
+
+> toxbox@0.0.0 test:inventory
+> node scripts/test-inventory.mjs
+
+154项映射/原文件SHA/唯一owner/发现目录通过；缺项及重复身份/owner负向夹具均被拒绝。默认151，SSG3，旧runner仅作对照。

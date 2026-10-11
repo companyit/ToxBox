@@ -1,0 +1,27 @@
+{
+  "requiredInputsMissing": [],
+  "requiredInputsIgnored": [],
+  "legalTemplatesVisible": true,
+  "environmentSecretsIgnored": true,
+  "trackedNewlyIgnored": [],
+  "gitDiffCheck": 0,
+  "stagedFiles": [],
+  "scannedCandidateFiles": 315,
+  "realCredentialPatternHits": [],
+  "localUserPathFiles": [],
+  "scanLimitations": [
+    "不含.git作者历史的改写",
+    "无完整截图OCR或逐项用户输入人工验收",
+    "只覆盖已知凭据模式，不保证识别任意秘密"
+  ],
+  "knownSyntheticMarkers": [
+    "docs/verification/evidence/m106c4/selfcheck.py",
+    "scripts/ci-evidence.py"
+  ],
+  "nonReservedEmailPatternFiles": [],
+  "reservedDomainFixtureFiles": [
+    "docs/verification/evidence/m106c2/branch-audit.json",
+    "tests/routingSeo.test.ts",
+    "tests/unit/routingSeo.test.ts"
+  ]
+}

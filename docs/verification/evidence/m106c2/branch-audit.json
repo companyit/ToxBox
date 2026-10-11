@@ -1,0 +1,935 @@
+[
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "id",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "`W U+${code.toString(16)}`",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "`non-W U+${code.toString(16)}`",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "'100000 ASCII code units accepted'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "'100001 ASCII code units rejected without stale results'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "'50000 Emoji fit the code-unit limit'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "'Emoji limit plus one code unit rejected'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "'CRLF and adjacent line boundaries'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatistics.test.ts",
+    "registrationTitle": "'repeated calls have independent results'",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J01 empty and JSON whitespace for all actions'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['', ' \\t\\r\\n']",
+      "['validate','format','minify']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J02 non-JSON whitespace'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['\\u00a0','\\ufeff','\\u3000']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J03 exact indentation'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J04 arrays'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [
+      "['[]','[1,true,null]']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J05 string and number'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [
+      "['\"你好\"','42']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J06 false null zero and true remain outputs'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['true','false','null','0']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J07 illegal structures'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['{\"a\":}','{\"a\":1,}','[1,]',\"{'a':1}\",'/*x*/{}']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J08 invalid primitives and multiple roots'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['undefined','NaN','Infinity','01','1n','{}[]']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J09 surrounding JSON whitespace'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J10 nested exact output'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J11 internal spaces'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J12 duplicate and escaped duplicate names'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J13 safe boundaries'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['9007199254740991','-9007199254740991']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J14 reject unsafe conversion, allow syntax validation'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [
+      "['9007199254740992','9007199254740993','-9007199254740992','9.007199254740992e15']",
+      "[n,`{\"n\":${n}}`]",
+      "['format','minify']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J15 finite range'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [
+      "['1e400','{\"n\":-1e400}']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J16 decimal loss, underflow and representation are explicit native semantics'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "[['1.0000000000000001','1'],['1e-400','0'],['-0','0'],['1.00','1'],['1e2','100'],['9007199254740991.1','9007199254740991']]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J17 Unicode escaped and emoji'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J18 escapes and literal newline'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J19 lone surrogate and no normalization'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J20 proto is own data and index keys reorder'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J21 UTF16 limits ASCII and emoji'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J22 depth and quotes'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J23 output guard exact boundary and actual expansion'",
+    "oldAssertions": 3,
+    "newAssertions": 3,
+    "internalLoopExpressions": [
+      "[999999,1000000,1000001]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J24 unexpected failures sanitized and recover'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatter.test.ts",
+    "registrationTitle": "'J25 overwritten values and deterministic error priority'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U01 empty is not an error and avoids native APIs'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [
+      "names",
+      "modes",
+      "['encode','decode']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U02 unescaped set'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U03 Chinese'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U04 Emoji'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U05 component reserved'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U06 URI reserved'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U07 brackets'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U08 reserved decoding'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U09 preserved escape case'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U10 space and plus encode'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U11 whitespace is content'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U12 plus never means form space'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U13 invalid percent sequences'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['%','%2','%GG','a%4Zb','%u4F60']",
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U14 truncated UTF8'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['%E4%BD','%F0%9F%98','%E4x%BD%A0']",
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U15 invalid UTF8'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['%80','%C0%AF','%E0%80%AF','%F4%90%80%80','%FF']",
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U16 encoded surrogate fails'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['%ED%A0%80','%ED%B0%80']",
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U17 lower-case escapes'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U18 percent once'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U19 existing escape is encoded'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U20 repeated decode requires manual input'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U21 repeated encode'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U22 raw URI is not parsed or validated'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U23 lone surrogate encode fails'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "['\\uD800','\\uDC00','a\\uD800b','\\uD800\\uD800','\\uDC00\\uD800']",
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U24 raw surrogate decode is native passthrough'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U25 HTML remains a string'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U26 ASCII size boundary avoids API on excess'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes",
+      "['encode','decode']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U27 Emoji code units and maximum expansion'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U28 exact decode size'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U29 unexpected and URIError sanitized then recovered'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "[['encodeURIComponent','encode','component'],['encodeURI','encode','uri'],['decodeURIComponent','decode','component'],['decodeURI','decode','uri']]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoder.test.ts",
+    "registrationTitle": "'U30 no Unicode normalization, controls, no recursive repair'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [
+      "modes"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'empty/example/nonempty guard/clear'",
+    "oldAssertions": 7,
+    "newAssertions": 7,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'composition hides stale numbers until compositionend'",
+    "oldAssertions": 3,
+    "newAssertions": 3,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'over limit preserves text and invalidates results, then recovers'",
+    "oldAssertions": 4,
+    "newAssertions": 4,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'clipboard missing selects full text even above limit'",
+    "oldAssertions": 4,
+    "newAssertions": 4,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'clipboard rejection preserves input and shows fallback'",
+    "oldAssertions": 3,
+    "newAssertions": 3,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'clipboard success copies exact text'",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'pending copy cannot overwrite clear feedback or submit twice'",
+    "oldAssertions": 3,
+    "newAssertions": 3,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "registrationTitle": "'unmount during pending clipboard promise is safe'",
+    "oldAssertions": 0,
+    "newAssertions": 0,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C01 edit invalidates immediately, illegal and over-limit inputs retained'",
+    "oldAssertions": 8,
+    "newAssertions": 8,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C02 composition prevents execution and never auto-parses'",
+    "oldAssertions": 5,
+    "newAssertions": 5,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C03 indent change, minify independence, validate has no output'",
+    "oldAssertions": 6,
+    "newAssertions": 6,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C04 guarded sample and clear reset/focus'",
+    "oldAssertions": 9,
+    "newAssertions": 9,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C05 successful result copy and failure variants select output'",
+    "oldAssertions": 6,
+    "newAssertions": 6,
+    "internalLoopExpressions": [
+      "[[undefined,true],[{writeText:async()=>{throw new Error('denied')}},true],[{writeText:async()=>{throw new Error('must not run')}},false]]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C06 stale success/failure never changes new results or focus'",
+    "oldAssertions": 4,
+    "newAssertions": 4,
+    "internalLoopExpressions": [
+      "['clear','edit','indent','recompute']",
+      "[false,true]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C07 pending prevents duplicate writes and no clipboard reads'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "registrationTitle": "'C08 unmount ignores late callbacks and remount empty; source text tool unchanged by integration'",
+    "oldAssertions": 6,
+    "newAssertions": 6,
+    "internalLoopExpressions": [
+      "['TextStatistics','JsonFormatter']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C01 default mode, empty state and switching invalidation'",
+    "oldAssertions": 8,
+    "newAssertions": 8,
+    "internalLoopExpressions": [
+      "['编码','解码']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C02 edit, decode failure, excess retention and recovery'",
+    "oldAssertions": 8,
+    "newAssertions": 8,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C03 repeated actions use original input and switching action clears old output'",
+    "oldAssertions": 7,
+    "newAssertions": 7,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C04 composition invalidates and requires manual operation'",
+    "oldAssertions": 6,
+    "newAssertions": 6,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C05 sample guard, clear and focus reset'",
+    "oldAssertions": 10,
+    "newAssertions": 10,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C06 actual result passed to clipboard, failure variants select output'",
+    "oldAssertions": 6,
+    "newAssertions": 6,
+    "internalLoopExpressions": [
+      "[[undefined,true],[{writeText:async()=>{throw Error('denied')}},true],[{writeText:async()=>{throw Error('must not call')}},false]]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C07 duplicate pending copies blocked'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C08 stale completion never changes new result or selection'",
+    "oldAssertions": 4,
+    "newAssertions": 4,
+    "internalLoopExpressions": [
+      "['edit','mode','clear','recompute']",
+      "[false,true]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "registrationTitle": "'C09 unmount, remount, HTML plain value and integration'",
+    "oldAssertions": 7,
+    "newAssertions": 7,
+    "internalLoopExpressions": [
+      "['TextStatistics','JsonFormatter','UrlEncoder']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U01 eight unique static pages and a non-indexable 404'",
+    "oldAssertions": 5,
+    "newAssertions": 5,
+    "internalLoopExpressions": [
+      "['path','routeName','title','description']",
+      "pages"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "`route ${page.path} resolves to ${page.routeName}`",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U02/03 known paths normalize preserving query/hash, unknown and wrong case stay 404'",
+    "oldAssertions": 4,
+    "newAssertions": 4,
+    "internalLoopExpressions": [
+      "['/Office/','/Unknown','/office//']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U04 page model switches and not-found never inherits previous tool'",
+    "oldAssertions": 4,
+    "newAssertions": 4,
+    "internalLoopExpressions": [
+      "['home','json-formatter','not-found','privacy']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U05 local/preview do not infer canonical from origin'",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [
+      "['local','preview']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U06 production rejects missing or invalid approved HTTPS origin'",
+    "oldAssertions": 1,
+    "newAssertions": 1,
+    "internalLoopExpressions": [
+      "[undefined,'bad','http://test.invalid','https://a:b@test.invalid','https://test.invalid/path','https://test.invalid/?a=1','https://test.invalid/#x','https://test.invalid/']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U07 approved test-only origin emits canonical paths and no 404 canonical'",
+    "oldAssertions": 3,
+    "newAssertions": 3,
+    "internalLoopExpressions": [
+      "pages"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U08 DOM adapter deduplicates managed tags and removes stale canonical'",
+    "oldAssertions": 5,
+    "newAssertions": 7,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'U09 API/resources are not known page or canonical targets'",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [
+      "['/api/v1/example','/assets/missing.js']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/routingSeo.test.ts",
+    "registrationTitle": "'memory history normalization replace does not introduce an extra entry'",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/ssg.test.mjs",
+    "registrationTitle": "'SSG path validation rejects duplicates, traversal and missing pages'",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [
+      "[{path:'/'},{path:'/../escape/'},{routeName:'p0'},{description:''}]"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/ssg.test.mjs",
+    "registrationTitle": "'SSG validation rejects missing body and missing assets'",
+    "oldAssertions": 2,
+    "newAssertions": 2,
+    "internalLoopExpressions": [],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  },
+  {
+    "source": "tests/ssg.test.mjs",
+    "registrationTitle": "'SSG output covers eight pages and real 404 with no preview SEO residue'",
+    "oldAssertions": 5,
+    "newAssertions": 5,
+    "internalLoopExpressions": [
+      "['index.html','office/index.html','office/text-statistics/index.html','developer/index.html','developer/json-formatter/index.html','developer/url-encoder/index.html','about/index.html','privacy/index.html','404.html']",
+      "['robots.txt','sitemap.xml','entry-server.js']"
+    ],
+    "result": "通过：断言种类/顺序和循环分支保留；head另核对真实DOM预期"
+  }
+]

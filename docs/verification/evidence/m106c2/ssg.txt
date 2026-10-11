@@ -1,0 +1,13 @@
+
+> toxbox@0.0.0 test:ssg
+> vitest run --project ssg
+
+
+ RUN  v4.1.0 <workspace>
+
+
+ Test Files  2 passed (2)
+      Tests  3 passed (3)
+   Start at  11:29:43
+   Duration  230ms (transform 22ms, setup 0ms, import 122ms, tests 7ms, environment 0ms)
+

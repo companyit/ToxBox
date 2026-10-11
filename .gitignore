@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+node_modules/
 .DS_Store
 dist
 dist-ssr
@@ -40,3 +40,27 @@ __screenshots__/
 
 .ssg-build/
 dist-ssg/
+
+# CI中转产物与待上传证据，不进入仓库或公开站点
+.ci/
+
+# 本地浏览器诊断，仅保留在工作区；历史已跟踪证据不会由本规则移出索引
+/playwright-report/
+/test-results/
+/docs/verification/evidence/m106c3/runs/
+trace.zip
+*.trace.zip
+test-failed-*.png
+error-context.md
+
+# 环境秘密；允许公开的无秘密模板
+.env
+.env.*
+.envrc
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
+!.env.sample
+!.env.*.sample
+!.envrc.example

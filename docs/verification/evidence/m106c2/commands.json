@@ -1,0 +1,79 @@
+[
+  {
+    "command": "npm run type-check",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:32.823228+00:00",
+    "durationSeconds": 2.011,
+    "evidence": "type-check.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:34.834260+00:00",
+    "durationSeconds": 2.489,
+    "evidence": "test-before-build.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:37.323687+00:00",
+    "durationSeconds": 1.991,
+    "evidence": "build.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:39.315151+00:00",
+    "durationSeconds": 1.779,
+    "evidence": "test-after-build.txt"
+  },
+  {
+    "command": "npm test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:41.093715+00:00",
+    "durationSeconds": 1.798,
+    "evidence": "npm-test.txt"
+  },
+  {
+    "command": "npm run test:ssg",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:42.891352+00:00",
+    "durationSeconds": 0.454,
+    "evidence": "ssg.txt"
+  },
+  {
+    "command": "npm run test:unit",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:43.345521+00:00",
+    "durationSeconds": 0.39,
+    "evidence": "unit.txt"
+  },
+  {
+    "command": "npm run test:components",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:43.735219+00:00",
+    "durationSeconds": 1.669,
+    "evidence": "components.txt"
+  },
+  {
+    "command": "npm run test:legacy",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:45.404239+00:00",
+    "durationSeconds": 0.425,
+    "evidence": "legacy.txt"
+  },
+  {
+    "command": "npm run test:inventory",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:45.829333+00:00",
+    "durationSeconds": 1.824,
+    "evidence": "inventory.txt"
+  },
+  {
+    "command": "git diff --check",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:29:47.653563+00:00",
+    "durationSeconds": 0.024,
+    "evidence": "diff-check.txt"
+  }
+]

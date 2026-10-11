@@ -1,0 +1,1 @@
+Embedded Python compile and summary execution exit 0; synthetic failed step remains failure in summary. Not a GitHub remote run.

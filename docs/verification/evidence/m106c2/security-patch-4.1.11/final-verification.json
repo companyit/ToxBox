@@ -1,0 +1,19 @@
+{
+  "changedExistingFiles": [
+    "docs/architecture/decisions.md",
+    "docs/specs/007-testing-ci/tasks.md",
+    "docs/verification/M1-06C2-vitest-migration.md",
+    "package-lock.json",
+    "package.json"
+  ],
+  "otherExistingFilesUnchanged": 201,
+  "previousEvidenceUnchanged": true,
+  "testedShaAllMatch": true,
+  "relativeLinksMissing": [],
+  "regressionCommandsAllPassed": true,
+  "defaultRuns": 5,
+  "testsPerDefaultRun": 151,
+  "ssgTestsPassed": 3,
+  "htmlFiles": 9,
+  "finalDiffCheckExitCode": 0
+}

@@ -1,0 +1,140 @@
+
+> toxbox@0.0.0 test
+> node scripts/e2e-run.mjs chromium
+
+
+> toxbox@0.0.0 build
+> run-p type-check "build-only {@}" --
+
+
+> toxbox@0.0.0 build-only
+> node scripts/ssg.mjs
+
+
+> toxbox@0.0.0 type-check
+> vue-tsc --build && vue-tsc --noEmit -p tsconfig.tests.json
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 78 modules transformed.
+rendering chunks...
+computing gzip size...
+.ssg-build/client/index.html                                     1.11 kB │ gzip:  0.65 kB
+.ssg-build/client/.vite/ssr-manifest.json                        6.59 kB │ gzip:  1.03 kB
+.ssg-build/client/assets/ToolPageLayout-bio4ZB7c.css             0.07 kB │ gzip:  0.09 kB
+.ssg-build/client/assets/ToolCard-Wn11rW9E.css                   0.68 kB │ gzip:  0.32 kB
+.ssg-build/client/assets/UrlEncoderPage-Bsoruvy1.css             1.65 kB │ gzip:  0.54 kB
+.ssg-build/client/assets/JsonFormatterPage-Dc8N_6RG.css          1.65 kB │ gzip:  0.54 kB
+.ssg-build/client/assets/HomeView-DzEzjvHm.css                   2.20 kB │ gzip:  0.66 kB
+.ssg-build/client/assets/TextStatisticsPage-QDQXVboo.css         2.22 kB │ gzip:  0.66 kB
+.ssg-build/client/assets/index-Xo4amtEH.css                      4.20 kB │ gzip:  1.46 kB
+.ssg-build/client/assets/interactionReady-Bz8OmTHO.js            0.04 kB │ gzip:  0.06 kB
+.ssg-build/client/assets/_plugin-vue_export-helper-BDNMzG2s.js   0.08 kB │ gzip:  0.09 kB
+.ssg-build/client/assets/tools-DN3FD6s2.js                       0.58 kB │ gzip:  0.39 kB
+.ssg-build/client/assets/NotFoundPage-tQv530fc.js                0.74 kB │ gzip:  0.48 kB
+.ssg-build/client/assets/ToolCard-98X1d3G3.js                    1.00 kB │ gzip:  0.64 kB
+.ssg-build/client/assets/CategoryPage-LVdY0u9a.js                1.13 kB │ gzip:  0.70 kB
+.ssg-build/client/assets/AboutPage-D5-3m5aW.js                   1.14 kB │ gzip:  0.78 kB
+.ssg-build/client/assets/PrivacyPage-xbwEm-Ji.js                 1.39 kB │ gzip:  0.96 kB
+.ssg-build/client/assets/ToolPageLayout-C_q6TJnz.js              1.72 kB │ gzip:  1.05 kB
+.ssg-build/client/assets/pages-CQlpXUR5.js                       1.76 kB │ gzip:  1.03 kB
+.ssg-build/client/assets/HomeView-zZci18RQ.js                    3.16 kB │ gzip:  1.71 kB
+.ssg-build/client/assets/TextStatisticsPage-B4qbKUNK.js          5.52 kB │ gzip:  2.90 kB
+.ssg-build/client/assets/UrlEncoderPage-DOW3hHSK.js              5.73 kB │ gzip:  2.80 kB
+.ssg-build/client/assets/JsonFormatterPage-r3Gykquj.js           6.89 kB │ gzip:  3.25 kB
+.ssg-build/client/assets/index-WB_wQp3P.js                      15.65 kB │ gzip:  6.79 kB
+.ssg-build/client/assets/vue-router-wC1Mx9LN.js                 94.79 kB │ gzip: 37.04 kB
+
+✓ built in 190ms
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 54 modules transformed.
+rendering chunks...
+computing gzip size...
+.ssg-build/server/assets/tools-CSENnnRx.js                0.72 kB │ gzip: 0.45 kB
+.ssg-build/server/assets/NotFoundPage-DhXjDGCo.js         2.19 kB │ gzip: 0.85 kB
+.ssg-build/server/assets/AboutPage-Bdz0Sd7b.js            2.50 kB │ gzip: 1.16 kB
+.ssg-build/server/assets/PrivacyPage-CchuS787.js          2.57 kB │ gzip: 1.34 kB
+.ssg-build/server/assets/ToolCard-Ey4guTee.js             2.71 kB │ gzip: 1.11 kB
+.ssg-build/server/assets/CategoryPage-CLHryI84.js         2.78 kB │ gzip: 1.11 kB
+.ssg-build/server/assets/ToolPageLayout-OxyjcqKO.js       4.16 kB │ gzip: 1.50 kB
+.ssg-build/server/assets/HomeView-DI_lrz3u.js             5.22 kB │ gzip: 2.10 kB
+.ssg-build/server/assets/UrlEncoderPage-DKawd29w.js       7.34 kB │ gzip: 2.66 kB
+.ssg-build/server/assets/JsonFormatterPage-B_onhjc2.js    7.65 kB │ gzip: 2.70 kB
+.ssg-build/server/assets/TextStatisticsPage-DCrWLk7s.js   8.63 kB │ gzip: 3.22 kB
+.ssg-build/server/entry-server.js                        15.87 kB │ gzip: 5.16 kB
+
+✓ built in 34ms
+SSG成功：index.html, office/index.html, office/text-statistics/index.html, developer/index.html, developer/json-formatter/index.html, developer/url-encoder/index.html, about/index.html, privacy/index.html, 404.html
+[WebServer] (node:9028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 42 tests using 1 worker
+
+(node:9029) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[2/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[3/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[4/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[5/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[6/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[7/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[8/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[9/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[10/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[11/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[12/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[13/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[14/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[15/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[16/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[17/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[18/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[19/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[20/42] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[21/42] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[22/42] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[23/42] [chromium] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[24/42] [chromium] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[25/42] [chromium] › e2e/pages.spec.ts:96:1 › E06 无斜杠308与旧hash
+[26/42] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /missing/
+[27/42] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /office/missing/
+[28/42] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /developer/missing/
+[29/42] [chromium] › e2e/pages.spec.ts:123:1 › E08 实际静态资源与禁止泄漏文件
+[30/42] [chromium] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[31/42] [chromium] › e2e/tools.spec.ts:29:1 › E05 JSON格式压缩语法与安全边界
+[32/42] [chromium] › e2e/tools.spec.ts:70:1 › E05 URL两模式四操作单轮与错误恢复
+[33/42] [chromium] › e2e/tools.spec.ts:113:3 › E05 复制成功失败挂起与卸载 text
+[34/42] [chromium] › e2e/tools.spec.ts:113:3 › E05 复制成功失败挂起与卸载 json
+[35/42] [chromium] › e2e/tools.spec.ts:113:3 › E05 复制成功失败挂起与卸载 url
+[36/42] [chromium] › e2e/tools.spec.ts:170:1 › E09 键盘跳转焦点与基础语义
+[37/42] [chromium] › e2e/tools.spec.ts:197:3 › E09 响应式与本地内容隐私 375
+[38/42] [chromium] › e2e/tools.spec.ts:197:3 › E09 响应式与本地内容隐私 768
+[39/42] [chromium] › e2e/tools.spec.ts:197:3 › E09 响应式与本地内容隐私 1440
+[40/42] [chromium] › e2e/tools.spec.ts:221:5 › E10 locale en-US › E10 固定数字展示
+[41/42] [chromium] › e2e/tools.spec.ts:221:5 › E10 locale zh-CN › E10 固定数字展示
+[42/42] [chromium] › e2e/tools.spec.ts:233:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+  42 passed (9.0s)
+本地E2E证据：docs/verification/evidence/m106c3/runs/2026-10-11T04-14-45.198Z-8921
+       11.30 real        14.85 user         3.01 sys
+           497270784  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              845936  page reclaims
+               12173  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+               45994  messages sent
+               25686  messages received
+                   3  signals received
+                8403  voluntary context switches
+              293820  involuntary context switches
+           765548374  instructions retired
+           268455530  cycles elapsed
+            26627120  peak memory footprint

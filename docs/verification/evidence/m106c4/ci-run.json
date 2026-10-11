@@ -1,0 +1,13 @@
+{
+  "projects": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "startedUtc": "2026-10-11T04:40:40.189Z",
+  "buildExitCode": null,
+  "testExitCode": 0,
+  "portReleased": true,
+  "buildMode": "verified-artifact",
+  "durationSeconds": 37.871
+}

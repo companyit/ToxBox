@@ -1,0 +1,119 @@
+[
+  {
+    "name": "type-check",
+    "command": [
+      "npm",
+      "run",
+      "type-check"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 2.095
+  },
+  {
+    "name": "npm-test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 12.282
+  },
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.988
+  },
+  {
+    "name": "test-1",
+    "command": [
+      "npm",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 11.112
+  },
+  {
+    "name": "test-2",
+    "command": [
+      "npm",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 11.633
+  },
+  {
+    "name": "test-3",
+    "command": [
+      "npm",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 11.216
+  },
+  {
+    "name": "vitest",
+    "command": [
+      "npm",
+      "run",
+      "test:vitest"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 2.298
+  },
+  {
+    "name": "ssg",
+    "command": [
+      "npm",
+      "run",
+      "test:ssg"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.471
+  },
+  {
+    "name": "inventory",
+    "command": [
+      "npm",
+      "run",
+      "test:inventory"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.88
+  },
+  {
+    "name": "audit",
+    "command": [
+      "npm",
+      "audit"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.767
+  },
+  {
+    "name": "static",
+    "command": [
+      "ruby",
+      "scripts/ci-check.rb"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.101
+  },
+  {
+    "name": "diff",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.022
+  }
+]

@@ -1,0 +1,7 @@
+
+> toxbox@0.0.0 type-check
+> vue-tsc --build && vue-tsc --noEmit -p tsconfig.tests.json
+
+vitest.config.ts(11,5): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'forbidOnly' does not exist in type 'InlineConfig'.

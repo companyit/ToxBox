@@ -1,0 +1,107 @@
+[
+  {
+    "case": "clean-report",
+    "passed": true,
+    "detail": "exit=0"
+  },
+  {
+    "case": "plaintext-sensitive",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "plaintext-sensitive-staged-deletion",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "embedded-zip-sensitive",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "embedded-zip-sensitive-staged-deletion",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "missing-expected-report",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "missing-expected-report-staged-deletion",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "not-started-report-warning",
+    "passed": true,
+    "detail": "exit=0"
+  },
+  {
+    "case": "historical-failure-report-scan",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "failure-context-and-trace-preserved",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "artifact-corruption",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "manifest-corruption",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "commit-mismatch",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "lock-mismatch",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "independent-receipt-mismatch",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "missing-independent-CI-receipt",
+    "passed": true,
+    "detail": "exit=1"
+  },
+  {
+    "case": "restored-artifact-valid",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "workflow-rejects-write-permission",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "workflow-rejects-broken-dependency",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "workflow-rejects-unpinned-action",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "case": "workflow-rejects-failure-bypass",
+    "passed": true,
+    "detail": ""
+  }
+]

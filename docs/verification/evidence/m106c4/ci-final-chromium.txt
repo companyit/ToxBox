@@ -1,0 +1,58 @@
+
+> toxbox@0.0.0 test:ci:e2e
+> node scripts/e2e-run.mjs --prepared chromium
+
+[WebServer] (node:13120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 42 tests using 1 worker
+
+(node:13129) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[2/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[3/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[4/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[5/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[6/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[7/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[8/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[9/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[10/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[11/42] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[12/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[13/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[14/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[15/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[16/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[17/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[18/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[19/42] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[20/42] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[21/42] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[22/42] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[23/42] [chromium] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[24/42] [chromium] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[25/42] [chromium] › e2e/pages.spec.ts:96:1 › E06 无斜杠308与旧hash
+[26/42] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /missing/
+[27/42] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /office/missing/
+[28/42] [chromium] › e2e/pages.spec.ts:111:3 › E07 真实HTTP404 /developer/missing/
+[29/42] [chromium] › e2e/pages.spec.ts:123:1 › E08 实际静态资源与禁止泄漏文件
+[30/42] [chromium] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[31/42] [chromium] › e2e/tools.spec.ts:33:1 › E05 JSON格式压缩语法与安全边界
+[32/42] [chromium] › e2e/tools.spec.ts:74:1 › E05 URL两模式四操作单轮与错误恢复
+[33/42] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 text
+[34/42] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 json
+[35/42] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 url
+[36/42] [chromium] › e2e/tools.spec.ts:174:1 › E09 键盘跳转焦点与基础语义
+[37/42] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 375
+[38/42] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 768
+[39/42] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 1440
+[40/42] [chromium] › e2e/tools.spec.ts:227:5 › E10 locale en-US › E10 固定数字展示
+[41/42] [chromium] › e2e/tools.spec.ts:227:5 › E10 locale zh-CN › E10 固定数字展示
+[42/42] [chromium] › e2e/tools.spec.ts:239:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+  42 passed (10.1s)
+本地E2E证据：.ci/run

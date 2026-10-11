@@ -1,0 +1,56 @@
+[
+  {
+    "runId": "2026-10-11T05-15-01.438Z-15041",
+    "projects": [
+      "chromium"
+    ],
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.165,
+    "stats": {
+      "startTime": "2026-10-11T05:15:03.678Z",
+      "duration": 8894.036,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "rawEvidence": "本地m106c3/runs目录；不公开提交"
+  },
+  {
+    "runId": "2026-10-11T05-14-47.837Z-14844",
+    "projects": [
+      "chromium"
+    ],
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.719,
+    "stats": {
+      "startTime": "2026-10-11T05:14:50.167Z",
+      "duration": 9358.304,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "rawEvidence": "本地m106c3/runs目录；不公开提交"
+  },
+  {
+    "runId": "2026-10-11T05-15-14.606Z-15278",
+    "projects": [
+      "chromium"
+    ],
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 11.503,
+    "stats": {
+      "startTime": "2026-10-11T05:15:16.736Z",
+      "duration": 9343.596000000001,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "rawEvidence": "本地m106c3/runs目录；不公开提交"
+  }
+]

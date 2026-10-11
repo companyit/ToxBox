@@ -1,0 +1,24 @@
+{
+  "reportMissing": false,
+  "browserStepOutcome": "success",
+  "syntheticInputsOnly": true,
+  "stats": {
+    "startTime": "2026-10-11T04:43:27.202Z",
+    "duration": 10071.547,
+    "expected": 42,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "run": {
+    "projects": [
+      "chromium"
+    ],
+    "startedUtc": "2026-10-11T04:43:26.920Z",
+    "buildExitCode": null,
+    "testExitCode": 0,
+    "portReleased": true,
+    "buildMode": "verified-artifact",
+    "durationSeconds": 10.402
+  }
+}

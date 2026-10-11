@@ -1,0 +1,1388 @@
+[
+  {
+    "id": "TXT-01",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U01",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-02",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U02",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-03",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U03",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-04",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U04",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-05",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U05",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-06",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U06",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-07",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U07",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-08",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U08",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-09",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U09",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-10",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U10",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-11",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U11",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-12",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U12",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-13",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U13",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-14",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U14",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-15",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U15",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-16",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U16",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-17",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U17",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-18",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U18",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-19",
+    "source": "tests/textStatistics.test.ts",
+    "title": "U19",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-20",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+9",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-21",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+a",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-22",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+b",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-23",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+c",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-24",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+d",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-25",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+20",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-26",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+a0",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-27",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+1680",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-28",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2000",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-29",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2001",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-30",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2002",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-31",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2003",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-32",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2004",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-33",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2005",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-34",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2006",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-35",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2007",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-36",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2008",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-37",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2009",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-38",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+200a",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-39",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2028",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-40",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+2029",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-41",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+202f",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-42",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+205f",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-43",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+3000",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-44",
+    "source": "tests/textStatistics.test.ts",
+    "title": "W U+feff",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-45",
+    "source": "tests/textStatistics.test.ts",
+    "title": "non-W U+85",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-46",
+    "source": "tests/textStatistics.test.ts",
+    "title": "non-W U+180e",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-47",
+    "source": "tests/textStatistics.test.ts",
+    "title": "non-W U+200b",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-48",
+    "source": "tests/textStatistics.test.ts",
+    "title": "non-W U+200d",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-49",
+    "source": "tests/textStatistics.test.ts",
+    "title": "100000 ASCII code units accepted",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-50",
+    "source": "tests/textStatistics.test.ts",
+    "title": "100001 ASCII code units rejected without stale results",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-51",
+    "source": "tests/textStatistics.test.ts",
+    "title": "50000 Emoji fit the code-unit limit",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-52",
+    "source": "tests/textStatistics.test.ts",
+    "title": "Emoji limit plus one code unit rejected",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-53",
+    "source": "tests/textStatistics.test.ts",
+    "title": "CRLF and adjacent line boundaries",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "TXT-54",
+    "source": "tests/textStatistics.test.ts",
+    "title": "repeated calls have independent results",
+    "target": "tests/unit/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "id": "JSON-01",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J01 empty and JSON whitespace for all actions",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-02",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J02 non-JSON whitespace",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-03",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J03 exact indentation",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-04",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J04 arrays",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-05",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J05 string and number",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-06",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J06 false null zero and true remain outputs",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-07",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J07 illegal structures",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-08",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J08 invalid primitives and multiple roots",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-09",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J09 surrounding JSON whitespace",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-10",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J10 nested exact output",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-11",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J11 internal spaces",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-12",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J12 duplicate and escaped duplicate names",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-13",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J13 safe boundaries",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-14",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J14 reject unsafe conversion, allow syntax validation",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-15",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J15 finite range",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-16",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J16 decimal loss, underflow and representation are explicit native semantics",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-17",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J17 Unicode escaped and emoji",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-18",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J18 escapes and literal newline",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-19",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J19 lone surrogate and no normalization",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-20",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J20 proto is own data and index keys reorder",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-21",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J21 UTF16 limits ASCII and emoji",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-22",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J22 depth and quotes",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-23",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J23 output guard exact boundary and actual expansion",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-24",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J24 unexpected failures sanitized and recover",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "JSON-25",
+    "source": "tests/jsonFormatter.test.ts",
+    "title": "J25 overwritten values and deterministic error priority",
+    "target": "tests/unit/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "id": "URL-01",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U01 empty is not an error and avoids native APIs",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-02",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U02 unescaped set",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-03",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U03 Chinese",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-04",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U04 Emoji",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-05",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U05 component reserved",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-06",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U06 URI reserved",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-07",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U07 brackets",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-08",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U08 reserved decoding",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-09",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U09 preserved escape case",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-10",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U10 space and plus encode",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-11",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U11 whitespace is content",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-12",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U12 plus never means form space",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-13",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U13 invalid percent sequences",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-14",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U14 truncated UTF8",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-15",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U15 invalid UTF8",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-16",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U16 encoded surrogate fails",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-17",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U17 lower-case escapes",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-18",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U18 percent once",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-19",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U19 existing escape is encoded",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-20",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U20 repeated decode requires manual input",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-21",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U21 repeated encode",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-22",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U22 raw URI is not parsed or validated",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-23",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U23 lone surrogate encode fails",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-24",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U24 raw surrogate decode is native passthrough",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-25",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U25 HTML remains a string",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-26",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U26 ASCII size boundary avoids API on excess",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-27",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U27 Emoji code units and maximum expansion",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-28",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U28 exact decode size",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-29",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U29 unexpected and URIError sanitized then recovered",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "URL-30",
+    "source": "tests/urlEncoder.test.ts",
+    "title": "U30 no Unicode normalization, controls, no recursive repair",
+    "target": "tests/unit/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "id": "TXTC-01",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "empty/example/nonempty guard/clear",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "TXTC-02",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "composition hides stale numbers until compositionend",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "TXTC-03",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "over limit preserves text and invalidates results, then recovers",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "TXTC-04",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "clipboard missing selects full text even above limit",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "TXTC-05",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "clipboard rejection preserves input and shows fallback",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "TXTC-06",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "clipboard success copies exact text",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "TXTC-07",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "pending copy cannot overwrite clear feedback or submit twice",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "TXTC-08",
+    "source": "tests/textStatisticsInteraction.test.mjs",
+    "title": "unmount during pending clipboard promise is safe",
+    "target": "tests/components/textStatistics.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "id": "JSONC-01",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C01 edit invalidates immediately, illegal and over-limit inputs retained",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "JSONC-02",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C02 composition prevents execution and never auto-parses",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "JSONC-03",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C03 indent change, minify independence, validate has no output",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "JSONC-04",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C04 guarded sample and clear reset/focus",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "JSONC-05",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C05 successful result copy and failure variants select output",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "JSONC-06",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C06 stale success/failure never changes new results or focus",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "JSONC-07",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C07 pending prevents duplicate writes and no clipboard reads",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "JSONC-08",
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "title": "C08 unmount ignores late callbacks and remount empty; source text tool unchanged by integration",
+    "target": "tests/components/jsonFormatter.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "id": "URLC-01",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C01 default mode, empty state and switching invalidation",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-02",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C02 edit, decode failure, excess retention and recovery",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-03",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C03 repeated actions use original input and switching action clears old output",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-04",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C04 composition invalidates and requires manual operation",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-05",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C05 sample guard, clear and focus reset",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-06",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C06 actual result passed to clipboard, failure variants select output",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-07",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C07 duplicate pending copies blocked",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-08",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C08 stale completion never changes new result or selection",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "URLC-09",
+    "source": "tests/urlEncoderInteraction.test.mjs",
+    "title": "C09 unmount, remount, HTML plain value and integration",
+    "target": "tests/components/urlEncoder.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "id": "ROUTE-01",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U01 eight unique static pages and a non-indexable 404",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-02",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route / resolves to home",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-03",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route /office/ resolves to office",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-04",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route /office/text-statistics/ resolves to text-statistics",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-05",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route /developer/ resolves to developer",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-06",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route /developer/json-formatter/ resolves to json-formatter",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-07",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route /developer/url-encoder/ resolves to url-encoder",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-08",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route /about/ resolves to about",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-09",
+    "source": "tests/routingSeo.test.ts",
+    "title": "route /privacy/ resolves to privacy",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-10",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U02/03 known paths normalize preserving query/hash, unknown and wrong case stay 404",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-11",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U04 page model switches and not-found never inherits previous tool",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-12",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U05 local/preview do not infer canonical from origin",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-13",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U06 production rejects missing or invalid approved HTTPS origin",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-14",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U07 approved test-only origin emits canonical paths and no 404 canonical",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-15",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U08 DOM adapter deduplicates managed tags and removes stale canonical",
+    "target": "tests/components/seoDom.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-16",
+    "source": "tests/routingSeo.test.ts",
+    "title": "U09 API/resources are not known page or canonical targets",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "ROUTE-17",
+    "source": "tests/routingSeo.test.ts",
+    "title": "memory history normalization replace does not introduce an extra entry",
+    "target": "tests/unit/routingSeo.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "id": "SSG-01",
+    "source": "tests/ssg.test.mjs",
+    "title": "SSG path validation rejects duplicates, traversal and missing pages",
+    "target": "tests/ssg/validators.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "aec9e9e325a6280694fbbae429bb03fc4168d12b912ae250e505eeb3eeaee193"
+  },
+  {
+    "id": "SSG-02",
+    "source": "tests/ssg.test.mjs",
+    "title": "SSG validation rejects missing body and missing assets",
+    "target": "tests/ssg/validators.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "aec9e9e325a6280694fbbae429bb03fc4168d12b912ae250e505eeb3eeaee193"
+  },
+  {
+    "id": "SSG-03",
+    "source": "tests/ssg.test.mjs",
+    "title": "SSG output covers eight pages and real 404 with no preview SEO residue",
+    "target": "tests/ssg/output.test.ts",
+    "owner": "vitest",
+    "review": "原断言及内部循环保留；DOM宿主迁移见报告",
+    "sourceSha256": "aec9e9e325a6280694fbbae429bb03fc4168d12b912ae250e505eeb3eeaee193"
+  }
+]

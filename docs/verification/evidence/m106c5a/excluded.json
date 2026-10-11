@@ -1,0 +1,37 @@
+[
+  {
+    "path": ".ci/",
+    "reason": "忽略的本机环境、生成产物或原始脱敏备份，不是CI源输入",
+    "fileCount": 84,
+    "bytes": 1781148,
+    "trackedFilesRemoved": 0
+  },
+  {
+    "path": ".ssg-build/",
+    "reason": "忽略的本机环境、生成产物或原始脱敏备份，不是CI源输入",
+    "fileCount": 39,
+    "bytes": 232766,
+    "trackedFilesRemoved": 0
+  },
+  {
+    "path": "dist-ssg/",
+    "reason": "忽略的本机环境、生成产物或原始脱敏备份，不是CI源输入",
+    "fileCount": 33,
+    "bytes": 201301,
+    "trackedFilesRemoved": 0
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/runs/",
+    "reason": "Playwright原始Trace/截图/HTML诊断；仅保留本地",
+    "fileCount": 194,
+    "bytes": 20052632,
+    "trackedFilesRemoved": 0
+  },
+  {
+    "path": "node_modules/",
+    "reason": "本地依赖，使用npm ci重建",
+    "fileCount": 6796,
+    "bytes": 156225315,
+    "trackedFilesRemoved": 0
+  }
+]

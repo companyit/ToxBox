@@ -1,0 +1,1130 @@
+[
+  {
+    "path": "docs/verification/evidence/chrome-1440-dark.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 149623,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "d30e9fa9f03eb97f1746db8134fca7981bc5cdf870fa421169218bc4229d1493"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-1440-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 147133,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "0f7f806b570a073902635c71ed9c5874a674469613000bf36a01093b20120091"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-375-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 49855,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c2458de6ef2b8c97678129fd89e4459e4b3247b107d84dfc6b0e888fbd7567f1"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-768-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 131364,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e25c73e615c28e92828b3ce70dde8765d9144bc3c33361f523b324c0d15983e7"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-accessibility-tree.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 173049,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "88761ab00b642763587b7b32ac532d7c1a1a8ddbe64fe711e8147b301565ee65"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-browser-events.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 10099,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e67e5ef606b1dbde03bc673949c028a7d3d3f7247800bfc29d368ccab800e122"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-clear-enter-native.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 934,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "99dd32436294f32104365c1b6f9777a434182e4fa12deb763756fea5ae3b801a"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-clear-enter-native.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 27528,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "51810c6960d5d23d7267f80bfbd0ba6b342e1981c6bee1d67923c822b48d685d"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-clear-enter-recheck.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 11624,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "0f57c8f1ad7741113cee7a7dafca1b7ccb3f40524c507d3d37e7a3e3bb11dc25"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-clear-recheck.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 899,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c92edaa2ab37713d8f073c190456233051e5a00f3ebd3f0fff626dff92cd1d35"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-clipboard-and-ax.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 5650,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "951ae64576fa6e7e17e4982a8f5043c342577f81922f063837b94e02301a913b"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-error-boundaries.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 912,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "2c340ace3f3ecbf6b2907972d5193d54f883f0c63948478a0634e8964bc2a598"
+  },
+  {
+    "path": "docs/verification/evidence/chrome-real-browser-results.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 25434,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c543b9b79175d08f4c99a710f85ebc8beeacad7b02a7cf407690a4c48c796deb"
+  },
+  {
+    "path": "docs/verification/evidence/m103/accessibility.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 196676,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "9e925414cfa091c4c9b278bef7392b27c224e5d85c27258edb0befe4e9e372b5"
+  },
+  {
+    "path": "docs/verification/evidence/m103/browser-check.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 13749,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "0da5b5b28a48b410ba0ce67e96ab9450b7815b926ec96da6c28f8bffd88ce4ce"
+  },
+  {
+    "path": "docs/verification/evidence/m103/browser-events.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 10098,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "36bccb34c7a0a9207c8b5dc1edebf2e8988ff75bc2217f5bea56f7733331f5b3"
+  },
+  {
+    "path": "docs/verification/evidence/m103/browser-results.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 6618,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "32ed325fec3fd6de0a4d9379dff2f5f32471bdb29ce4f69d1b2d5532b960753d"
+  },
+  {
+    "path": "docs/verification/evidence/m103/json-1440-dark.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 80147,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "7295087fe0554c772b17a9b8fedad49796b0ba50fb2b44b05a7d6efb46c597b6"
+  },
+  {
+    "path": "docs/verification/evidence/m103/json-1440-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 80010,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "23f6bd21d360967e02779c1a76cf53bb76e6232cb8e5543392c92fbef323499b"
+  },
+  {
+    "path": "docs/verification/evidence/m103/json-375-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 60305,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "824408c25a867a6641f236a7399a573f00dc0568fa3280e19ca9c7c5dc79d7ce"
+  },
+  {
+    "path": "docs/verification/evidence/m103/json-768-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 90930,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "fb105d9f0022ded32f32b49d7fffb5b95744925dda3a6d2e5d9066498b2e6639"
+  },
+  {
+    "path": "docs/verification/evidence/m103/tested-file-sha256.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 3617,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "1748ad9f5de0e657c664b292792ff70785a6ad0b75ba328a8abc36e3fdc9e3a0"
+  },
+  {
+    "path": "docs/verification/evidence/m104/accessibility.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 223558,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "ecee2736ec681bf10f7bc623cc3c426b4057ab593c5566ac758ebd0e078021c9"
+  },
+  {
+    "path": "docs/verification/evidence/m104/browser-check.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 15650,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "7e0114c11f1dacb555093812baa45d26c85adf500a580c951c2a2460e7f471a5"
+  },
+  {
+    "path": "docs/verification/evidence/m104/browser-events.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 10102,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "d21ec4099be0bf06684f17e44875396414411d55baea5828794ec9c8e847658a"
+  },
+  {
+    "path": "docs/verification/evidence/m104/browser-results.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 8863,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "4d5f87c956d91e087f4a8fc3da981f9bd81bf63c3dbf202aa74a4fde1c7211cd"
+  },
+  {
+    "path": "docs/verification/evidence/m104/performance-observations.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 11007,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c4ab00d8086f2c593e5a21e57abbdee30de2b8fc6fbfb1ce45e9245be98857ff"
+  },
+  {
+    "path": "docs/verification/evidence/m104/performance-observations.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 4064,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "7c37b6fd554c0412fe913592edd920bf29a0ad52fd67fbc944ed71701b87f0fa"
+  },
+  {
+    "path": "docs/verification/evidence/m104/tested-file-sha256.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 4121,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "74f30d1775c7a26d62922815e1fd5056e3eb14339491265e8e206f988d50aeac"
+  },
+  {
+    "path": "docs/verification/evidence/m104/url-1440-dark.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 171111,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "88cac8b848afccd46297d1a5357ab836df2b0999b022233d91b4af74a0be3779"
+  },
+  {
+    "path": "docs/verification/evidence/m104/url-1440-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 166302,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e780d67fdb831a51d83f12bd549f56dac34e87c15cf76cf13788a720caea62b8"
+  },
+  {
+    "path": "docs/verification/evidence/m104/url-375-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 52556,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "22a5e1f45577d18d0cd75929e24ef7edc2291d8c40cc7f8fc80fc841da40f125"
+  },
+  {
+    "path": "docs/verification/evidence/m104/url-768-light.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 159036,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "028fdb8c6dc9f0774a7d6f64e461043889de0c577515cec21350a42c4c8354d6"
+  },
+  {
+    "path": "docs/verification/evidence/m105/accessibility.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 193414,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "1802b87042e4c2202ca8ffb09a0113cb905503337da5745ee30e5a530f1373e7"
+  },
+  {
+    "path": "docs/verification/evidence/m105/browser-check.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 23604,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "1f40465c1c029db34a1d199a3fd411e2756bfea17deae1d31c8b913536e50db9"
+  },
+  {
+    "path": "docs/verification/evidence/m105/browser-events.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 954465,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "05b538b70f31dcc0d00e206571c8037b6d81ac0f03027aa225c62a6ea771353e"
+  },
+  {
+    "path": "docs/verification/evidence/m105/browser-results.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 25443,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e874cc15215563a369b1bd3f0986dbac2b3db5f1272ec09ed7294b2ffd6ac64f"
+  },
+  {
+    "path": "docs/verification/evidence/m105/changed-files.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 2082,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "011577a004efa4ba7e5890c4cd24627400296c5847d7271997b993f07dadbd5b"
+  },
+  {
+    "path": "docs/verification/evidence/m105/raw-tool-response.html",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 682,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "31d0689aec38edbde686f63e61e3433a1cdf34bb2aa4fa3111b4df386b25fdff"
+  },
+  {
+    "path": "docs/verification/evidence/m105/tested-file-sha256.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 7331,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "2411e6d91e925efd8693950b196f1b40111634e6fcae0b8875263a52b89e3ab7"
+  },
+  {
+    "path": "docs/verification/evidence/m105/url-1440-mobile-false.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 182800,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "68bf6766670b59230a157a62eb4ca55da8e4fc0ca665e4e6876a06b80ac58694"
+  },
+  {
+    "path": "docs/verification/evidence/m105/url-375-mobile-false.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 52583,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "48b65efe906a2137e79e6e93c6016b39022e63c43df71a103183854b8b78acee"
+  },
+  {
+    "path": "docs/verification/evidence/m105/url-375-mobile-true.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 60383,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "debb5adb12aa7ce60753a57c3692ca86cdc2d992261bd3c4a5a5a89f58307951"
+  },
+  {
+    "path": "docs/verification/evidence/m105/url-768-mobile-false.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 190430,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "bdcfe309f2e7c1032d732401cbae373d5721c4ce1eaa9ac0b0c8ef8fbfe4a275"
+  },
+  {
+    "path": "docs/verification/evidence/m105/url-dark.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 61525,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "00ba2c5b1f5310ad436b7054ddbb540cd242fbb740e406e4bba52a9cbe1c81d1"
+  },
+  {
+    "path": "docs/verification/evidence/m106/accessibility.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 194716,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "cb402ba258a9fd479a9d61ce9b38670fde40c8428555e8e38545a74927d9f957"
+  },
+  {
+    "path": "docs/verification/evidence/m106/browser-check.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 23698,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "1185720b5c648e395ec23113d4e80b00167b8a93b7a235a0184830b3e418274f"
+  },
+  {
+    "path": "docs/verification/evidence/m106/browser-events.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 1347934,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "9a364669cb71102f28075734758c3fe382caa880dece1650805eab49e7a0c43a"
+  },
+  {
+    "path": "docs/verification/evidence/m106/browser-results.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 24812,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "aed35680b752d5c5ae528124f5470f514d99742e05d6e0a2d507b3472d309fd8"
+  },
+  {
+    "path": "docs/verification/evidence/m106/changed-files.txt",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 706,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "775642c00b7916fa1ea6e9d3355cfc7d10d3dbbed24adf9c33033b06a28a02ab"
+  },
+  {
+    "path": "docs/verification/evidence/m106/delayed-check.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 5453,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "29544de0e1fef044e297e8380a808ae69e82f806b04586912293db5b8deb74cd"
+  },
+  {
+    "path": "docs/verification/evidence/m106/delayed-results.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 1124,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a4ad49658dc21fcaee2a36f5128e64c0e80eba8306fd7b51d6d35a64308f9b34"
+  },
+  {
+    "path": "docs/verification/evidence/m106/hydration-check.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 7427,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "f3426500ad8fb0a4b9471f343e45cb335e6439b12cc1af6e321da7b5bb49ce97"
+  },
+  {
+    "path": "docs/verification/evidence/m106/hydration-events.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 272467,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "3125fc1f2bfe386ba9fdf5acc4c632fb0d5b1a88f013ac73af76fd0671d47a9f"
+  },
+  {
+    "path": "docs/verification/evidence/m106/hydration-results.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 23864,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "8bfe3973b4627d767708c57fcf264ef9c9973dc0dd8387ac84ba048a2a55440c"
+  },
+  {
+    "path": "docs/verification/evidence/m106/raw-tool-response.html",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 5984,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "eb1874dad60a7d76cd5fecb2033d266335f5661fa66994289b343b6458932891"
+  },
+  {
+    "path": "docs/verification/evidence/m106/ssg-about.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 48395,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "26cfe1bf83b116a62e28ac475111ca47349ce71c78ba2426704354a7b497a805"
+  },
+  {
+    "path": "docs/verification/evidence/m106/tested-sha256.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 8466,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "8e30d708c1e5f75f5f89506236080b58cfbdc6b5346a5db49788a891cd150204"
+  },
+  {
+    "path": "docs/verification/evidence/m106/url-1440-mobile-false.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 182824,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "73e3885ed13eb65107f340c9859609a16fcf7b9ed26d8a5fe6cf4de632e73dd0"
+  },
+  {
+    "path": "docs/verification/evidence/m106/url-375-mobile-false.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 52590,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a6d608bda1ec3bde6b9edf329a78c1ec765a63441ee412a9258ea3a8ded6f1f6"
+  },
+  {
+    "path": "docs/verification/evidence/m106/url-375-mobile-true.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 60400,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "d59334546f31e543930416e9e3245577e2919d30f3d93a879ab6cb0ac1f815d4"
+  },
+  {
+    "path": "docs/verification/evidence/m106/url-768-mobile-false.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 190455,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "ed76f23395123e6a1fcc5087c2cce4fb7495b82524d40b31c980314b0195cb15"
+  },
+  {
+    "path": "docs/verification/evidence/m106/url-dark.png",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 61512,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "143d679e7ebd7127c994cfeb69f18ec21715e33f0743082feac95b9a9405f036"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/build.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 4054,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "4ffa57974734396db277b983e7858d227e70dc2b945cc3471f0405cfd3d720bb"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/components.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 265,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "c59526d542339da11ecb64f8a0a2d4d20c5151d245dc6d68994c56c1e33458ec"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/diff-check.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 0,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/inventory.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 223,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "57704e1cd1acad255903f246011892f7af9ad31a09b4e4288c3078b3d5d0fdf5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/legacy-before-build.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 7334,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "6a6e2dd18f9c6cbaebd01f35466e2a21ed05a0357725cdafbb115fe8cc948092"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/legacy.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 7833,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "46541eb196e848e695f14d40d347d796adb411c724fc17fe0e26586264fed76c"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/npm-test.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 272,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "f2d1fc64bf3ce67ca6dc0705b417491a1d62bddb6f5fafea56046ca6f1b8be42"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/build.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 4054,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "0853c27bbdeed6e63a95c87037b1aaf1e6073552adc323431f7375365b5efcc9"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/diff-check-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 0,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/diff-check.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 0,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/install.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 449,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "1de4e8aff1238f9cbcb2e7e482a0b7f7fe28d54438fb07748b48e67d7b6edf3c"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/inventory.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 223,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "57704e1cd1acad255903f246011892f7af9ad31a09b4e4288c3078b3d5d0fdf5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/lock-before.json",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 132883,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "0731cf09bdacd209001651eedf6781e329e7fdd3ba42270220ab73eeecf874d1"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/npm-audit.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 24,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "6d8c5c8f3d7684adb070417bd608d01ae90aa3dc26a65af03ffda4955f38d9a3"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/npm-ci.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 449,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "77df68f5aa80e80458807aafd19ece861c680fcfd1886df850e53596de29bc21"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/npm-ls.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 84,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e42e89c0cefe2db5c75324e0d7db8f81844a425a52e20bf5c6fb99b13f09a99f"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/npm-test.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 273,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "aca162e5c0ccb2241fbaeb62950c4888c82dec396d8581ef0577d6fad0342b9f"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/package-before.json",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 1504,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "044b4fa1a3fa45fb226e08c82f81d3e52d20bf3490d0ec674b726764fd663ab8"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/ssg.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 246,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "ca58791ea9a31ce8e1ae71b07d8cae375897136df7989b58db320fe1ef2dc930"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-after-build-1.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 273,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "80ced50fc6946fa584425d4df82526b71437bf1b9b55b3ea695adb78f4f04943"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-after-build-2.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 273,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "95c0923497ff295c15dfb37cf529c51fce24a4ece6b6a3024bbdfd86fb3795dc"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-before-build-1.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 273,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "f6785753a5ae7cf530e0832b2cb5e577005bd9f6e3cff0041d2b12bea94d92e4"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-before-build-2.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 273,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5ab8c38f0346b40a268e1aef6600a9a8e5f1286f19d1bbe4855169d4744dd969"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/type-check.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 89,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/ssg.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 245,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e53460c2edaa46099778694bc360eb35eab5561b9b52f160f4fdce96d7e83a06"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-after-build.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 272,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "7a570595c3a15d4be396e08c8f9b749087b0e4049138cd18dd8d8c1ddb390923"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-before-build.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 272,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "bec6a04dab56cdef6e7994b6868f308e6fe71a019fc1538a6693f136e8734272"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-first.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 1572,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "bcb48491e574805cee32ddbf3fc7664599080f8551188af578d72a66ef243e88"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-second.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 272,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "249eb763e88475a55eb4274fc209f95ce6554cdfbd7a58cf47e5c9357b0bdda7"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/type-check-first.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 314,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "253225d98bedd2febf1fc36992c5a839180d32aede1010dd5dedd140fa281172"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/type-check-second.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 2961,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "6ac8b2b013b444b874e88325a0d8e879a12901494822128a0f05dc5e758437bd"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/type-check-third.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 89,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/type-check.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 89,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/unit.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 253,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "d2d98c31ff7fa0a13eaa31b6d388ab51c5f22f88a25952f1bbb8177d33237fbd"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/audit.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 24,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "6d8c5c8f3d7684adb070417bd608d01ae90aa3dc26a65af03ffda4955f38d9a3"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/browser-install.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 11218,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "54231027f8a8ca3134800308a6d78077e22012d66362c308af05fd7993a88e12"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/build-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 4054,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e94eb4ec8b2bb678c5ec61dbf114968b8a7e72da1e02d1a4c2d8def42d519e5d"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/chromium-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 9298,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "4a0f1fc3f18e9775c404f4154b625378c708a66f263fa88788a37fa3a2eb1ea5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/chromium-first.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 44548,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a7095e3aa4154a0747d8ae11993f79d4c4b498b0283f8c2d8dfa54e71e65001d"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/chromium-second.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 5323,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a241e533ed71a6cb283643968d3acbd95554c1e7f6f845d40d8121a96c0d2da0"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/chromium-third.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 9298,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "b592bd9a62a9e960bb5f1559f4be035eb425402ca8f0a5b5a9ec30098b4888b3"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/diff-check-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 0,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/install.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 447,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "55157d66624b8ccd805a5b64a415f076b5e5b6a36ac1994302671b1f6cd03390"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/inventory-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 223,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "57704e1cd1acad255903f246011892f7af9ad31a09b4e4288c3078b3d5d0fdf5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/lock-before.json",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 133148,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "317c37aa642948659e9c3f990c083202b41c24ca51de3e2b05ec39c49d49bae8"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/npm-test-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 9298,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "c4e18454b9f18d6c837180bc1c3c8c644f4aed270e037f32e712fb98aacc7b00"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/package-before.json",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 1505,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "41ddb480ce0c0fd0841b2e94ecbd3d56c40ab2655f66d8d31c76e1ef0a440946"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/ssg-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 246,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "69ffd2bc5d1bca8a087c3a5bcfe462eab61fae327b9da5ec2148d684b6a9fe24"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/test-final-1.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 9301,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "45ac3119292d47b5189d49cca33e52a67ecf68c20df89ed06923cc053c840439"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/test-final-2.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 9301,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "9f5b9bc32d4ec827234eff9f47173290c29ad31038eb69fc81af7bd9104f4de8"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/three-engines-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 17532,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5bf65f9f80703ee4f9ccfae026272a417d4369eb1221690685a32ca616ffd4e2"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/three-engines-first.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 27229,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "f41eca0a08bc9c78801e28f7f849b3a965facfc04e087b418314c42d0750839e"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/type-check-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 89,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/type-check-first.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 89,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/vitest-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 280,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "4a1f5e6d4ee026af225b7aea87e09c8eb7015167cd970487a7dcdb165a75d9be"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/audit.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 24,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "6d8c5c8f3d7684adb070417bd608d01ae90aa3dc26a65af03ffda4955f38d9a3"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/build.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 4054,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "cf63f184f64d54f56dc7c26eba35ee63f7d13e311e028ab4900e2f547c687b35"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-e2e.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 12653,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "21ef233f254008a5965b852b27afd39310e811435ac69a5ef6bf4ac0acc7bd04"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-final-chromium.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 4427,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "dcb87a4c111b506ca99726d1a01e2d2cfea0b5a0015463df51ab2fc2e4953886"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/diff.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 0,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/embedded-summary-check.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 129,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a6523b407e5cb9c9bd5cb915483b7ec0d1e44a1ab2a85ee48aa519139aede43b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/inventory.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 223,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "57704e1cd1acad255903f246011892f7af9ad31a09b4e4288c3078b3d5d0fdf5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/npm-test.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 8524,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "51b4948a95413f0dccce9c8487079721f17e583800bf66d13808b5855c52565a"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/selfcheck.py",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 4639,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5f4349c633dbbb3c40f23f57e9c310d9895edbe8a7775ce5e2e8d5406de3430e"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ssg.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 246,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "fcc6a3f123b24fdc5f7fecdd0020ec4913f0369c7cc65dcc724a89fb6a2af621"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/static-final.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 126,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "3330746745c691b2aa8fd2c6143d80d4a6742d34f83d50fc1d5d6b3243b9394b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/static.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 126,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "694bdaf6c617c803f4c34ef271437d38421b38408ad85e7994380442bcf1e172"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/test-1.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 8524,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "bf7ef9235e0da7f77ae5cf9ad71fb77d33c4e0355c58f4e2f0afa7b22078b034"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/test-2.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 8524,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a707df52822b425d64c432034237f797c2d24165eb9a9d4171b9f8a51b658ee5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/test-3.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 8524,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "3c86a14644b3f4ca529ddcaeb432b013ca9dc44b9efc39eee49f02cb60959bc7"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/type-check.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 89,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/vitest.txt",
+    "reason": "可选日志/历史包快照/本地复核辅助：审阅输入内容和用途后再选取",
+    "bytes": 280,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "bd06840cdf320e617193028e34608e2ce581123b9470356702ea61c6210efc50"
+  },
+  {
+    "path": "docs/verification/evidence/tested-file-sha256.json",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 2881,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "5832fabe4e8ff3d760b17cec69ce52b966e5fd51d7a9ea92e5b37630e4481dab"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-clear-native.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 4156,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "030322b751157b280d843ec4578a38a076f90e07a05098617021f62526351341"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-clear-recheck.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 4102,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "48b1475d866f2e15a5bd8c37c6c1be89b404a67e0da35cfa744aef690ed5657b"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-clipboard-ax.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 3831,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "04237cf6e46b13117ee47367214dd827c227af8b440f0b29331d77b5b0341812"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-error-boundaries.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 4362,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "286c19d1c0a13ab58ccbd2dff9d34fac1ff509d891c1978fc769739fb3920f4f"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-m102-browser-check.mjs",
+    "reason": "历史已跟踪浏览器证据/宿主：需确认截图及原始数据公开范围，不自动移除索引",
+    "bytes": 13771,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "2cb9aef483d2a5fb8c480ddbdae4c189efef40119d8fb6762f9faf02854cc5e7"
+  }
+]

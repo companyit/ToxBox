@@ -1,0 +1,17 @@
+[
+  {
+    "name": "node_modules/@playwright/test",
+    "before": null,
+    "after": "1.64.0"
+  },
+  {
+    "name": "node_modules/playwright",
+    "before": null,
+    "after": "1.64.0"
+  },
+  {
+    "name": "node_modules/playwright-core",
+    "before": null,
+    "after": "1.64.0"
+  }
+]

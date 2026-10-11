@@ -1,0 +1,39 @@
+
+> toxbox@0.0.0 test
+> vitest run --project unit --project components
+
+
+ RUN  v4.1.0 <workspace>
+
+ ❯ |components| tests/components/urlEncoder.test.ts (9 tests | 1 failed) 56ms
+   × URLC-09 C09 unmount, remount, HTML plain value and integration 4ms
+ ❯ |components| tests/components/jsonFormatter.test.ts (8 tests | 1 failed) 60ms
+   × JSONC-08 C08 unmount ignores late callbacks and remount empty; source text tool unchanged by integration 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |components| tests/components/jsonFormatter.test.ts > JSONC-08 C08 unmount ignores late callbacks and remount empty; source text tool unchanged by integration
+TypeError: The URL must be of scheme file
+ ❯ tests/components/jsonFormatter.test.ts:72:20
+     70|     const page=await readFile(new URL('../../src/views/pages/'+c+'Page…
+     71|   }
+     72|   const home=await readFile(new URL('../../src/views/HomeView.vue',imp…
+       |                    ^
+     73| })
+     74|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |components| tests/components/urlEncoder.test.ts > URLC-09 C09 unmount, remount, HTML plain value and integration
+TypeError: The URL must be of scheme file
+ ❯ tests/components/urlEncoder.test.ts:38:710
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 6 passed (8)
+      Tests  2 failed | 149 passed (151)
+   Start at  11:26:45
+   Duration  1.50s (transform 189ms, setup 0ms, import 344ms, tests 208ms, environment 827ms)
+

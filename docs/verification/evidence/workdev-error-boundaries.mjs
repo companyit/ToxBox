@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import os from 'node:os';
-const dir='/Users/user/development/ToxBox/ToxBox/docs/verification/evidence';
+import { fileURLToPath } from 'node:url';
+const dir=fileURLToPath(new URL('./',import.meta.url));
 await fs.mkdir(dir,{recursive:true});
 const tabs=await (await fetch('http://127.0.0.1:9223/json')).json();
 const ws=new WebSocket(tabs.find(t=>t.type==='page').webSocketDebuggerUrl);

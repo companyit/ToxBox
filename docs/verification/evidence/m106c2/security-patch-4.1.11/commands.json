@@ -1,0 +1,72 @@
+[
+  {
+    "command": "npm run type-check",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:19.566480+00:00",
+    "durationSeconds": 1.997,
+    "evidence": "type-check.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:21.563665+00:00",
+    "durationSeconds": 2.711,
+    "evidence": "test-before-build-1.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:24.275018+00:00",
+    "durationSeconds": 1.834,
+    "evidence": "test-before-build-2.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:26.108828+00:00",
+    "durationSeconds": 2.036,
+    "evidence": "build.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:28.144907+00:00",
+    "durationSeconds": 1.821,
+    "evidence": "test-after-build-1.txt"
+  },
+  {
+    "command": "npm test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:29.965550+00:00",
+    "durationSeconds": 1.785,
+    "evidence": "npm-test.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:31.750654+00:00",
+    "durationSeconds": 1.828,
+    "evidence": "test-after-build-2.txt"
+  },
+  {
+    "command": "git diff --check",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:33.579160+00:00",
+    "durationSeconds": 0.025,
+    "evidence": "diff-check.txt"
+  },
+  {
+    "command": "npm run test:ssg",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:33.603821+00:00",
+    "durationSeconds": 0.491,
+    "evidence": "ssg.txt"
+  },
+  {
+    "command": "npm run test:inventory",
+    "exitCode": 0,
+    "startedUtc": "2026-10-11T03:38:34.094793+00:00",
+    "durationSeconds": 1.836,
+    "evidence": "inventory.txt"
+  }
+]

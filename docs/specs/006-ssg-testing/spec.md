@@ -1,3 +1,5 @@
+> M1-06C1承接（2026-10-11）：负责人已确认M1-06B Dev Done，Release Ready未完成。未实施的SSG-11/13与SSG-12 Playwright部分由[007测试与CI规格](../007-testing-ci/spec.md)、[设计](../007-testing-ci/design.md)、[任务](../007-testing-ci/tasks.md)细化，基线更新为154项（原151+3SSG）；ADR-019仍待审批，未授权迁移/安装/CI。下方M1-06A/B状态和证据保留为历史，不自动关闭任务。
+
 > M1-06B授权更新（2026-10-10）：负责人批准原生SSG及必要Hydration/SEO适配；以下待批描述保留为M1-06A历史。仅实施SSG，保留原Node/CDP测试；不实施ADR-019的框架迁移或CI。正式域名与托管发布仍待批准。实际状态以文末实施记录为准。
 
 当前实施状态：8个正式页面与404已生成静态正文和head，真实Chrome完成禁JS、节点保留、准备状态及工具回归。SSG-11/13框架迁移与CI不属于本轮；SSG-12核心采用已有Node/CDP，不安装Playwright。当前只批准preview产物；非preview SEO构建明确拒绝，正式索引产物尚未实施。Dev Done开发条件满足、提交负责人审阅；Release Ready未完成。实际证据与未测范围见[本轮验收](../../verification/M1-06-ssg-testing.md)。

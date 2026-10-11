@@ -1,0 +1,67 @@
+[
+  {
+    "name": "test-1",
+    "command": [
+      "npm",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 12.003,
+    "rawLog": ".ci/m106c5a-validation/test-1.txt"
+  },
+  {
+    "name": "types",
+    "command": [
+      "npm",
+      "run",
+      "type-check"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.783,
+    "rawLog": ".ci/m106c5a-validation/types.txt"
+  },
+  {
+    "name": "npm-test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 11.264,
+    "rawLog": ".ci/m106c5a-validation/npm-test.txt"
+  },
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.902,
+    "rawLog": ".ci/m106c5a-validation/build.txt"
+  },
+  {
+    "name": "test-2",
+    "command": [
+      "npm",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 11.603,
+    "rawLog": ".ci/m106c5a-validation/test-2.txt"
+  },
+  {
+    "name": "diff",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.027,
+    "rawLog": ".ci/m106c5a-validation/diff.txt"
+  }
+]

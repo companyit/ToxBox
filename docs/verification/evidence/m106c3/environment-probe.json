@@ -1,0 +1,41 @@
+{
+  "firefox": {
+    "events": [
+      {
+        "type": "compositionstart",
+        "isComposing": null,
+        "isTrusted": false
+      },
+      {
+        "type": "compositionstart",
+        "isComposing": null,
+        "isTrusted": true
+      },
+      {
+        "type": "compositionend",
+        "isComposing": null,
+        "isTrusted": true
+      },
+      {
+        "type": "input",
+        "isComposing": false,
+        "isTrusted": true
+      }
+    ],
+    "counts": [
+      "2",
+      "2",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "webkitTab": {
+    "tag": "BODY",
+    "text": "跳转到主内容WWorkDev Tools办公工具开发者工具隐"
+  },
+  "webkitAltTab": {
+    "tag": "A",
+    "text": "跳转到主内容"
+  }
+}

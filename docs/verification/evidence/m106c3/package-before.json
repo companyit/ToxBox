@@ -1,0 +1,42 @@
+{
+  "name": "toxbox",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview --outDir dist-ssg",
+    "build-only": "node scripts/ssg.mjs",
+    "type-check": "vue-tsc --build && vue-tsc --noEmit -p tsconfig.tests.json",
+    "build:csr": "vite build",
+    "test": "vitest run --project unit --project components",
+    "test:unit": "vitest run --project unit",
+    "test:components": "vitest run --project components",
+    "test:ssg": "vitest run --project ssg",
+    "test:watch": "vitest --project unit --project components",
+    "test:inventory": "node scripts/test-inventory.mjs",
+    "test:legacy": "node --test tests/textStatistics.test.ts tests/jsonFormatter.test.ts tests/urlEncoder.test.ts tests/textStatisticsInteraction.test.mjs tests/jsonFormatterInteraction.test.mjs tests/urlEncoderInteraction.test.mjs tests/routingSeo.test.ts tests/ssg.test.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.42",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.5",
+    "@types/node": "^24.13.4",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vue/test-utils": "2.5.1",
+    "@vue/tsconfig": "^0.9.1",
+    "jsdom": "30.0.1",
+    "npm-run-all2": "^9.0.3",
+    "typescript": "~6.0.0",
+    "vite": "^8.2.2",
+    "vite-plugin-vue-devtools": "^8.2.1",
+    "vitest": "4.1.11",
+    "vue-tsc": "^3.3.11"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  }
+}

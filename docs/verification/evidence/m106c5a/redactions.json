@@ -1,0 +1,198 @@
+[
+  {
+    "path": "docs/verification/evidence/m106c2/components.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "8e6e214cc01cc0b23b00d679a7e2752b299e6eb7e7040ec167a18481294b546f",
+    "publicSha256": "c59526d542339da11ecb64f8a0a2d4d20c5151d245dc6d68994c56c1e33458ec",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/components.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/npm-test.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "91b3657c1ba8b865b2c2f9e49c00d8e06131e96faa8f282c310059ba6ca5e5a4",
+    "publicSha256": "f2d1fc64bf3ce67ca6dc0705b417491a1d62bddb6f5fafea56046ca6f1b8be42",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/npm-test.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/npm-ls.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "97b6d721508690ff923862876aaa1706916780f4d2699a791cefbc07587ec831",
+    "publicSha256": "e42e89c0cefe2db5c75324e0d7db8f81844a425a52e20bf5c6fb99b13f09a99f",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/security-patch-4.1.11/npm-ls.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/npm-test.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "09bf30f4507729f38940f2174881c742d4d7bad3f6ba9c4842daa16fea5ec521",
+    "publicSha256": "aca162e5c0ccb2241fbaeb62950c4888c82dec396d8581ef0577d6fad0342b9f",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/security-patch-4.1.11/npm-test.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/ssg.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "db1f53531ed54ff090c76ad2bcc9461c2adb9335883256bffa8593ca6ed42028",
+    "publicSha256": "ca58791ea9a31ce8e1ae71b07d8cae375897136df7989b58db320fe1ef2dc930",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/security-patch-4.1.11/ssg.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-after-build-1.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "f36ebfe30b9cce277ca876af6f4268f090401c294646b2796b2b4d0a082a41a4",
+    "publicSha256": "80ced50fc6946fa584425d4df82526b71437bf1b9b55b3ea695adb78f4f04943",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/security-patch-4.1.11/test-after-build-1.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-after-build-2.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "dcc82c979c78278e8a47fe10a8a0b4033e95eb3325c224268b7fd7de7711bdb7",
+    "publicSha256": "95c0923497ff295c15dfb37cf529c51fce24a4ece6b6a3024bbdfd86fb3795dc",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/security-patch-4.1.11/test-after-build-2.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-before-build-1.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "d15dba067923349ee227a12cd6d82ded6cd954e09c049a86aab55920506ba878",
+    "publicSha256": "f6785753a5ae7cf530e0832b2cb5e577005bd9f6e3cff0041d2b12bea94d92e4",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/security-patch-4.1.11/test-before-build-1.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/test-before-build-2.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "a34aa2d514ddf6d01be72f055af9440ffba948cd0299de082268305f3b104ae3",
+    "publicSha256": "5ab8c38f0346b40a268e1aef6600a9a8e5f1286f19d1bbe4855169d4744dd969",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/security-patch-4.1.11/test-before-build-2.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/ssg.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "e0600866a45388119406263587ae04d1bad157f4664a0ed2c82c6b42065de4a0",
+    "publicSha256": "e53460c2edaa46099778694bc360eb35eab5561b9b52f160f4fdce96d7e83a06",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/ssg.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-after-build.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "454e1619f92fb7efeb8d700f650ab1653fe8a5e445d6810745576d0b603dedac",
+    "publicSha256": "7a570595c3a15d4be396e08c8f9b749087b0e4049138cd18dd8d8c1ddb390923",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/test-after-build.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-before-build.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "af952b80704b558157d8911e62cf882ee11b3f44b5838ae780e1675193f1a09d",
+    "publicSha256": "bec6a04dab56cdef6e7994b6868f308e6fe71a019fc1538a6693f136e8734272",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/test-before-build.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-first.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "141c4b30d424e749f25dbfbfd58b430ac1cc634e76529bcb0d00aa5ee4db1705",
+    "publicSha256": "bcb48491e574805cee32ddbf3fc7664599080f8551188af578d72a66ef243e88",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/test-first.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/test-second.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "09e8c5b7e2975a7ae84b953f96efcf0d1ece1e7218e3c09ef7edf7b06f7aedf7",
+    "publicSha256": "249eb763e88475a55eb4274fc209f95ce6554cdfbd7a58cf47e5c9357b0bdda7",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/test-second.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/unit.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "a29acaf87bd528ef6e135bd595be7cc6a479305a7d5312f2a3a0f94555c5c080",
+    "publicSha256": "d2d98c31ff7fa0a13eaa31b6d388ab51c5f22f88a25952f1bbb8177d33237fbd",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c2/unit.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/browser-install.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "a46b2a77d7adf489658d4d067a75f3db53947e819e0edf9e1ce8f67bfc8b9380",
+    "publicSha256": "54231027f8a8ca3134800308a6d78077e22012d66362c308af05fd7993a88e12",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c3/browser-install.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/chromium-first.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "f805e2087279682cfe08a064461bb8984ab8acedeed61991a44a6ba5a02df708",
+    "publicSha256": "a7095e3aa4154a0747d8ae11993f79d4c4b498b0283f8c2d8dfa54e71e65001d",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c3/chromium-first.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/environment.json",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "68be83e1c85aa629018305a7c16c4c432835c89a31a44a2daa286c57b082fc1c",
+    "publicSha256": "7e1c859ebe56416244b76f997760ed6aac6a8b1e801ac5d3b2959baac3825203",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c3/environment.json"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/ssg-final.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "96e76f3597e0a6555dec0cf8458ef0ecb735d751035ed770b6a7167e2faac734",
+    "publicSha256": "69ffd2bc5d1bca8a087c3a5bcfe462eab61fae327b9da5ec2148d684b6a9fe24",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c3/ssg-final.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/three-engines-first.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "0286135528a8cd04470e3380498bcd3f6534f3550657a55969ba3ebdbf0bb1c5",
+    "publicSha256": "f41eca0a08bc9c78801e28f7f849b3a965facfc04e087b418314c42d0750839e",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c3/three-engines-first.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/vitest-final.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "fc3ffc534b9fc6255bf9a3541e1c1e348d52a176a8ef36037a1c73cc0dbdda79",
+    "publicSha256": "4a1f5e6d4ee026af225b7aea87e09c8eb7015167cd970487a7dcdb165a75d9be",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c3/vitest-final.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ssg.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "efee6afb5263d17d8ab21ea4a64fcd02d11ff7c18ec427dc47c78ffc8462f3f2",
+    "publicSha256": "fcc6a3f123b24fdc5f7fecdd0020ec4913f0369c7cc65dcc724a89fb6a2af621",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c4/ssg.txt"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/vitest.txt",
+    "reason": "非必要本机工作区/缓存/临时目录标识；未修改测试输入、结果、版本或算法",
+    "originalSha256": "245a28d3c76fe7091ab4b29348ef4487ef73869f190bdb3023ee048ff4802a16",
+    "publicSha256": "bd06840cdf320e617193028e34608e2ce581123b9470356702ea61c6210efc50",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/m106c4/vitest.txt"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-clear-recheck.mjs",
+    "reason": "历史CDP宿主输出路径改为相对脚本位置；断言/输入/浏览器操作保持",
+    "originalSha256": "c0b0a237d16c76e575307ff4b3d3e6c787a2063de9e323995fea6a1ac606ee16",
+    "publicSha256": "48b1475d866f2e15a5bd8c37c6c1be89b404a67e0da35cfa744aef690ed5657b",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/workdev-clear-recheck.mjs"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-clipboard-ax.mjs",
+    "reason": "历史CDP宿主输出路径改为相对脚本位置；断言/输入/浏览器操作保持",
+    "originalSha256": "01e761a638db8c769b6352cd65cb8cce3e2ba6182a5b6213b2d541a9f5215929",
+    "publicSha256": "04237cf6e46b13117ee47367214dd827c227af8b440f0b29331d77b5b0341812",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/workdev-clipboard-ax.mjs"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-clear-native.mjs",
+    "reason": "历史CDP宿主输出路径改为相对脚本位置；断言/输入/浏览器操作保持",
+    "originalSha256": "5199bb7d20bef23f8c54f5e09820f831d907b4a12b655fd00cebdc4b1860b54a",
+    "publicSha256": "030322b751157b280d843ec4578a38a076f90e07a05098617021f62526351341",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/workdev-clear-native.mjs"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-error-boundaries.mjs",
+    "reason": "历史CDP宿主输出路径改为相对脚本位置；断言/输入/浏览器操作保持",
+    "originalSha256": "d1a13301b1c7daadafc9275b9f5d07c79262d8dae1644129f3533ee14fb817d4",
+    "publicSha256": "286c19d1c0a13ab58ccbd2dff9d34fac1ff509d891c1978fc769739fb3920f4f",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/workdev-error-boundaries.mjs"
+  },
+  {
+    "path": "docs/verification/evidence/workdev-m102-browser-check.mjs",
+    "reason": "历史CDP宿主输出路径改为相对脚本位置；断言/输入/浏览器操作保持",
+    "originalSha256": "96e0696ec1a5f84acbc6c60d18bd52f9b9461cca56c81b39ffb3667bbdfbc22d",
+    "publicSha256": "2cb9aef483d2a5fb8c480ddbdae4c189efef40119d8fb6762f9faf02854cc5e7",
+    "originalLocation": ".ci/m106c5a-originals/docs/verification/evidence/workdev-m102-browser-check.mjs"
+  }
+]

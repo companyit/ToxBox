@@ -1,0 +1,1388 @@
+[
+  {
+    "path": ".github/workflows/quality.yml",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 6825,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "de5a9366ed7f4b1485e5b932e341b436064b65dd869997858a23afa19db35731"
+  },
+  {
+    "path": ".gitignore",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 904,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "a9f598193a587dc42ab59b098b76a0852295a1da0d050975e7116deac4da6433"
+  },
+  {
+    "path": ".node-version",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 8,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "73fb1b615e2043a933be1c0895cde4358036acc28d785692509b822aa53c761f"
+  },
+  {
+    "path": ".vscode/extensions.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 39,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "70d56b550e796e3ea92922763ae03037a1a94596fda9d737982c75f6a20e88dd"
+  },
+  {
+    "path": "AGENTS.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3312,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "ebe7442ca529fa22000a8afbcabeb0b07f7e90ed76417487c2802da96f6bb949"
+  },
+  {
+    "path": "README.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1367,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "9fd2167ed6cbc4247227a5c9a119ce4c266403c920db426212cb37cc342766a0"
+  },
+  {
+    "path": "docs/architecture/decisions.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 24132,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "9c87fc3148360105b0f2f888ec5f904df9a4bd75dc7f9c74548c370c716ed26f"
+  },
+  {
+    "path": "docs/architecture/frontend.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 9569,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "d1874d8e7f81cd306ac29843fbac82c8fcef9c3622b7bb501da7700576f11d46"
+  },
+  {
+    "path": "docs/product/requirements.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4183,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "910989424f26f105887dc410a04bc29a36b9cc64f5368fc3bf7bfa6d2ae7c127"
+  },
+  {
+    "path": "docs/product/roadmap.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4442,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "86c9f21f4e3e23fc985bfc62d81863ee84d00503a7314eac428ae3ed00576114"
+  },
+  {
+    "path": "docs/product/vision.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1603,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e2dd44aa36aad453b745ff5024db4a873dd4a7e46546fd9934fe4f8ede8e5ebe"
+  },
+  {
+    "path": "docs/quality/gates.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3552,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "f27b8b545b28b0b73804ffe82b267fb8998c97c1ba6d3a4f944785090e596112"
+  },
+  {
+    "path": "docs/specs/001-site-shell/design.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 5737,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "caa2504cc31b0f7d84c1e2f3db87d783fb26ea6b09fe5706bba4c566c38ad3e0"
+  },
+  {
+    "path": "docs/specs/001-site-shell/spec.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4172,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "7ccb9197db9d7e50fc63957fa3755272865dd4048321cbd7fd3f0608219453ee"
+  },
+  {
+    "path": "docs/specs/001-site-shell/tasks.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 10383,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "219c365af0cc686299ea0bef25b89ad78cdd5c98b3ad28b812e628773b1d89dd"
+  },
+  {
+    "path": "docs/specs/002-text-statistics/design.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 8143,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "de0cc02b23e6041e25f32218770ca6d5e784507496d00069cafeb46ee51de671"
+  },
+  {
+    "path": "docs/specs/002-text-statistics/spec.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 9478,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "f0ac0d522d21db01e2d691013c92986cd7268bdaa90f4aafa37b64860e825ccc"
+  },
+  {
+    "path": "docs/specs/002-text-statistics/tasks.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 32031,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "cf5b42cebd90618d59eae7cdde14d6b2ec2031c140e0c13d19f8c35cf7c0aa0a"
+  },
+  {
+    "path": "docs/specs/003-json-formatter/design.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 8721,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a2df6b4452f79ebde6369f530fdb77a4d92d8efb9a0c1e0e2bd65fae99c46ec7"
+  },
+  {
+    "path": "docs/specs/003-json-formatter/spec.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 10486,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "07c10d9a4b4ac9e2fb23637c77ad8756e015873cf650eade3b5ebe677d650e6d"
+  },
+  {
+    "path": "docs/specs/003-json-formatter/tasks.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 15833,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "1cbe8c20e9ee7d72748745c5f4651e2a3ef294f1be7abefac389efd8d68d930f"
+  },
+  {
+    "path": "docs/specs/004-url-encoder/design.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 8806,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e1c6214028a8c9c02458e1515a0c7f6620e5a59ce619a3d7d374dd232b12b02a"
+  },
+  {
+    "path": "docs/specs/004-url-encoder/spec.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 11678,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "8d2f5779d1efb2d4574f0895978df834a4e315f4ca1eac42b07692bb9bd6c20e"
+  },
+  {
+    "path": "docs/specs/004-url-encoder/tasks.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 17146,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e5e18e303a523c70cbbb20f3a3c1d4c0231c56cc3e238a3857eeca67457509aa"
+  },
+  {
+    "path": "docs/specs/005-routing-seo/design.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 15161,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "12b42863f8c0795e579abcf90b722a4b8b29bff099cc29db00213920cddf6187"
+  },
+  {
+    "path": "docs/specs/005-routing-seo/spec.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 9192,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "2fd379ca27a83f18e7e6fd35878f03a58e57999fdfc050639b99105f39e0ca7f"
+  },
+  {
+    "path": "docs/specs/005-routing-seo/tasks.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 16392,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "98c75d34fdfd58139d4e9e1a9ecf71e416c1c3a89120e67c06d49e9952bb578b"
+  },
+  {
+    "path": "docs/specs/006-ssg-testing/design.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 23543,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "34ec93170678d859b26da02565454df093eb7f6237d5e5c1f3659329988b5267"
+  },
+  {
+    "path": "docs/specs/006-ssg-testing/spec.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 9477,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "cdec7b61e8e71e5006ab103576697c7c30572e5fb91fcdda50d5acafa8085ac9"
+  },
+  {
+    "path": "docs/specs/006-ssg-testing/tasks.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 17838,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "0a8620335246b1df0466ad4e1f87582854b0fec675a9aa7c809a42be7102e9ac"
+  },
+  {
+    "path": "docs/specs/007-testing-ci/design.md",
+    "reason": "test-inventory.mjs必需154映射规格，不得忽略",
+    "bytes": 44659,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "0ecdc90b4dee98a6519fed69a19743f338a88beae8a8aa191d1d6509d74a5e18"
+  },
+  {
+    "path": "docs/specs/007-testing-ci/spec.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 9210,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "9138e3b5c5586ec3020dbb6b6cea26c94af780073b5679d225986e1c2feb00d6"
+  },
+  {
+    "path": "docs/specs/007-testing-ci/tasks.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 16885,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "9027a46b51dd01e23afd2f18883a183c9afc60781cc82176dd869d5ba5221c18"
+  },
+  {
+    "path": "docs/verification/M1-02-text-statistics.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 34003,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e8b84aee590d088d1a08ef7899fcbe672974be414b4eb7348b4265783c637bbe"
+  },
+  {
+    "path": "docs/verification/M1-03-json-formatter.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 7874,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c170b05b3a0142620a0f21239bef729dac4644c5eac59db3a8077013344dfa35"
+  },
+  {
+    "path": "docs/verification/M1-04-url-encoder.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 10558,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "ae009bb3d52735f29256fec19e9f33410bfa5e789c53723e0e83ce1ebd09ac3d"
+  },
+  {
+    "path": "docs/verification/M1-05-routing-seo.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 12152,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c418fe696f1e9dbbc94255fd840697e95e5cd2046ba6c21bfaccb2a5fb18ff37"
+  },
+  {
+    "path": "docs/verification/M1-06-ssg-testing.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 10759,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "43ccfa321dc527b9ed3068d1d1f8c59c73c47cbb2217a5edf2da6e9a73f2fc8f"
+  },
+  {
+    "path": "docs/verification/M1-06C2-vitest-migration.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 16672,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "2219694372a2efe3569da80fabfc44ea6a9cc864a57f255f12e9276adf1f7e88"
+  },
+  {
+    "path": "docs/verification/M1-06C3-playwright-e2e.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 10345,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "3867359f0fbdb2365595fb4e42bd9323e621ddfccdc0529ec902608fe36722f1"
+  },
+  {
+    "path": "docs/verification/M1-06C4-github-actions.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 13124,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "7093c2ddada8ae326914544396370f7b603ca83f30d23edce0a5a4962ec00d3c"
+  },
+  {
+    "path": "docs/verification/M1-06C5A-public-submission.md",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 6684,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "7bed53c78453b9075ddab947ae6167237a6efa3410dccd56c45189cf56b5c03b"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/branch-audit.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 34493,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "f81512ea593687460a3a73cabd17b8dcb91dd1c757b3ec9c8907d6a17eddc5c6"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/commands.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1970,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "83b723bf4e62c4b43b52ede87852036e6e22e9e05503de6ea0b38845e8315b2c"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/environment.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 683,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "529723d7e755f2ddbdbef27bad6e8b17ab40831f6b39ba1d9525a28c0ea02972"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/commands.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1803,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "30d0144a08a82e5e73ec9cb96d2152598f5a3b82962a909874af541c880b03dd"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/dependency-changes.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 776,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "57a1662f7502900acf909b5d7ec644b4182ff174be39bd873f44c0236e1da3b7"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/environment.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 2533,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "3045f7e72fcf26a3d0dfbbe1bfac0cdd8c925b033ac98f313bc23f1d30f3c00a"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/final-verification.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 507,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "9bb6be579e395e3475f6536ec9894f8a1b9495a71f45134207e1743f7cd83c27"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/tested-sha256.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 10840,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "6e0d812ce74c5181520e5da2b23185e1f943502fac9fa9bb0f6ff5623e742326"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/security-patch-4.1.11/workspace-before.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 23109,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "51492d360081c4eec88e46cd6d39e67f716741369ff65080a327bf5aa588bae5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c2/tested-sha256.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 10840,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "af6d354a4fb1b90e5406a0b99f5cca227d4283e641043b8dd3d8c13ed0768415"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/commands.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1557,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "c998138e4294c6bc730f8a25570ea8a5bb4115cf80c97cc214b2912f22c81088"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/dependency-changes.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 284,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "4f08d5180452c1aa5741b836bde4b77da00792fdb69d31d9b09e473a6b8545e7"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/environment-probe.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 734,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "adb73f5fb5860f7ee4c89e9aa2b45d4068cf23b1f4c79a63d2a99cf18c655e79"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/environment.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 694,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "7e1c859ebe56416244b76f997760ed6aac6a8b1e801ac5d3b2959baac3825203"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/final-verification.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 677,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a9f1230f32bbeed79005454aa4e5280878f61073b6bd8e4f6f8b34a3e24a7c41"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/historical-cdp-mapping.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 17285,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "7194922d5d7c8e2122ee3d5dece30dbcea4594381f7232ecfe18c9076a513b51"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/privacy-scan.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 398,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5da854fe6bcede80d680b1d52cec5d01f3ab77925e6fd2fb9aad92543b39ab5c"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/process-cleanup.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 35,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "8d3f973a150f8b0b96a1fefbdbe88b2b344fbd5de0447bbfb1de52b4b2304cc6"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/published-package-and-browser-catalog.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1429,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "c4fafe4ec07c3cafac7b2715ecc7bad3dcaa7272b84da2cd472eb96793893548"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/runs-summary.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 5212,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "24df190efb247ed737822be23e49d02c59b0abcb70ae17edc50a9e5d1b8571cb"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/tested-sha256.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 11197,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "3f4b31eaefdc37d3e02102dcde40f9ead4cf548664b39b160b31d7605261bed6"
+  },
+  {
+    "path": "docs/verification/evidence/m106c3/workspace-before.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 26471,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "de6e6acefc1182779f654bf651aabdde45e50beb431e136e26eaf3f13597fd4f"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/actions.json",
+    "reason": "ci-check.rb必需官方Action SHA核对输入，不得忽略",
+    "bytes": 1145,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5435d5a502380efcaa047726f7898f5da720336cd0d999efe694a86e468475a3"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/before.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 62432,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "0ffe75efae921012768417618e71b26195097ee5fc8d931016f65d5a88636cb2"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/changed-from-start.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 241,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "509de8448201258a64b7573244643d8816b21779475866f64257abf3168465f8"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-build-sha256.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 8273,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "dbf80165b469bf833cdf93ecfce8912aac4589a4300c3a68658c3d9f9fcaa101"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-final-receipt.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 12381,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "b524c5c9a1f689b0671abca0dbab246f99822fa36ddf181cfcf1c9da5664e6ac"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-final-run.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 217,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "ee657ab6089e394200b5f8a85eee9892f74d72fcd0f1403c721f88617963c9fc"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-final-summary.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 506,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "510485886be1a290dac4badabf5d6e4a95849a92e14aca92fde24b4949d481ed"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-run.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 246,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "bb8551ddbf35234eee33e9c088e370c0e3fa38a840405e30ba7f2d8654a795a8"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/ci-summary.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 549,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "42ef1b50ecd972f703e4df26c0518562dc5fa44317fb7dd7c82aeba13b2d6696"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/commands.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1722,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "dafebb15e57c433f55b1ffcee967c641c9dfa38511581a1221f462eda231eab2"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/default-runs.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 2018,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "15296e5c55e22a52ce87ed49be4ca3452e128ebc4e38be8c6155587dd74fd291"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/environment.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 573,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "da5abef9ec74917d565254d79f42b9e149b1512e21d9d2413304500337a04133"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/final-checks.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 731,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "1f7796e56c3b82c0ea37c9c711d996929fc754ef3b183ecb3373f739e682a9eb"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/negative-checks.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1927,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "6205857a1cff12e96e64e05b6da7bbeae57d9ffd1e4bb1cc2b043110c14749c5"
+  },
+  {
+    "path": "docs/verification/evidence/m106c4/process-cleanup.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 67,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "fce73cc501d2d0f9103ade84df19ec52aeb797e0e51340f1d2348c371d34962a"
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/checks.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 812,
+    "gitState": "??",
+    "currentChange": true
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/commands.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1158,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5b248e9579fe1ea9f1bf3f851ef335743e2b7190e05dcffb168f36b0ff2be2aa"
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/excluded.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 979,
+    "gitState": "??",
+    "currentChange": true
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/manifest.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 10342,
+    "gitState": "??",
+    "currentChange": true
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/must-submit.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 55198,
+    "gitState": "??",
+    "currentChange": true
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/preservation.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 229,
+    "gitState": "??",
+    "currentChange": true
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/redactions.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 13439,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "552588f31439946bfe48fa44dad29c06f3f115cf731675e3b2c9a0ed69b2e4bf"
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/review-required.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 49330,
+    "gitState": "??",
+    "currentChange": true
+  },
+  {
+    "path": "docs/verification/evidence/m106c5a/test-summary.json",
+    "reason": "结构化验收、迁移/安全/版本/提交范围证据；保留复核所需输入",
+    "bytes": 1272,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e23502c8c6c74789f6b4a6c4be84a4a51bd6f9dd91c713eda62af0c01a5644ba"
+  },
+  {
+    "path": "e2e/helpers.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4315,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "8229d435d7944c1cc21250ced2797c4424498de1ccd02cdd35a76f8a1a64e406"
+  },
+  {
+    "path": "e2e/pages.spec.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 7808,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "8a90db3fdf0f7e6d52647757559e26939f5bfdb1264ba03f069a2e6f6d34a1bd"
+  },
+  {
+    "path": "e2e/tools.spec.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 13041,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5f49c5cbb4da6ed347f3b1b438e4e4db22dfaba9107c4256f04e9ef44cf41058"
+  },
+  {
+    "path": "env.d.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 38,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+  },
+  {
+    "path": "index.html",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 672,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "ed4ad35b5cdb7a0dc2f461219c9bec1c796479e4c4ffb7fd54073140a5b68c9d"
+  },
+  {
+    "path": "package-lock.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 134614,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "0ba1938a5aeb0e507c2f5859f769bcb2975b3e70d8fbfcb4de69edec52ff7fcb"
+  },
+  {
+    "path": "package.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1721,
+    "gitState": " M",
+    "currentChange": true,
+    "sha256": "3dbd6978b7d30d8e9d2525333369e045075419d9442094d53b0aa6d912f7cd29"
+  },
+  {
+    "path": "playwright.config.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1303,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "e8c94cec235fd3ddf57670a2e414431c40b9083a601c46ed81b88edda19d8f86"
+  },
+  {
+    "path": "public/favicon.ico",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4286,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445"
+  },
+  {
+    "path": "scripts/ci-build.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4020,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "8e86b3d6eabd7f695d86bca2bd45836506731cb894cda4c60b721ce81656d151"
+  },
+  {
+    "path": "scripts/ci-check.rb",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3855,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "304ed2238e8ff640718df7d703a97459341a7a55c8d38cfe741f8d5c3ea9d55e"
+  },
+  {
+    "path": "scripts/ci-evidence.py",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4029,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "1a479a3626befe1774a841eca563c8ac658af69ffbc8453b7dc5a438673ee382"
+  },
+  {
+    "path": "scripts/e2e-run.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4769,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a25778106b434bdb65964b8af7ea6b7870cc466c85befd90d0869e0986a29cc1"
+  },
+  {
+    "path": "scripts/ssg.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4984,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "d792029e142ecc9ec5e576398339a5862d76db083e02faa19dc385b60568b468"
+  },
+  {
+    "path": "scripts/test-inventory.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3032,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "eb5f87d639469fface6e256e6c52519b1a3cad81b511510eee210daf4d1b0b18"
+  },
+  {
+    "path": "src/App.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1165,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "9dfe447c5a44b0001a42d687316aa8e2bbe421c4fd3bde5fe74cf6b7f0d93af5"
+  },
+  {
+    "path": "src/app.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 546,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "d73534abc0e7d6156030b52c223e21b5e6a55a842334175cbd3115a7a8698339"
+  },
+  {
+    "path": "src/assets/base.css",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1347,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "3f562517d1b41ddffe6905292bcb7cd458fd50e952ec29c4b7a5f381a95d3617"
+  },
+  {
+    "path": "src/assets/logo.svg",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 276,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "277e0e97813ffd3af7f70f14474967a1f535de3033efaeb3e746e9ece04f8cc9"
+  },
+  {
+    "path": "src/assets/main.css",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 2233,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a172bee049b45b57ea6fd8ca5293f8e9d11053936e7e529610cffa426bc0f5cc"
+  },
+  {
+    "path": "src/components/HelloWorld.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 674,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c4daba95e3842514356ca909968bfe243a803d31b0303d3cce23bd45c130ceec"
+  },
+  {
+    "path": "src/components/TheWelcome.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3510,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "9da64ba42800fb2a49059b9f7845cb47918c8adcd30c2ee754c4c69755c83814"
+  },
+  {
+    "path": "src/components/WelcomeItem.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1414,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e8a90c39c07f3fa990cc3d618f8bb140f4c4d614d71bd6dfd248c68fc2a7d0ad"
+  },
+  {
+    "path": "src/components/icons/IconCommunity.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1054,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e4c96b480b105eea2f94da16360f879815a21bdda91592e0fecf577e0830f6f4"
+  },
+  {
+    "path": "src/components/icons/IconDocumentation.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1254,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c6f0865f83b6ff5f0b3d97f08da3a692d3628bb01cbbef13bcab7157264483c3"
+  },
+  {
+    "path": "src/components/icons/IconEcosystem.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1977,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "882bf3e6de3468a209b1b194ff1a9966fb6220303ac6904fa043dc7a5ae979fc"
+  },
+  {
+    "path": "src/components/icons/IconSupport.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 288,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "8dd119141e8a4a7d72acd45da20712513e7bd37770ea01af779876c5d756bd3d"
+  },
+  {
+    "path": "src/components/icons/IconTooling.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 913,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "11a4e2a80f9bbf7f147842c38cef42108eb26112a10afdc865893026eea1ef69"
+  },
+  {
+    "path": "src/components/layout/SiteFooter.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 754,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "0a61e1cf12832a59e2bbcc80ddbe2b9b46aacd418136016bc66670736d406919"
+  },
+  {
+    "path": "src/components/layout/SiteHeader.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1857,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a765636a971532c1266bb123921079289efe973041dd115e4e1b813af3d3ffab"
+  },
+  {
+    "path": "src/components/layout/ToolPageLayout.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1664,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "8201554bd21dff4411222abce2fc16ebcaaf279ed9dbdba07ccec46f15e20380"
+  },
+  {
+    "path": "src/components/tools/ToolCard.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1557,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "28aa8b6eb07a66959d841c763760b0204bd30bb992d8696c237051ac0f357b6c"
+  },
+  {
+    "path": "src/composables/useRouteAccessibility.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 2031,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "8844c8ab7677a06ff837f3cc6651fca5bf33c5cd0c50bc4f9f6c57d2ec6c2f02"
+  },
+  {
+    "path": "src/data/pages.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 2631,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "496d9c7e2545ece59645d2b968e63737e78a518a8284a8844a75052c4cd61d77"
+  },
+  {
+    "path": "src/data/tools.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 776,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "cc7ff160a7d24175918247c56c5521a3ae9cba5d663042245fafc09aec95c311"
+  },
+  {
+    "path": "src/entry-server.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 996,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "688ec881afdc966397d8b889c65f9b7b45d711caafb0ec2c0fbd49902ce7c718"
+  },
+  {
+    "path": "src/interactionReady.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 135,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "f75c54bbd985c9b2073fe7963fea3994fabbfddcc584e77598695e31717c972b"
+  },
+  {
+    "path": "src/main.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 326,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "b0882d66f4d48c28c7a9342d547897236347c238267de041ba8ffef4c63ada2b"
+  },
+  {
+    "path": "src/router/index.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 905,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "955c552edbcb4d5ea267afd75ad671f4706b6bea0af16108e9f2434c650943f2"
+  },
+  {
+    "path": "src/router/routes.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1251,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "f14b4b66a6cfc98280938ca7e7c0743f0abb9564bba6cb166ef6837c491664c0"
+  },
+  {
+    "path": "src/types/jsonFormatter.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 473,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "1b260eb4de8b8461868b21f93fcadc4e0436989bf0256c4c1e263dfcd3afb843"
+  },
+  {
+    "path": "src/types/textStatistics.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 314,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "66b34b7d3c4dbf359ecd69bdbe9ea255650a98c6b869bb60f58d29b52a85c09f"
+  },
+  {
+    "path": "src/types/tool.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 378,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "e90d8871c68c40b69f8bc49054a32863e9d3df251546e1e16c7e8e253e4cbf74"
+  },
+  {
+    "path": "src/types/urlEncoder.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 388,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "c1ae58e3fea08870620784b3d46bd1c13d9145c1fb231deb9f14e17fd83d55e2"
+  },
+  {
+    "path": "src/utils/jsonFormatter.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 2493,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "751d3e046e6b805882d541cf8264a20eb1f02dfea3f676b6b8a1e6c16e1a4e3f"
+  },
+  {
+    "path": "src/utils/seo.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 2177,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "6d1b49d7729b596c3ee704d78215e0919acd6cce6315be33b5c9f03fe20fadce"
+  },
+  {
+    "path": "src/utils/textStatistics.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1805,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "7b45956008af430bd3d4ec418aa4c1142dc38c7e75012db1956634858b81f81f"
+  },
+  {
+    "path": "src/utils/urlEncoder.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 730,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "fb9df30011435ce47f98231636d8e710ec366748d4a0f6937e3d89d6f4c9622a"
+  },
+  {
+    "path": "src/views/HomeView.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4928,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "6e4d5c5259f9f9bea06a694cac64cb88536c3b50dd7e194523246dd6d08000ea"
+  },
+  {
+    "path": "src/views/JsonFormatterView.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 8609,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "2326aa84deac03f11adb9e5204d71474f54d0968bd52945f41afd0c16b2058e7"
+  },
+  {
+    "path": "src/views/TextStatisticsView.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 8357,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "62d595f790744f4015f4f08baab43ecb80978ac055b9245804292cee8ddf79c6"
+  },
+  {
+    "path": "src/views/UrlEncoderView.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 8104,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "848370dac6b588e4f3cfd504152a0fdb137d14ade577ecf3bc6466691bebcdd0"
+  },
+  {
+    "path": "src/views/pages/AboutPage.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 882,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "9f3222950ee0045540e058a35d2c8a030b91f9b1c4455b99e64a519dce1b23b0"
+  },
+  {
+    "path": "src/views/pages/CategoryPage.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1073,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "6e76123c4a18af8429fce0c9d5c3c4f4d3e552c5a2d76fd029c756d3909acaf7"
+  },
+  {
+    "path": "src/views/pages/JsonFormatterPage.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 268,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "3dcc79da589b556bf823f2fadba52682cf6d66dec681af219eefd33599b484eb"
+  },
+  {
+    "path": "src/views/pages/NotFoundPage.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 534,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "520da8660296a95fe208c0b22670cb4036b94c9aa4766189e7a76e0e7abaf9f0"
+  },
+  {
+    "path": "src/views/pages/PrivacyPage.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1143,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "84002f1d33b411b0685686244c664654c91188de0ed6e4bae91ff650b31a43df"
+  },
+  {
+    "path": "src/views/pages/TextStatisticsPage.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 272,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "bb633ae7c967d5ae18cacc13eade901af8eb178d0df6068b73bde8645f05121e"
+  },
+  {
+    "path": "src/views/pages/UrlEncoderPage.vue",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 256,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "54992546b69f220c4ed6be621ff73b9bb551082b1164fac87f96077e77a895b8"
+  },
+  {
+    "path": "tests/components/jsonFormatter.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 6143,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "9046bfa188527e0921941145b965d7068117216311d71d3919347a980aa1794f"
+  },
+  {
+    "path": "tests/components/seoDom.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1653,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "1efc8249acaa25187ed6655aad5b4420c36fd751cc2495aec5bb9d5e7d221044"
+  },
+  {
+    "path": "tests/components/textStatistics.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3966,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "622b2db6b5991ecc7b6cf6786c9a781f8dec88b39107d17572f868dc627e1eb7"
+  },
+  {
+    "path": "tests/components/urlEncoder.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 6705,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a756dc912f4c4d429bfa4fa16c5d0f88a19f5714ffb0f78cd03e185280539127"
+  },
+  {
+    "path": "tests/helpers/domTool.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 4755,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "0dabf90c58c2dd5f5fe532c5d9bb2786b90eb3e6281e87eae3f7e3329d16ee3e"
+  },
+  {
+    "path": "tests/helpers/migration.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 530,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "a64232bbabc18eeffabd96b4d1070553b569d11695eaef8ebff79e18163add60"
+  },
+  {
+    "path": "tests/jsonFormatter.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 5193,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "1359a9ade04e45d8e85188a4b6fcc847f46898d249fa48574a4c5f186dd26f72"
+  },
+  {
+    "path": "tests/jsonFormatterInteraction.test.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 9670,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f"
+  },
+  {
+    "path": "tests/migration.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 55216,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "60e2fcbbe5f5615ed96903654c74834e5155c3052817cf3b4c08d8e1ef26331f"
+  },
+  {
+    "path": "tests/routingSeo.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 5096,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a08ed8bf2651b9194e7766d7bb29e5e89e357c091c301ffb885d5d0d7a3a46d9"
+  },
+  {
+    "path": "tests/ssg.test.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1793,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "aec9e9e325a6280694fbbae429bb03fc4168d12b912ae250e505eeb3eeaee193"
+  },
+  {
+    "path": "tests/ssg/output.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1083,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "d10f1e3969ec178b2438b32ead4b781d6d749c6d159d9c84ba6b4dd97e1698ad"
+  },
+  {
+    "path": "tests/ssg/validators.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 992,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "69ca5cf19a88bfb763decffcec74a95f85d8b8451b1c0963ec86dd2b05b2eb38"
+  },
+  {
+    "path": "tests/textStatistics.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3094,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "cc3150c3c9b74dea4b170817cb149bf780e915ec4740d3c40a18b73601ab9b33"
+  },
+  {
+    "path": "tests/textStatisticsInteraction.test.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 7296,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "98fdd3f8888d92c8d3b4a6113fbac9d7bf65c9ae8cd77269d3b5cab4881b9dd8"
+  },
+  {
+    "path": "tests/unit/jsonFormatter.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 5281,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "5aa9f8b1907ed7e25dd0fcd05a1aecf58fa3be51cb587e14461992ae73b1d110"
+  },
+  {
+    "path": "tests/unit/routingSeo.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3995,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "90c6b5fd299e4294b871b4c39dd2725f67f9dc4a059247d985d9b39fae0bb72d"
+  },
+  {
+    "path": "tests/unit/textStatistics.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 3180,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "f113eda3fee9043fe442ad46e625905bcdd2eb2e9ae51a31f64927456f9c1c93"
+  },
+  {
+    "path": "tests/unit/urlEncoder.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 6026,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "23493ab66975bbf01df860073386626a17758903b364e16c3280201686e077c2"
+  },
+  {
+    "path": "tests/urlEncoder.test.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 5941,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "033a7419b3fd67449ede3034dee15dd83f8b3832ca8f017e11e48530b5a3b296"
+  },
+  {
+    "path": "tests/urlEncoderInteraction.test.mjs",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 10252,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a21497b39e93c1f161ab9068e4e6a5523b4eaa7b9f590f73d18d19b00ccb7b1c"
+  },
+  {
+    "path": "tsconfig.app.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 594,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "92496d0db20bb707be8b697a9dc316c7ded1011f8a9998a472c89f3e612822f2"
+  },
+  {
+    "path": "tsconfig.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 139,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "3dd280df663fb5fbe9e85e5981289d27a7120b97a852827dd16e0ac296836d1b"
+  },
+  {
+    "path": "tsconfig.node.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1004,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "f3d48b85104c3b01aa68ee8758762eb6e90cb09677251f6b7b4b53360e37bde1"
+  },
+  {
+    "path": "tsconfig.tests.json",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 512,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "64686cfbd304fd6285a72040d005e0e1f89efb69fc57f19ddf42d0ea60cf98ab"
+  },
+  {
+    "path": "vite.config.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 1852,
+    "gitState": "tracked-unchanged",
+    "currentChange": false,
+    "sha256": "a00c8ccdf68686e08baa87af0c79db474203bebbb01b52dc7d1a983344a7f37d"
+  },
+  {
+    "path": "vitest.config.ts",
+    "reason": "生产/测试/构建与CI配置或批准规格/验收文档，维持完整项目基线",
+    "bytes": 868,
+    "gitState": "??",
+    "currentChange": true,
+    "sha256": "21ec73329e89371acfc737a56e8c2bfcb42b802e3844f1011304010d5e88e8d1"
+  }
+]

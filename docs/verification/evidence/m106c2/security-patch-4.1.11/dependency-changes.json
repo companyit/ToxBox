@@ -1,0 +1,42 @@
+[
+  {
+    "name": "node_modules/@vitest/expect",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  },
+  {
+    "name": "node_modules/@vitest/mocker",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  },
+  {
+    "name": "node_modules/@vitest/pretty-format",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  },
+  {
+    "name": "node_modules/@vitest/runner",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  },
+  {
+    "name": "node_modules/@vitest/snapshot",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  },
+  {
+    "name": "node_modules/@vitest/spy",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  },
+  {
+    "name": "node_modules/@vitest/utils",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  },
+  {
+    "name": "node_modules/vitest",
+    "before": "4.1.0",
+    "after": "4.1.11"
+  }
+]

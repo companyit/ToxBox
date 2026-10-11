@@ -1,0 +1,9 @@
+{
+  "scannedFiles": 184,
+  "expandedTraceArchives": 28,
+  "credentialPatternsFound": [],
+  "onlySyntheticFixtures": true,
+  "diagnosticSummariesExcludeInput": true,
+  "uploaded": false,
+  "limitation": "不是通用DLP或截图OCR；截图与trace均来自空白隔离profile和固定合成夹具，保留本地，真实敏感事件必须丢弃受影响trace，不承诺任意二进制可脱敏"
+}

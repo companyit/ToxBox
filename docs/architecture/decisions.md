@@ -87,15 +87,30 @@ hash 路由、Pinia、立即接入 Playwright、SSR 和后端不是当前方案�
 
 备选B为vite-ssg，上游声明层支持当前栈但未实测，且带入head/HTML处理依赖；不得直接采用。备选C维持CSR可以开发回退，不能算达成静态正文目标。细节、版本研究、风险和回滚见[006设计](../specs/006-ssg-testing/design.md)。影响main/App/router/导航辅助/head/构建配置及新增生成入口，只有后续明确编码授权才允许调整；本轮不改代码、配置或依赖。
 
-## ADR-019：渐进测试迁移与分层CI（草案，待批准）
+## ADR-019：统一测试迁移与分层 CI（细化草案，待批准）
 
-起草日期：2026-10-10；批准日期/批准者：未批准。关联ADR-006、014、018。
+起草日期：2026-10-10；细化日期：2026-10-11（M1-06C1）。批准日期/批准者：未批准。关联ADR-006、014、018、020及[007规格](../specs/007-testing-ci/spec.md)、[设计与154项映射](../specs/007-testing-ci/design.md)、[任务](../specs/007-testing-ci/tasks.md)。本草案取代原151项提案的当前计划，不修改历史验收。负责人已确认M1-06B Dev Done，Release Ready未完成；测试框架/CI仍未实施。
 
-建议评估新增开发依赖vitest、@vue/test-utils、jsdom、@playwright/test；实施前核对Node24/Vite8/Vue3/TS6兼容的发布版本并锁定，浏览器二进制与系统依赖下载另列批准范围，不预装。原151项Node测试按109算法、25组件、17路由/head逐项映射迁移；Node旧runner与新runner隔离双跑，审阅后才移除旧覆盖，不能将双跑数量视作覆盖翻倍。
+建议精确新增四个开发依赖：vitest4.1.0、@vue/test-utils2.5.1、jsdom30.0.1、@playwright/test1.64.0。2026-10-11只读npm官方元数据及文档核对：Vitest包含Vite8支持，Test Utils适用Vue3；jsdom要求Node24>=24.15.0，故测试/CI统一Node24（初始patch建议24.21.0），当前终端Node25.1.0不满足jsdom候选engines。精确peer/engines及来源在007设计；这是声明兼容推断，项目安装/TS6/运行验证尚未进行。package/lock、业务和测试本轮均不改。
 
-单元/生成器在Node、组件用标准SFC挂载与jsdom，浏览器用Playwright禁JS/启JS与Hydration负向夹具；Chromium/Firefox/WebKit及Chrome通道结果分别记录。WebKit不等同真实Safari，模拟设备不等于真实手机，补丁引擎不替代产品两个主版本验收。
+154旧身份=109算法+25交互+17路由/head+3SSG。逐项完整映射已形成：109算法和16路由迁Vitest Node，1个head DOM与25交互改Test Utils/jsdom，3个SSG归构建后ssg项目的Node环境。保留所有输入、预期、循环分支、源码集成断言与旧文件；组内对照后转移唯一owner，旧Node显式清单、新Vitest目录、Playwright目录与历史证据互斥，双跑不重复计数。正常npm test含151旧身份，test:ssg含3旧身份，新增与引擎执行数另报；没有未经审阅直接删除旧测试。历史59项Chrome/CDP证据保留，并核对其Playwright行为归属，不加入154。
 
-CI建议PR类型/回归→SSG完整性→核心浏览器，夜间/手动扩展引擎与发布检查；同一静态产物摘要贯穿、失败不放行、无部署步骤。核心Hydration/安全失败不能藏入后续优化；发布验证继续按RR门禁。备选继续Node自定义renderer/CDP无需测试包，但维护与标准DOM覆盖成本较高，可作为迁移对照。影响测试目录、未来配置/package/锁文件、CI与证据留存；依赖、迁移范围及GitHub接入均需后续授权，当前未实施。[006任务](../specs/006-ssg-testing/tasks.md)有追溯和固定用例。
+本地命令拟采用npm test、test:unit、test:components、test:watch、test:ssg、test:e2e、test:e2e:all、test:e2e:chrome、test:ci、test:legacy、test:inventory、test:browsers:install，详见007设计契约。E2E只用一次完整dist-ssg及SHA，loopback preview静态服务，不使用CSR开发或外部公共/生产服务器。覆盖禁JS、Hydration节点身份/结构负向夹具/延迟准备、三个工具、深链/404/资源、locale/故障/隐私。PR Chromium全套，夜间/手动三引擎全套，品牌Chrome可用设备核心另报；已发现核心失败不能推给夜间忽略。WebKit不等于Safari、模拟设备不等于真机，不关闭RR两个主版本/实机门槛。
+
+浏览器安装与npm安装分开授权，固定本地CLI/revision，用户缓存与项目产物隔离；CI初期只缓存npm下载包、不缓存浏览器，Linux系统依赖显式安装。CI Node24/npm ci，回归→一次SSG/产物→浏览器，有失败依赖阻断、只读仓库权限，无部署/生产密钥。只用合成输入，报告上传前敏感检查，失败截图/Trace/报告分离，留存14天/Trace7天为待批值。
+
+待审批项目（批准设计不等于实施授权）：
+
+| ID | 需要负责人明确批准的范围 | 阻塞任务 |
+| --- | --- | --- |
+| D019-01 | 四包精确版本及锁文件、Node24>=24.15/初始24.21.0、engines/测试TS配置调整、安装和编码授权 | 007 G01/I01 |
+| D019-02 | 154身份/分支账本、分组迁移与唯一owner、旧副本保留；删除另行审阅/授权 | G01/I02/I03/I04，删除G04 |
+| D019-03 | npm命令、SSG专属项目、临时输出/故障注入可测试性调整（不改算法）与新固定用例 | G01/I01/I04/I06 |
+| D019-04 | PR/三引擎/Chrome范围，浏览器二进制与Linux系统依赖安装、缓存位置/策略和网络范围 | G01/I05/I06 |
+| D019-05 | GitHub仓库/分支、workflow创建、PR/夜间/手动触发、真实远端接入与运行/分支保护；可独立分阶段批准 | G02/I07/V07 |
+| D019-06 | 报告/截图14天、Trace7天，敏感数据删除/工件权限、容量规划及worker1/超时初值 | G03/I08/V08 |
+
+理由：标准DOM与跨引擎验证降低自编译renderer/CDP维护成本，并提高故障复现与证据一致性。备选继续Node+自定义renderer/CDP无需框架包，但缺统一发现/报告/多引擎能力；仍可作迁移对照。另选Vitest浏览器组件模式会增加适配包与运行成本，本方案先采用jsdom组件层+独立Playwright E2E，不自动加包。风险与资源估计见007设计；不兼容先更新决策，不升级现有技术栈或删测试绕过。当前仅完成设计，停止人工审批，不授权依赖安装、编码、workflow、commit/push、远端执行或生产部署。
 
 ## ADR-020：静态产物、404 Hydration与SEO环境一致性（本轮实施范围批准）
 
@@ -110,3 +125,33 @@ CI建议PR类型/回归→SSG完整性→核心浏览器，夜间/手动扩展�
 ## M1-06B批准记录（2026-10-10）
 
 项目负责人正式批准ADR-018原生Vue SSR/Vite/自定义SSG，不新增依赖；ADR-020中的8页+404、共享静态head、preview noindex、Hydration交互保护与必要一致性适配获批。前述未批准描述为起草历史。正式域名、生产索引文件、托管验证和发布仍未批准；ADR-019测试框架迁移及CI仍为草案，本轮排除。生成目录采用dist-ssg，中间构建位于.ssg-build；CSR仅显式开发回退，不能冒充SSG候选。
+
+## M1-06C2 分阶段实施批准（2026-10-11）
+
+项目负责人本轮明确授权 Vitest 测试迁移执行。D019-01～03 中仅批准 vitest@4.1.0、@vue/test-utils@2.5.1、jsdom@30.0.1 三个精确开发依赖、Node24>=24.15.0、154项身份/唯一owner迁移、隔离配置、测试类型检查与本地命令及实际SSG产物检查。现有 .node-version=24.21.0 保留；本轮不修改产品 engines，不改工具算法。旧8文件完整保留，仅显式对照执行，不纳入Vitest发现。
+
+本次授权优先于AGENTS早期9文档限制和007 C1待审批历史描述。Playwright及浏览器下载、CI/workflow、远端、部署、commit/push均明确禁止，不进入M1-06C3。SSG生成器输出/超时/故障注入改造与N02/N03不在本轮迁移必需范围，保留后续审批；不能据此关闭完整TC-05。Dev Done须结合实际证据和负责人验收，不自动确认。
+
+## ADR-019 补充：M1-06C2 安全补丁与条件验收批准（2026-10-11）
+
+项目负责人已审阅154项测试迁移技术检查，明确批准仅将vitest由4.1.0升级为精确4.1.11，修复GHSA-82fw-gwwq-j7x9；正常更新锁文件及其必要传递依赖。不升级Vue/Vite/TypeScript/jsdom等无关直接依赖，不执行npm audit fix --force。当前Node24.21.0满足Vitest4.1.11的Node声明，Vite8.3.4满足其peer。
+
+授权安全检查（npm ls、npm audit、npm ci）及完整回归；全部通过后将M1-06C2标记Dev Done。本结论限本地测试迁移与补丁子阶段，沿用已审阅的既有业务浏览器证据，不宣称本轮重新运行浏览器或完整007完成。Release Ready继续未完成；Playwright、浏览器下载、workflow、业务算法、部署、commit/push及自动进入M1-06C3均排除。保留原4.1.0告警及首次失败证据，补丁结果另行追加。
+
+本次条件验收执行结果：vitest及7个@vitest包精确4.1.11，其他锁定包版本不变；npm ls/audit/ci均退出0，audit报告0漏洞；完整回归默认151及SSG3、154身份清单、类型/构建/diff均通过。按上述负责人条件授权，M1-06C2已标记Dev Done，Release Ready未完成；历史告警/失败证据保留。详见[安全补丁与最终验收报告](../verification/M1-06C2-vitest-migration.md)。
+
+## ADR-019 补充：M1-06C3 Playwright本地实施批准（2026-10-11）
+
+负责人确认C2 Dev Done，授权精确@playwright/test1.64.0（安装前实际注册表核对已发布、Node>=20），并允许官方CLI下载Chromium/Firefox/WebKit。当前Node24.21.0、macOS26.4 arm64、可用磁盘122GiB；不运行管理员系统修改。先Chromium核心通过，再同集Firefox/WebKit。本次用户命令要求优先于C1命令提案：npm test默认Chromium，test:e2e三引擎，原默认Vitest151脚本完整保留为test:vitest，unit/components/ssg/watch/legacy/inventory不变，154项归属不变。
+
+授权测试代码/config/package/lock与必要规范；目录采用根e2e/。测试启动前完整build，记录当前源/锁及dist-ssg摘要，同轮三引擎共享产物，固定loopback4177，禁止复用已有服务，结束终止服务/浏览器。仅合成样本；拦截非预期外部请求，失败截图/Trace仅本地保存并扫描，报告不记录真实用户内容，不自动上传。worker1、retry0、30秒用例/5秒断言作为本地保护值，不是性能数据。CI/上传/留存审批继续独立。
+
+E2E发现真实业务缺陷时登记复现并停止相应生产功能修改，独立申请修复授权。算法、生产源码修改、部署、Git提交/推送、Actions及自动进入C4均未授权。N02/N03生成器故障注入改造不由本次浏览器范围默认批准；完整007与Release Ready不得自动关闭。
+
+C3实际结果：精确Playwright1.64.0三包安装成功，Chromium156.0.8078.4/Firefox157.0/WebKit27.2各42核心用例通过；原Vitest151+SSG3、154清单、类型/完整构建/审计0漏洞/diff通过。首次定位/类型/浏览器事件与键盘环境差异通过测试宿主适配修复并保留证据，生产源码不变；本地技术条件满足，等待负责人阶段审阅，不自动确认完整007或Release Ready。详见[C3报告](../verification/M1-06C3-playwright-e2e.md)。
+
+## ADR-019 补充：M1-06C4 CI实施批准（2026-10-11）
+
+负责人确认C3 Dev Done，批准D019-05的workflow编写/本地校验及D019-06留存子集；不批准远端Git操作、部署或M2。采用ubuntu-24.04、.node-version=24.21.0、官方Actions完整SHA、只读contents权限、不持久化checkout凭据、无生产密钥。push/PR日常Chromium，每日UTC19:17及手动三引擎；quality成功后同一摘要绑定SSG artifact进入browser矩阵，不重复构建。摘要14天，含Trace副本的完整HTML/截图/Trace均7天，构建产物1天。新增无重建CI测试入口及扫描辅助，不增加依赖、不修改生产代码或154身份。真实远端运行和分支保护另行验证，本地检查不得冒充远端通过。
+
+C4实施状态：已创建quality→browser矩阵→Quality gate只读工作流及摘要保护的CI入口；全部指定本地回归通过，原154身份保持、三引擎本地126通过，敏感/篡改/归档验证通过。远端GitHub执行、失败阻断演练和分支保护未执行，不能称CI已生效。Dev Done等待负责人结合[C4报告](../verification/M1-06C4-github-actions.md)确认，Release Ready保持未完成，停止不进入M2。

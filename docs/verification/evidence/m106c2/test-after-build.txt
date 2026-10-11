@@ -1,0 +1,13 @@
+
+> toxbox@0.0.0 test
+> vitest run --project unit --project components
+
+
+ RUN  v4.1.0 <workspace>
+
+
+ Test Files  8 passed (8)
+      Tests  151 passed (151)
+   Start at  11:29:39
+   Duration  1.51s (transform 183ms, setup 0ms, import 342ms, tests 203ms, environment 844ms)
+

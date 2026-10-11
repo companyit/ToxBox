@@ -1,0 +1,415 @@
+[
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /office/",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /office/text-statistics/",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /developer/",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /developer/json-formatter/",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /developer/url-encoder/",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /about/",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01/B06 direct + refresh /privacy/",
+    "currentTarget": "E02 八路由直达刷新/SEO",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01 homepage cards open three independent tools",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B01 new tabs for all eight URLs",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "C08/C11 rapid navigation only applies final page head and announcement",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B02 six old hashes and tool migration links",
+    "currentTarget": "E06六旧hash与迁移链接",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B04 no-slash normalization preserves query/hash and back source",
+    "currentTarget": "E06实际HTTP308/query/hash与独立历史测试",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B04 saved scroll + forward/back + preventScroll focus",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B04 hash focus and missing target fallback",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B05 client and direct 404 + no echo/canonical",
+    "currentTarget": "E07直接HTTP404/回首页/noecho/head，客户端404专门切换未单列",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "C08 simulated lazy navigation failure retry and recovery",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "C08 late failed navigation cannot overwrite newer successful page",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "R01 text calculation, limits, clear + copy fallback",
+    "currentTarget": "E05文本统计及复制fallback",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "R02 JSON all top-level, indent, compress, safety + errors",
+    "currentTarget": "E05JSON六顶层/缩进/安全整数/错误",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "R03 URL four operations, invalid UTF8, invalidation + limit",
+    "currentTarget": "E05URL两模式四操作/UTF8/超限",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B03 tools leave/re-enter and refresh clear memory",
+    "currentTarget": "E06离页返回状态清除，E02刷新",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B03 actual Clipboard API roundtrip on all tools",
+    "currentTarget": "E05注入Clipboard合成成功/拒绝/挂起；不替代原生系统剪贴板",
+    "status": "历史原生证据保留",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B03 pending clipboard completion after route unmount is ignored",
+    "currentTarget": "E05三工具pending离页",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B07 real Tab/Enter skip-link and route keyboard navigation",
+    "currentTarget": "E09真实键盘skip-link/工具操作/焦点；WebKit使用OptionTab",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B08 shared nav current state and footer regression",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B08 simulated viewport 375 mobile=false",
+    "currentTarget": "E09 375/768/1440桌面视口、暗色、溢出",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B08 simulated viewport 768 mobile=false",
+    "currentTarget": "E09 375/768/1440桌面视口、暗色、溢出",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B08 simulated viewport 1440 mobile=false",
+    "currentTarget": "E09 375/768/1440桌面视口、暗色、溢出",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B08 simulated viewport 375 mobile=true",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "B08 dark CSS and accessibility tree (not screenreader)",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "privacy input marker not in requests, URL, storage or HTML execution",
+    "currentTarget": "E09请求/console/URL/存储合成标记",
+    "status": "部分覆盖：HTML纯文本行为未单列E2E，原URLC-09保留",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/browser-results.json",
+    "historicalName": "static HTML has page-specific head and body",
+    "currentTarget": "E01禁JS八页head/body，E08产物/资源",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /office/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /office/text-statistics/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /developer/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /developer/json-formatter/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /developer/url-encoder/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /about/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /privacy/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /office/missing/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /developer/missing/",
+    "currentTarget": "E01 无JS静态正文/元数据/禁用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E01 JavaScript disabled /404.html",
+    "currentTarget": "历史保留，本轮未完整复刻",
+    "status": "待后续补充",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /office/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /office/text-statistics/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /developer/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /developer/json-formatter/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /developer/url-encoder/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /about/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /privacy/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /office/missing/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /developer/missing/",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E02/E03 hydration identity /404.html",
+    "currentTarget": "E03仅三工具检查节点身份；E02其他路由检查挂载与异常",
+    "status": "部分覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/hydration-results.json",
+    "historicalName": "E08 negative control detects hydration mismatch",
+    "currentTarget": "E04 结构破坏公共检测器",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/delayed-results.json",
+    "historicalName": "E03 delayed client /office/text-statistics/",
+    "currentTarget": "E03 三工具延迟脚本/禁用/节点复用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/delayed-results.json",
+    "historicalName": "E03 delayed client /developer/json-formatter/",
+    "currentTarget": "E03 三工具延迟脚本/禁用/节点复用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  },
+  {
+    "historicalFile": "docs/verification/evidence/m106/delayed-results.json",
+    "historicalName": "E03 delayed client /developer/url-encoder/",
+    "currentTarget": "E03 三工具延迟脚本/禁用/节点复用",
+    "status": "本轮覆盖",
+    "countedInCurrentE2E": false
+  }
+]

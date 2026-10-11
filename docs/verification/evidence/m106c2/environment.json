@@ -1,0 +1,30 @@
+{
+  "node": "v24.21.0",
+  "npm": "11.19.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "commit": "ba78bf6a064f6fe7beec14b338c9fb2848504329",
+  "dirty": true,
+  "directTestPackages": {
+    "vitest": "4.1.0",
+    "@vue/test-utils": "2.5.1",
+    "jsdom": "30.0.1"
+  },
+  "compatibleEngines": true,
+  "cleanInstall": {
+    "command": "npm ci",
+    "exitCode": 0
+  },
+  "audit": {
+    "moderate": 2,
+    "high": 0,
+    "critical": 0,
+    "packages": [
+      "vitest",
+      "@vitest/mocker"
+    ],
+    "advisory": "https://github.com/advisories/GHSA-82fw-gwwq-j7x9",
+    "fixedIn": "4.1.11",
+    "action": "保留获批4.1.0，未运行audit fix，版本调整待负责人确认"
+  }
+}
