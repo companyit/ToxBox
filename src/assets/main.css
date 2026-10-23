@@ -26,3 +26,8 @@ section[id] { scroll-margin-top: var(--space-5); }
 .navigation-error { padding: var(--space-5); border: 1px solid var(--color-border); }
 nav a[aria-current="page"] { color: var(--color-accent); text-decoration: underline; font-weight: 650; }
 h1[tabindex="-1"]:focus-visible, #main-content:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+
+.container--home, .container--directory, .site-header .container, .site-footer .container { width: calc(100% - 2 * var(--ui-gutter)); max-width: var(--layout-home-width); }
+
+/* B2仅工具页消费宽屏工作台Token；B1角色及通用正文保持原样。 */
+.container--workspace { width: calc(100% - 2 * var(--ui-gutter)); max-width: var(--layout-workspace-width); }

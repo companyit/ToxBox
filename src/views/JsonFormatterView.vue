@@ -98,6 +98,8 @@ onBeforeUnmount(() => { disposed = true; revision++ })
       <p>转换拒绝最终值中的不安全整数及非有限数。有限小数可能舍入或下溢，科学计数法、尾随零和负零可能变化；需要精确数字时，请在原数据中使用字符串。</p>
       <p>最多 100,000 个 UTF-16 码元、100 层嵌套，输出最多 1,000,000 个码元。仅在当前浏览器内存中处理，不上传或保存；刷新或收起工具后清空。</p>
     </div>
+    <div class="workspace">
+    <div class="editor-pane">
     <div class="editor-heading">
       <label for="json-input">输入或粘贴 JSON</label>
       <span>{{ input.length.toLocaleString('zh-CN') }} / {{ JSON_INPUT_LIMIT.toLocaleString('zh-CN') }} UTF-16 码元</span>
@@ -107,15 +109,19 @@ onBeforeUnmount(() => { disposed = true; revision++ })
       <label for="json-indent">缩进</label>
       <select id="json-indent" :value="indent" :disabled="composing" @change="changeIndent"><option value="2">2 空格</option><option value="4">4 空格</option></select>
       <button type="button" :disabled="composing || processing || tooLong" @click="execute('validate')">校验语法</button>
-      <button type="button" :disabled="composing || processing || tooLong" @click="execute('format')">格式化</button>
+      <button type="button" :disabled="composing || processing || tooLong" class="action-primary" @click="execute('format')">格式化</button>
       <button type="button" :disabled="composing || processing || tooLong" @click="execute('minify')">压缩</button>
-      <button type="button" :disabled="input !== '' || composing" @click="fillExample">填入示例</button>
-      <button type="button" :disabled="initial || composing" @click="clear">清空</button>
+      <button type="button" :disabled="input !== '' || composing" class="action-quiet" @click="fillExample">填入示例</button>
+      <button type="button" :disabled="initial || composing" class="action-quiet" @click="clear">清空</button>
     </div>
     <p id="json-status" class="status" role="status" aria-live="polite" aria-atomic="true">{{ status }}</p>
-    <label for="json-output">处理结果（只读）</label>
+    </div>
+    <div class="output-pane">
+    <div class="editor-heading"><label for="json-output">处理结果（只读）</label></div>
     <textarea id="json-output" ref="outputEditor" :value="output" rows="12" readonly aria-describedby="json-rules json-status" :spellcheck="false" autocomplete="off" />
     <div class="actions"><button type="button" :disabled="!output || copying || composing" @click="copyResult">{{ copying ? '复制中…' : '复制结果' }}</button></div>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -134,4 +140,19 @@ button { cursor: pointer; font-weight: 600; }
 button:disabled, select:disabled { color: var(--color-muted); cursor: default; opacity: 0.65; }
 textarea:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
 .status { min-height: 1.7em; margin-block: var(--space-3); color: var(--color-muted); overflow-wrap: anywhere; }
+
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+.editor-pane, .output-pane { min-width: 0; padding: 16px; border: 1px solid var(--color-border); border-radius: var(--ui-panel-radius); background: var(--color-surface); }
+textarea { font-size: 16px; line-height: 1.7; border-radius: var(--ui-control-radius); }
+button, select { border-radius: var(--ui-control-radius); }
+button:not(:disabled):hover { border-color: var(--color-accent); background: var(--color-accent-soft); }
+button.action-primary { background: var(--color-accent); color: var(--color-on-accent); border-color: var(--color-accent); }
+button.action-primary:not(:disabled):hover { background: var(--color-accent); text-decoration: underline; }
+button.action-primary:disabled { background: var(--color-surface); color: var(--color-muted); border-color: var(--color-border); }
+button.action-quiet { background: transparent; }
+@media (min-width: 640px) { .editor-pane, .output-pane { padding: 24px; } }
+@media (min-width: 1200px) { .workspace { grid-template-columns: repeat(2, minmax(0, 1fr)); } textarea { height: 384px; } }
+textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+#json-output { margin-top: 0; }
+.output-pane > .editor-heading { min-height: 27px; }
 </style>

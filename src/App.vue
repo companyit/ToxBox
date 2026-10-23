@@ -12,7 +12,7 @@ const { announcement, navigationError, retry } = useRouteAccessibility(useRouter
 </script>
 <template>
   <SiteHeader />
-  <main id="main-content" class="container" tabindex="-1">
+  <main id="main-content" class="container" :class="{ 'container--home': route.name === 'home', 'container--directory': route.name === 'office' || route.name === 'developer', 'container--workspace': route.name === 'text-statistics' || route.name === 'json-formatter' || route.name === 'url-encoder' }" tabindex="-1">
     <div v-if="navigationError" class="navigation-error" role="alert">
       <p>页面加载失败，请重试。</p><button type="button" @click="retry">重试加载</button>
     </div>

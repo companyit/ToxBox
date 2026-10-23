@@ -24,10 +24,12 @@ function focusMain() {
 </template>
 
 <style scoped>
-.header-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4); padding-block: var(--space-5); }
+.header-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4); padding-block: 12px; }
 .brand { display: inline-flex; align-items: center; gap: var(--space-3); color: var(--color-text); font-weight: 750; text-decoration: none; }
 .brand-mark { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; flex-shrink: 0; border-radius: var(--radius-small); color: var(--color-on-accent); background: var(--color-accent); }
 nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
-nav a { padding-block: var(--space-2); color: var(--color-muted); text-decoration: none; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px; border-radius: var(--ui-control-radius); color: var(--color-muted); text-decoration: none; }
 nav a:hover { color: var(--color-accent); text-decoration: underline; }
+nav a:hover { background: var(--color-accent-soft); }
+@media (max-width: 639px) { nav { width: 100%; gap: 8px; } .header-content { gap: 8px; } }
 </style>

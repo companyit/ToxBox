@@ -11,7 +11,7 @@ const page = getPage(props.pageName)
 const category = props.pageName === 'text-statistics' ? 'office' : 'developer'
 </script>
 <template>
-  <div class="page-content">
+  <div class="page-content tool-page">
     <nav class="breadcrumbs" aria-label="面包屑">
       <RouterLink :to="{ name: 'home' }">首页</RouterLink><span aria-hidden="true"> / </span>
       <RouterLink :to="{ name: category }">{{ category === 'office' ? '办公工具' : '开发者工具' }}</RouterLink>
@@ -28,4 +28,7 @@ const category = props.pageName === 'text-statistics' ? 'office' : 'developer'
 
 <style scoped>
 .hydration-controls { border: 0; padding: 0; margin: 0; min-width: 0; }
+.tool-page { min-width: 0; }
+.tool-page .page-heading { max-width: var(--layout-prose-width); }
+.tool-page .related-tools { font-size: .875rem; }
 </style>

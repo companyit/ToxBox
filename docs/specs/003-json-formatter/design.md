@@ -1,3 +1,15 @@
+# DEV-06UI-B2 增补（2026-10-23）
+
+负责人已批准本批限定实现和必要本地验证。当前栈Vue/Router/Vite/SSG及既有测试，以实际配置为准；下文历史基线保留。
+
+## B2布局与保护设计
+
+仅批准16文件；App按现有route.name新增workspace展示class，main.css只添加该角色样式，ToolPageLayout保留fieldset/ready与slot。View以中性wrapper分组，JSON/URL规则仍在上方，输入/动作/status先于输出/复制；统计dl仍五项同序。>=1200双栏，窄屏同一DOM纵排；无viewport v-if、CSS order或重复控件。用现有workspace1440、gutter16/24/32、圆角12/16和明暗配对色；业务script块与绑定原字节冻结。原1024统计五列改为保守两列/desktop侧栏单列。
+
+验证：一次含类型检查SSG构建、现有151 Vitest及SSG/身份检查；复用产物Chromium/WebKit完整回归和视觉矩阵。源码/测试/配置/产物摘要与B1共享文件增量单独保存于忽略目录。Firefox Deferred；无Git写入/远端/部署。
+
+---
+
 # 003 JSON 工具技术设计
 
 状态：2026-10-10，已获本轮规格审批与实现授权。依据 [spec](spec.md)、[门禁](../../quality/gates.md)、[架构决策](../../architecture/decisions.md)。

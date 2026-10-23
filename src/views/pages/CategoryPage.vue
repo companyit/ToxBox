@@ -8,7 +8,7 @@ const props = defineProps<{ category: ToolCategory }>()
 const page = getPage(props.category)
 </script>
 <template>
-  <div class="page-content">
+  <div class="page-content category-directory" :class="`category-directory--${category}`">
     <nav class="breadcrumbs" aria-label="面包屑"><RouterLink :to="{ name: 'home' }">首页</RouterLink></nav>
     <header class="page-heading"><h1 tabindex="-1">{{ page.heading }}</h1><p>{{ page.description }}</p></header>
     <section aria-labelledby="category-tools"><h2 id="category-tools">可试用工具</h2>
@@ -17,3 +17,8 @@ const page = getPage(props.category)
     <p class="related-tools"><RouterLink :to="{ name: category === 'office' ? 'developer' : 'office' }">浏览{{ category === 'office' ? '开发者' : '办公' }}工具</RouterLink></p>
   </div>
 </template>
+
+<style scoped>
+.category-grid { grid-template-columns: minmax(0, 1fr); max-width: 420px; }
+@media (min-width: 640px) { .category-directory--developer .category-grid { max-width: 864px; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>

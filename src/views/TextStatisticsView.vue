@@ -95,6 +95,8 @@ onBeforeUnmount(() => { disposed = true; revision++ })
 
 <template>
   <div class="text-tool">
+    <div class="workspace">
+    <div class="editor-pane">
     <div class="editor-heading">
       <label for="statistics-input">输入或粘贴文本</label>
       <span>{{ text.length.toLocaleString('zh-CN') }} / {{ TEXT_CODE_UNIT_LIMIT.toLocaleString('zh-CN') }} UTF-16 码元</span>
@@ -115,17 +117,19 @@ onBeforeUnmount(() => { disposed = true; revision++ })
       @compositionend="onCompositionEnd"
     />
     <div class="actions">
-      <button type="button" :disabled="text !== '' || composing" @click="fillExample">填入示例</button>
-      <button type="button" :disabled="!text || copying || composing" @click="copyText">{{ copying ? '复制中…' : '复制文本' }}</button>
-      <button type="button" :disabled="!text || composing" @click="clearText">清空</button>
+      <button type="button" :disabled="text !== '' || composing" class="action-quiet" @click="fillExample">填入示例</button>
+      <button type="button" :disabled="!text || copying || composing" class="action-primary" @click="copyText">{{ copying ? '复制中…' : '复制文本' }}</button>
+      <button type="button" :disabled="!text || composing" class="action-quiet" @click="clearText">清空</button>
     </div>
     <p id="statistics-status" class="status" role="status" aria-live="polite" aria-atomic="true">{{ status }}</p>
+    </div>
     <dl class="statistics" aria-label="文本统计结果">
       <div v-for="field in fields" :key="field.key">
         <dt>{{ field.label }}</dt>
         <dd>{{ statistics ? statistics[field.key].toLocaleString('zh-CN') : '—' }}</dd>
       </div>
     </dl>
+    </div>
     <div id="statistics-rules" class="rules">
       <p>字符按 Unicode 码点计数，Emoji 组合可能包含多个字符。去空白数排除规定的空格、Tab、换行等空白，不移除零宽连接符。</p>
       <p>词段按空白分隔，不是准确中文分词，也不是自然语言词数。CRLF 算一次换行，末尾空行保留，自动折行不增加行数。</p>
@@ -160,5 +164,21 @@ dd { margin: var(--space-2) 0 0; color: var(--color-text); font-size: 1.75rem; f
 .rules p + p, details { margin-top: var(--space-3); }
 summary { cursor: pointer; color: var(--color-accent); }
 @media (min-width: 640px) { .statistics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1024px) { .statistics { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+.editor-pane, .output-pane { min-width: 0; padding: 16px; border: 1px solid var(--color-border); border-radius: var(--ui-panel-radius); background: var(--color-surface); }
+textarea { font-size: 16px; line-height: 1.7; border-radius: var(--ui-control-radius); }
+button, select { border-radius: var(--ui-control-radius); }
+button:not(:disabled):hover { border-color: var(--color-accent); background: var(--color-accent-soft); }
+button.action-primary { background: var(--color-accent); color: var(--color-on-accent); border-color: var(--color-accent); }
+button.action-primary:not(:disabled):hover { background: var(--color-accent); text-decoration: underline; }
+button.action-primary:disabled { background: var(--color-surface); color: var(--color-muted); border-color: var(--color-border); }
+button.action-quiet { background: transparent; }
+@media (min-width: 640px) { .editor-pane, .output-pane { padding: 24px; } }
+@media (min-width: 1200px) { .workspace { grid-template-columns: repeat(2, minmax(0, 1fr)); } textarea { height: 384px; } }
+.statistics { margin: 0; }
+.statistics div { background: var(--color-surface); border-radius: var(--ui-panel-radius); }
+.rules { margin-top: 24px; }
+@media (min-width: 1200px) { .workspace { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } .statistics { grid-template-columns: minmax(0, 1fr); } }
 </style>

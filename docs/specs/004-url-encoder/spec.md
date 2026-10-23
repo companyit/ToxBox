@@ -1,3 +1,17 @@
+# DEV-06UI-B2 增补（2026-10-23）
+
+负责人已批准本批限定实现和必要本地验证。当前栈Vue/Router/Vite/SSG及既有测试，以实际配置为准；下文历史基线保留。
+
+## B2-004-UI 需求与验收
+
+- 桌面1280/1440/1920使用最大1440工作台；1200起桌面布局，手机320/375/390/430保持单列及输入完整。
+- URL编解码的算法、状态、事件、输入上限、错误保留、IME和复制语义不变；所有原label/ID/disabled/readonly/ARIA与关键规则保留。
+- JSON/URL输入与输出双栏、24px间隔；统计编辑与原五项dl约2:1；键盘DOM顺序不变。
+- 16px编辑器、desktop初始384px且可纵向resize；可见focus、长文本内部滚动，不以隐藏页面溢出代替修复。
+- 验收须含原E01～E10、双引擎布局/重排/错误及截图；未执行的项目不能标记通过。
+
+---
+
 # 004 URL 编解码需求规格
 
 状态：M1-04 / Implement + Verify，2026-10-10；项目负责人已批准规格和编码。前置：002 与 003 已报告 Dev Done，Release Ready 遗留继续保留，不在本规格中关闭。依据：[产品需求](../../product/requirements.md) P1-05～08、[架构](../../architecture/frontend.md)、[决策](../../architecture/decisions.md)、[双层门禁](../../quality/gates.md)、[002](../002-text-statistics/tasks.md)、[003](../003-json-formatter/tasks.md)。

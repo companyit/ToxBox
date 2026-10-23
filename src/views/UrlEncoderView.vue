@@ -84,20 +84,26 @@ onBeforeUnmount(() => { disposed = true; revision++ })
       <p>编码孤立 UTF-16 代理项会失败；解码原样存在的孤立代理项会保留，但其非法 UTF-8 百分号编码会失败。解码成功不等于 Unicode 有效性校验。不可见字符及换行可能受显示或系统剪贴板规范化影响。</p>
       <p>最多 100,000 个 UTF-16 码元。仅在当前浏览器内存中处理，不上传或保存；刷新或收起工具后清空。</p>
     </div>
+    <div class="workspace">
+    <div class="editor-pane">
     <div class="editor-heading"><label for="url-input">输入或粘贴文本</label><span>{{ input.length.toLocaleString('zh-CN') }} / {{ URL_INPUT_LIMIT.toLocaleString('zh-CN') }} UTF-16 码元</span></div>
     <textarea id="url-input" ref="editor" :value="input" rows="10" aria-describedby="url-rules url-status" :aria-invalid="error ? 'true' : undefined" autocomplete="off" autocapitalize="off" :spellcheck="false" placeholder="例如：你好 world 😀" @input="onInput" @compositionstart="onCompositionStart" @compositionend="onCompositionEnd" />
     <div class="actions">
       <label for="url-mode">处理模式</label>
       <select id="url-mode" :value="mode" :disabled="composing" aria-describedby="url-rules" @change="changeMode"><option value="component">URI 组件</option><option value="uri">完整 URI</option></select>
-      <button type="button" :disabled="composing || processing || tooLong" @click="execute('encode')">编码</button>
+      <button type="button" :disabled="composing || processing || tooLong" class="action-primary" @click="execute('encode')">编码</button>
       <button type="button" :disabled="composing || processing || tooLong" @click="execute('decode')">解码</button>
-      <button type="button" :disabled="input !== '' || composing" @click="fillExample">填入示例</button>
-      <button type="button" :disabled="initial || composing" @click="clear">清空</button>
+      <button type="button" :disabled="input !== '' || composing" class="action-quiet" @click="fillExample">填入示例</button>
+      <button type="button" :disabled="initial || composing" class="action-quiet" @click="clear">清空</button>
     </div>
     <p id="url-status" class="status" role="status" aria-live="polite" aria-atomic="true">{{ status }}</p>
-    <label for="url-output">处理结果（只读）</label>
+    </div>
+    <div class="output-pane">
+    <div class="editor-heading"><label for="url-output">处理结果（只读）</label></div>
     <textarea id="url-output" ref="outputEditor" :value="output" rows="10" readonly aria-describedby="url-rules url-status" autocomplete="off" :spellcheck="false" />
     <div class="actions"><button type="button" :disabled="!output || copying || composing" @click="copyResult">{{ copying ? '复制中…' : '复制结果' }}</button></div>
+    </div>
+    </div>
   </div>
 </template>
 <style scoped>
@@ -115,4 +121,19 @@ button { cursor: pointer; font-weight: 600; }
 button:disabled, select:disabled { color: var(--color-muted); cursor: default; opacity: 0.65; }
 textarea:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
 .status { min-height: 1.7em; margin-block: var(--space-3); color: var(--color-muted); overflow-wrap: anywhere; }
+
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+.editor-pane, .output-pane { min-width: 0; padding: 16px; border: 1px solid var(--color-border); border-radius: var(--ui-panel-radius); background: var(--color-surface); }
+textarea { font-size: 16px; line-height: 1.7; border-radius: var(--ui-control-radius); }
+button, select { border-radius: var(--ui-control-radius); }
+button:not(:disabled):hover { border-color: var(--color-accent); background: var(--color-accent-soft); }
+button.action-primary { background: var(--color-accent); color: var(--color-on-accent); border-color: var(--color-accent); }
+button.action-primary:not(:disabled):hover { background: var(--color-accent); text-decoration: underline; }
+button.action-primary:disabled { background: var(--color-surface); color: var(--color-muted); border-color: var(--color-border); }
+button.action-quiet { background: transparent; }
+@media (min-width: 640px) { .editor-pane, .output-pane { padding: 24px; } }
+@media (min-width: 1200px) { .workspace { grid-template-columns: repeat(2, minmax(0, 1fr)); } textarea { height: 384px; } }
+textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+#url-output { margin-top: 0; }
+.output-pane > .editor-heading { min-height: 27px; }
 </style>

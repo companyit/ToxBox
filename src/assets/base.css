@@ -40,3 +40,8 @@ h1, h2, h3, p, ul { margin: 0; }
 h1, h2, h3 { font-weight: 750; }
 a { color: var(--color-accent); }
 :where(a, button, [tabindex]):focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+
+/* B1角色Token：通用容器及旧间距保持不变。 */
+:root { --layout-home-width: 1280px; --layout-workspace-width: 1440px; --layout-prose-width: 52rem; --ui-control-radius: 12px; --ui-panel-radius: 16px; --ui-gutter: 16px; }
+@media (min-width: 640px) { :root { --ui-gutter: 24px; } }
+@media (min-width: 960px) { :root { --ui-gutter: 32px; } }
