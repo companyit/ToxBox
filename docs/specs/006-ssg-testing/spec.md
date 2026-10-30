@@ -62,3 +62,40 @@ Release Ready沿RR-01～07：在上述基础上补四浏览器各两个主版本
 ## 待批准
 
 ADR-018原生SSR构建+自定义SSG，ADR-019测试迁移与CI，ADR-020静态产物/404/SEO环境边界；以及Hydration前禁用交互、固定数字展示locale、生成器资源超时参数和性能测量方案。当前无域名不阻塞preview模式方案设计，但阻塞正式SEO/发布验收。见[design](design.md)和[tasks](tasks.md)。
+
+---
+
+## RELEASE-01-D1：006-ssg-testing 新增需求
+
+日期：2026-10-25。设计决策来源：项目负责人RELEASE-01-D1指令，对应拟议ADR-021。
+
+| 新需求ID | 需求 | 后续验收条件（未执行） |
+| --- | --- | --- |
+| REL-SSG-01 | 保留原34份产物及历史证据，只在独立唯一目录生成production与preview候选。 | 原34文件集合/SHA前后相等，候选ID/路径穿越/符号链接/覆盖旧目录拒绝。 |
+| REL-SSG-02 | 绑定源/配置/锁/测试/脚本清单、完整HEAD+Dirty Diff与产物逐文件SHA及工具版本。 | 输入或产物被改、receipt与独立预期摘要不符时拒绝；不能只记HEAD。 |
+| REL-SSG-03 | 完整校验后才生成SUCCESS和成功receipt，失败非零且不得留伪成功。 | 渲染/资源/重复路径/SEO/超时/输入改变故障注入，无成功标记、不用旧产物冒充新成功。 |
+| REL-SSG-04 | production与preview均遵守严格模式合同，9HTML结构和SSR/client head一致。 | 生产8页+404、www origin、robots/sitemap；preview noindex且不生成production canonical/sitemap，两模式分别执行。 |
+| REL-SSG-05 | 禁止手改SSG HTML冒充构建，产物目录允许清单与云HTTP责任分层。 | 源码与产物SHA绑定，无内部文件公开，不将本地404/308推定云端行为。 |
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+追踪：本目录design.md的REL-SSG-D01～D03与tasks.md的REL-SSG-T01～T05；跨规范005 SEO、006 SSG、007 TEST形成完整合同。

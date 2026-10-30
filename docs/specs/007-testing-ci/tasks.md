@@ -139,3 +139,38 @@ C4本地执行结果：Node24.21.0/npm11.19.0，npm ci/type-check/指定四轮Ch
 ## M1-06C5A 公开提交准备（2026-10-11）
 
 负责人确认C4本地Dev Done，批准以既有公开companyit/ToxBox作为候选CI目标；仅整理忽略、提交清单和明确本机标识，不授权暂存/commit/push/PR/部署。保留生产源码、配置、全部测试、154映射、006/007/ADR和必要验收证据；design.md与m106c4/actions.json必须可提交。临时Playwright runs及本地产物忽略，既有已跟踪截图/原始浏览器证据单列人工审阅，不自动移出索引。路径脱敏保留原字节于忽略的本地备份，原始/公开SHA另记；不修改算法、断言或历史测试结果。详见[C5A整理报告](../../verification/M1-06C5A-public-submission.md)。
+
+---
+
+## RELEASE-01-D1：007-testing-ci 新增任务（未实施）
+
+日期：2026-10-25。全部新增任务保持未勾选，设计批准不是编码或测试完成证据。
+
+- [ ] REL-TEST-T01：保护旧154身份/源SHA/owner，设计获批新REL独立精确账本。 对应REL-TEST-01，D01。
+- [ ] REL-TEST-T02：在另获授权后分别记录类型、Vitest、SSG、SEO双模式与错误配置实际结果。 对应REL-TEST-02，D02。
+- [ ] REL-TEST-T03：Chromium/WebKit复用同一候选，前后核验SHA并保存原退出码/状态/Trace，保留旧断言。 对应REL-TEST-03，D02。
+- [ ] REL-TEST-T04：登记Firefox风险；由负责人明确补验人/环境/日期或里程碑，不自动设期限。 对应REL-TEST-04，D03。
+- [ ] REL-TEST-T05：区分本地/CI/远端/人工/真机证据，保留历史FAIL，发布仍需独立审批。 对应REL-TEST-05，D03。
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+旧任务勾选、历史验收和FAIL一律原字节保留；新任务只有实际证据并获对应验收后才能在后续独立授权范围内更新。本段不执行任何测试或Git写入。

@@ -163,6 +163,7 @@ dt { color: var(--color-muted); font-size: 0.875rem; }
 dd { margin: var(--space-2) 0 0; color: var(--color-text); font-size: 1.75rem; font-weight: 700; overflow-wrap: anywhere; }
 .rules p + p, details { margin-top: var(--space-3); }
 summary { cursor: pointer; color: var(--color-accent); }
+details > summary { min-height: 44px; }
 @media (min-width: 640px) { .statistics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 
@@ -181,4 +182,28 @@ button.action-quiet { background: transparent; }
 .statistics div { background: var(--color-surface); border-radius: var(--ui-panel-radius); }
 .rules { margin-top: 24px; }
 @media (min-width: 1200px) { .workspace { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } .statistics { grid-template-columns: minmax(0, 1fr); } }
+
+/* B3-1：仅缩短窄屏编辑与操作路径，桌面工作台及原生select保护保持原样。 */
+@media (width < 1200px) {
+  textarea { height: clamp(14rem, 36vw, 18rem); min-height: 12rem; }
+}
+@media (width < 640px) {
+  .workspace { gap: var(--space-4); }
+  .actions { gap: var(--space-2); }
+  .rules p + p { margin-top: var(--space-2); }
+  .rules { margin-top: var(--space-4); }
+}
+
+/* B3-2A：统计卡仅在手机紧凑排列，窄屏按最小可读卡宽回退。 */
+@media (width < 640px) {
+  .statistics {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(9.5rem, calc((100% - var(--space-2)) / 2))), 1fr));
+    gap: var(--space-2);
+  }
+  .statistics > div { min-width: 0; padding: var(--space-3); }
+  .statistics > div:first-child { grid-column: 1 / -1; }
+  .statistics dt, .statistics dd { min-width: 0; overflow-wrap: anywhere; }
+  .statistics dd { font-size: 1.5rem; }
+  .statistics > div:first-child dd { font-size: 1.75rem; }
+}
 </style>

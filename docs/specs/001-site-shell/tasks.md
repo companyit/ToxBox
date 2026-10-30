@@ -1,3 +1,14 @@
+# DEV-06UI-B3-3F SHELL / tasks
+
+负责人已批准限定实施。- [x] F44-SHELL-SDD：新增规格、设计、任务并保留历史正文。
+- [x] F44-SHELL-CSS：完成唯一获批CSS增量。
+- [ ] F44-SHELL-REGRESSION：15视口Chromium/WebKit真实几何、点击、键盘与既有布局回归。
+- [ ] F44-SHELL-OWNER：负责人视觉签收；真机、软键盘与读屏不由模拟浏览器证明。
+
+原始B3-3V FAIL永久保留，不覆盖历史证据、不改变旧任务或验收结论；使用新候选构建。未实测尺寸及纵向位移均为INFERRED / NOT VERIFIED。
+
+---
+
 # DEV-06UI-B1 当前增补（2026-10-20）
 
 负责人正式授权本批规格、源码、新增UI测试及必要本地验证；旧Pending已被本轮授权取代。现有Router/SSG/测试配置为当前事实，下文历史记录保留，不作为本轮执行结果。

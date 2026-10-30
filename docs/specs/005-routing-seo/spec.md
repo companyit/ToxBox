@@ -56,3 +56,41 @@ M1-05A 完成指文档可审查，不等于 Dev Done。M1-05B Dev Done：获批�
 Release Ready：在 Dev Done 上完成 RR-01～07，尤其 RSEO-05 托管深链、RSEO-06 HTTP404、RSEO-08 正式 canonical、RSEO-09 正式 SEO 产物及 RSEO-10 渲染评估后的批准方案验收；完整兼容性、设备、无障碍、隐私和性能验证不得沿用迁移前结果冒充迁移后通过。预渲染建议若被暂缓，必须由负责人批准理由和 SEO 风险，而非默认仅 CSR 即发布就绪。搜索实际收录只能记录后续观测，不能作为已保证的结果。
 
 M1-05A起草时测试未执行；M1-05B实际结果见任务文末，不将发布项改成通过。测试计划与追溯见 [tasks](tasks.md)，实现方案与待批准事项见 [design](design.md)。生产发布独立授权。
+
+---
+
+## RELEASE-01-D1：005-routing-seo 新增需求
+
+日期：2026-10-25。设计决策来源：项目负责人RELEASE-01-D1指令，对应拟议ADR-021。
+
+| 新需求ID | 需求 | 后续验收条件（未执行） |
+| --- | --- | --- |
+| REL-SEO-01 | 批准8页面索引清单与规范URL；排除404、未知、资源/API、别名、query/hash变体。 | 页面目录、canonical和sitemap集合严格全等，重复URL/未批准路由被拒绝。 |
+| REL-SEO-02 | 显式production模式与固定www origin强校验，preview/local隔离；无批准配置不猜测。 | 缺值、http、credentials、path/query/hash、非默认端口、根host/错域名失败；不得静默回退成功。 |
+| REL-SEO-03 | SSR/client共用构建期SEO配置和PageHead，canonical/OG字段唯一且raw/hydration一致。 | 原始HTML、禁JS、hydration、客户端导航及返回逐字段相等，无重复或旧canonical/OG。 |
+| REL-SEO-04 | preview/local/404/未知noindex，按模式/页面清除旧canonical/OG URL。 | production→404→正式页和preview合同强校验，不继承上页索引标签。 |
+| REL-SEO-05 | production robots/sitemap只引用批准规范URL，HTML/XML正确转义，无伪造lastmod。 | robots指向唯一www sitemap；XML解析和URL集合等式，注入/重复/错误域名负向检查。 |
+| REL-SEO-06 | 应用SEO和云端DNS/301/308/TLS/HTTP404权限与证据分离。 | 不以canonical或本地preview通过替代真实托管验收；云操作另批。 |
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+追踪：本目录design.md的REL-SEO-D01～D03与tasks.md的REL-SEO-T01～T05；跨规范005 SEO、006 SSG、007 TEST形成完整合同。

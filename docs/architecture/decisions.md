@@ -163,3 +163,48 @@ C3实际结果：精确Playwright1.64.0三包安装成功，Chromium156.0.8078.4
 负责人确认C3 Dev Done，批准D019-05的workflow编写/本地校验及D019-06留存子集；不批准远端Git操作、部署或M2。采用ubuntu-24.04、.node-version=24.21.0、官方Actions完整SHA、只读contents权限、不持久化checkout凭据、无生产密钥。push/PR日常Chromium，每日UTC19:17及手动三引擎；quality成功后同一摘要绑定SSG artifact进入browser矩阵，不重复构建。摘要14天，含Trace副本的完整HTML/截图/Trace均7天，构建产物1天。新增无重建CI测试入口及扫描辅助，不增加依赖、不修改生产代码或154身份。真实远端运行和分支保护另行验证，本地检查不得冒充远端通过。
 
 C4实施状态：已创建quality→browser矩阵→Quality gate只读工作流及摘要保护的CI入口；全部指定本地回归通过，原154身份保持、三引擎本地126通过，敏感/篡改/归档验证通过。远端GitHub执行、失败阻断演练和分支保护未执行，不能称CI已生效。Dev Done等待负责人结合[C4报告](../verification/M1-06C4-github-actions.md)确认，Release Ready保持未完成，停止不进入M2。
+
+---
+
+## ADR-021：公开试用生产SEO及隔离候选构建（RELEASE-01-D1拟议追加）
+
+日期：2026-10-25。状态：设计决策已由项目负责人本轮确认；本段仍为拟议追加，跟踪文件写入和源码实现未授权。当前最高ADR-020；下一轮如发现021占用，停止确认，不覆盖或修改旧编号。
+
+### 背景、决策与理由
+
+WorkDev Tools公开试用版、拟定v0.1.0，现有三工具和8页面+404。公开试用成熟度与正式生产SEO可并存，不移除试用标签，不新增后端、账户、云保存、广告、埋点、付费功能。
+
+www为唯一canonical origin；SSR/client共用同一构建期SEO配置和PageHead，避免静态HTML正确而hydration写回preview的漂移。production显式配置并强校验；OG最小六字段且无分享图，preview/production严格隔离。
+
+独立生产候选目录保护原34产物，源/配置/锁/测试/HEAD+Dirty Diff和产物SHA绑定；完整校验后才有SUCCESS和成功receipt，失败非零无伪成功。原154身份保留，新REL测试精确独立账本，双引擎复用同候选。
+
+### 授权和交付边界
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+### 备选与后果
+
+不采用运行时host推导canonical、手改SSG HTML或覆盖旧证据后用汇总自证成功。采用统一模型/隔离候选增加配置和验收职责，具体实现仍需独立文件白名单。云端DNS/301/308/证书与应用SEO不是同一授权；本地preview结果不是云真实HTTP404证据。
+
+### 追踪
+
+005 REL-SEO-01～06、D01～D03、T01～T05；006 REL-SSG-01～05、D01～D03、T01～T05；007 REL-TEST-01～05、D01～D03、T01～T05。Firefox继续Deferred，补验负责人和期限待定，不把已有CI能力视为候选通过。原ADR状态/旧正文/历史任务和FAIL不回写。

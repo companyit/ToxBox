@@ -158,3 +158,44 @@ D-006-04：Hydration前fieldset禁用交互、固定zh-CN展示locale、30秒/�
 - [Vitest安装要求](https://vitest.dev/guide/)、[测试环境](https://vitest.dev/guide/environment.html)、[Vue Test Utils](https://test-utils.vuejs.org/guide/)：版本/环境须实施时核对。
 - [Playwright浏览器与平台差异](https://playwright.dev/docs/browsers)、[CI](https://playwright.dev/docs/ci-intro)：自动化引擎不替代真实Safari/设备。
 - [Cloudflare Pages路径与404](https://developers.cloudflare.com/pages/configuration/serving-pages/)：顶层404关闭默认SPA回退，HTTP行为仍须实测。
+
+---
+
+## RELEASE-01-D1：006-ssg-testing 新增设计
+
+日期：2026-10-25。以下为设计而非已实施结论。
+
+### REL-SSG-D01：隔离目录与来源绑定
+
+对应REL-SSG-01/02。候选入口预校验mode/origin/8URL及安全ID，再建独立work/staging/output，拒绝覆盖原dist-ssg/34产物和符号链接。receipt置公开目录外，绑定HEAD+dirty、源/测试/配置/锁/工具与产物SHA，独立记录receipt预期摘要。生产允许9HTML+批准assets/favicon+robots/sitemap，不公开SSR/.vite/.ci/.map/秘密；新产物不强制仍34文件。
+
+### REL-SSG-D02：失败关闭
+
+对应REL-SSG-03。所有页面渲染、资源/SEO/唯一性/HTML/XML及输入二次SHA检查完成，再同文件系统移动候选并最后写成功receipt/SUCCESS。任一失败非零、无成功标记，失败诊断独立保留，不用手改HTML或旧工件弥补。不得在配置验证前清理原证据。
+
+### REL-SSG-D03：双模式与责任分层
+
+对应REL-SSG-04/05。preview与production分别强验证，同候选SSR/client head一致，默认dev/preview行为保留。真实HTTP404/目录刷新/永久跳转不由本地preview代替；云操作不属于此构建实现包。
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+追踪关系：D01→T01/T02；D02→T03；D03→T04/T05。实现必须另获精确源码白名单授权，本D1只拟议追加SDD。

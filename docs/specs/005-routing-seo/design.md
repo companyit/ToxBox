@@ -103,3 +103,44 @@ sitemap.xml、robots.txt 只在正式域名、公开页面清单及生成任务�
 已知无尾斜杠地址在beforeEach中、历史提交前规范化，不强制覆盖用户导航的push/replace意图：初始直达仍由Router初始replace处理，站内push只提交规范地址一次。若所有规范化重定向强制replace，会覆盖来源历史条目，破坏返回；本轮测试发现后采用上述方式并复验，不增加中间非规范历史。
 
 M1-05B审批结果：D-005-01/02/05及D-005-03阶段拆分已批准；D-005-04分层原则获批，正式origin、公开索引策略、具体托管配置与产物仍待发布准备审批。当前采用vue-router4.6.4，客户端预览noindex，无canonical，不生成sitemap/robots；未接入SSR或hydration。
+
+---
+
+## RELEASE-01-D1：005-routing-seo 新增设计
+
+日期：2026-10-25。以下为设计而非已实施结论。
+
+### REL-SEO-D01：共享构建期配置与批准索引
+
+对应REL-SEO-01/02。统一纯环境校验和不可变注入，SSR render与客户端初始/afterEach使用同一PageHead。显式裸origin必须等于https://www.v7luck.com，拒绝尾斜杠输入等非严格origin；根域名不能替代www。此前D草案productionOrigin=null待决已由负责人当前www决定解决，旧草案不回写。底层test.invalid夹具不是生产域名批准。
+
+### REL-SEO-D02：受控head与站点地图
+
+对应REL-SEO-03/04/05。原页面title/description复用，不改文案。HTML与DOM适配只管理明确字段，去重canonical/OG并清除跨页面/模式遗留。production robots指向https://www.v7luck.com/sitemap.xml；XML只含8个canonical，不造lastmod。分别做HTML/XML转义，不将环境字符串拼入可执行脚本。preview仍安全无production标签，不通过删除旧禁止项制造成功。
+
+### REL-SEO-D03：交付边界
+
+对应REL-SEO-06。保留router/焦点/滚动/ARIA/工具语义；不因应用canonical推定根到www已跳转。DNS/301/308/证书/CDN与真实404须单独授权及实测，robots不是访问控制。
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+追踪关系：D01→T01/T02；D02→T03/T04；D03→T05。实现必须另获精确源码白名单授权，本D1只拟议追加SDD。

@@ -1,3 +1,35 @@
+# DEV-06UI-B3-3F TEXT / design
+
+负责人已批准限定实施。需求/设计编号：TEXT-F44-D01。仅新增details > summary { min-height:44px; }，不改padding/display/marker或JS。默认单行预计增加20.203125px，规则正文及Footer随文档流变化，待实测。
+
+原始B3-3V FAIL永久保留，不覆盖历史证据、不改变旧任务或验收结论；使用新候选构建。未实测尺寸及纵向位移均为INFERRED / NOT VERIFIED。
+
+---
+
+# DEV-06UI-B3-2A 增补（2026-10-24）
+
+负责人正式批准5文件限定实施及必要本地验证。
+
+## B3-2A 局部响应式设计
+
+<640的statistics使用自适应最小卡宽9.5rem、gap8、卡padding12、min-width:0；最小轨道再以容器二分宽度为下限，使最多两列。320可用288不足2×152+8，回退单列；375可用343可容纳两列（仅算术预算，待实际渲染确认）。首卡grid-column:1/-1，普通dd24px/首卡28px，dt仍14px，文本自然换行，不隐藏任何数字。
+
+仅新增局部CSS块，不改template/script/统计规则或原B3-1样式。新增UI测试使用真实输入（空、混合Unicode换行、100,000合法上限），验证五项原值、列几何、文本range不越界及桌面保护。新SSG构建最多一次供两引擎复用；实际截图和人工验收分开记录，受限环境准备普通Terminal方案。
+
+---
+
+# DEV-06UI-B3-1 增补（2026-10-24）
+
+负责人已正式批准限定范围实施及本地验证；执行结果以本批证据为准。
+
+## B3-1 局部CSS设计
+
+仅本View scoped CSS：<1200px textarea初始height:clamp(14rem,36vw,18rem)、min-height:12rem，保留resize:vertical、输入输出值与内部滚动；≥1200保留原384px。<640 workspace gap16、actions gap8、规则段距8及规则相邻工作区距16，复用现有Token。JSON/URL规则在输入前，文本规则在结果后，不移动DOM。保留script/template原字节及select 44px修复完整块。
+
+一次新SSG构建供两引擎定向ui-layout/tools和截图复用；保存源/测试/配置/产物摘要。使用现有hydrated和平台Tab策略，历史图仅参考。同环境96px比较缺少基线则未验证。禁止卡片密度/错误视觉、平板专项、全局Token、SEO/路由/品牌/preview改动。
+
+---
+
 # DEV-06UI-B2 增补（2026-10-23）
 
 负责人已批准本批限定实现和必要本地验证。当前栈Vue/Router/Vite/SSG及既有测试，以实际配置为准；下文历史基线保留。

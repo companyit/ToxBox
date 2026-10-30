@@ -1,3 +1,11 @@
+# DEV-06UI-B3-3F SHELL / spec
+
+负责人已批准限定实施。需求/设计编号：SHELL-F44-01。品牌a真实border box≥44px，图标保持36×36px；保留原文字、RouterLink、Tab顺序、Skip Link和nav≥44px。图标、文字、上下边缘均可返回首页。
+
+原始B3-3V FAIL永久保留，不覆盖历史证据、不改变旧任务或验收结论；使用新候选构建。未实测尺寸及纵向位移均为INFERRED / NOT VERIFIED。
+
+---
+
 # DEV-06UI-B1 当前增补（2026-10-20）
 
 负责人正式授权本批规格、源码、新增UI测试及必要本地验证；旧Pending已被本轮授权取代。现有Router/SSG/测试配置为当前事实，下文历史记录保留，不作为本轮执行结果。

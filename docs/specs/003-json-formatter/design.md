@@ -1,3 +1,29 @@
+# DEV-06UI-B3-2B 增补（2026-10-24）
+
+负责人已正式批准9文件限定实施及必要本地验证，320 JSON全宽清空回退已获接受。
+
+## B3-2B 局部CSS与证据设计
+
+新增<640 scoped规则限.editor-pane > .actions：保持flex-wrap/gap8，button padding-inline:--space-2、min-width44、flex:0 0 auto；label/select flex:0 0 auto；末按钮flex-grow:1填余量，320 JSON独行时填满尾行。select其余修复块不变，不改输出复制按钮。无Grid/wrapper/order/新断点；Vue script/template原字节保持。
+
+.editor-pane > textarea[aria-invalid="true"] ~ .status采用color-text、650字重、3px accent左边框、accent-soft浅底、padding8/12、上距8、自然换行；正常状态不误强调。边框+字重提供非颜色线索，原语义/文本/状态逻辑不变。
+
+一次新SSG产物供两引擎定向与截图复用，逐视口记录真实行组/控件文字及盒边界/高度、动作前后scrollY/actions/status位置和错误可见比例。历史bbox仅作参考，同环境未取基线时不宣称精确前后改善通过。保留所有既有UI断言，尤其B3-2A统计6例与B1/FIX焦点；受限环境交普通Terminal，不重复端口诊断。
+
+---
+
+# DEV-06UI-B3-1 增补（2026-10-24）
+
+负责人已正式批准限定范围实施及本地验证；执行结果以本批证据为准。
+
+## B3-1 局部CSS设计
+
+仅本View scoped CSS：<1200px textarea初始height:clamp(14rem,36vw,18rem)、min-height:12rem，保留resize:vertical、输入输出值与内部滚动；≥1200保留原384px。<640 workspace gap16、actions gap8、规则段距8及规则相邻工作区距16，复用现有Token。JSON/URL规则在输入前，文本规则在结果后，不移动DOM。保留script/template原字节及select 44px修复完整块。
+
+一次新SSG构建供两引擎定向ui-layout/tools和截图复用；保存源/测试/配置/产物摘要。使用现有hydrated和平台Tab策略，历史图仅参考。同环境96px比较缺少基线则未验证。禁止卡片密度/错误视觉、平板专项、全局Token、SEO/路由/品牌/preview改动。
+
+---
+
 # DEV-06UI-B2 增补（2026-10-23）
 
 负责人已批准本批限定实现和必要本地验证。当前栈Vue/Router/Vite/SSG及既有测试，以实际配置为准；下文历史基线保留。

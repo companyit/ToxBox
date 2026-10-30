@@ -4,6 +4,7 @@ import { createSiteApp } from './app'
 import { getPage, pages } from './data/pages'
 import { createPageHead } from './utils/seo'
 import { routes } from './router/routes'
+import { siteSeoEnvironment } from './config/seo'
 export { pages }
 export const routeCatalog = routes.filter(route => route.name !== 'not-found').map(route => ({ path: route.path, routeName: route.name }))
 export async function render(path: string) {
@@ -13,5 +14,5 @@ export async function render(path: string) {
   if (pages.some(p => p.path === path) && router.currentRoute.value.name !== pages.find(p => p.path === path)?.routeName) throw Error('路由与页面目录不一致')
   const context: { modules?: Set<string> } = {}
   const body = await renderToString(app, context)
-  return { body, head: createPageHead(getPage(router.currentRoute.value.name), { mode: 'preview' }), modules: [...(context.modules ?? [])] }
+  return { body, head: createPageHead(getPage(router.currentRoute.value.name), siteSeoEnvironment), seoEnvironment: siteSeoEnvironment, modules: [...(context.modules ?? [])] }
 }

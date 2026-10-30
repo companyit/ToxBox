@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "productionOrigin": "https://www.v7luck.com",
+  "indexableRouteNames": [
+    "home",
+    "office",
+    "text-statistics",
+    "developer",
+    "json-formatter",
+    "url-encoder",
+    "about",
+    "privacy"
+  ]
+}

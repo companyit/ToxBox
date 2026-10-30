@@ -155,4 +155,55 @@ button.action-quiet { background: transparent; }
 textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
 #json-output { margin-top: 0; }
 .output-pane > .editor-heading { min-height: 27px; }
+
+/* 原生select保持语义与事件，统一实际控件盒子并保留下拉指示。 */
+select {
+  box-sizing: border-box;
+  min-height: 44px;
+  height: auto;
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: 1.5;
+  padding-inline-end: 2.5rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+
+/* B3-1：仅缩短窄屏编辑与操作路径，桌面工作台及原生select保护保持原样。 */
+@media (width < 1200px) {
+  textarea { height: clamp(14rem, 36vw, 18rem); min-height: 12rem; }
+}
+@media (width < 640px) {
+  .workspace { gap: var(--space-4); }
+  .actions { gap: var(--space-2); }
+  .rules p + p { margin-top: var(--space-2); }
+  .rules { margin-bottom: var(--space-4); }
+}
+
+/* B3-2B：仅手机输入动作紧凑Flex及原status错误层级，保留原生select修复。 */
+@media (width < 640px) {
+  .editor-pane > .actions > button {
+    padding-inline: var(--space-2);
+    min-width: 44px;
+    flex: 0 0 auto;
+  }
+  .editor-pane > .actions > label,
+  .editor-pane > .actions > select { flex: 0 0 auto; }
+  .editor-pane > .actions > button:last-child { flex-grow: 1; }
+  .editor-pane > textarea[aria-invalid="true"] ~ .status {
+    color: var(--color-text);
+    font-weight: 650;
+    border-inline-start: 3px solid var(--color-accent);
+    background: var(--color-accent-soft);
+    padding: var(--space-2) var(--space-3);
+    margin-block-start: var(--space-2);
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
 </style>

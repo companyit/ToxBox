@@ -138,3 +138,38 @@ G01～03已正式批准；ADR-016/017核心方案批准日期2026-10-10。仅安
 RR-01～07保持未完成；路由本地验证不自动关闭001～004的原发布遗留。规范任务未执行部分保持未勾选，不等同已发现失败。实施完成后停止M1-05B，不部署、不提交/推送、不自动进入下一阶段。
 
 M1-06A前序状态确认：M1-05B Dev Done已由负责人确认，Release Ready及原待验证项目不变；本次只归档阶段批准，未重新执行测试。
+
+---
+
+## RELEASE-01-D1：005-routing-seo 新增任务（未实施）
+
+日期：2026-10-25。全部新增任务保持未勾选，设计批准不是编码或测试完成证据。
+
+- [ ] REL-SEO-T01：核对www批准配置和8索引path精确一致，先规格后实现；不自动纳入新页面。 对应REL-SEO-01/02，D01。
+- [ ] REL-SEO-T02：独立授权后接入显式production/preview隔离，负向配置失败，不从host推导。 对应REL-SEO-02/04，D01。
+- [ ] REL-SEO-T03：实现唯一canonical/六项OG无分享图及跨页面清理，验证raw/hydration一致。 对应REL-SEO-03/04，D02。
+- [ ] REL-SEO-T04：生成并交叉验证robots/sitemap规范集合及HTML/XML安全，无伪造lastmod。 对应REL-SEO-01/05，D02。
+- [ ] REL-SEO-T05：记录云DNS/301/308/证书/HTTP404单独授权和真实交付验收，不推定已配置。 对应REL-SEO-06，D03。
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+旧任务勾选、历史验收和FAIL一律原字节保留；新任务只有实际证据并获对应验收后才能在后续独立授权范围内更新。本段不执行任何测试或Git写入。

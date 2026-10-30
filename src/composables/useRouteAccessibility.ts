@@ -3,6 +3,7 @@ import type { Router } from 'vue-router'
 import { getPage } from '@/data/pages'
 import { applyPageHead, createPageHead } from '@/utils/seo'
 import { hashTarget } from '@/router'
+import { siteSeoEnvironment } from '@/config/seo'
 
 export function useRouteAccessibility(router: Router) {
   const announcement = ref('')
@@ -13,12 +14,12 @@ export function useRouteAccessibility(router: Router) {
   function retry() { void router.replace(failedTarget).catch(() => { /* 当前导航错误由onError处理，忽略过期重试。 */ }) }
   let cleanup = () => {}
   onMounted(() => {
-    applyPageHead(document, createPageHead(getPage(router.currentRoute.value.name), { mode: 'preview' }))
+    applyPageHead(document, createPageHead(getPage(router.currentRoute.value.name), siteSeoEnvironment))
     const removeBefore = router.beforeEach(to => { revision++; pendingFullPath = to.fullPath; navigationError.value = false })
     const removeAfter = router.afterEach(async (to, from, failure) => {
       if (failure) return
       const current = revision
-      applyPageHead(document, createPageHead(getPage(to.name), { mode: 'preview' }))
+      applyPageHead(document, createPageHead(getPage(to.name), siteSeoEnvironment))
       await nextTick()
       if (current !== revision || to.fullPath !== router.currentRoute.value.fullPath) return
       const target = hashTarget(to.hash)

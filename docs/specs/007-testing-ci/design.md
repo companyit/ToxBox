@@ -337,3 +337,44 @@ C4实际实施：quality中合并质量与一次完整SSG构建，独立job outp
 ## M1-06C5A 公开提交准备（2026-10-11）
 
 负责人确认C4本地Dev Done，批准以既有公开companyit/ToxBox作为候选CI目标；仅整理忽略、提交清单和明确本机标识，不授权暂存/commit/push/PR/部署。保留生产源码、配置、全部测试、154映射、006/007/ADR和必要验收证据；design.md与m106c4/actions.json必须可提交。临时Playwright runs及本地产物忽略，既有已跟踪截图/原始浏览器证据单列人工审阅，不自动移出索引。路径脱敏保留原字节于忽略的本地备份，原始/公开SHA另记；不修改算法、断言或历史测试结果。详见[C5A整理报告](../../verification/M1-06C5A-public-submission.md)。
+
+---
+
+## RELEASE-01-D1：007-testing-ci 新增设计
+
+日期：2026-10-25。以下为设计而非已实施结论。
+
+### REL-TEST-D01：精确测试账本
+
+对应REL-TEST-01。原154逐身份及源SHA映射不改；新REL测试另建title/path/project精确集合，清单校验旧与新分别严格相等，未知/漏项/重复均失败，不把154改成任意更大数。
+
+### REL-TEST-D02：分层同产物验证
+
+对应REL-TEST-02/03。按类型→Vitest→两模式SSG/SEO→浏览器的依赖保存实际结果。每个mode内Chromium/WebKit对同receipt和SHA串行运行，preview与production两个候选无需相同HTML字节。保留所有旧44px/焦点/业务断言，raw/hydration/路由head、robots/sitemap与错误配置均强测。截图生成与人工视觉分离，未执行标NOT VERIFIED。
+
+### REL-TEST-D03：Firefox与证据边界
+
+对应REL-TEST-04/05。Firefox继续Deferred，原因是环境启动失败而非已证明业务不兼容。建议测试/浏览器兼容性角色执行、项目负责人审批，具体人员、环境、补验日期/里程碑及到期处理待确认。现有CI包含Firefox不等于候选通过，不自动触发远端。真实触控/软键盘/读屏、云404与域名验收均独立保留。
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+追踪关系：D01→T01；D02→T02/T03；D03→T04/T05。实现必须另获精确源码白名单授权，本D1只拟议追加SDD。

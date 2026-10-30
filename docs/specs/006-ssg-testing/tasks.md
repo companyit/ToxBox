@@ -157,3 +157,38 @@ M1-06A历史结论：当时G01～03未批准，不具备直接实施条件。当
 - [ ] Release Ready：未完成，001～005发布遗留不自动关闭。
 
 追溯补充：SSG-01～07/09～10本轮范围由I01～05→V01/02/04证据覆盖；SSG-08及正式SSG-09由I10→V05/06待发布批准；SSG-11/13由I06/08→迁移与CI验证，未授权；SSG-12改用获准的既有CDP完成核心E01～05/E07～09及E10子集，完整矩阵保留；SSG-14机制完成、性能V08待测。完整固定计划未执行项保持未完成，不以核心门禁通过勾选整套计划。
+
+---
+
+## RELEASE-01-D1：006-ssg-testing 新增任务（未实施）
+
+日期：2026-10-25。全部新增任务保持未勾选，设计批准不是编码或测试完成证据。
+
+- [ ] REL-SSG-T01：先封存原34集合/SHA及历史证据，设计并独立授权隔离candidate目录。 对应REL-SSG-01，D01。
+- [ ] REL-SSG-T02：绑定源/配置/锁/测试/HEAD+Dirty Diff/工具与产物SHA，独立记录receipt摘要。 对应REL-SSG-02，D01。
+- [ ] REL-SSG-T03：完整校验后才有SUCCESS，故障非零且无伪成功，不覆盖原证据。 对应REL-SSG-03，D02。
+- [ ] REL-SSG-T04：执行获批的production/preview强合同，www与9HTML、noindex/raw-hydration逐项验证。 对应REL-SSG-04，D03。
+- [ ] REL-SSG-T05：审计允许产物目录和源产物关系，禁止手改HTML，把云HTTP验收单列。 对应REL-SSG-05，D03。
+
+### 本阶段固定SEO与授权合同
+
+唯一production origin为`https://www.v7luck.com`，production须显式传入且与批准配置精确相等；不从location.origin、根域名或运行时host推断。以下为批准的完整8路径清单，未来新增页面不自动获准索引。
+
+| 允许收录的规范path | 唯一canonical |
+| --- | --- |
+| `/` | `https://www.v7luck.com/` |
+| `/office/` | `https://www.v7luck.com/office/` |
+| `/office/text-statistics/` | `https://www.v7luck.com/office/text-statistics/` |
+| `/developer/` | `https://www.v7luck.com/developer/` |
+| `/developer/json-formatter/` | `https://www.v7luck.com/developer/json-formatter/` |
+| `/developer/url-encoder/` | `https://www.v7luck.com/developer/url-encoder/` |
+| `/about/` | `https://www.v7luck.com/about/` |
+| `/privacy/` | `https://www.v7luck.com/privacy/` |
+
+404/未知页面noindex、无canonical、不进入sitemap。preview/local继续noindex，不输出production canonical或sitemap；维持现有preview默认无robots/sitemap合同。OG最小字段为og:title、og:description、og:url、og:type=website、og:site_name=WorkDev Tools、og:locale=zh_CN，不含og:image分享图；production索引页og:url等于canonical，404不输出og:url，preview/local不输出production OG URL。
+
+www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；DNS/证书/具体OSS/CDN/边缘服务均为未来独立实施授权议题。本地preview的404/308不证明云端真实HTTP行为。保留三工具、公开试用标记、8页面+404，不新增业务或改算法。
+
+本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
+
+旧任务勾选、历史验收和FAIL一律原字节保留；新任务只有实际证据并获对应验收后才能在后续独立授权范围内更新。本段不执行任何测试或Git写入。
