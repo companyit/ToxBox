@@ -99,3 +99,10 @@ www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；D
 本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
 
 追踪：本目录design.md的REL-SSG-D01～D03与tasks.md的REL-SSG-T01～T05；跨规范005 SEO、006 SSG、007 TEST形成完整合同。
+
+
+## REL-NOTICE-01：许可通知分发（拟议，待负责人批准）
+
+Preview和Production候选必须包含third-party-notices.txt，与public中批准的原文逐字节一致；缺失或不符必须失败且不得生成SUCCESS。输入快照须覆盖public内未跟踪文件，避免新增公开资源逃过来源绑定。通知文件本身不替代全部第三方来源和许可范围审查。
+
+本段为拟议变更，不追认运行通过；历史状态原样保留。

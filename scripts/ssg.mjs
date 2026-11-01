@@ -120,6 +120,9 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
   if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选9HTML清单不一致')
   const production = environment.mode === 'production'
   const allowedSeo = production ? ['robots.txt', 'sitemap.xml'] : []
+  const noticesName = 'third-party-notices.txt'
+  const notices = await readSafeFile(path.join(repositoryRoot, 'public', noticesName))
+  if (!files[noticesName] || files[noticesName].size !== notices.length || files[noticesName].sha256 !== sha256(notices)) throw Error('第三方许可通知缺失或字节不符')
   const referenced = new Set()
   const { JSDOM } = await import('jsdom')
   for (const page of [...approvedPages, notFoundPage]) {
@@ -159,7 +162,7 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
     referenced.add(resource.slice(1))
   }
   for (const name of Object.keys(files)) {
-    if (!expectedHtml.includes(name) && !allowedSeo.includes(name) && !referenced.has(name)) throw Error('公开输出含未批准文件或未引用资源')
+    if (!expectedHtml.includes(name) && !allowedSeo.includes(name) && name !== noticesName && !referenced.has(name)) throw Error('公开输出含未批准文件或未引用资源')
     contentTypeFor(name)
   }
   const canonicalUrls = approvedPages.map(p => createPageHead(p, environment).canonical).filter(Boolean)
@@ -199,8 +202,8 @@ export async function generateCandidate({ candidateRoot, envelope }) {
   await assertSafePath(metadata, { directory: true })
   const define = { __WORKDEV_SEO_CONFIG__: JSON.stringify(envelope) }
   const client = path.join(workRoot, 'client')
-  await build({ root: repositoryRoot, define, build: { outDir: client, ssrManifest: true, sourcemap: false, emptyOutDir: true } })
-  await build({ root: repositoryRoot, define, build: { outDir: path.join(workRoot, 'server'), ssr: 'src/entry-server.ts', sourcemap: false, emptyOutDir: true } })
+  await build({ root: repositoryRoot, define, configLoader: 'native', cacheDir: path.join(workRoot, 'vite-cache/client'), build: { outDir: client, ssrManifest: true, sourcemap: false, emptyOutDir: true } })
+  await build({ root: repositoryRoot, define, configLoader: 'native', cacheDir: path.join(workRoot, 'vite-cache/server'), build: { outDir: path.join(workRoot, 'server'), ssr: 'src/entry-server.ts', sourcemap: false, emptyOutDir: true } })
   const manifestPath = path.join(metadata, 'ssr-manifest.json')
   const manifestBytes = await readSafeFile(path.join(client, '.vite/ssr-manifest.json'))
   await fs.writeFile(manifestPath, manifestBytes, { flag: 'wx', mode: 0o600 })
@@ -214,7 +217,7 @@ export async function generateCandidate({ candidateRoot, envelope }) {
   // Copy only the client bundle. Metadata/server/maps are never copied into public output.
   for (const entry of Object.keys(await digestDirectory(client))) {
     if (entry === 'index.html' || entry.startsWith('.vite/')) continue
-    if (entry !== 'favicon.ico' && !/^assets\/[A-Za-z0-9_.-]+\.(?:js|css|svg|png|jpg|webp|woff2?)$/.test(entry)) throw Error('客户端输出含未批准文件')
+    if (entry !== 'favicon.ico' && entry !== 'third-party-notices.txt' && !/^assets\/[A-Za-z0-9_.-]+\.(?:js|css|svg|png|jpg|webp|woff2?)$/.test(entry)) throw Error('客户端输出含未批准文件')
     const target = path.join(staging, entry)
     await fs.mkdir(path.dirname(target), { recursive: true })
     await fs.writeFile(target, await readSafeFile(path.join(client, entry)), { flag: 'wx' })

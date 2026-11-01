@@ -1,10 +1,7 @@
 import type { PageDefinition, PageName } from '../data/pages.ts'
 import { approvedIndexablePages } from './seoEnvironment.ts'
-export interface SeoEnvironment {
-  readonly mode: 'local' | 'preview' | 'production'
-  readonly approvedOrigin?: string
-  readonly indexableRouteNames?: readonly PageName[]
-}
+import type { SeoEnvironment } from '../types/seo'
+export type { SeoEnvironment } from '../types/seo'
 export type OpenGraphProperty = 'og:title' | 'og:description' | 'og:url' | 'og:type' | 'og:site_name' | 'og:locale'
 export interface PageHead {
   title: string; description: string; robots: string; canonical?: string

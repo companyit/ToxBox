@@ -1,5 +1,5 @@
 import { pages, type PageName } from '../data/pages.ts'
-import type { SeoEnvironment } from './seo.ts'
+import type { SeoEnvironment } from '../types/seo'
 
 // 固定批准集合；页面目录新增条目不会自动加入。
 export const approvedIndexablePages = Object.freeze([

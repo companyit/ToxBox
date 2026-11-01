@@ -94,7 +94,7 @@ export async function inputSnapshot() {
   if (git('rev-parse', '--show-toplevel').trim() !== repositoryRoot) fail('Git根目录不一致')
   const files = new Set(git('ls-files', '-z').split('\0').filter(Boolean))
   // Include approved untracked implementation/tests, never ignored .env or build outputs.
-  for (const folder of ['src', 'config', 'scripts', 'tests', 'e2e', '.github']) {
+  for (const folder of ['src', 'config', 'scripts', 'tests', 'e2e', '.github', 'public']) {
     const root = path.join(repositoryRoot, folder)
     await assertSafePath(root, { directory: true })
     const entries = await digestDirectory(root)
@@ -339,6 +339,6 @@ async function main() {
   }
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  try { await main() } catch (error) { console.error(error.message); process.exitCode = 1 }
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url) && !new URL(import.meta.url).search && !new URL(import.meta.url).hash) {
+  main().catch(error => { console.error(error.message); process.exitCode = 1 })
 }

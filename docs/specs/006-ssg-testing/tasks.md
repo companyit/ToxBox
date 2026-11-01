@@ -192,3 +192,13 @@ www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；D
 本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
 
 旧任务勾选、历史验收和FAIL一律原字节保留；新任务只有实际证据并获对应验收后才能在后续独立授权范围内更新。本段不执行任何测试或Git写入。
+
+
+## REL-NOTICE-T01～04（拟议，全部待验证）
+
+- [ ] T01：负责人批准八文件变更和许可证文本覆盖范围。
+- [ ] T02：实施后静态审计，保留全部旧SHA与原候选；不回填历史通过。
+- [ ] T03：新Preview/Production构建、verify、通知200及字节比对；补缺失/篡改通知失败关闭证据，复验原3项SSG。
+- [ ] T04：继续浏览器/隐私/真机/性能/托管门禁，负责人独立验收；发布仍另批。
+
+本段为拟议变更，不追认运行通过；历史状态原样保留。

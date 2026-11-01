@@ -199,3 +199,10 @@ www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；D
 本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
 
 追踪关系：D01→T01/T02；D02→T03；D03→T04/T05。实现必须另获精确源码白名单授权，本D1只拟议追加SDD。
+
+
+## REL-NOTICE-D01：通知文件的有限白名单设计（拟议）
+
+仅允许third-party-notices.txt额外公开，不放宽任意txt或其他资源白名单。客户端复制、输出审计及public输入递归同步调整。使用已有text/plain MIME映射和receipt文件摘要；不修改SEO、页面、旧候选或已通过证据。
+
+本段为拟议变更，不追认运行通过；历史状态原样保留。
