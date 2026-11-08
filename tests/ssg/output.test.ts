@@ -13,6 +13,6 @@ test('SSG output covers eight pages and real 404 with no preview SEO residue',as
  const approvedNotices=await fs.readFile(new URL('../../public/third-party-notices.txt',import.meta.url))
  assert.deepEqual(notices,approvedNotices)
  assert.ok(notices.length>0)
- const actual=(await fs.readdir('dist-ssg',{recursive:true})).filter(p=>p.endsWith('.html'));assert.equal(actual.length,27)
+ const actual=(await fs.readdir('dist-ssg',{recursive:true})).filter(p=>p.endsWith('.html'));assert.equal(actual.length,28)
  for(const file of ['robots.txt','sitemap.xml','entry-server.js'])await assert.rejects(fs.access('dist-ssg/'+file))
 })

@@ -1,10 +1,12 @@
 import { build } from 'vite'
 import { pdfResourceFiles } from './pdf-resources.mjs'
+import { collectImageResourceSizes, validateImageResourceBudgets } from './image-resource-budget.mjs'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL, fileURLToPath } from 'node:url'
 import { createHash } from 'node:crypto'
-import { createPageHead } from '../src/utils/seo.ts'
+import { createPageHead, serializeStructuredData } from '../src/utils/seo.ts'
+import { indexablePages } from '../src/data/indexing.ts'
 import { pages as approvedPages, notFoundPage } from '../src/data/pages.ts'
 import { resolveSeoEnvironment } from '../src/utils/seoEnvironment.ts'
 import { assertSafePath, readSafeFile, digestDirectory, repositoryRoot, createSeoEnvelope } from './release-candidate.mjs'
@@ -17,7 +19,7 @@ export function validatePages(pages) {
     if (!p.title || !p.description) throw Error('页面元数据缺失')
     names.add(p.routeName); paths.add(p.path)
   }
-  if (pages.length !== 26) throw Error('正式页面数量不符合已批准清单')
+  if (pages.length !== 27) throw Error('正式页面数量不符合已批准清单')
 }
 export async function validateHtml(html, directory) {
   if ((html.match(/<h1(?:\s|>)/g) ?? []).length !== 1 || (html.match(/<main(?:\s|>)/g) ?? []).length !== 1 || !html.includes('data-render-mode="ssg"')) throw Error('静态正文结构缺失')
@@ -74,7 +76,8 @@ async function generateLegacyPreview() {
       await fs.writeFile(destination, html)
       generated.push(filename)
     }
-    if (new Set(generated).size !== 27) throw Error('页面遗漏或输出重复')
+    if (new Set(generated).size !== 28) throw Error('页面遗漏或输出重复')
+    validateImageResourceBudgets(await collectImageResourceSizes(candidate, path.join(client, '.vite/ssr-manifest.json')))
     await fs.rename(candidate, output)
     console.log('SSG成功：' + generated.join(', '))
   } finally { clearTimeout(timer) }
@@ -115,10 +118,11 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
   await assertSafePath(directory, { directory: true })
   const manifestBytes = await readSafeFile(manifestPath)
   const manifest = JSON.parse(manifestBytes.toString('utf8'))
+  validateImageResourceBudgets(await collectImageResourceSizes(directory, manifestPath))
   const resources = manifestResources(manifest)
   const expectedHtml = [...approvedPages.map(p => p.path.slice(1) + 'index.html'), '404.html'].sort()
   const files = await digestDirectory(directory)
-  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选27HTML清单不一致')
+  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选28HTML清单不一致')
   const production = environment.mode === 'production'
   const allowedSeo = production ? ['robots.txt', 'sitemap.xml'] : []
   const noticesName = 'third-party-notices.txt'
@@ -149,6 +153,10 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
       single('meta[name="robots"]', 'content', head.robots)
       single('link[rel="canonical"]', 'href', head.canonical)
       for (const property of ['og:title', 'og:description', 'og:url', 'og:type', 'og:site_name', 'og:locale']) single(`meta[property="${property}"]`, 'content', head.openGraph?.[property])
+      const structured = [...doc.querySelectorAll('script[type="application/ld+json"]')]
+      if (head.structuredData) {
+        if (structured.length !== 1 || !structured[0].hasAttribute('data-workdev-structured-data') || !equal(JSON.parse(structured[0].textContent), head.structuredData)) throw Error('结构化数据缺失、重复或内容不符')
+      } else if (structured.length) throw Error('出现未批准的结构化数据')
       if (doc.head.querySelector('meta[property="og:image"]')) throw Error('分享图不在批准范围')
       if (doc.querySelectorAll('main').length !== 1 || doc.querySelectorAll('h1').length !== 1 || doc.documentElement.lang !== 'zh-CN') throw Error('静态正文结构无效')
       for (const node of doc.querySelectorAll('[src], link[href]')) {
@@ -173,7 +181,7 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
   }
   const canonicalUrls = approvedPages.map(p => createPageHead(p, environment).canonical).filter(Boolean)
   if (production) {
-    if (canonicalUrls.length !== 8 || new Set(canonicalUrls).size !== 8) throw Error('生产canonical集合不一致')
+    if (canonicalUrls.length !== indexablePages.length || new Set(canonicalUrls).size !== indexablePages.length) throw Error('生产canonical集合不一致')
     const robots = (await readSafeFile(path.join(directory, 'robots.txt'))).toString('utf8')
     if (robots !== `User-agent: *\nAllow: /\nSitemap: ${environment.approvedOrigin}/sitemap.xml\n`) throw Error('robots合同不符')
     const xml = (await readSafeFile(path.join(directory, 'sitemap.xml'))).toString('utf8')
@@ -183,9 +191,9 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
       const doc = dom.window.document
       if (doc.documentElement.localName !== 'urlset' || doc.documentElement.namespaceURI !== 'http://www.sitemaps.org/schemas/sitemap/0.9') throw Error('sitemap命名空间不符')
       const children = [...doc.documentElement.children]
-      if (children.length !== 8 || children.some(node => node.localName !== 'url' || node.children.length !== 1 || node.firstElementChild?.localName !== 'loc')) throw Error('sitemap结构或条目不符')
+      if (children.length !== indexablePages.length || children.some(node => node.localName !== 'url' || node.children.length !== 1 || node.firstElementChild?.localName !== 'loc')) throw Error('sitemap结构或条目不符')
       const actual = children.map(node => node.firstElementChild.textContent)
-      if (!equal([...actual].sort(), [...canonicalUrls].sort()) || new Set(actual).size !== 8) throw Error('sitemap不等于批准canonical集合')
+      if (!equal([...actual].sort(), [...canonicalUrls].sort()) || new Set(actual).size !== indexablePages.length) throw Error('sitemap不等于批准canonical集合')
     } finally { dom.window.close() }
   } else if (files['robots.txt'] || files['sitemap.xml']) throw Error('preview禁止生产SEO产物')
   return { htmlFiles: expectedHtml, mode: environment.mode, canonicalUrls, publicFiles: Object.keys(files), manifestSha256: sha256(manifestBytes) }
@@ -239,6 +247,7 @@ export async function generateCandidate({ candidateRoot, envelope }) {
     if (!equal(result.head, expectedHead) || !equal(result.seoEnvironment, environment)) throw Error('SSR/client SEO配置或head不一致')
     const styles = [...new Set(result.modules.flatMap(id => manifest[id] ?? []).filter(file => file.endsWith('.css')))]
     const seo = (expectedHead.canonical ? `<link rel="canonical" href="${escape(expectedHead.canonical)}">` : '')
+      + (expectedHead.structuredData ? `<script type="application/ld+json" data-workdev-structured-data>${serializeStructuredData(expectedHead.structuredData)}</script>` : '')
       + Object.entries(expectedHead.openGraph ?? {}).map(([property, value]) => `<meta property="${escape(property)}" content="${escape(value)}">`).join('')
     const html = template.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escape(expectedHead.title)}</title>`)
       .replace(/<meta name="description" content="[^"]*">/, () => `<meta name="description" content="${escape(expectedHead.description)}">`)
@@ -252,7 +261,7 @@ export async function generateCandidate({ candidateRoot, envelope }) {
   }
   if (environment.mode === 'production') {
     const urls = pages.filter(p => p.indexable).map(p => createPageHead(p, environment).canonical)
-    if (urls.some(url => !url) || new Set(urls).size !== 8) throw Error('生产索引清单不完整')
+    if (urls.some(url => !url) || new Set(urls).size !== indexablePages.length) throw Error('生产索引清单不完整')
     await fs.writeFile(path.join(staging, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${environment.approvedOrigin}/sitemap.xml\n`, { flag: 'wx' })
     await fs.writeFile(path.join(staging, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.map(url => `  <url><loc>${xmlEscape(url)}</loc></url>`).join('\n') + '\n</urlset>\n', { flag: 'wx' })
   }

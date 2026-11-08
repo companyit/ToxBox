@@ -1,6 +1,8 @@
 import type { Tool } from '@/types/tool'
+import { orderTools } from '../utils/toolOrder'
 
-export const tools: readonly Tool[] = [
+const catalog: readonly Tool[] = [
+  { id: 'image-crop', name: '图片尺寸与裁剪', description: '本地拖动或填写坐标裁剪图片，选择固定比例并等比缩小后下载。', category: 'office', status: 'preview', routeName: 'image-crop' },
   { id: 'pdf-organizer', name: 'PDF 页面整理', description: '本地查看缩略图，排序、旋转和删除 PDF 页面后导出。', category: 'office', status: 'preview', routeName: 'pdf-organizer' },
   { id: 'text-workbench', name: '文本处理工作台', description: '串联清理、去重、排序与替换，一次查看步骤统计、最终文本及差异。', category: 'office', status: 'preview', routeName: 'text-workbench' },
   { id: 'text-diff', name: '文本差异对比', description: '本地逐行对比两段文本，查看新增、删除及行号，复制变化报告。', category: 'office', status: 'preview', routeName: 'text-diff' },
@@ -42,3 +44,5 @@ export const tools: readonly Tool[] = [
   { id: 'timestamp', name: '时间戳转换', description: '秒、毫秒时间戳与 UTC 或 UTC+08:00 日期互转。', category: 'developer', status: 'preview', routeName: 'timestamp' },
   { id: 'uuid', name: 'UUID 生成', description: '使用安全随机数单次或批量生成 UUID v4。', category: 'developer', status: 'preview', routeName: 'uuid' },
 ]
+
+export const tools: readonly Tool[] = orderTools(catalog)

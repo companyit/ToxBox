@@ -14,12 +14,12 @@ function memoryRouter() {
  return router
 }
 test('U01 eight unique static pages and a non-indexable 404',()=>{
- assert.equal(pages.length,26)
- for(const field of ['path','routeName','title','description'] as const)assert.equal(new Set(pages.map(p=>p[field] )).size,26)
- assert.equal(routes.length,27);assert.equal(notFoundPage.indexable,false)
+ assert.equal(pages.length,27)
+ for(const field of ['path','routeName','title','description'] as const)assert.equal(new Set(pages.map(p=>p[field] )).size,27)
+ assert.equal(routes.length,28);assert.equal(notFoundPage.indexable,false)
  for(const p of pages)assert.ok(routes.find(r=>r.name===p.routeName)?.component)
 })
-for(const page of pages)(['pdf-organizer','text-workbench','text-diff','json-yaml','image-convert','images-to-pdf','date-calculator','csv-json','text-cleanup','pdf-split','pdf-merge','word-to-pdf','totp','base64','timestamp','uuid','contact','terms'].includes(page.routeName) ? newTest : test)(`route ${page.path} resolves to ${page.routeName}`,async()=>{
+for(const page of pages)(['image-crop','pdf-organizer','text-workbench','text-diff','json-yaml','image-convert','images-to-pdf','date-calculator','csv-json','text-cleanup','pdf-split','pdf-merge','word-to-pdf','totp','base64','timestamp','uuid','contact','terms'].includes(page.routeName) ? newTest : test)(`route ${page.path} resolves to ${page.routeName}`,async()=>{
  const r=memoryRouter();await r.push(page.path);assert.equal(r.currentRoute.value.name,page.routeName);assert.equal(r.currentRoute.value.path,page.path)
 })
 test('U02/03 known paths normalize preserving query/hash, unknown and wrong case stay 404',async()=>{

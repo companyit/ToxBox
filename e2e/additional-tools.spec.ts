@@ -30,7 +30,7 @@ for(const width of [375,768,1440]) {
   await search.fill('不存在的工具'); await expect(page.locator('.tool-grid li')).toHaveCount(0)
   await expect(page.getByText('没有找到匹配工具，请调整关键词或清除搜索条件。')).toBeVisible()
   await page.getByRole('button',{name:'清除搜索',exact:true}).click()
-  await expect(search).toBeFocused(); await expect(page.locator('.tool-grid li')).toHaveCount(19)
+  await expect(search).toBeFocused(); await expect(page.locator('.tool-grid li')).toHaveCount(20)
  })
 }
 test('新增工具键盘与复制失败提示、离页清空',async({page,browserName})=>{

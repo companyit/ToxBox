@@ -6,6 +6,6 @@
   "adScriptEnabled": false,
   "publisherId": null,
   "adsTxtConfigured": false,
-  "excludedPaths": ["/developer/2fa/", "/office/pdf-merge/", "/office/word-to-pdf/", "/office/pdf-split/", "/office/images-to-pdf/", "/office/image-convert/", "/developer/json-yaml/", "/office/text-diff/", "/office/text-workbench/", "/office/pdf-organizer/"],
+  "excludedPaths": ["/developer/2fa/", "/office/pdf-merge/", "/office/word-to-pdf/", "/office/pdf-split/", "/office/images-to-pdf/", "/office/image-convert/", "/developer/json-yaml/", "/office/text-diff/", "/office/text-workbench/", "/office/pdf-organizer/", "/office/image-crop/"],
   "trustPaths": ["/about/", "/contact/", "/privacy/", "/terms/"]
 }

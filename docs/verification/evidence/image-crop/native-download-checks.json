@@ -1,0 +1,116 @@
+[
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-08T02-34-26.012Z-7460/artifacts/image-crop-CROP-原像素裁剪、比例、拖动和真实下载-1440-chromium/cropped-image.png",
+    "sha256": "60cd70300ec050dc4501dcc1f240dbed4a0fed7c9ebcf3cca21605979e2ebc73",
+    "decoded": "native-decoded-1.png",
+    "width": 100,
+    "height": 50,
+    "samples": [
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ]
+    ]
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-08T02-34-26.012Z-7460/artifacts/image-crop-CROP-原像素裁剪、比例、拖动和真实下载-1440-webkit/cropped-image.png",
+    "sha256": "52cf82ed14411665cb718b90f04a0c511e010c4584a99e8dd54f74f350196b71",
+    "decoded": "native-decoded-2.png",
+    "width": 100,
+    "height": 50,
+    "samples": [
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ]
+    ]
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-08T02-34-26.012Z-7460/artifacts/image-crop-CROP-原像素裁剪、比例、拖动和真实下载-375-chromium/cropped-image.png",
+    "sha256": "60cd70300ec050dc4501dcc1f240dbed4a0fed7c9ebcf3cca21605979e2ebc73",
+    "decoded": "native-decoded-3.png",
+    "width": 100,
+    "height": 50,
+    "samples": [
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ]
+    ]
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-08T02-34-26.012Z-7460/artifacts/image-crop-CROP-原像素裁剪、比例、拖动和真实下载-375-webkit/cropped-image.png",
+    "sha256": "52cf82ed14411665cb718b90f04a0c511e010c4584a99e8dd54f74f350196b71",
+    "decoded": "native-decoded-4.png",
+    "width": 100,
+    "height": 50,
+    "samples": [
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ]
+    ]
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-08T02-34-26.012Z-7460/artifacts/image-crop-CROP-原像素裁剪、比例、拖动和真实下载-768-chromium/cropped-image.png",
+    "sha256": "60cd70300ec050dc4501dcc1f240dbed4a0fed7c9ebcf3cca21605979e2ebc73",
+    "decoded": "native-decoded-5.png",
+    "width": 100,
+    "height": 50,
+    "samples": [
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ]
+    ]
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-08T02-34-26.012Z-7460/artifacts/image-crop-CROP-原像素裁剪、比例、拖动和真实下载-768-webkit/cropped-image.png",
+    "sha256": "52cf82ed14411665cb718b90f04a0c511e010c4584a99e8dd54f74f350196b71",
+    "decoded": "native-decoded-6.png",
+    "width": 100,
+    "height": 50,
+    "samples": [
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        255,
+        0
+      ]
+    ]
+  }
+]

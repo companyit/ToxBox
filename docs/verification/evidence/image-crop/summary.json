@@ -1,0 +1,17 @@
+{
+  "node": "24.21.0",
+  "head": "e86985030c91e39b325341b6a89e44d1462e11fa",
+  "run": "docs/verification/evidence/m106c3/runs/2026-11-08T02-34-26.012Z-7460",
+  "unitComponents": 325,
+  "static": 16,
+  "identityAudit": 154,
+  "browsers": 518,
+  "html": 28,
+  "tools": 20,
+  "office": 13,
+  "developer": 7,
+  "guides": 20,
+  "nativeDownloads": 6,
+  "productionPackage": false,
+  "deployed": false
+}

@@ -7,7 +7,7 @@ for (const theme of ['light','dark'] as const) for(const width of [375,768,1440]
   const input=page.getByLabel('搜索工具',{exact:true}),box=await input.boundingBox()
   expect(box!.y).toBeGreaterThanOrEqual(0);expect(box!.y+box!.height).toBeLessThan(width===375?812:900)
   if(width===1440){const entry=await page.locator('.tool-card a').first().boundingBox();expect(entry!.y+entry!.height).toBeLessThan(900)}
-  await expect(page.locator('.office .tool-card')).toHaveCount(12);await expect(page.locator('.developer .tool-card')).toHaveCount(7)
+  await expect(page.locator('.office .tool-card')).toHaveCount(13);await expect(page.locator('.developer .tool-card')).toHaveCount(7)
   for(const section of ['office','developer']){
    const grid=page.locator(`.${section} .tool-grid`),cards=grid.locator('.tool-card'),first=await cards.first().boundingBox()
    const columns=width<640?1:width<1024?2:3
@@ -15,7 +15,7 @@ for (const theme of ['light','dark'] as const) for(const width of [375,768,1440]
   }
   for (const link of [page.locator('header nav a').first(), page.locator('.tool-card a').first()]) { await link.hover(); await expect(link).toHaveCSS('text-decoration-line','none') }
   await input.fill('PDF');await expect(page.locator('.tool-grid li')).toHaveCount(5)
-  await page.getByRole('button',{name:'清除搜索',exact:true}).click();await expect(input).toBeFocused();await expect(page.locator('.tool-grid li')).toHaveCount(19)
+  await page.getByRole('button',{name:'清除搜索',exact:true}).click();await expect(input).toBeFocused();await expect(page.locator('.tool-grid li')).toHaveCount(20)
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
   const colors=await page.evaluate(()=>{
    const rgb=(s:string)=>s.match(/[\d.]+/g)!.slice(0,3).map(Number)
@@ -47,7 +47,7 @@ test('UI2 长名称和200%字号重排，无截断或横向滚动',async({page})
 })
 
 test('UI3 分类目录无重复底部入口，工具列表保留',async({page})=>{
- for (const [path,count] of [['/office/',12],['/developer/',7]] as const) {
+ for (const [path,count] of [['/office/',13],['/developer/',7]] as const) {
   await page.goto(path);await hydrated(page)
   await expect(page.locator('.category-grid .tool-card')).toHaveCount(count)
   await expect(page.locator('.category-directory .related-tools')).toHaveCount(0)

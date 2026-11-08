@@ -1,0 +1,14 @@
+{
+  "summary.json": "1b38c0738957f8a13461bebd28465bb02ff5bbedb5ce4a226bd71ad2fdba9e9e",
+  "before-loading.log": "b23120499813c301ee563a682b7dc9f630037ff358b84ddf8516776251a1fb8d",
+  "original-source.json": "08c06230434141ff5797de3f20e93a885af8ad79bcc25737a697689c28871ca6",
+  "final-e2e.log": "69f85bd1915781cd58ae9726cda422dd4475cf232def4bd684227eced285d530",
+  "comparison.json": "c9cd7a3571b401de047e38c86cde6bba88c8468c7cd87c3589b3099e67dacacd",
+  "after-sizes.json": "a27b1f8f7abf08b3e28aea7e732d94007184be9a93e742e71611fb90c5838588",
+  "before-sizes.json": "9bd6040f8399e256fbf427849f5e49dcf5e9d0504f519ffa81e08f951c9a4c14",
+  "after-loading.log": "1ea256387d891ea3bc62e7de8c4f8cbd2c61c6e11dba05e11f4b5ea112dad916",
+  "before-requests.json": "6f38304719623a2d05b3c6b867315ae4eddd219ae56da98cfd24756ce1913f8a",
+  "after-requests.json": "99eec4427a8285e1207c222b51c75487cf424d01660261052fbaf1fe29e87b24",
+  "original-inspection.txt": "4f0071f129b0263b9a9e1545f89ad40e1089aba6689fd97d753316fc77cdd864",
+  "production-tests.log": "1dceaa5d8f2a2486bc672e4413210991f38812467b134bcfcbbc77c910e42ddf"
+}

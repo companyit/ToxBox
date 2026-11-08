@@ -1,6 +1,7 @@
 import type { RouteRecordRaw, LocationQueryRaw } from 'vue-router'
 import { canonicalPath, pages } from '../data/pages.ts'
 const components = {
+  'image-crop': () => import('../views/pages/ImageCropPage.vue'),
   'pdf-organizer': () => import('../views/pages/PdfOrganizerPage.vue'),
   'text-workbench': () => import('../views/pages/TextWorkbenchPage.vue'),
   'text-diff': () => import('../views/pages/TextDiffPage.vue'),

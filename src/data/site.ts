@@ -3,5 +3,5 @@ export const site = Object.freeze({
   englishName: 'ToolHug',
   displayName: '顺手集 ToolHug',
   contactEmail: 'huangjemdev@gmail.com',
-  updatedAt: '2026-11-07',
+  updatedAt: '2026-11-08',
 })

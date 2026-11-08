@@ -1,0 +1,2951 @@
+{
+  "files": 47,
+  "pages": 147,
+  "results": [
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-1440-chromium/docx-print.pdf",
+      "sha256": "25c5d6a6c6e045f845be5bc0d734b50d4aa42a1c318fc2aed98770862f8fce4e",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "本地转换标题\n加粗文字斜体文字\n1. 编号项目甲\n2. 编号项目乙\n无序项目甲\n无序项目乙\n外链文字\n表格甲\n表格乙\n中文测试，第 1 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 2 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 3 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 4 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 5 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 6 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 7 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 8 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 9 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 10 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 11 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 12 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 13 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 14 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 15 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        },
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "中文测试，第 16 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 17 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 18 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 19 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 20 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 21 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 22 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 23 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 24 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 25 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 26 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 27 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 28 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 29 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 30 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 31 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 32 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 33 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 34 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 35 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 36 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 37 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 38 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 39 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 40 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 41 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 42 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 43 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        },
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "中文测试，第 44 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 45 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 46 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 47 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 48 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 49 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 50 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 51 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 52 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 53 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 54 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 55 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 56 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 57 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 58 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 59 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 60 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 61 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 62 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 63 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 64 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 65 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 66 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 67 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 68 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 69 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 70 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-00",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-chromium/docx-print.pdf",
+      "sha256": "9b7164e245f681ae36c7ae363c1417fc481a557fae9d7c0f1f14de15bf310f1f",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "本地转换标题\n加粗文字斜体文字\n1. 编号项目甲\n2. 编号项目乙\n无序项目甲\n无序项目乙\n外链文字\n表格甲\n表格乙\n中文测试，第 1 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 2 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 3 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 4 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 5 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 6 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 7 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 8 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 9 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 10 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 11 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 12 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 13 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 14 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 15 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        },
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "中文测试，第 16 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 17 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 18 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 19 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 20 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 21 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 22 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 23 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 24 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 25 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 26 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 27 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 28 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 29 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 30 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 31 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 32 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 33 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 34 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 35 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 36 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 37 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 38 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 39 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 40 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 41 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 42 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 43 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        },
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "中文测试，第 44 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 45 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 46 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 47 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 48 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 49 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 50 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 51 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 52 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 53 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 54 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 55 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 56 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 57 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 58 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 59 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 60 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 61 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 62 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 63 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 64 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 65 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 66 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 67 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 68 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 69 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 70 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-01",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-768-chromium/docx-print.pdf",
+      "sha256": "2448b09fcfeaff88452e04fd7f6f1ed29a619e414932740a82118ef1884bad09",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "本地转换标题\n加粗文字斜体文字\n1. 编号项目甲\n2. 编号项目乙\n无序项目甲\n无序项目乙\n外链文字\n表格甲\n表格乙\n中文测试，第 1 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 2 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 3 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 4 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 5 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 6 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 7 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 8 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 9 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 10 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 11 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 12 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 13 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 14 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 15 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        },
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "中文测试，第 16 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 17 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 18 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 19 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 20 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 21 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 22 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 23 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 24 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 25 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 26 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 27 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 28 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 29 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 30 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 31 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 32 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 33 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 34 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 35 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 36 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 37 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 38 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 39 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 40 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 41 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 42 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 43 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        },
+        {
+          "rotation": 0,
+          "width": 594.95996,
+          "height": 841.91998,
+          "text": "中文测试，第 44 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 45 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 46 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 47 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 48 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 49 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 50 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 51 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 52 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 53 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 54 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 55 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 56 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 57 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 58 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 59 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 60 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 61 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 62 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 63 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 64 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 65 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 66 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 67 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 68 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 69 段。Synthetic paragraph for paginati\non, tables and local conversi\non.\n中文测试，第 70 段。Synthetic paragraph for paginati\non, tables and local conversi\non."
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-02",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-PDF-合并真实-Worker-与下载-1440-chromium/merged.pdf",
+      "sha256": "85e58f04d2b86498a75cff2a7a2c222baba0841dac9dfa7e521d79ec8dd8213c",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 300,
+          "height": 400,
+          "text": "Synthetic page 300-1"
+        },
+        {
+          "rotation": 0,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-1"
+        },
+        {
+          "rotation": 90,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-2"
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-03",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-PDF-合并真实-Worker-与下载-1440-webkit/merged.pdf",
+      "sha256": "438775d6729bdb3e0ebbbedae860949055319aa6b0aeea8eaef0cb08e4bbbce3",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 300,
+          "height": 400,
+          "text": "Synthetic page 300-1"
+        },
+        {
+          "rotation": 0,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-1"
+        },
+        {
+          "rotation": 90,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-2"
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-04",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-PDF-合并真实-Worker-与下载-375-chromium/merged.pdf",
+      "sha256": "58e8a270c7fb65495db4e1f62fc7623a575f2ebd43ed83998d83e0dafb3100d3",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 300,
+          "height": 400,
+          "text": "Synthetic page 300-1"
+        },
+        {
+          "rotation": 0,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-1"
+        },
+        {
+          "rotation": 90,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-2"
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-05",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-PDF-合并真实-Worker-与下载-375-webkit/merged.pdf",
+      "sha256": "f97be3ffe6cd2e39a7066a0bd852bdc95f1898709412cb0a5394e1acab91f0b5",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 300,
+          "height": 400,
+          "text": "Synthetic page 300-1"
+        },
+        {
+          "rotation": 0,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-1"
+        },
+        {
+          "rotation": 90,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-2"
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-06",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-PDF-合并真实-Worker-与下载-768-chromium/merged.pdf",
+      "sha256": "ceaeeefa89b1d8b83e88a8e24d1b994b7ee011cff7c360d198cc4d434755e6db",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 300,
+          "height": 400,
+          "text": "Synthetic page 300-1"
+        },
+        {
+          "rotation": 0,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-1"
+        },
+        {
+          "rotation": 90,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-2"
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-07",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/document-tools-DOC-LOCAL-PDF-合并真实-Worker-与下载-768-webkit/merged.pdf",
+      "sha256": "f9e04780d506e416e7b14ac526563f394b489e0a4541215b8bb6b513895a7dcc",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 300,
+          "height": 400,
+          "text": "Synthetic page 300-1"
+        },
+        {
+          "rotation": 0,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-1"
+        },
+        {
+          "rotation": 90,
+          "width": 200,
+          "height": 400,
+          "text": "Synthetic page 200-2"
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-08",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-EXIF-1～8-实际-Worker-方向解码及透明白底输出-chromium/orientations.pdf",
+      "sha256": "07df6f3689c7e34f70bbcca688259a44d6f4281dfbf0a5745a9f358a0ed7436e",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 9 pages",
+      "pngPrefix": "pdf-09",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "GRYB",
+          "samples": [
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              0,
+              254
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "YBGR",
+          "samples": [
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              254,
+              0,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 4,
+          "expected": "BYRG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 5,
+          "expected": "RBGY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 6,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 7,
+          "expected": "YGBR",
+          "samples": [
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 8,
+          "expected": "GYRB",
+          "samples": [
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              254
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 9,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-EXIF-1～8-实际-Worker-方向解码及透明白底输出-webkit/orientations.pdf",
+      "sha256": "289e830bd45ff56f206184750be3be90cfd203d686a306af3c375f060b3cb962",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 9 pages",
+      "pngPrefix": "pdf-10",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "GRYB",
+          "samples": [
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "YBGR",
+          "samples": [
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              254,
+              0,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 4,
+          "expected": "BYRG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 5,
+          "expected": "RBGY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 6,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 7,
+          "expected": "YGBR",
+          "samples": [
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 8,
+          "expected": "GYRB",
+          "samples": [
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              254
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 9,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-1440-chromium/images.pdf",
+      "sha256": "bdfd57634a397cbf4a055103b2df19afcb5d604ab4412d4e6617a00a1492a6cc",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-11",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-1440-chromium/landscape.pdf",
+      "sha256": "7e920323c2eff2cfd96a730bae1b135737bf6c02523c64f80a03e1f3843ba8c6",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-12",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-1440-webkit/images.pdf",
+      "sha256": "68d436a5bf8a5a7d5fb47e821df3423384b27f24a7a1f7266c340c224cdb7af4",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-13",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-1440-webkit/landscape.pdf",
+      "sha256": "0638a918c99847f00c59ee4349a01ab38cc208c6ab8cb56004937e6a4d23d091",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-14",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-chromium/images.pdf",
+      "sha256": "66e97961870a699f3d1731969346657152397ee263c10f889050bb6541bfd53b",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-15",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-chromium/landscape.pdf",
+      "sha256": "bc3146d5236e63f93ed283800463f1975fd0d3f6bce7f16d14fb1a51dc2b89b0",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-16",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-webkit/images.pdf",
+      "sha256": "ad9ba1121e6c00eac72925aca0fcd750fdb64ef62d14934e7a8938cb00b63f87",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-17",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-webkit/landscape.pdf",
+      "sha256": "8083a4c632c6e6345323ddebfc60ba6108e135e5999202c76a7b0082297ab39c",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-18",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-768-chromium/images.pdf",
+      "sha256": "cb10a46a0a9e56b60cd040c867452161fd26d07213bf4a7ab0c23a6fb042f08b",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-19",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-768-chromium/landscape.pdf",
+      "sha256": "520fb0267c0ffca18e8e42f6085663559903a68db45fd04d959cf249a66a4bb9",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-20",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              0
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-768-webkit/images.pdf",
+      "sha256": "8c5bc1ae0a5cd28c3cd67f02ebb6af9b26a9cdc15326d07201f35d5ee06ecccc",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 595.2755905511812,
+          "height": 841.8897637795277,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-21",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            565,
+            800
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-768-webkit/landscape.pdf",
+      "sha256": "d2dc37531831825220c5ed80d0e169f78dd119af00237a2a120997bb28454205",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        },
+        {
+          "rotation": 0,
+          "width": 841.8897637795277,
+          "height": 595.2755905511812,
+          "text": ""
+        }
+      ],
+      "render": "Rendered 3 pages",
+      "pngPrefix": "pdf-22",
+      "pixelChecks": [
+        {
+          "page": 1,
+          "expected": "BRYG",
+          "samples": [
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              1
+            ],
+            [
+              0,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 2,
+          "expected": "RGBY",
+          "samples": [
+            [
+              254,
+              0,
+              0
+            ],
+            [
+              0,
+              255,
+              1
+            ],
+            [
+              0,
+              0,
+              254
+            ],
+            [
+              255,
+              255,
+              1
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        },
+        {
+          "page": 3,
+          "expected": "RWWW",
+          "samples": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255
+            ]
+          ],
+          "render": [
+            800,
+            565
+          ]
+        }
+      ]
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-organizer-ORG-本地缩略图、键盘-拖动、旋转删除与真实导出-1440-chromium/organized.pdf",
+      "sha256": "67a3b94ba00c518afc98b864e6f4bba890548ae51ea41dcc4f8a9df19d0e55e0",
+      "pages": [
+        {
+          "rotation": 270,
+          "width": 280,
+          "height": 360,
+          "text": "Page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 240,
+          "height": 360,
+          "text": "Page 1\n工"
+        },
+        {
+          "rotation": 180,
+          "width": 260,
+          "height": 360,
+          "text": "Page 3"
+        },
+        {
+          "rotation": 180,
+          "width": 270,
+          "height": 360,
+          "text": "Page 4"
+        },
+        {
+          "rotation": 0,
+          "width": 290,
+          "height": 360,
+          "text": "Page 6"
+        }
+      ],
+      "render": "Rendered 5 pages",
+      "pngPrefix": "pdf-23",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-organizer-ORG-本地缩略图、键盘-拖动、旋转删除与真实导出-1440-webkit/organized.pdf",
+      "sha256": "1d46fbc51f18b1217f328d67f7e4677e766e12caddfc6d88aba1f926956e274c",
+      "pages": [
+        {
+          "rotation": 270,
+          "width": 280,
+          "height": 360,
+          "text": "Page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 240,
+          "height": 360,
+          "text": "Page 1\n工"
+        },
+        {
+          "rotation": 180,
+          "width": 260,
+          "height": 360,
+          "text": "Page 3"
+        },
+        {
+          "rotation": 180,
+          "width": 270,
+          "height": 360,
+          "text": "Page 4"
+        },
+        {
+          "rotation": 0,
+          "width": 290,
+          "height": 360,
+          "text": "Page 6"
+        }
+      ],
+      "render": "Rendered 5 pages",
+      "pngPrefix": "pdf-24",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-organizer-ORG-本地缩略图、键盘-拖动、旋转删除与真实导出-375-chromium/organized.pdf",
+      "sha256": "4bc32d1e0ecf1aaf618c4a06ec4883858f2880107c45d8adf4508d1fc7acad34",
+      "pages": [
+        {
+          "rotation": 270,
+          "width": 280,
+          "height": 360,
+          "text": "Page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 240,
+          "height": 360,
+          "text": "Page 1\n工"
+        },
+        {
+          "rotation": 180,
+          "width": 260,
+          "height": 360,
+          "text": "Page 3"
+        },
+        {
+          "rotation": 180,
+          "width": 270,
+          "height": 360,
+          "text": "Page 4"
+        },
+        {
+          "rotation": 0,
+          "width": 290,
+          "height": 360,
+          "text": "Page 6"
+        }
+      ],
+      "render": "Rendered 5 pages",
+      "pngPrefix": "pdf-25",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-organizer-ORG-本地缩略图、键盘-拖动、旋转删除与真实导出-375-webkit/organized.pdf",
+      "sha256": "d89ae9873f1562503e879d6244591b63e219e24caa638fe3a2dba2d9a50cbacc",
+      "pages": [
+        {
+          "rotation": 270,
+          "width": 280,
+          "height": 360,
+          "text": "Page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 240,
+          "height": 360,
+          "text": "Page 1\n工"
+        },
+        {
+          "rotation": 180,
+          "width": 260,
+          "height": 360,
+          "text": "Page 3"
+        },
+        {
+          "rotation": 180,
+          "width": 270,
+          "height": 360,
+          "text": "Page 4"
+        },
+        {
+          "rotation": 0,
+          "width": 290,
+          "height": 360,
+          "text": "Page 6"
+        }
+      ],
+      "render": "Rendered 5 pages",
+      "pngPrefix": "pdf-26",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-organizer-ORG-本地缩略图、键盘-拖动、旋转删除与真实导出-768-chromium/organized.pdf",
+      "sha256": "88fcf9dcadb8a8bfa2096c2aa125e5bcc9bb4f88c3113e69dde889a2376d3ed8",
+      "pages": [
+        {
+          "rotation": 270,
+          "width": 280,
+          "height": 360,
+          "text": "Page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 240,
+          "height": 360,
+          "text": "Page 1\n工"
+        },
+        {
+          "rotation": 180,
+          "width": 260,
+          "height": 360,
+          "text": "Page 3"
+        },
+        {
+          "rotation": 180,
+          "width": 270,
+          "height": 360,
+          "text": "Page 4"
+        },
+        {
+          "rotation": 0,
+          "width": 290,
+          "height": 360,
+          "text": "Page 6"
+        }
+      ],
+      "render": "Rendered 5 pages",
+      "pngPrefix": "pdf-27",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-organizer-ORG-本地缩略图、键盘-拖动、旋转删除与真实导出-768-webkit/organized.pdf",
+      "sha256": "6e5325cc7d2de58ea0e204e07434cabe3db15091e79c11c39bcf83981da4c152",
+      "pages": [
+        {
+          "rotation": 270,
+          "width": 280,
+          "height": 360,
+          "text": "Page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 240,
+          "height": 360,
+          "text": "Page 1\n工"
+        },
+        {
+          "rotation": 180,
+          "width": 260,
+          "height": 360,
+          "text": "Page 3"
+        },
+        {
+          "rotation": 180,
+          "width": 270,
+          "height": 360,
+          "text": "Page 4"
+        },
+        {
+          "rotation": 0,
+          "width": 290,
+          "height": 360,
+          "text": "Page 6"
+        }
+      ],
+      "render": "Rendered 5 pages",
+      "pngPrefix": "pdf-28",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-1440-chromium/page-0001.pdf",
+      "sha256": "02ccbd0114e75eb3af39cb80c7b3da4bda6acbfc16ddc40423eab6423d7718ae",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-29",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-1440-chromium/page-0003.pdf",
+      "sha256": "09b9f1976b5845a3f2f644f91c0017f1307f6d5260aa9cfa1cc0b9d0de760ab0",
+      "pages": [
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-30",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-1440-chromium/selected.pdf",
+      "sha256": "e9ef3221375d37c229c91f37e12ae2a0b11c19337419bdb33b0d58c997535398",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 250,
+          "height": 400,
+          "text": "Source page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        },
+        {
+          "rotation": 0,
+          "width": 220,
+          "height": 400,
+          "text": "Source page 2"
+        },
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 4 pages",
+      "pngPrefix": "pdf-31",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-1440-webkit/page-0001.pdf",
+      "sha256": "c2a2e0ac266ee628df88241ee81fe9ef9e08991e87c2ff31a4ea5f26c7bfa477",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-32",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-1440-webkit/page-0003.pdf",
+      "sha256": "ec9e235d15997bdcc93b564979301d89953e4b40752d2f5ca47174dfb4454a2b",
+      "pages": [
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-33",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-1440-webkit/selected.pdf",
+      "sha256": "c6f7e3e4adebeb1258e0e92e3ee4309316b61d50319095e246bf9cef8dfc83ae",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 250,
+          "height": 400,
+          "text": "Source page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        },
+        {
+          "rotation": 0,
+          "width": 220,
+          "height": 400,
+          "text": "Source page 2"
+        },
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 4 pages",
+      "pngPrefix": "pdf-34",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-chromium/page-0001.pdf",
+      "sha256": "ba30f1c844e23e50663302b4fbf3345851f14055306a04d037a6e2ae0e41944a",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-35",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-chromium/page-0003.pdf",
+      "sha256": "f3b3a71e77bc7b57ca3b59d608ce070dc811f22b209cae675452ca9ecbba51fa",
+      "pages": [
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-36",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-chromium/selected.pdf",
+      "sha256": "c299e267d7ea7ac0513cc87aac69f48903f65584fe4684a78d4a67efac25d911",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 250,
+          "height": 400,
+          "text": "Source page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        },
+        {
+          "rotation": 0,
+          "width": 220,
+          "height": 400,
+          "text": "Source page 2"
+        },
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 4 pages",
+      "pngPrefix": "pdf-37",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-webkit/page-0001.pdf",
+      "sha256": "ccac8be38eb34fd8f020236c133cad7b0b677b76c7a1167d897b07ae27576bd1",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-38",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-webkit/page-0003.pdf",
+      "sha256": "bc4fc0ebc0c6f920ebc705e9dcbb82388d595764f35f8566baaa826255f99d1d",
+      "pages": [
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-39",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-webkit/selected.pdf",
+      "sha256": "054385f568df7250d578185def20bf2574c7f98606ff6530320fcb4e173d768e",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 250,
+          "height": 400,
+          "text": "Source page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        },
+        {
+          "rotation": 0,
+          "width": 220,
+          "height": 400,
+          "text": "Source page 2"
+        },
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 4 pages",
+      "pngPrefix": "pdf-40",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-768-chromium/page-0001.pdf",
+      "sha256": "ffa1f1d59e8b78a3baa377358f09b2b458a4ab0320158600c9e1436962301652",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-41",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-768-chromium/page-0003.pdf",
+      "sha256": "71376615cdc21deb81973ce64f7c4cf7b3559a6f40ebb4873aba5b57a0123882",
+      "pages": [
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-42",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-768-chromium/selected.pdf",
+      "sha256": "e9ef3221375d37c229c91f37e12ae2a0b11c19337419bdb33b0d58c997535398",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 250,
+          "height": 400,
+          "text": "Source page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        },
+        {
+          "rotation": 0,
+          "width": 220,
+          "height": 400,
+          "text": "Source page 2"
+        },
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 4 pages",
+      "pngPrefix": "pdf-43",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-768-webkit/page-0001.pdf",
+      "sha256": "c2a2e0ac266ee628df88241ee81fe9ef9e08991e87c2ff31a4ea5f26c7bfa477",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-44",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-768-webkit/page-0003.pdf",
+      "sha256": "ec9e235d15997bdcc93b564979301d89953e4b40752d2f5ca47174dfb4454a2b",
+      "pages": [
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 1 pages",
+      "pngPrefix": "pdf-45",
+      "pixelChecks": null
+    },
+    {
+      "input": "docs/verification/evidence/m106c3/runs/2026-11-08T00-51-37.449Z-2161/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-768-webkit/selected.pdf",
+      "sha256": "c6f7e3e4adebeb1258e0e92e3ee4309316b61d50319095e246bf9cef8dfc83ae",
+      "pages": [
+        {
+          "rotation": 0,
+          "width": 250,
+          "height": 400,
+          "text": "Source page 5"
+        },
+        {
+          "rotation": 0,
+          "width": 210,
+          "height": 400,
+          "text": "Source page 1"
+        },
+        {
+          "rotation": 0,
+          "width": 220,
+          "height": 400,
+          "text": "Source page 2"
+        },
+        {
+          "rotation": 90,
+          "width": 230,
+          "height": 400,
+          "text": "Source page 3"
+        }
+      ],
+      "render": "Rendered 4 pages",
+      "pngPrefix": "pdf-46",
+      "pixelChecks": null
+    }
+  ],
+  "environment": {
+    "os": "macOS 27.0 (26A428), arm64",
+    "reader": "system PDFKit",
+    "sourceRun": "2026-11-08T00-51-37.449Z-2161",
+    "head": "e86985030c91e39b325341b6a89e44d1462e11fa"
+  }
+}

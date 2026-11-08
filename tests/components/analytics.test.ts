@@ -52,7 +52,7 @@ test('敏感 TOTP 页面不初始化第三方统计', async () => {
   expect(Reflect.has(target, 'dataLayer')).toBe(false)
 })
 
-for (const [name, path] of [['text-workbench', '/office/text-workbench/'], ['text-diff', '/office/text-diff/'], ['json-yaml', '/developer/json-yaml/'], ['pdf-split', '/office/pdf-split/'], ['pdf-merge', '/office/pdf-merge/'], ['word-to-pdf', '/office/word-to-pdf/']]) {
+for (const [name, path] of [['image-crop', '/office/image-crop/'], ['text-workbench', '/office/text-workbench/'], ['text-diff', '/office/text-diff/'], ['json-yaml', '/developer/json-yaml/'], ['pdf-split', '/office/pdf-split/'], ['pdf-merge', '/office/pdf-merge/'], ['word-to-pdf', '/office/word-to-pdf/']]) {
  test(`敏感文档 ${name} 即使正式 origin 也不初始化统计`, async () => {
   const router = createRouter({ history: createMemoryHistory(), routes: [{ path: path!, name, component: {} }] })
   await router.push(path!); await router.isReady()

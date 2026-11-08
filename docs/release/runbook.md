@@ -28,9 +28,9 @@
 
 - 测试环境必须通过响应头X-Robots-Tag:noindex及访问限制阻止收录；production HTML不可直接在可收录的测试域名公开。
 - HTTPS证书匹配www域名，HTTP至HTTPS和根域名至www规则需独立确认，不从应用canonical推定存在。
-- 八个规范页面均返回200，可刷新；已知无尾斜杠路径按批准规则跳转；未知路径真实HTTP404并提供404.html，不能SPA回退200。
+- 035批准的24个规范页面均返回200，可刷新；已知无尾斜杠路径按批准规则跳转；未知路径真实HTTP404并提供404.html，不能SPA回退200。
 - JS/CSS/SVG MIME正确；不存在路径穿越、目录列表、服务端/审计文件泄露。HTML短缓存或需重新验证；hash资源可长缓存immutable。错误页不得缓存为正常页面。
-- robots允许正式页面，sitemap恰含八个规范URL；404无canonical且noindex。检查原始HTML与hydration后head一致。
+- robots允许正式页面，sitemap恰含035批准的24个规范URL；404无canonical且noindex。检查原始HTML与hydration后head一致。
 - Chromium/WebKit全站与手机回归、负责人视觉、实际设备触控/软键盘、读屏检查分别签署。Firefox未验证支持范围及补验责任由负责人决定。
 
 ## 发布与监控（待单独授权）
@@ -39,9 +39,9 @@
 
 发布后从实际公网检查首页、两分类、当前目录全部工具、关于/联系/隐私/条款、未知404、资源、HTTPS和SEO。监控采用获批的平台日志与人工探测；不新增用户输入采集、广告或埋点。
 
-## 当前19工具的移交前核对
+## 当前20工具的移交前核对
 
-人工执行入口为[19工具清单](../verification/local-review-19-tools-2026-11-07.md)，不是旧12工具范围。当前完整实现及后续补验见[033验证](../verification/033-pdf-organizer.md)与[补验报告](../verification/033-pdf-organizer-followup.md)。未签收项保持未完成，不因本地回归自动批准生产操作。
+人工执行入口为[20工具清单](../verification/local-review-20-tools-2026-11-08.md)，SEO与推广按[035指南](seo-promotion.md)执行；正式索引清单由历史8页扩展为24页仅是本地能力，部署及账号提交仍独立。当前完整实现及后续补验见[033验证](../verification/033-pdf-organizer.md)与[补验报告](../verification/033-pdf-organizer-followup.md)。未签收项保持未完成，不因本地回归自动批准生产操作。
 
 PDF页面整理新增`pdf-assets/`同源资源：当前批准包共188项，必须与站点JS/Worker一并移交。实际托管检查`.wasm`为`application/wasm`、`.js`为JavaScript MIME、`.ttf`为`font/ttf`、`.icc`为`application/vnd.iccprofile`，`.bcmap`/`.pfb`为二进制类型；未知资源应404。浏览器实际选择合成JPX/CMYK/CMap PDF，核对缩略图与同源资源响应，不能用本地Vite结果推定远端配置。
 
@@ -49,8 +49,12 @@ PDF页面整理新增`pdf-assets/`同源资源：当前批准包共188项，必�
 
 ## 回滚
 
-保留上一个通过审批的完整包和独立SHA，不删除旧hash资源。故障时记录时间、URL、HTTP/控制台证据，由负责人批准回滚；先独立verify旧包，再切换到旧site/，核验八路由、真实404、资源及SEO，按平台规则失效HTML缓存。没有数据库迁移，不涉及用户数据恢复。无法确认旧包完整性时停止，不手工拼装产物。
+保留上一个通过审批的完整包和独立SHA，不删除旧hash资源。故障时记录时间、URL、HTTP/控制台证据，由负责人批准回滚；先独立verify旧包，再切换到旧site/，核验035批准的24个规范路由、真实404、资源及SEO，按平台规则失效HTML缓存。没有数据库迁移，不涉及用户数据恢复。无法确认旧包完整性时停止，不手工拼装产物。
 
 ## 上线停止条件
 
 候选或包SHA错误；未知文件变化；真实404/MIME/HTTPS失败；生产索引策略错误；浏览器核心功能失败；缺少发布或回滚审批。上述任一项存在维持NO-GO。
+
+## 035 SEO本地验收入口
+
+执行`node --test --test-concurrency=1 tests/release/package.test.mjs tests/release/seo-growth.test.mjs`：在隔离目录生成production/preview候选和测试包，另起本地4177端口校验production页面，要求已安装的Chromium/WebKit及空闲端口。实际检查24canonical/sitemap、结构化数据错误拒绝及两引擎各28页SSR/hydration，不修改根dist或连接线上账号。默认preview的完整工具回归仍使用现有`node scripts/e2e-run.mjs chromium webkit`入口。

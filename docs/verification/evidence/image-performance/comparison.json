@@ -1,0 +1,38 @@
+[
+  {
+    "browser": "chromium",
+    "route": "image-convert",
+    "initialBefore": 604408,
+    "initialAfter": 184042,
+    "initialReductionPercent": 69.55,
+    "taskTotalBefore": 1130004,
+    "taskTotalAfter": 287664
+  },
+  {
+    "browser": "chromium",
+    "route": "image-crop",
+    "initialBefore": 611661,
+    "initialAfter": 191306,
+    "initialReductionPercent": 68.72,
+    "taskTotalBefore": 1469833,
+    "taskTotalAfter": 204760
+  },
+  {
+    "browser": "webkit",
+    "route": "image-convert",
+    "initialBefore": 604408,
+    "initialAfter": 184042,
+    "initialReductionPercent": 69.55,
+    "taskTotalBefore": 1130004,
+    "taskTotalAfter": 287664
+  },
+  {
+    "browser": "webkit",
+    "route": "image-crop",
+    "initialBefore": 611661,
+    "initialAfter": 191306,
+    "initialReductionPercent": 68.72,
+    "taskTotalBefore": 1469833,
+    "taskTotalAfter": 204760
+  }
+]

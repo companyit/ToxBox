@@ -11,7 +11,7 @@ const page = getPage(props.category)
   <div class="page-content category-directory" :class="`category-directory--${category}`">
     <nav class="breadcrumbs" aria-label="面包屑"><RouterLink :to="{ name: 'home' }">首页</RouterLink></nav>
     <header class="page-heading"><h1 tabindex="-1">{{ page.heading }}</h1><p>{{ page.description }}</p></header>
-    <section aria-labelledby="category-tools"><h2 id="category-tools">可试用工具</h2>
+    <section aria-labelledby="category-tools"><h2 id="category-tools">在线工具目录</h2>
       <ul class="category-grid"><li v-for="tool in tools.filter(t => t.category === category)" :key="tool.id"><ToolCard :tool="tool" /></li></ul>
     </section>
   </div>

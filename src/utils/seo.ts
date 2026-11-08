@@ -7,6 +7,7 @@ export type OpenGraphProperty = 'og:title' | 'og:description' | 'og:url' | 'og:t
 export interface PageHead {
   title: string; description: string; robots: string; canonical?: string
   openGraph?: Readonly<Record<OpenGraphProperty, string>>
+  structuredData?: Readonly<Record<string, unknown>>
 }
 export function createPageHead(page: PageDefinition, environment: SeoEnvironment): PageHead {
   if (!['local', 'preview', 'production'].includes(environment.mode)) throw new Error('SEO环境模式无效。')
@@ -28,8 +29,10 @@ export function createPageHead(page: PageDefinition, environment: SeoEnvironment
   }
   const indexable = Boolean(origin && page.indexable && approved && (!names || names.includes(page.routeName as PageName)))
   const canonical = indexable ? origin! + page.path : undefined
+  const structuredData = canonical ? createStructuredData(page, origin!) : undefined
   return {
     title: page.title, description: page.description,
+    ...(structuredData ? { structuredData } : {}),
     robots: indexable ? 'index,follow' : 'noindex,follow',
     ...(canonical ? { canonical, openGraph: {
       'og:title': page.title, 'og:description': page.description, 'og:url': canonical,
@@ -37,6 +40,20 @@ export function createPageHead(page: PageDefinition, environment: SeoEnvironment
     } } : {}),
   }
 }
+/** JSON-LD follows visible breadcrumbs and never includes user inputs or fictitious reviews. */
+function createStructuredData(page: PageDefinition, origin: string): Readonly<Record<string, unknown>> | undefined {
+  if (page.routeName === 'home') return { '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, alternateName: site.englishName, url: origin + '/', description: page.description }
+  const category = page.path.startsWith('/office/') ? 'office' : page.path.startsWith('/developer/') ? 'developer' : undefined
+  if (!category) return undefined
+  const categoryName = category === 'office' ? '办公工具' : '开发者工具'
+  const items = [{ name: '首页', item: origin + '/' }, { name: categoryName, item: origin + '/' + category + '/' }]
+  if (page.routeName !== category) items.push({ name: page.heading, item: origin + page.path })
+  return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, ...item })) }
+}
+export function serializeStructuredData(value: Readonly<Record<string, unknown>>): string {
+  return JSON.stringify(value).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029')
+}
+
 // 纯模型可用于两种构建环境；SSR/client生产接线属于后续批次。
 export function applyPageHead(document: Document, head: PageHead): void {
   document.title = head.title
@@ -55,6 +72,14 @@ export function applyPageHead(document: Document, head: PageHead): void {
     const element = document.createElement('link')
     element.rel = 'canonical'; element.href = head.canonical
     document.head.append(element)
+  }
+  document.head.querySelectorAll('script[data-workdev-structured-data]').forEach(node => node.remove())
+  if (head.structuredData) {
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.dataset.workdevStructuredData = ''
+    script.textContent = serializeStructuredData(head.structuredData)
+    document.head.append(script)
   }
   const managed: readonly OpenGraphProperty[] = ['og:title', 'og:description', 'og:url', 'og:type', 'og:site_name', 'og:locale']
   for (const property of managed) {

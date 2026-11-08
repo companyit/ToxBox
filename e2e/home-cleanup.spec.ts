@@ -6,7 +6,7 @@ const legacyCases = [
 for(const width of [375,768,1440])test(`HOME 清理重复区域且保留普通入口 ${width}`,async({page},info)=>{
  await page.setViewportSize({width,height:900});await page.goto('/');await hydrated(page)
  await expect(page.getByRole('heading',{name:'工具入口已迁移',exact:true})).toHaveCount(0);await expect(page.locator('.migration-section, .migration-entry')).toHaveCount(0)
- await expect(page.locator('.tool-card a')).toHaveCount(19);await expect(page.getByRole('link',{name:'查看完整隐私说明',exact:true})).toHaveCount(1)
+ await expect(page.locator('.tool-card a')).toHaveCount(20);await expect(page.getByRole('link',{name:'查看完整隐私说明',exact:true})).toHaveCount(1)
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
  await page.screenshot({path:info.outputPath(`home-clean-${width}.png`),fullPage:true})
 })

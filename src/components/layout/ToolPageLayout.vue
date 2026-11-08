@@ -9,7 +9,7 @@ import { toolGuides } from '@/data/toolGuides'
 const props = defineProps<{ pageName: ToolPageName }>()
 const page = getPage(props.pageName)
 const guide = toolGuides[props.pageName]
-const category = ['pdf-organizer', 'text-workbench', 'text-diff', 'image-convert', 'images-to-pdf', 'date-calculator', 'csv-json', 'text-cleanup', 'text-statistics', 'pdf-merge', 'word-to-pdf', 'pdf-split'].includes(props.pageName) ? 'office' : 'developer'
+const category = ['image-crop', 'pdf-organizer', 'text-workbench', 'text-diff', 'image-convert', 'images-to-pdf', 'date-calculator', 'csv-json', 'text-cleanup', 'text-statistics', 'pdf-merge', 'word-to-pdf', 'pdf-split'].includes(props.pageName) ? 'office' : 'developer'
 </script>
 <template>
   <div class="page-content tool-page">

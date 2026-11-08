@@ -1,0 +1,768 @@
+{
+  "candidate": {
+    "candidateId": "seo-1794106625765",
+    "receipt": ".ci/release-01/candidates/seo-1794106625765/receipt.json",
+    "receiptSha256": "903bec8a408e990852a34a65c036a87a525bf80e944bd6aed9f013d5ac56a511"
+  },
+  "heads": [
+    {
+      "path": "/",
+      "title": "免费在线工具箱：PDF、图片、文本与开发工具｜顺手集 ToolHug",
+      "description": "免费免登录的在线工具箱，提供PDF合并拆分、图片压缩裁剪、文本整理、JSON格式化、Base64及时间戳转换，工具内容在浏览器本地处理。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "顺手集",
+          "alternateName": "ToolHug",
+          "url": "https://www.v7luck.com/",
+          "description": "免费免登录的在线工具箱，提供PDF合并拆分、图片压缩裁剪、文本整理、JSON格式化、Base64及时间戳转换，工具内容在浏览器本地处理。"
+        }
+      ]
+    },
+    {
+      "path": "/office/image-crop/",
+      "title": "图片裁剪与尺寸调整：自定义坐标、比例与像素｜顺手集 ToolHug",
+      "description": "本地矩形裁剪 JPG、PNG、WebP，支持固定比例、拖动与数值坐标及等比缩小，不上传图片。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/image-crop/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "图片尺寸与裁剪",
+              "item": "https://www.v7luck.com/office/image-crop/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/pdf-organizer/",
+      "title": "PDF页面整理：缩略图排序、旋转与删除页面｜顺手集 ToolHug",
+      "description": "在浏览器本地查看 PDF 缩略图，排序、旋转和删除页面后导出，不上传文档。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/pdf-organizer/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "PDF 页面整理",
+              "item": "https://www.v7luck.com/office/pdf-organizer/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/text-workbench/",
+      "title": "文本处理工作台：批量清理、去重、排序与替换｜顺手集 ToolHug",
+      "description": "本地串联清理、去重、排序及替换，一次查看每步统计、最终文本和原文差异，不上传内容。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/text-workbench/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "文本处理工作台",
+              "item": "https://www.v7luck.com/office/text-workbench/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/text-diff/",
+      "title": "文本差异对比：逐行比较、增删统计与变化报告｜顺手集 ToolHug",
+      "description": "在本地逐行对比两段文本，查看新增、删除和行号，支持仅看变化及复制报告，不上传内容。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/text-diff/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "文本差异对比",
+              "item": "https://www.v7luck.com/office/text-diff/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/developer/json-yaml/",
+      "title": "JSON与YAML在线互转：语法校验与格式转换｜顺手集 ToolHug",
+      "description": "本地双向转换 JSON 与 YAML 1.2，检查语法和重复键，支持复制结果，不上传配置内容。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/developer/json-yaml/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "开发者工具",
+              "item": "https://www.v7luck.com/developer/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "JSON ↔ YAML 转换",
+              "item": "https://www.v7luck.com/developer/json-yaml/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/image-convert/",
+      "title": "图片压缩与格式转换：JPG、PNG、WebP在线处理｜顺手集 ToolHug",
+      "description": "本地批量转换 JPG、PNG、WebP，等比缩小并对比体积，支持单张及 ZIP 下载，不上传图片。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/image-convert/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "图片压缩与格式转换",
+              "item": "https://www.v7luck.com/office/image-convert/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/images-to-pdf/",
+      "title": "图片转PDF：JPG、PNG多图排序合成A4文档｜顺手集 ToolHug",
+      "description": "本地将 JPG/PNG 按顺序转为每图一页 A4 PDF，支持方向和边距，不上传图片。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/images-to-pdf/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "图片转 PDF",
+              "item": "https://www.v7luck.com/office/images-to-pdf/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/date-calculator/",
+      "title": "日期计算器：计算相差天数与日期加减｜顺手集 ToolHug",
+      "description": "本地计算有符号公历日期差或日期加减整数天，不依赖设备时区。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/date-calculator/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "日期差与日期加减",
+              "item": "https://www.v7luck.com/office/date-calculator/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/pdf-merge/",
+      "title": "PDF合并：多份文档排序合成一个PDF｜顺手集 ToolHug",
+      "description": "本地按文件顺序合并 PDF，支持键盘排序、取消和下载，不上传文档。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/pdf-merge/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "PDF 合并",
+              "item": "https://www.v7luck.com/office/pdf-merge/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/word-to-pdf/",
+      "title": "DOCX转PDF：Word简版预览与打印另存｜顺手集 ToolHug",
+      "description": "将DOCX在浏览器本地重排为简版预览，通过打印对话框另存PDF。不上传文件；不支持旧DOC，不保证还原Word原版式。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/word-to-pdf/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Word 转 PDF（DOCX 简版）",
+              "item": "https://www.v7luck.com/office/word-to-pdf/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/pdf-split/",
+      "title": "PDF拆分与提取页面：按页码选页导出｜顺手集 ToolHug",
+      "description": "本地按指定页码顺序导出 PDF，或逐页拆分下载，不上传文件。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/pdf-split/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "PDF 拆分与选页导出",
+              "item": "https://www.v7luck.com/office/pdf-split/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/text-cleanup/",
+      "title": "文本整理：去空白、按行去重排序与批量替换｜顺手集 ToolHug",
+      "description": "本地清理行首尾空白、删除空白行、去重、排序及普通文本替换，保留原输入。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/text-cleanup/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "文本整理",
+              "item": "https://www.v7luck.com/office/text-cleanup/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/csv-json/",
+      "title": "CSV与JSON在线互转：二维字符串表格转换｜顺手集 ToolHug",
+      "description": "本地转换逗号 CSV 与二维字符串数组，保留前导零，不推断表头或类型。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/csv-json/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "CSV 与 JSON 表格互转",
+              "item": "https://www.v7luck.com/office/csv-json/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/",
+      "title": "在线办公工具：PDF合并拆分、图片处理与文本整理｜顺手集 ToolHug",
+      "description": "在线处理PDF合并、拆分和页面排序，转换或裁剪图片、图片转PDF、统计字数和整理文本。免费免登录，所选文档在浏览器本地处理，不上传内容。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/office/text-statistics/",
+      "title": "字数与字符统计：文本行数、去空白字符计数｜顺手集 ToolHug",
+      "description": "本地统计 Unicode 码点字符、去空白字符、词段、总行与非空行；词段不等于中文分词。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/office/text-statistics/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "办公工具",
+              "item": "https://www.v7luck.com/office/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "文本统计",
+              "item": "https://www.v7luck.com/office/text-statistics/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/developer/",
+      "title": "开发者在线工具：JSON、Base64、时间戳与URL｜顺手集 ToolHug",
+      "description": "免费使用JSON格式化与校验、JSON/YAML互转、Base64、URL编解码、时间戳和UUID工具。支持中文提示，配置和文本在浏览器本地处理。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/developer/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "开发者工具",
+              "item": "https://www.v7luck.com/developer/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/developer/json-formatter/",
+      "title": "JSON格式化与校验：美化、压缩和语法检查｜顺手集 ToolHug",
+      "description": "在线校验JSON语法，选择2或4空格美化缩进或压缩；提供中文错误与数字精度风险提示，数据仅在浏览器本地处理。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/developer/json-formatter/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "开发者工具",
+              "item": "https://www.v7luck.com/developer/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "JSON 格式化与校验",
+              "item": "https://www.v7luck.com/developer/json-formatter/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/developer/url-encoder/",
+      "title": "URL在线编码解码：URI组件与完整链接转换｜顺手集 ToolHug",
+      "description": "使用 URI 组件或完整 URI 模式进行单轮编码与解码，保留加号的原生语义。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/developer/url-encoder/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "开发者工具",
+              "item": "https://www.v7luck.com/developer/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "URL 编解码",
+              "item": "https://www.v7luck.com/developer/url-encoder/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/developer/2fa/",
+      "title": "2FA 动态验证码｜顺手集 ToolHug",
+      "description": "输入密钥或导入 otpauth 链接，本地生成 6/8 位 TOTP 验证码，识别算法与周期，不保存密钥。",
+      "robots": "noindex,follow",
+      "schema": []
+    },
+    {
+      "path": "/developer/base64/",
+      "title": "Base64在线编码解码：UTF-8中文文本互转｜顺手集 ToolHug",
+      "description": "标准 Base64 与 UTF-8 文本在浏览器本地互转。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/developer/base64/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "开发者工具",
+              "item": "https://www.v7luck.com/developer/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Base64 编解码",
+              "item": "https://www.v7luck.com/developer/base64/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/developer/timestamp/",
+      "title": "时间戳在线转换：秒、毫秒与UTC日期互转｜顺手集 ToolHug",
+      "description": "秒或毫秒 Unix 时间戳与 UTC、固定 UTC+08:00 日期互转。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/developer/timestamp/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "开发者工具",
+              "item": "https://www.v7luck.com/developer/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "时间戳转换",
+              "item": "https://www.v7luck.com/developer/timestamp/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/developer/uuid/",
+      "title": "UUID在线生成器：单个或批量生成UUID v4｜顺手集 ToolHug",
+      "description": "使用浏览器安全随机数单次或批量生成 UUID v4，支持全部复制。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/developer/uuid/",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.v7luck.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "开发者工具",
+              "item": "https://www.v7luck.com/developer/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "UUID 生成",
+              "item": "https://www.v7luck.com/developer/uuid/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/about/",
+      "title": "关于顺手集｜顺手集 ToolHug",
+      "description": "了解顺手集 ToolHug的产品定位、本地处理原则与当前工具范围。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/about/",
+      "schema": []
+    },
+    {
+      "path": "/contact/",
+      "title": "联系我们｜顺手集 ToolHug",
+      "description": "通过公开邮箱反馈工具问题、功能建议、内容纠错或隐私咨询。",
+      "robots": "noindex,follow",
+      "schema": []
+    },
+    {
+      "path": "/terms/",
+      "title": "服务条款｜顺手集 ToolHug",
+      "description": "了解顺手集 ToolHug的服务范围、合理使用、结果局限与使用条款。",
+      "robots": "noindex,follow",
+      "schema": []
+    },
+    {
+      "path": "/privacy/",
+      "title": "隐私政策｜顺手集 ToolHug",
+      "description": "了解工具输入的本地处理、不自动保存、复制权限及网站静态资源请求边界。",
+      "robots": "index,follow",
+      "canonical": "https://www.v7luck.com/privacy/",
+      "schema": []
+    },
+    {
+      "path": "/__missing__/",
+      "title": "页面不存在｜顺手集 ToolHug",
+      "description": "请求的页面不存在，请返回首页或浏览工具分类。",
+      "robots": "noindex,follow",
+      "schema": []
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "156.0.8078.4",
+      "pages": 28,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "webkit",
+      "version": "27.2",
+      "pages": 28,
+      "errors": [],
+      "external": []
+    }
+  ],
+  "publicFiles": 299
+}

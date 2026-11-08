@@ -1,0 +1,18 @@
+{
+  "html": 27,
+  "indexable": 8,
+  "noindex": 19,
+  "sitemap": [
+    "https://www.v7luck.com/",
+    "https://www.v7luck.com/about/",
+    "https://www.v7luck.com/developer/",
+    "https://www.v7luck.com/developer/json-formatter/",
+    "https://www.v7luck.com/developer/url-encoder/",
+    "https://www.v7luck.com/office/",
+    "https://www.v7luck.com/office/text-statistics/",
+    "https://www.v7luck.com/privacy/"
+  ],
+  "pdfAssets": 188,
+  "packageId": "release-1794103925180-5af57239",
+  "purpose": "isolated acceptance test only"
+}

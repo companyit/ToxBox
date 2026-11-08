@@ -1,0 +1,23 @@
+{
+  "head": "e86985030c91e39b325341b6a89e44d1462e11fa",
+  "previewRun": "docs/verification/evidence/m106c3/runs/2026-11-08T03-04-04.914Z-11425",
+  "productionEvidence": "seo-1794106625765",
+  "unitComponents": 330,
+  "static": 17,
+  "identityAudit": 154,
+  "productionTests": 21,
+  "productionBrowsers": {
+    "chromium": 28,
+    "webkit": 28
+  },
+  "previewBrowsers": 522,
+  "indexable": 24,
+  "noindexHtml": 4,
+  "structuredDataPages": 22,
+  "tools": 20,
+  "html": 28,
+  "guides": 20,
+  "deployed": false,
+  "searchPlatformSubmitted": false,
+  "siteReleaseSha256": "cdc5e476ddd43c3fb4d47d00f737c740e8912260e91f6e337e97b445370b7f70"
+}

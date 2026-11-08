@@ -4,11 +4,27 @@
   "indexableRouteNames": [
     "home",
     "office",
-    "text-statistics",
     "developer",
-    "json-formatter",
-    "url-encoder",
     "about",
-    "privacy"
+    "privacy",
+    "image-convert",
+    "pdf-merge",
+    "pdf-split",
+    "images-to-pdf",
+    "image-crop",
+    "pdf-organizer",
+    "text-statistics",
+    "text-cleanup",
+    "text-diff",
+    "csv-json",
+    "date-calculator",
+    "text-workbench",
+    "word-to-pdf",
+    "json-formatter",
+    "timestamp",
+    "base64",
+    "json-yaml",
+    "url-encoder",
+    "uuid"
   ]
 }

@@ -6,7 +6,7 @@ for(const colorScheme of ['light','dark'] as const)for(const width of [375,1440]
  await expect(brand.locator('.brand-name')).toHaveText('顺手集ToolHug');await expect(brand.locator('svg')).toHaveAttribute('aria-hidden','true')
  expect((await brand.boundingBox())!.height).toBeGreaterThanOrEqual(44)
  expect((await brand.locator('.brand-mark').boundingBox())!.width).toBe(36)
- await expect(page).toHaveTitle('顺手集 ToolHug — 办公与开发者在线工具')
+ await expect(page).toHaveTitle('免费在线工具箱：PDF、图片、文本与开发工具｜顺手集 ToolHug')
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
  await page.screenshot({path:info.outputPath(`brand-home-${colorScheme}-${width}.png`),fullPage:true})
  await page.getByRole('link',{name:'关于我们',exact:true}).click();await hydrated(page);await expect(page.locator('h1')).toHaveText('关于顺手集');await expect(page).toHaveTitle('关于顺手集｜顺手集 ToolHug')

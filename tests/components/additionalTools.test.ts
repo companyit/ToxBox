@@ -48,7 +48,7 @@ test('搜索超限不截断，清空恢复目录及离页不保留', async()=>{
  expect(wrapper.text()).toContain('搜索内容超过')
  expect(wrapper.findAll('.tool-grid li')).toHaveLength(0)
  await wrapper.get('.tool-search button').trigger('click')
- expect(wrapper.findAll('.tool-grid li')).toHaveLength(19)
+ expect(wrapper.findAll('.tool-grid li')).toHaveLength(20)
  await wrapper.get('#tool-search').setValue('Base64')
  window.dispatchEvent(new Event('pagehide')); await nextTick()
  expect(wrapper.get('#tool-search').element).toHaveProperty('value','')

@@ -135,7 +135,7 @@ for (const path of ['/missing/', '/office/missing/', '/developer/missing/']) {
 test('E08 实际静态资源与禁止泄漏文件', async ({ request }) => {
   const files = await fs.readdir('dist-ssg', { recursive: true })
   const htmlFiles = files.filter(file => file.endsWith('.html'))
-  expect(htmlFiles).toHaveLength(27)
+  expect(htmlFiles).toHaveLength(28)
   const resources = new Set<string>()
   for (const file of htmlFiles) {
     const html = await fs.readFile('dist-ssg/' + file, 'utf8')

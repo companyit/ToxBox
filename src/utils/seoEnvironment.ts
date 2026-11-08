@@ -1,17 +1,9 @@
 import { pages, type PageName } from '../data/pages.ts'
 import type { SeoEnvironment } from '../types/seo'
 
-// 固定批准集合；页面目录新增条目不会自动加入。
-export const approvedIndexablePages = Object.freeze([
-  { routeName: 'home', path: '/' },
-  { routeName: 'office', path: '/office/' },
-  { routeName: 'text-statistics', path: '/office/text-statistics/' },
-  { routeName: 'developer', path: '/developer/' },
-  { routeName: 'json-formatter', path: '/developer/json-formatter/' },
-  { routeName: 'url-encoder', path: '/developer/url-encoder/' },
-  { routeName: 'about', path: '/about/' },
-  { routeName: 'privacy', path: '/privacy/' },
-].map(page => Object.freeze(page)))
+// 固定批准集合；新增目录条目不会自动取得索引授权。
+export { indexablePages as approvedIndexablePages } from '../data/indexing.ts'
+import { indexablePages as approvedIndexablePages } from '../data/indexing.ts'
 
 export interface ApprovedSeoConfig {
   readonly schemaVersion: 1
@@ -51,7 +43,7 @@ export function resolveSeoEnvironment(raw: unknown, approvedConfig: unknown): Re
     || names.some(name => typeof name !== 'string') || new Set(names).size !== names.length
     || approvedIndexablePages.some(page => !names.includes(page.routeName))
     || approvedIndexablePages.some(page => !pages.some(actual => actual.routeName === page.routeName && actual.path === page.path && actual.indexable))) {
-    throw new Error('批准SEO索引清单必须与既有八个规范页面完全一致。')
+    throw new Error('批准SEO索引清单必须与035批准的24个规范页面完全一致。')
   }
   const input = record(raw === undefined ? {} : raw, ['mode', 'origin'], 'SEO环境')
   const mode = Object.hasOwn(input, 'mode') ? input.mode : 'preview'

@@ -1,0 +1,36 @@
+{
+  "shared": {
+    "files": [
+      {
+        "resource": "/assets/imageConvert-CkUfKYUU.js",
+        "bytes": 1469,
+        "gzipBytes": 992
+      }
+    ],
+    "bytes": 1469,
+    "gzipBytes": 992
+  },
+  "cropWorker": {
+    "files": [
+      {
+        "resource": "/assets/imageCrop.worker-DKZFBYAg.js",
+        "bytes": 6727,
+        "gzipBytes": 2853
+      }
+    ],
+    "bytes": 6727,
+    "gzipBytes": 2853
+  },
+  "convertWorker": {
+    "files": [
+      {
+        "resource": "/assets/imageConvert.worker-DEptmJWw.js",
+        "bytes": 103622,
+        "gzipBytes": 31148
+      }
+    ],
+    "bytes": 103622,
+    "gzipBytes": 31148
+  },
+  "pdfModules": []
+}

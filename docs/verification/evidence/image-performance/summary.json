@@ -1,0 +1,18 @@
+{
+  "head": "e86985030c91e39b325341b6a89e44d1462e11fa",
+  "previewRun": "docs/verification/evidence/m106c3/runs/2026-11-08T10-16-26.746Z-3702",
+  "productionEvidence": "docs/verification/evidence/seo-growth/seo-1794132942041",
+  "unitComponents": 332,
+  "static": 18,
+  "identityAudit": 154,
+  "productionTests": 21,
+  "browserTests": 522,
+  "inspectionSha256": "4f0071f129b0263b9a9e1545f89ad40e1089aba6689fd97d753316fc77cdd864",
+  "inspectionIdentical": true,
+  "pdfGenerationIdentical": true,
+  "tools": 20,
+  "html": 28,
+  "guides": 20,
+  "indexable": 24,
+  "deployed": false
+}

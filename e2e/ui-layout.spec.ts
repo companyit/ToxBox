@@ -23,7 +23,7 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1280, 1440, 1920]) {
           await expect(page.getByRole('link', { name, exact: true })).toHaveCount(1)
         }
         const cards = await page.locator('.tool-card').all()
-        expect(cards).toHaveLength(19)
+        expect(cards).toHaveLength(20)
         const boxes = await Promise.all(cards.map(card => card.boundingBox()))
         const office = await page.locator('.office .tool-card').first().boundingBox()
         const developer = await page.locator('.developer .tool-card').first().boundingBox()

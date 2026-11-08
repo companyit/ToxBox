@@ -24,7 +24,7 @@ const categories = [
 <template>
   <section class="hero" aria-labelledby="home-title">
     <h1 id="home-title" tabindex="-1">让日常工作，轻松一点。</h1>
-    <p class="hero-description">免费、免登录，在浏览器里完成。</p>
+    <p class="hero-description">PDF、图片、文本与开发工具，免费免登录，在浏览器本地处理。</p>
   </section>
 
   <section class="tool-search" aria-labelledby="search-heading">

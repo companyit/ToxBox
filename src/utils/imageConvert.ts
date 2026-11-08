@@ -1,4 +1,4 @@
-import { inspectImage } from './imagePdf'
+import { inspectImage } from './imageInspect'
 export type ImageFormat = 'jpeg' | 'png' | 'webp'
 export interface ImageConvertOptions { format: ImageFormat; quality: number; maxSide: number }
 export const convertErrors = {
