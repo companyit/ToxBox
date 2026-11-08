@@ -1,4 +1,5 @@
 import { build } from 'vite'
+import { pdfResourceFiles } from './pdf-resources.mjs'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL, fileURLToPath } from 'node:url'
@@ -16,13 +17,13 @@ export function validatePages(pages) {
     if (!p.title || !p.description) throw Error('页面元数据缺失')
     names.add(p.routeName); paths.add(p.path)
   }
-  if (pages.length !== 8) throw Error('正式页面数量不符合已批准清单')
+  if (pages.length !== 26) throw Error('正式页面数量不符合已批准清单')
 }
 export async function validateHtml(html, directory) {
   if ((html.match(/<h1(?:\s|>)/g) ?? []).length !== 1 || (html.match(/<main(?:\s|>)/g) ?? []).length !== 1 || !html.includes('data-render-mode="ssg"')) throw Error('静态正文结构缺失')
   if ((html.match(/<title>/g) ?? []).length !== 1 || (html.match(/<meta name="description" content="[^"]+"/g) ?? []).length !== 1) throw Error('静态SEO元数据缺失或重复')
   for (const [, resource] of html.matchAll(/(?:src|href)="(\/[^"#?]+)"/g)) {
-    if (!resource.startsWith('/assets/') && resource !== '/favicon.ico') continue
+    if (!resource.startsWith('/assets/') && !['/favicon.ico', '/favicon.svg'].includes(resource)) continue
     await fs.access(path.join(directory, resource.slice(1)))
   }
 }
@@ -61,10 +62,10 @@ async function generateLegacyPreview() {
       const result = await Promise.race([render(page.path), new Promise((_, reject) => { pageTimer = setTimeout(() => reject(Error('页面渲染超时')), 30000) })]).finally(() => clearTimeout(pageTimer))
       const { head, body, modules } = result
       const styles = [...new Set(modules.flatMap(id => manifest[id] ?? []).filter(file => file.endsWith('.css')))]
-      let html = template.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(head.title)}</title>`)
-        .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escape(head.description)}">`)
-        .replace('<div id="app"></div>', `<div id="app" data-render-mode="ssg">${body}</div>`)
-        .replace('</head>', styles.filter(file => !template.includes(`href="${file}"`)).map(file => `<link rel="stylesheet" href="${file}">`).join('') + '</head>')
+      let html = template.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escape(head.title)}</title>`)
+        .replace(/<meta name="description" content="[^"]*">/, () => `<meta name="description" content="${escape(head.description)}">`)
+        .replace('<div id="app"></div>', () => `<div id="app" data-render-mode="ssg">${body}</div>`)
+        .replace('</head>', () => styles.filter(file => !template.includes(`href="${file}"`)).map(file => `<link rel="stylesheet" href="${file}">`).join('') + '</head>')
       if (!html.includes(escape(head.title)) || !html.includes(escape(head.description)) || html.includes('rel="canonical"')) throw Error('静态head不一致')
       await validateHtml(html, candidate)
       const filename = page.routeName === 'not-found' ? '404.html' : page.path.slice(1) + 'index.html'
@@ -73,14 +74,14 @@ async function generateLegacyPreview() {
       await fs.writeFile(destination, html)
       generated.push(filename)
     }
-    if (new Set(generated).size !== 9) throw Error('页面遗漏或输出重复')
+    if (new Set(generated).size !== 27) throw Error('页面遗漏或输出重复')
     await fs.rename(candidate, output)
     console.log('SSG成功：' + generated.join(', '))
   } finally { clearTimeout(timer) }
 }
 
 export function contentTypeFor(filename) {
-  const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.ico': 'image/x-icon', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.woff': 'font/woff', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8' }
+  const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.ico': 'image/x-icon', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.woff': 'font/woff', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8', '.bcmap': 'application/octet-stream', '.pfb': 'application/octet-stream', '.ttf': 'font/ttf', '.wasm': 'application/wasm', '.icc': 'application/vnd.iccprofile' }
   const result = types[path.extname(filename)]
   if (!result) throw Error('不允许的资源扩展名/MIME')
   return result
@@ -117,13 +118,18 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
   const resources = manifestResources(manifest)
   const expectedHtml = [...approvedPages.map(p => p.path.slice(1) + 'index.html'), '404.html'].sort()
   const files = await digestDirectory(directory)
-  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选9HTML清单不一致')
+  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选27HTML清单不一致')
   const production = environment.mode === 'production'
   const allowedSeo = production ? ['robots.txt', 'sitemap.xml'] : []
   const noticesName = 'third-party-notices.txt'
   const notices = await readSafeFile(path.join(repositoryRoot, 'public', noticesName))
   if (!files[noticesName] || files[noticesName].size !== notices.length || files[noticesName].sha256 !== sha256(notices)) throw Error('第三方许可通知缺失或字节不符')
   const referenced = new Set()
+  const pdfResources = await pdfResourceFiles()
+  for (const [name, expected] of pdfResources) {
+    if (!files[name] || files[name].size !== expected.size || files[name].sha256 !== expected.sha256) throw Error('PDF资源缺失或摘要不符')
+    referenced.add(name)
+  }
   const { JSDOM } = await import('jsdom')
   for (const page of [...approvedPages, notFoundPage]) {
     const filename = page.routeName === 'not-found' ? '404.html' : page.path.slice(1) + 'index.html'
@@ -149,7 +155,7 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
         const resource = node.getAttribute('src') ?? node.getAttribute('href')
         if (node.matches('link[rel="canonical"]')) continue
         if (!resource || resource.startsWith('#')) continue
-        if (resource !== '/favicon.ico' && !/^\/assets\/[A-Za-z0-9_.-]+\.(?:js|css|svg|png|jpg|webp|woff2?)$/.test(resource)) throw Error('静态资源URL未批准')
+        if (!['/favicon.ico', '/favicon.svg'].includes(resource) && !/^\/assets\/[A-Za-z0-9_.-]+\.(?:js|css|svg|png|jpg|webp|woff2?)$/.test(resource)) throw Error('静态资源URL未批准')
         const name = resource.slice(1)
         if (!files[name] || !files[name].size) throw Error('静态资源缺失或为空')
         contentTypeFor(name)
@@ -215,9 +221,10 @@ export async function generateCandidate({ candidateRoot, envelope }) {
   for (const resource of resources) await readSafeFile(path.join(client, resource.slice(1)))
   const template = (await readSafeFile(path.join(client, 'index.html'))).toString('utf8')
   // Copy only the client bundle. Metadata/server/maps are never copied into public output.
+  const pdfResources = await pdfResourceFiles()
   for (const entry of Object.keys(await digestDirectory(client))) {
     if (entry === 'index.html' || entry.startsWith('.vite/')) continue
-    if (entry !== 'favicon.ico' && entry !== 'third-party-notices.txt' && !/^assets\/[A-Za-z0-9_.-]+\.(?:js|css|svg|png|jpg|webp|woff2?)$/.test(entry)) throw Error('客户端输出含未批准文件')
+    if (!pdfResources.has(entry) && !['favicon.ico', 'favicon.svg', 'third-party-notices.txt'].includes(entry) && !/^assets\/[A-Za-z0-9_.-]+\.(?:js|css|svg|png|jpg|webp|woff2?)$/.test(entry)) throw Error('客户端输出含未批准文件')
     const target = path.join(staging, entry)
     await fs.mkdir(path.dirname(target), { recursive: true })
     await fs.writeFile(target, await readSafeFile(path.join(client, entry)), { flag: 'wx' })
@@ -244,7 +251,7 @@ export async function generateCandidate({ candidateRoot, envelope }) {
     await fs.writeFile(target, html, { flag: 'wx' })
   }
   if (environment.mode === 'production') {
-    const urls = pages.map(p => createPageHead(p, environment).canonical)
+    const urls = pages.filter(p => p.indexable).map(p => createPageHead(p, environment).canonical)
     if (urls.some(url => !url) || new Set(urls).size !== 8) throw Error('生产索引清单不完整')
     await fs.writeFile(path.join(staging, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${environment.approvedOrigin}/sitemap.xml\n`, { flag: 'wx' })
     await fs.writeFile(path.join(staging, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.map(url => `  <url><loc>${xmlEscape(url)}</loc></url>`).join('\n') + '\n</urlset>\n', { flag: 'wx' })

@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-05",
+  "unitAndComponents": 212,
+  "ssg": 3,
+  "legacyIdentities": 154,
+  "browser": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 296,
+    "run": "docs/verification/evidence/m106c3/runs/2026-11-05T13-34-17.417Z-6701"
+  },
+  "sourceFixturesAndOutputMatch": true,
+  "dependenciesUnchangedFromPreviousRun": true,
+  "print": {
+    "chromium": "三个宽度均记录 beforeprint/afterprint",
+    "webkit": "真实按钮流程执行，无头环境没有打印事件",
+    "systemSave": "未验证"
+  },
+  "visual": "三页合成 DOCX 打印 PDF 逐页检查通过",
+  "deployment": "未执行",
+  "hashes": {
+    "src/views/pages/WordToPdfPage.vue": "9ff9ab3fec98256a3695bb874cfcadbbd9a83b8aa55bb3c85a38bf106e7cf837",
+    "tests/helpers/documentFixtures.ts": "d18cad2104bf231ec25ed3a32d1daa090ae9407f3ef7529f45c6952a703a97ec",
+    "tests/unit/docxConversion.test.ts": "4f225a0b90e18f3fd0efcc1416e087e7431ad8c4fd1755b3207e9e0ad09505a7",
+    "tests/components/documentLifecycle.test.ts": "b004809bcc80f4a39b49483f8cc953d8d5c355e1bc63ec9a1bf3ad7b494f4d57",
+    "e2e/document-tools.spec.ts": "92e1076af9d1f786120dfb39059cf8cc28c5063aa942f65016e9b4d15ce4f4d1",
+    "scripts/e2e-run.mjs": "d27b4961d9bfb530d204e34cff9740bf3cefbf7c64938ea492e408de3f8004e2",
+    "docs/verification/evidence/m106c3/runs/2026-11-05T13-34-17.417Z-6701/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-chromium/docx-print.pdf": "a9449aa1aae4c64384208e3a287fa99322506b702749322c38d763a604e535f3",
+    "docs/verification/evidence/document-tools/format-print-2026-11-05/docx-page-1.png": "a022f1fbf95d56bd050feadd80db7aaa70e7ed7673cd38df725873ec6d7f2ab3",
+    "docs/verification/evidence/document-tools/format-print-2026-11-05/docx-page-2.png": "dee27f64c301163017aa65e65a41d1df363634f8c5f7f4ed3635d85c68f389e1",
+    "docs/verification/evidence/document-tools/format-print-2026-11-05/docx-page-3.png": "73507779e23f6a550c93aef485eac5b585b4f4d1893bb7881e0e1a1da5d70bd7"
+  }
+}

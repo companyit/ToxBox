@@ -1,0 +1,86 @@
+import { test, expect, hydrated } from './helpers'
+
+test('TOTP 标准时间向量、遮挡、校验与清空', async ({ page }) => {
+  await page.clock.install({ time: new Date(59000) })
+  await page.goto('/developer/2fa/')
+  await hydrated(page)
+  const editor = page.getByLabel('Base32 密钥', { exact: true })
+  await expect(editor).toHaveAttribute('type', 'password')
+  await editor.fill('GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ')
+  await page.getByRole('button', { name: '生成验证码', exact: true }).click()
+  await expect(page.locator('output')).toHaveText('287082')
+  await page.getByRole('button', { name: '显示密钥', exact: true }).click()
+  await expect(editor).toHaveAttribute('type', 'text')
+  await editor.fill('INVALID0')
+  await expect(page.locator('output')).toHaveCount(0)
+  await page.getByRole('button', { name: '生成验证码', exact: true }).click()
+  await expect(page.locator('#totp-error')).not.toBeEmpty()
+  await expect(editor).toHaveValue('INVALID0')
+  await page.getByRole('button', { name: '清空', exact: true }).click()
+  await expect(editor).toHaveValue('')
+  await expect(editor).toHaveAttribute('type', 'password')
+  await expect(page.locator('#workdev-google-tag')).toHaveCount(0)
+})
+
+test('TOTP 跨页导航隔离文档且返回不保留密钥', async ({ page }) => {
+  await page.goto('/')
+  await hydrated(page)
+  await page.evaluate(() => { Reflect.set(window, '__totpDocumentProbe', 'public') })
+  await Promise.all([
+    page.waitForURL('**/developer/2fa/', { waitUntil: 'load' }),
+    page.getByRole('link', { name: '试用工具 ：2FA 动态验证码', exact: true }).click(),
+  ])
+  await hydrated(page)
+  expect(await page.evaluate(() => Reflect.get(window, '__totpDocumentProbe'))).toBeUndefined()
+  await page.getByLabel('Base32 密钥', { exact: true }).fill('MY')
+  await page.evaluate(() => { Reflect.set(window, '__totpDocumentProbe', 'sensitive') })
+  await Promise.all([
+    page.waitForURL('/', { waitUntil: 'load' }),
+    page.getByRole('link', { name: '首页', exact: true }).click(),
+  ])
+  expect(await page.evaluate(() => Reflect.get(window, '__totpDocumentProbe'))).toBeUndefined()
+  await page.goBack()
+  // WebKit 可能先恢复历史文档，再由路由隔离切换文档；用可重试 locator 等待目标控件。
+  await expect(page.getByLabel('Base32 密钥', { exact: true })).toBeVisible()
+  await expect(page.getByLabel('Base32 密钥', { exact: true })).toHaveValue('')
+})
+
+test('TOTP 安全计算不可用仍保留输入并提示', async ({ page }) => {
+  await page.addInitScript(() => { Object.defineProperty(crypto, 'subtle', { value: undefined, configurable: true }) })
+  await page.goto('/developer/2fa/'); await hydrated(page)
+  const editor = page.getByLabel('Base32 密钥', { exact: true })
+  await editor.fill('MY')
+  await page.getByRole('button', { name: '生成验证码', exact: true }).click()
+  await expect(page.locator('#totp-error')).toContainText('暂时无法生成')
+  await expect(editor).toHaveValue('MY')
+  await expect(page.locator('output')).toHaveCount(0)
+})
+
+test('TOTP 导入链接识别参数，失败保留及清空', async ({ page }) => {
+  await page.clock.install({ time: new Date(59000) })
+  await page.clock.pauseAt(new Date(59000))
+  await page.goto('/developer/2fa/'); await hydrated(page)
+  const uri = page.getByLabel('otpauth 链接', { exact: true })
+  const secret = page.getByLabel('Base32 密钥', { exact: true })
+  await uri.fill('otpauth://totp/Example:alice?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA1&digits=8&period=60')
+  await page.getByRole('button', { name: '导入链接', exact: true }).click()
+  await expect(uri).toHaveValue('')
+  await expect(page.locator('.parameter-summary')).toHaveText('当前参数：SHA-1 · 8 位 · 60 秒')
+  await page.getByRole('button', { name: '生成验证码', exact: true }).click()
+  await expect(page.locator('output')).toHaveText('84755224')
+  await expect(page.locator('progress')).toHaveAttribute('max', '60')
+  await page.clock.runFor(1000)
+  await expect(page.locator('output')).toHaveText('94287082')
+  await uri.fill('otpauth://hotp/private?secret=INVALID0')
+  await page.getByRole('button', { name: '导入链接', exact: true }).click()
+  await expect(page.locator('#totp-import-error')).toContainText('导入失败')
+  await expect(secret).toHaveValue('GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ')
+  await expect(page.locator('.parameter-summary')).toContainText('8 位 · 60 秒')
+  await secret.fill('MY')
+  await expect(page.locator('.parameter-summary')).toContainText('SHA-1 · 6 位 · 30 秒')
+  await page.getByRole('button', { name: '清空', exact: true }).click()
+  await expect(uri).toHaveValue('')
+  await expect(secret).toHaveValue('')
+  await expect(page.locator('.account-info')).toHaveCount(0)
+  expect(page.url()).not.toContain('secret=')
+})

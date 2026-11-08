@@ -89,7 +89,7 @@ test('C03 indent change, minify independence, validate has no output', async t =
 })
 test('C04 guarded sample and clear reset/focus', async t => {
   const tool=mountTool(t);assert.equal(tool.button('清空').props.disabled,true)
-  await tool.click('填入示例');assert.match(tool.editor().props.value,/WorkDev Tools/);assert.equal(tool.output(),'')
+  await tool.click('填入示例');assert.match(tool.editor().props.value,/ToolHug/);assert.equal(tool.output(),'')
   await tool.input(' ');await tool.click('填入示例');assert.equal(tool.editor().props.value,' ')
   tool.indent().props.onChange({target:{value:'4'}});await nextTick();await tool.click('清空')
   assert.equal(tool.editor().props.value,'');assert.equal(tool.output(),'');assert.equal(tool.indent().props.value,2);assert.equal(tool.focused(),tool.editor());assert.equal(tool.status(),'')

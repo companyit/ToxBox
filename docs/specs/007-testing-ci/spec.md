@@ -96,3 +96,8 @@ www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；D
 本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
 
 追踪：本目录design.md的REL-TEST-D01～D03与tasks.md的REL-TEST-T01～T05；跨规范005 SEO、006 SSG、007 TEST形成完整合同。
+
+
+## REL-FAIL-01：Candidate与部署包的持续负向验证
+
+保留原154迁移身份及断言。另设tests/release/*.test.mjs精确独立测试族，覆盖production/preview正向合同与缺SUCCESS、损坏输出/manifest/receipt、symlink、已占用ID、模式错误、部署包缺失/额外/损坏。故障只注入一次性fixture，不改成功候选、源码或旧产物。不把新族通过算成旧154通过或CI已执行。

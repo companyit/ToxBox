@@ -1,0 +1,25 @@
+{
+  "run": "docs/verification/evidence/m106c3/runs/2026-11-07T12-33-39.257Z-7177",
+  "result": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "startedUtc": "2026-11-07T12:33:39.257Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 255.105
+  },
+  "dependencyChange": false,
+  "evidenceSha256": {
+    "workbench-375.png": "3a34be7350f786c9e2102c51be904676f223073cbd1bbbc865d567cab80b609b",
+    "chromium-cmap.png": "146854d05b577277e50b32fc57391c63fc0f2458dc7bc3df4b3e4e75942fdfd3",
+    "webkit-cmyk.png": "eea550427f2c626738d17ea23dfb6efa1f808e30b4abf785ee2cbcbcb19a6dec",
+    "chromium-cmyk.png": "c558d08c604d97678ecbe0c64ae2c0d5ba7a7e58e8279a921bb759ec4bb00426",
+    "webkit-cmap.png": "c7f47b6b2cb17f948b6184153410a267ebf022627c71042cb3ae907f3ba2bf4b",
+    "webkit-jpx.png": "44023158183eb89cb8fc97346d3f5656db464023d9670c325903a410174bda82",
+    "chromium-jpx.png": "6d3890e04f0afe26cd7b876086282157d2a068ac980dcab8cc8c1614adaac1fb",
+    "resource-checks.json": "560ff9c4789721354c78984a43cc30e45e5052c62e1feb93a1e18e9a969483ee"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-02",
+  "unit_components_ssg": {
+    "files": 13,
+    "passed": 167
+  },
+  "build": "passed",
+  "type_check": "passed",
+  "targeted_e2e": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "repeat_each": 3,
+    "passed": 18,
+    "results": "targeted-results.json"
+  },
+  "full_runs": [
+    {
+      "path": "../m106c3/runs/2026-11-02T12-44-13.377Z-3874",
+      "chromium_passed": 118,
+      "firefox": "profile launch failure; interrupted"
+    },
+    {
+      "path": "../m106c3/runs/2026-11-02T12-46-41.109Z-4781",
+      "webkit_passed": 117,
+      "webkit_failed": 1,
+      "cause": "history document-switch test wait race; corrected and targeted rerun passed"
+    }
+  ],
+  "inventory": "failed existing tests/ssg.test.mjs historical source SHA mismatch; current file equals HEAD; historical identity/owner mapping verified separately",
+  "deployed": false
+}

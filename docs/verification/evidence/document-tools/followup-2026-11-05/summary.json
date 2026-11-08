@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-05",
+  "unitAndComponents": 211,
+  "ssg": 3,
+  "legacyIdentities": 154,
+  "browser": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 296,
+    "run": "docs/verification/evidence/m106c3/runs/2026-11-05T13-24-08.903Z-5272"
+  },
+  "snapshotVerified": true,
+  "files": {
+    "docs/verification/evidence/document-tools/followup-2026-11-05/merged-page-1.png": "6f717ae247181384b49c6fa3a55a19e3a224cc3c635078e40ee3d4aa834455e3",
+    "docs/verification/evidence/document-tools/followup-2026-11-05/merged-page-2.png": "4e701333400ce82d8dd8b39ee89544d0ca5ae5467203444f03de72fd0d7db932",
+    "docs/verification/evidence/document-tools/followup-2026-11-05/merged-page-3.png": "58bf5e668db03e10843ddd08688b65f7de5c4c575d0aee0bbe1e3a6acf5828d0",
+    "docs/verification/evidence/document-tools/followup-2026-11-05/docx-page-1.png": "36bd474b971c8e5dbc45753453b4104d4f321779ab283f26cbb5fb6ed20ea765",
+    "docs/verification/evidence/document-tools/followup-2026-11-05/docx-page-2.png": "c56e0bbd60dc88cbe420ebc2edba5374e4eaddb4540f3810c167ca04aee9f118",
+    "docs/verification/evidence/document-tools/followup-2026-11-05/docx-page-3.png": "b7cb8dc4efb939da5a7d1d31c195670ddacbc8c89ad685606a4685910b9bbde7",
+    "docs/verification/evidence/m106c3/runs/2026-11-05T13-24-08.903Z-5272/artifacts/document-tools-DOC-LOCAL-PDF-合并真实-Worker-与下载-375-chromium/merged.pdf": "cba23764225c80183dc9d3d15545300d56e3b537a0e68f46e1c2042c81bcfc44",
+    "docs/verification/evidence/m106c3/runs/2026-11-05T13-24-08.903Z-5272/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-chromium/docx-print.pdf": "b6ca4d4693bc0f668bfa4958b3824b32f14bcdefea847fc42af63bb7727327ba",
+    "scripts/render-document-pdf.m": "15133610f0649225826965297f60827bfaa3d32702a61dc813cad0bf66b6a468"
+  },
+  "visualReview": "两份合成 PDF 共六页独立渲染并逐页核对",
+  "firefox": "已尝试，启动失败，未验证",
+  "manualSystemPrint": "未完成",
+  "realDevices": "未完成",
+  "dependenciesChanged": false,
+  "deployment": "未执行"
+}

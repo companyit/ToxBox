@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-02",
+  "vitest": {
+    "files": 15,
+    "passed": 174
+  },
+  "inventory": "passed",
+  "build_and_typecheck": "passed",
+  "e2e": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 238,
+    "run": "docs/verification/evidence/m106c3/runs/2026-11-02T14-26-15.227Z-6970"
+  },
+  "remaining": [
+    "Firefox profile launch failure",
+    "real Safari and mobile devices",
+    "production release validation"
+  ],
+  "deployed": false
+}

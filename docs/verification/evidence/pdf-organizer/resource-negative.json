@@ -1,0 +1,18 @@
+[
+  {
+    "kind": "missing",
+    "rejected": true
+  },
+  {
+    "kind": "corrupt",
+    "rejected": true
+  },
+  {
+    "kind": "extra-quickjs",
+    "rejected": true
+  },
+  {
+    "kind": "extra-resource",
+    "rejected": true
+  }
+]

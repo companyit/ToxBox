@@ -1,0 +1,47 @@
+[
+  {
+    "browserName": "chromium",
+    "width": 375,
+    "printEvents": [
+      "beforeprint",
+      "afterprint"
+    ],
+    "systemSaveVerified": false
+  },
+  {
+    "browserName": "chromium",
+    "width": 768,
+    "printEvents": [
+      "beforeprint",
+      "afterprint"
+    ],
+    "systemSaveVerified": false
+  },
+  {
+    "browserName": "chromium",
+    "width": 1440,
+    "printEvents": [
+      "beforeprint",
+      "afterprint"
+    ],
+    "systemSaveVerified": false
+  },
+  {
+    "browserName": "webkit",
+    "width": 375,
+    "printEvents": [],
+    "systemSaveVerified": false
+  },
+  {
+    "browserName": "webkit",
+    "width": 768,
+    "printEvents": [],
+    "systemSaveVerified": false
+  },
+  {
+    "browserName": "webkit",
+    "width": 1440,
+    "printEvents": [],
+    "systemSaveVerified": false
+  }
+]

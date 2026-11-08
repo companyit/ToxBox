@@ -1,0 +1,30 @@
+[
+  {
+    "viewportWidth": 375,
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T04-33-38.042Z-13074/artifacts/home-cleanup-HOME-清理重复区域且保留普通入口-375-chromium/home-clean-375.png",
+    "before": "docs/verification/evidence/toolhug-brand/mobile.png",
+    "beforePng": [
+      375,
+      4908
+    ],
+    "afterPng": [
+      375,
+      4069
+    ],
+    "reducedHeight": 839
+  },
+  {
+    "viewportWidth": 1440,
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T04-33-38.042Z-13074/artifacts/home-cleanup-HOME-清理重复区域且保留普通入口-1440-chromium/home-clean-1440.png",
+    "before": "docs/verification/evidence/toolhug-brand/desktop.png",
+    "beforePng": [
+      1440,
+      2261
+    ],
+    "afterPng": [
+      1440,
+      1878
+    ],
+    "reducedHeight": 383
+  }
+]

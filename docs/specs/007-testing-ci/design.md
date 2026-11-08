@@ -378,3 +378,12 @@ www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；D
 本追加仅记录负责人已确认设计及后续待做工作，不宣称源码已实现或测试已通过。R03/R06：DESIGN PREPARED / 尚未修复FAIL；RELEASE-01：NOT READY FOR PRODUCTION；Git / Build / Test / Remote / Deploy：NOT AUTHORIZED。原正文、原勾选、历史FAIL及审批状态原字节保留。
 
 追踪关系：D01→T01；D02→T02/T03；D03→T04/T05。实现必须另获精确源码白名单授权，本D1只拟议追加SDD。
+
+
+## REL-FAIL-D01：一次性故障fixture
+
+对应REL-FAIL-01。Node内置test runner串行运行，先新建preview及production候选各一次，再在不同新ID下克隆fixture并调整receipt ID及其独立预期SHA，仅在克隆上注入错误。原候选及旧dist-ssg/.ssg-build前后SHA保持。部署包create/verify使用相同生产来源。测试日志与清单保存在全新.ci目录，失败不删除现场、不自动重试。
+
+## 009 后续验收：历史源完整性修正（2026-11-02）
+
+负责人要求继续开发，已确认 tests/ssg.test.mjs 在 856aea8 中仅增加许可证同一性校验，历史迁移账本仍引用 0de610b 的原摘要。保留 migration.json 原字节，新增历史源快照及显式演进登记；门禁同时校验登记的旧摘要、快照内容与当前完整文件摘要，未登记修改继续失败。新增用例独立于 154 历史身份计数。以负向测试验证篡改当前源、历史快照和原摘要均拒绝，不以跳过门禁替代修复。

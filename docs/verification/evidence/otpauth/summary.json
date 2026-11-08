@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-02",
+  "build": "passed",
+  "type_check": "passed",
+  "inventory": "passed",
+  "vitest": {
+    "files": 15,
+    "passed": 172
+  },
+  "browser": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 8,
+    "results": "browser-results.json"
+  },
+  "source_sha256": {
+    "src/utils/otpauth.ts": "d9517910b182cb64c5564e5043d8a7944a566da6806f3d74688f292014bb22bb",
+    "src/utils/totp.ts": "816531c037b6e26738db443887b2726a48b479dd73154f1c147e33bc47904f38",
+    "src/views/TotpView.vue": "517dbdaabc1f801b8f1175b38a53cf7f8c43a78848af4f950bc3a0aeaee2b703",
+    "tests/unit/otpauth.test.ts": "2a00a4b25d8fc39d58d1201a4c5f1fa52d32bdbf1fcb100e1de4581237f49b6a",
+    "tests/unit/totp.test.ts": "5bc42ef303be7783ce77058c6ea5757a48488fc501bd5af47b380580008493a1",
+    "tests/components/totp.test.ts": "794902c850f20b28f7730939f2e2c5c5a2e4a1214167e2c972a107fe1f6dcdd4",
+    "e2e/totp.spec.ts": "66d797bc51041d98799022f4b9f4e9e52db6a2501253b63cb681790e630eac38"
+  },
+  "deployed": false
+}

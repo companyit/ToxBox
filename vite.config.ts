@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { resolveViteSeoContext, readSafeFile, repositoryRoot } from './scripts/release-candidate.mjs'
 import path from 'node:path'
+import { pdfResourcesPlugin } from './scripts/pdf-resources.mjs'
 
 // https://vite.dev/config/
 export default defineConfig(async ({ command, isPreview }): Promise<UserConfig> => {
@@ -17,6 +18,7 @@ export default defineConfig(async ({ command, isPreview }): Promise<UserConfig> 
   ...(context.candidate ? { build: { outDir: publicRoot } } : {}),
   plugins: [
     vue(),
+    pdfResourcesPlugin(),
     { name: 'approved-seo-envelope', configResolved(config) {
       if (config.define?.__WORKDEV_SEO_CONFIG__ !== envelope || path.resolve(config.root) !== repositoryRoot) throw Error('最终构建SEO配置被覆盖')
       if (context.candidate && path.resolve(config.root, config.build.outDir) !== publicRoot) throw Error('preview真实根与receipt不一致')
@@ -44,7 +46,7 @@ export default defineConfig(async ({ command, isPreview }): Promise<UserConfig> 
               res.setHeader('Content-Type', contentTypeFor(filename)); res.end(bytes); return
             }
             res.statusCode = 404
-            if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname.startsWith('/assets/') || pathname === '/favicon.ico' || pathname.startsWith('/api/')) {
+            if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname.startsWith('/assets/') || pathname.startsWith('/pdf-assets/') || ['/favicon.ico', '/favicon.svg'].includes(pathname) || pathname.startsWith('/api/')) {
               res.setHeader('Content-Type', 'text/plain; charset=utf-8'); res.end('Not Found'); return
             }
             res.setHeader('Content-Type', 'text/html; charset=utf-8')
@@ -54,7 +56,7 @@ export default defineConfig(async ({ command, isPreview }): Promise<UserConfig> 
           }
         }
         const pathname = new URL(req.url ?? '/', 'http://localhost').pathname
-        if (pathname.startsWith('/assets/') || pathname === '/favicon.ico') return next()
+        if (pathname.startsWith('/assets/') || pathname.startsWith('/pdf-assets/') || ['/favicon.ico', '/favicon.svg'].includes(pathname)) return next()
         if (/^\/(?:[a-z0-9-]+\/)*[a-z0-9-]+$/.test(pathname)) {
           try {
             await readFile(new URL(`./dist-ssg${pathname}/index.html`, import.meta.url))

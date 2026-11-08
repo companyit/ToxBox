@@ -1,0 +1,950 @@
+[
+  {
+    "engine": "chromium",
+    "mode": "orientations",
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T00-05-52.031Z-4163/artifacts/images-to-pdf-IMG-EXIF-1～8-实际-Worker-方向解码及透明白底输出-chromium/orientations.pdf",
+    "renderer": "Rendered 9 pages",
+    "checks": [
+      {
+        "page": 1,
+        "expected": "RGBY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 2,
+        "expected": "GRYB",
+        "samples": [
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            254
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 3,
+        "expected": "YBGR",
+        "samples": [
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            254,
+            0,
+            0
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 4,
+        "expected": "BYRG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 5,
+        "expected": "RBGY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 6,
+        "expected": "BRYG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 7,
+        "expected": "YGBR",
+        "samples": [
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 8,
+        "expected": "GYRB",
+        "samples": [
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            254
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 9,
+        "expected": "RWWW",
+        "samples": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "mode": "portrait",
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T00-05-52.031Z-4163/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-chromium/images.pdf",
+    "renderer": "Rendered 3 pages",
+    "checks": [
+      {
+        "page": 1,
+        "expected": "BRYG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 2,
+        "expected": "RGBY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 3,
+        "expected": "RWWW",
+        "samples": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "mode": "landscape",
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T00-05-52.031Z-4163/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-chromium/landscape.pdf",
+    "renderer": "Rendered 3 pages",
+    "checks": [
+      {
+        "page": 1,
+        "expected": "BRYG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          800,
+          565
+        ]
+      },
+      {
+        "page": 2,
+        "expected": "RGBY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ],
+        "render": [
+          800,
+          565
+        ]
+      },
+      {
+        "page": 3,
+        "expected": "RWWW",
+        "samples": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ],
+        "render": [
+          800,
+          565
+        ]
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "mode": "orientations",
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T00-05-52.031Z-4163/artifacts/images-to-pdf-IMG-EXIF-1～8-实际-Worker-方向解码及透明白底输出-webkit/orientations.pdf",
+    "renderer": "Rendered 9 pages",
+    "checks": [
+      {
+        "page": 1,
+        "expected": "RGBY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 2,
+        "expected": "GRYB",
+        "samples": [
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 3,
+        "expected": "YBGR",
+        "samples": [
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            254,
+            0,
+            0
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 4,
+        "expected": "BYRG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 5,
+        "expected": "RBGY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            255,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 6,
+        "expected": "BRYG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 7,
+        "expected": "YGBR",
+        "samples": [
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 8,
+        "expected": "GYRB",
+        "samples": [
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            254
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 9,
+        "expected": "RWWW",
+        "samples": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "mode": "portrait",
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T00-05-52.031Z-4163/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-webkit/images.pdf",
+    "renderer": "Rendered 3 pages",
+    "checks": [
+      {
+        "page": 1,
+        "expected": "BRYG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 2,
+        "expected": "RGBY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      },
+      {
+        "page": 3,
+        "expected": "RWWW",
+        "samples": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ],
+        "render": [
+          565,
+          800
+        ]
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "mode": "landscape",
+    "source": "docs/verification/evidence/m106c3/runs/2026-11-07T00-05-52.031Z-4163/artifacts/images-to-pdf-IMG-排序、参数、下载及白底-375-webkit/landscape.pdf",
+    "renderer": "Rendered 3 pages",
+    "checks": [
+      {
+        "page": 1,
+        "expected": "BRYG",
+        "samples": [
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            1
+          ],
+          [
+            0,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          800,
+          565
+        ]
+      },
+      {
+        "page": 2,
+        "expected": "RGBY",
+        "samples": [
+          [
+            254,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            1
+          ],
+          [
+            0,
+            0,
+            254
+          ],
+          [
+            255,
+            255,
+            1
+          ]
+        ],
+        "render": [
+          800,
+          565
+        ]
+      },
+      {
+        "page": 3,
+        "expected": "RWWW",
+        "samples": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ],
+        "render": [
+          800,
+          565
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "source": "tests/ssg.test.mjs",
+    "originalSha256": "aec9e9e325a6280694fbbae429bb03fc4168d12b912ae250e505eeb3eeaee193",
+    "currentSha256": "946da0c7695d9c62fc0684ca1f4a917e1c3e3a7335665f7720bf85b50b2a9c1b",
+    "snapshot": "tests/legacy-baselines/ssg.test.mjs.txt",
+    "reason": "856aea8 在旧源中增加第三方许可证同一性断言；快照保留 0de610b 迁移时原文，当前 Vitest 目标保留该新增断言。"
+  },
+  {
+    "source": "tests/jsonFormatterInteraction.test.mjs",
+    "originalSha256": "dfd5d59c34c29db9089a4c677964db336139fd44b601327d3290eb384a186c5f",
+    "currentSha256": "5cd27d0a6e8c196b2b910a7af4d646142bedcad3ead40ba281b7615fe796ae39",
+    "snapshot": "tests/legacy-baselines/jsonFormatterInteraction.pre-toolhug.test.mjs.txt",
+    "reason": "023负责人批准顺手集/ToolHug品牌接入，JSON主动示例名称由WorkDev Tools改为ToolHug；仅更新示例品牌预期，原文快照及154项迁移身份/摘要账本保留，Vitest目标同步断言。"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-03",
+  "method": "curl, TLS verification enabled; HTTP initial redirect checked separately with HEAD",
+  "domainOwnership": "not verified",
+  "remoteChanges": false,
+  "checks": [
+    {
+      "url": "https://www.v7luck.com/",
+      "httpCode": 200,
+      "effectiveUrl": "https://www.v7luck.com/",
+      "tlsVerified": true
+    },
+    {
+      "url": "http://www.v7luck.com/",
+      "httpCode": 301,
+      "effectiveUrl": "https://www.v7luck.com/",
+      "tlsVerified": true
+    },
+    {
+      "url": "https://www.v7luck.com/about/",
+      "httpCode": 200,
+      "effectiveUrl": "https://www.v7luck.com/about/",
+      "tlsVerified": true
+    },
+    {
+      "url": "https://www.v7luck.com/privacy/",
+      "httpCode": 200,
+      "effectiveUrl": "https://www.v7luck.com/privacy/",
+      "tlsVerified": true
+    },
+    {
+      "url": "https://www.v7luck.com/nonexistent-adsense-check-20261103/",
+      "httpCode": 200,
+      "effectiveUrl": "https://www.v7luck.com/nonexistent-adsense-check-20261103/",
+      "tlsVerified": true
+    },
+    {
+      "url": "https://v7luck.com/",
+      "exitCode": 6,
+      "error": "Could not resolve host: v7luck.com",
+      "status": "not verified"
+    }
+  ]
+}

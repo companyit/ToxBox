@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-03",
+  "vitest": 184,
+  "ssg": 3,
+  "e2ePassed": 258,
+  "e2eRun": "docs/verification/evidence/m106c3/runs/2026-11-03T12-10-15.213Z-4273",
+  "versions": {
+    "chromium": "156.0.8078.4",
+    "webkit": "27.2"
+  },
+  "firefox": "launch failed: Could not find profile folder",
+  "deployed": false
+}

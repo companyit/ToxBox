@@ -1,0 +1,13 @@
+{
+  "index.html": "977b165c91ef87b67e8851c1902ddf11994084dd83f9afca3cd5ba1021919dbd",
+  "vite.config.ts": "0573146629e690987ce6ab0a514937d94a57bbcb603180ededb7a883ebb2cd3d",
+  "scripts/ssg.mjs": "3721cd01e913655e6e307eeaadc2359a076787af96ac2ed3017d83e99aafb805",
+  "public/favicon.ico": "a3488684192cd990e7be3e16873c42adabe50ea1267f907cd18822aa55fa2a98",
+  "public/favicon.svg": "2afaac7abb0f907fa48a97e19e13f3addb2a0e4a750c19a00a3910fcd8f12f72",
+  "tests/source-evolution.json": "13b6049b97f0a3736afc535828b371f615e301d10ed57b4107cd6726116c02ac",
+  "tests/migration.json": "60e2fcbbe5f5615ed96903654c74834e5155c3052817cf3b4c08d8e1ef26331f",
+  "tests/ssg/brand.test.ts": "ce2fba6973fb1c0c0ccac8418fa1845170d7225922b9c90af6ef5419bf105ad0",
+  "e2e/brand.spec.ts": "d44fe7f83c013863387a992f1bc10075ec3f0473baf21ff167309f4102178bf5",
+  "package.json": "8c36e37b260df81176db0b865d8ea6965026f8e59943f28f1b9800b1c80f0e6a",
+  "package-lock.json": "0984677e7f89c1d558694fd6d2c524cabf61c228270a63aba09baa7ad53d0129"
+}

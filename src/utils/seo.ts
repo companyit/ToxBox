@@ -1,3 +1,4 @@
+import { site } from '../data/site.ts'
 import type { PageDefinition, PageName } from '../data/pages.ts'
 import { approvedIndexablePages } from './seoEnvironment.ts'
 import type { SeoEnvironment } from '../types/seo'
@@ -32,7 +33,7 @@ export function createPageHead(page: PageDefinition, environment: SeoEnvironment
     robots: indexable ? 'index,follow' : 'noindex,follow',
     ...(canonical ? { canonical, openGraph: {
       'og:title': page.title, 'og:description': page.description, 'og:url': canonical,
-      'og:type': 'website', 'og:site_name': 'WorkDev Tools', 'og:locale': 'zh_CN',
+      'og:type': 'website', 'og:site_name': site.displayName, 'og:locale': 'zh_CN',
     } } : {}),
   }
 }

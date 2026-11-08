@@ -58,7 +58,7 @@ function execute(action: JsonAction) {
 function fillExample() {
   if (input.value !== '' || composing.value) return
   invalidate()
-  input.value = '{"name":"WorkDev Tools","enabled":true,"items":[1,"你好",null]}'
+  input.value = '{"name":"ToolHug","enabled":true,"items":[1,"你好",null]}'
   message.value = '已填入示例，请选择操作。'
   editor.value?.focus()
 }
@@ -104,7 +104,7 @@ onBeforeUnmount(() => { disposed = true; revision++ })
       <label for="json-input">输入或粘贴 JSON</label>
       <span>{{ input.length.toLocaleString('zh-CN') }} / {{ JSON_INPUT_LIMIT.toLocaleString('zh-CN') }} UTF-16 码元</span>
     </div>
-    <textarea id="json-input" ref="editor" :value="input" rows="12" aria-describedby="json-rules json-status" :aria-invalid="error ? 'true' : undefined" autocomplete="off" autocapitalize="off" :spellcheck="false" placeholder='例如：{"name":"WorkDev Tools"}' @input="onInput" @compositionstart="onCompositionStart" @compositionend="onCompositionEnd" />
+    <textarea id="json-input" ref="editor" :value="input" rows="12" aria-describedby="json-rules json-status" :aria-invalid="error ? 'true' : undefined" autocomplete="off" autocapitalize="off" :spellcheck="false" placeholder='例如：{"name":"ToolHug"}' @input="onInput" @compositionstart="onCompositionStart" @compositionend="onCompositionEnd" />
     <div class="actions">
       <label for="json-indent">缩进</label>
       <select id="json-indent" :value="indent" :disabled="composing" @change="changeIndent"><option value="2">2 空格</option><option value="4">4 空格</option></select>

@@ -1,0 +1,51 @@
+{
+  "run": "docs/verification/evidence/m106c3/runs/2026-11-07T11-46-29.580Z-5267",
+  "result": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "startedUtc": "2026-11-07T11:46:29.580Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 249.316
+  },
+  "additionalInputsSha256": {
+    "scripts/ssg.mjs": "97ca9729b1b13e9d23ceba25d34cebc23161dbd0ca0c710a0023aeae4cec22d3",
+    "scripts/pdf-resources.mjs": "27a9c346044f8b8f4920b16836bee91a6be66a06fa2fa7d8543aadb61e762590",
+    "vite.config.ts": "ac82f4d70ae324ba2618e5274ea3623811e273d475904a8a628835c208d1ea71",
+    "config/adsense-readiness.json": "45c245c34ba022a5fc39b4fe8054f1737e31a14a14f0f7b7bb1b8607d63a4bd9",
+    "package.json": "205401ca31220777db7d21238d26dd2479089e083651cb2eeed48025a6f5e1cc",
+    "package-lock.json": "c493c61d1e03e3bf982e936cab3c16e9b53aaa242016381db0b82ee13e04bfd4"
+  },
+  "pdfkit": {
+    "pages": 5,
+    "pageOrder": [
+      5,
+      1,
+      3,
+      4,
+      6
+    ],
+    "rotations": [
+      270,
+      0,
+      180,
+      180,
+      0
+    ],
+    "embeddedType3CjkMapping": true
+  },
+  "evidenceSha256": {
+    "organized-synthetic.pdf": "3a3720e68e9550e1b607b0727c5515301cd4f1114f25552c2668addd125834aa",
+    "pdfkit-page-2.png": "daae989ca1977b731857a9789fbd72f15ba7f2e6a1d5be14c24279974a55837f",
+    "pdfkit-page-3.png": "a5a0458e8e706fce883f882c5b49af0159e7261a92283d65c5d9feae38a2bc6d",
+    "pdfkit-page-1.png": "9ea487f38c6cc36c9f7f3e683b02c1172f02a1482f1346a98268891bf139204c",
+    "pdfkit-page-4.png": "3e894e4537c63b5f41dc6c16ce662689decff36fd5e5142e91badcc44f43f31d",
+    "pdfkit-page-5.png": "333c68bdb0c2968e7e6a5544ce7d7822b6d491efc71915e381a73463d838c9f7",
+    "width-1440.png": "1253d37e3771d6880e22573f546fbbe831f673b8f867b76f444e8a3f45a1018e",
+    "width-375.png": "735c92b58bc227a7156e502d741f2c650b491e7fbc301ee764033ec47947c2b2",
+    "resource-negative.json": "2ab4e5c4ebb493eae890b2a7a746abf3a7fa74fee252f6bcce47a8f036e71c6c"
+  }
+}

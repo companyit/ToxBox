@@ -1,0 +1,11 @@
+{
+  "packageId": "release-1793709636258-22f72176",
+  "archive": ".ci/handoff/release-1793709636258-22f72176-site.tar.gz",
+  "archiveSha256": "74ee594d3cdf1fe4924b7497bc2b38365d8615aa5fbc47a489a05020e653580f",
+  "archiveFiles": 54,
+  "manifestSha256": "c7d2bed2218d1a120ea73dcb3bd1a01e123ec6ba25ee76d6f8b62e187be183e8",
+  "candidateId": "release-1793709636258-22f72176-prod",
+  "publicContentOnly": true,
+  "deployed": false,
+  "releaseStatus": "待负责人审阅与生产环境授权"
+}

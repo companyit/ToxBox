@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-03",
+  "expectedPackageId": "release-1793709636258-22f72176",
+  "files": 54,
+  "matched": 54,
+  "checks": [
+    {
+      "path": "404.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "about/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/AboutPage-DQogG9gK.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/Base64Page-ZxXIhuPy.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/CategoryPage-CSwFvOj6.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/CategoryPage-DLVlxlHW.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/ContactPage-CJ5I0w8s.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/HomeView-Byc3NtWy.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/HomeView-CttSUJV-.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/JsonFormatterPage-DS7iqIxs.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/JsonFormatterPage-DpkJdXMU.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/LocalToolEditor-9aedwRTE.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/LocalToolEditor-C10_LRcj.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/NotFoundPage-DRkTSG-f.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/PrivacyPage-CnvoAnk_.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/TermsPage-DMRfHNKK.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/TextStatisticsPage-Cxg49-bx.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/TextStatisticsPage-Dn8d201m.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/TimestampPage-BsOGQewK.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/ToolCard-CnvLOA2L.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/ToolCard-DJ5O059I.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/ToolPageLayout-CNIUXbd_.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/ToolPageLayout-CWYb4mv8.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/TotpPage-90WjePXy.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/TotpPage-BKQ6asiU.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/UrlEncoderPage-CRQ8hw_9.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/UrlEncoderPage-Ce0VOWHr.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/UuidPage-BMNpMvoe.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/_plugin-vue_export-helper-BDNMzG2s.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/index-B2JwO5nz.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/index-ClJyqEQ3.css",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/interactionReady-Bz8OmTHO.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/pages-BriNb2AC.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/runtime-dom.esm-bundler-ClndUbiG.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/site-JG6l_uXJ.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/tools-CR6dsZBx.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "assets/vue-router-BcoCDi6K.js",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "contact/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "developer/2fa/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "developer/base64/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "developer/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "developer/json-formatter/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "developer/timestamp/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "developer/url-encoder/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "developer/uuid/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "favicon.ico",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "office/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "office/text-statistics/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "privacy/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "robots.txt",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "sitemap.xml",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "terms/index.html",
+      "curlExit": 0,
+      "matches": true
+    },
+    {
+      "path": "third-party-notices.txt",
+      "curlExit": 0,
+      "matches": true
+    }
+  ]
+}

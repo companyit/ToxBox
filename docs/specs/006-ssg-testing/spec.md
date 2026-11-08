@@ -106,3 +106,8 @@ www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；D
 Preview和Production候选必须包含third-party-notices.txt，与public中批准的原文逐字节一致；缺失或不符必须失败且不得生成SUCCESS。输入快照须覆盖public内未跟踪文件，避免新增公开资源逃过来源绑定。通知文件本身不替代全部第三方来源和许可范围审查。
 
 本段为拟议变更，不追认运行通过；历史状态原样保留。
+
+
+## REL-PACK-01：可移交的部署包
+
+依据负责人2026-11-01本地工程授权，只允许从独立SHA核验成功的production候选导出到全新包目录。公开site/与候选文件逐字节一致；receipt、来源与清单位于site/之外。包绑定receipt SHA及全部文件大小/SHA，最后写SUCCESS；verify需独立预期清单SHA，拒绝缺失、额外、损坏、符号链接和复用。失败不能产生有效成功包。不包含Git写入、云配置或实际部署授权。

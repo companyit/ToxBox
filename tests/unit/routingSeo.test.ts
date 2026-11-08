@@ -1,5 +1,6 @@
 import { migrationTest } from '../helpers/migration'
 const test = migrationTest('tests/routingSeo.test.ts')
+import { test as newTest } from 'vitest'
 import assert from 'node:assert/strict'
 import { createRouter, createMemoryHistory } from 'vue-router'
 import { pages, getPage, notFoundPage, canonicalPath } from '../../src/data/pages.ts'
@@ -13,12 +14,12 @@ function memoryRouter() {
  return router
 }
 test('U01 eight unique static pages and a non-indexable 404',()=>{
- assert.equal(pages.length,8)
- for(const field of ['path','routeName','title','description'] as const)assert.equal(new Set(pages.map(p=>p[field])).size,8)
- assert.equal(routes.length,9);assert.equal(notFoundPage.indexable,false)
+ assert.equal(pages.length,26)
+ for(const field of ['path','routeName','title','description'] as const)assert.equal(new Set(pages.map(p=>p[field] )).size,26)
+ assert.equal(routes.length,27);assert.equal(notFoundPage.indexable,false)
  for(const p of pages)assert.ok(routes.find(r=>r.name===p.routeName)?.component)
 })
-for(const page of pages)test(`route ${page.path} resolves to ${page.routeName}`,async()=>{
+for(const page of pages)(['pdf-organizer','text-workbench','text-diff','json-yaml','image-convert','images-to-pdf','date-calculator','csv-json','text-cleanup','pdf-split','pdf-merge','word-to-pdf','totp','base64','timestamp','uuid','contact','terms'].includes(page.routeName) ? newTest : test)(`route ${page.path} resolves to ${page.routeName}`,async()=>{
  const r=memoryRouter();await r.push(page.path);assert.equal(r.currentRoute.value.name,page.routeName);assert.equal(r.currentRoute.value.path,page.path)
 })
 test('U02/03 known paths normalize preserving query/hash, unknown and wrong case stay 404',async()=>{
@@ -37,7 +38,7 @@ test('U06 production rejects missing or invalid approved HTTPS origin',()=>{
  for(const approvedOrigin of [undefined,'bad','http://test.invalid','https://a:b@test.invalid','https://test.invalid/path','https://test.invalid/?a=1','https://test.invalid/#x','https://test.invalid/'])assert.throws(()=>createPageHead(pages[0]!,{mode:'production',approvedOrigin}),/SEO/)
 })
 test('U07 approved test-only origin emits canonical paths and no 404 canonical',()=>{
- for(const p of pages){const h=createPageHead(p,{mode:'production',approvedOrigin:'https://test.invalid'});assert.equal(h.canonical,'https://test.invalid'+p.path);assert.equal(h.robots,'index,follow')}
+ for(const p of pages){const h=createPageHead(p,{mode:'production',approvedOrigin:'https://test.invalid'});assert.equal(h.canonical,p.indexable ? 'https://test.invalid'+p.path : undefined);assert.equal(h.robots,p.indexable ? 'index,follow' : 'noindex,follow')}
  assert.equal(createPageHead(notFoundPage,{mode:'production',approvedOrigin:'https://test.invalid'}).canonical,undefined)
 })
 test('U09 API/resources are not known page or canonical targets',async()=>{

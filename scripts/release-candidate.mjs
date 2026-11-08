@@ -281,7 +281,7 @@ export async function buildCandidate({ candidateId, mode, origin }) {
 
 export async function previewCandidate(receiptPath, expectedSha) {
   const candidate = await verifyCandidate(receiptPath, expectedSha)
-  const environment = { ...process.env, WORKDEV_CANDIDATE_RECEIPT: candidate.receipt, WORKDEV_CANDIDATE_RECEIPT_SHA: expectedSha }
+  const environment = { ...process.env, WORKDEV_CANDIDATE_RECEIPT: path.join(candidate.root, 'receipt.json'), WORKDEV_CANDIDATE_RECEIPT_SHA: expectedSha }
   delete environment.WORKDEV_RELEASE_BUILD_ID
   let child
   const terminate = () => { if (child?.pid) { try { process.kill(-child.pid, 'SIGTERM') } catch { /* Already exited. */ } } }
@@ -289,7 +289,28 @@ export async function previewCandidate(receiptPath, expectedSha) {
   for (const signal of signals) process.once(signal, terminate)
   try {
     const result = await new Promise((resolve, reject) => {
-      child = spawn(process.execPath, ['node_modules/vite/bin/vite.js', 'preview', '--outDir', candidate.output, '--host', '127.0.0.1', '--port', '4177', '--strictPort'], {
+      // Keep config loading and preview caches inside this verified candidate.
+      const options = {
+        root: repositoryRoot,
+        configLoader: 'native',
+        cacheDir: path.join(candidate.root, 'work/vite-cache/preview'),
+        build: { outDir: candidate.output },
+        preview: { host: '127.0.0.1', port: 4177, strictPort: true },
+      }
+      const program = `
+        const { preview } = await import('vite')
+        const server = await preview(${JSON.stringify(options)})
+        let closing
+        const stop = () => {
+          closing ??= server.close().then(
+            () => process.exit(0),
+            error => { console.error(error); process.exit(1) },
+          )
+        }
+        for (const signal of ['SIGINT', 'SIGTERM']) process.once(signal, stop)
+        server.printUrls()
+      `
+      child = spawn(process.execPath, ['--input-type=module', '--eval', program], {
         cwd: repositoryRoot, env: environment, stdio: 'inherit', detached: true,
       })
       child.once('error', reject)

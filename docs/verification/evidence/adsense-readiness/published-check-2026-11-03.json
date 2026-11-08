@@ -1,0 +1,837 @@
+{
+  "checks": [
+    {
+      "url": "http://www.v7luck.com/",
+      "exitCode": 0,
+      "status": 301,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "178",
+        "connection": "keep-alive",
+        "location": "https://www.v7luck.com/"
+      },
+      "ssg": false,
+      "h1": [
+        "301 Moved Permanently"
+      ],
+      "canonical": [],
+      "robots": [],
+      "footerLinks": [],
+      "assets": [],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "13845",
+        "last-modified": "Tue, 03 Nov 2026 14:14:15 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9ec37-3615\"",
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "让日常工作，<br data-v-c8243017>轻松一点。"
+      ],
+      "canonical": [
+        "https://www.v7luck.com/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/HomeView-Byc3NtWy.css",
+        "/assets/ToolCard-DJ5O059I.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/contact/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "3993",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-f99\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "联系我们"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/terms/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/terms/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "4963",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-1363\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "服务条款"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/contact/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/about/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "5933",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-172d\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "关于 WorkDev Tools"
+      ],
+      "canonical": [
+        "https://www.v7luck.com/about/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/contact/",
+        "/privacy/",
+        "/terms/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/privacy/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "7288",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-1c78\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "隐私政策"
+      ],
+      "canonical": [
+        "https://www.v7luck.com/privacy/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/contact/",
+        "/terms/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/developer/base64/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "7734",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-1e36\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "Base64 编解码"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/LocalToolEditor-C10_LRcj.css",
+        "/assets/ToolPageLayout-CWYb4mv8.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/developer/timestamp/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "8276",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-2054\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "时间戳转换"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/LocalToolEditor-C10_LRcj.css",
+        "/assets/ToolPageLayout-CWYb4mv8.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/developer/uuid/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "7637",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-1dd5\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "UUID 生成"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/LocalToolEditor-C10_LRcj.css",
+        "/assets/ToolPageLayout-CWYb4mv8.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/developer/2fa/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "8757",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-2235\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "2FA 动态验证码"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/ToolPageLayout-CWYb4mv8.css",
+        "/assets/TotpPage-90WjePXy.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/office/text-statistics/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "10028",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-272c\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "文本统计"
+      ],
+      "canonical": [
+        "https://www.v7luck.com/office/text-statistics/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/TextStatisticsPage-Cxg49-bx.css",
+        "/assets/ToolPageLayout-CWYb4mv8.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/developer/json-formatter/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "9748",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-2614\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "JSON 格式化与校验"
+      ],
+      "canonical": [
+        "https://www.v7luck.com/developer/json-formatter/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/JsonFormatterPage-DS7iqIxs.css",
+        "/assets/ToolPageLayout-CWYb4mv8.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/developer/url-encoder/",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "9703",
+        "last-modified": "Tue, 03 Nov 2026 12:40:44 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9d64c-25e7\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": true,
+      "h1": [
+        "URL 编解码"
+      ],
+      "canonical": [
+        "https://www.v7luck.com/developer/url-encoder/"
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/ToolPageLayout-CWYb4mv8.css",
+        "/assets/UrlEncoderPage-Ce0VOWHr.css",
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/missing-publish-check-20261103/",
+      "exitCode": 0,
+      "status": 404,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "2920",
+        "connection": "keep-alive",
+        "etag": "\"6ae9ec35-b68\"",
+        "strict-transport-security": "max-age=31536000"
+      },
+      "ssg": true,
+      "h1": [
+        "页面不存在"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/404.html",
+      "exitCode": 0,
+      "status": 404,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/html",
+        "content-length": "2920",
+        "connection": "keep-alive",
+        "etag": "\"6ae9ec35-b68\"",
+        "strict-transport-security": "max-age=31536000"
+      },
+      "ssg": true,
+      "h1": [
+        "页面不存在"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ],
+      "footerLinks": [
+        "/privacy/",
+        "/about/",
+        "/contact/",
+        "/privacy/",
+        "/terms/"
+      ],
+      "assets": [
+        "/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+        "/assets/index-B2JwO5nz.js",
+        "/assets/index-ClJyqEQ3.css",
+        "/assets/interactionReady-Bz8OmTHO.js",
+        "/assets/pages-BriNb2AC.js",
+        "/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+        "/assets/vue-router-BcoCDi6K.js"
+      ],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/sitemap.xml",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/xml",
+        "content-length": "595",
+        "last-modified": "Tue, 03 Nov 2026 14:14:14 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9ec36-253\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": false,
+      "h1": [],
+      "canonical": [],
+      "robots": [],
+      "footerLinks": [],
+      "assets": [],
+      "sitemapUrls": [
+        "https://www.v7luck.com/",
+        "https://www.v7luck.com/office/",
+        "https://www.v7luck.com/office/text-statistics/",
+        "https://www.v7luck.com/developer/",
+        "https://www.v7luck.com/developer/json-formatter/",
+        "https://www.v7luck.com/developer/url-encoder/",
+        "https://www.v7luck.com/about/",
+        "https://www.v7luck.com/privacy/"
+      ],
+      "bodyPreview": ""
+    },
+    {
+      "url": "https://www.v7luck.com/robots.txt",
+      "exitCode": 0,
+      "status": 200,
+      "error": "",
+      "headers": {
+        "server": "nginx/1.24.0 (Ubuntu)",
+        "date": "Tue, 03 Nov 2026 14:15:06 GMT",
+        "content-type": "text/plain",
+        "content-length": "67",
+        "last-modified": "Tue, 03 Nov 2026 14:14:14 GMT",
+        "connection": "keep-alive",
+        "etag": "\"6ae9ec36-43\"",
+        "strict-transport-security": "max-age=31536000",
+        "accept-ranges": "bytes"
+      },
+      "ssg": false,
+      "h1": [],
+      "canonical": [],
+      "robots": [],
+      "footerLinks": [],
+      "assets": [],
+      "sitemapUrls": [],
+      "bodyPreview": "User-agent: *\nAllow: /\nSitemap: https://www.v7luck.com/sitemap.xml\n"
+    },
+    {
+      "url": "https://v7luck.com/",
+      "exitCode": 6,
+      "status": null,
+      "error": "curl: (6) Could not resolve host: v7luck.com",
+      "headers": {},
+      "ssg": false,
+      "h1": [],
+      "canonical": [],
+      "robots": [],
+      "footerLinks": [],
+      "assets": [],
+      "sitemapUrls": [],
+      "bodyPreview": ""
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://www.v7luck.com/assets/HomeView-Byc3NtWy.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/JsonFormatterPage-DS7iqIxs.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/LocalToolEditor-C10_LRcj.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/TextStatisticsPage-Cxg49-bx.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/ToolCard-DJ5O059I.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/ToolPageLayout-CWYb4mv8.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/TotpPage-90WjePXy.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/UrlEncoderPage-Ce0VOWHr.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/_plugin-vue_export-helper-BDNMzG2s.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/index-B2JwO5nz.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/index-ClJyqEQ3.css",
+      "status": 200,
+      "contentType": "text/css",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/interactionReady-Bz8OmTHO.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/pages-BriNb2AC.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/runtime-dom.esm-bundler-ClndUbiG.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "error": ""
+    },
+    {
+      "url": "https://www.v7luck.com/assets/vue-router-BcoCDi6K.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "error": ""
+    }
+  ]
+}

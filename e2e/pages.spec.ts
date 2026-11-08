@@ -13,7 +13,7 @@ test.describe('E01 无JavaScript静态可读', () => {
       // Playwright的通用elementText会跳过NOSCRIPT，直接验证解析后的子段落和DOM文本。
       await expect(page.locator('noscript > p')).toBeVisible()
       expect(await page.locator('noscript').evaluate(node => node.textContent)).toContain('工具交互需要 JavaScript')
-      for (const input of await page.getByRole('textbox').all()) { await expect(input).toHaveValue(''); await expect(input).toBeDisabled() }
+      for (const input of await page.getByRole('textbox').all()) { await expect(input).toHaveValue(definition.routeName === 'uuid' && await input.getAttribute('id') === 'local-input' ? '1' : ''); await expect(input).toBeDisabled() }
       await expect(page.getByRole('main')).not.toContainText('missing')
     })
   }
@@ -29,7 +29,7 @@ for (const definition of pages) {
     await hydrated(page)
     await metadata(page, definition)
     await expect(page.getByRole('main')).toBeVisible()
-    if (definition.routeName === 'home') await expect(page.getByRole('textbox')).toHaveCount(0)
+    if (definition.routeName === 'home') await expect(page.getByRole('textbox')).toHaveCount(1)
   })
 }
 
@@ -80,17 +80,22 @@ test('E06 站内导航历史与状态卸载', async ({ page }) => {
   await page.goto('/office/text-statistics/')
   await hydrated(page)
   await page.getByLabel('输入或粘贴文本', { exact: true }).fill('synthetic local')
-  await page.getByRole('link', { name: 'JSON 格式化与校验', exact: true }).click()
+  await page.locator('header nav').getByRole('link', { name: '开发者工具', exact: true }).click()
+  await page.getByRole('link', { name: '试用工具 ：JSON 格式化与校验', exact: true }).click()
   await expect(page).toHaveURL(origin + '/developer/json-formatter/')
   await expect(page.getByRole('heading', { level: 1 })).toBeFocused()
   await page.getByLabel('输入或粘贴 JSON', { exact: true }).fill('{}')
   await page.goBack()
+  await expect(page).toHaveURL(origin + '/developer/')
+  await page.goBack()
   await expect(page.getByLabel('输入或粘贴文本', { exact: true })).toHaveValue('')
   await page.goForward()
+  await expect(page).toHaveURL(origin + '/developer/')
+  await page.goForward()
   await expect(page.getByLabel('输入或粘贴 JSON', { exact: true })).toHaveValue('')
-  await page.getByRole('link', { name: 'WorkDev Tools，返回首页' }).click()
+  await page.getByRole('link', { name: '顺手集 ToolHug，返回首页' }).click()
   await expect(page).toHaveURL(origin + '/')
-  for (const name of ['打开文本统计', '打开JSON 格式化与校验', '打开URL 编解码']) await expect(page.getByRole('link', { name, exact: true })).toBeVisible()
+  for (const name of ['试用工具 ：文本统计', '试用工具 ：JSON 格式化与校验', '试用工具 ：URL 编解码']) await expect(page.getByRole('link', { name, exact: true })).toBeVisible()
 })
 
 test('E06 无斜杠308与旧hash', async ({ page, request }) => {
@@ -99,12 +104,19 @@ test('E06 无斜杠308与旧hash', async ({ page, request }) => {
   expect(response.headers().location).toBe('/office/?sample=1')
   await page.goto('/office?sample=1#help')
   await expect(page).toHaveURL(origin + '/office/?sample=1#help')
-  for (const hash of ['office-tools', 'developer-tools', 'privacy', 'text-statistics', 'json-formatter', 'url-encoder']) {
+  for (const hash of ['office-tools', 'developer-tools', 'privacy']) {
     await page.goto('/#' + hash)
     await hydrated(page)
     await expect(page.locator('#' + hash)).toHaveCount(1)
-    await expect(page.getByRole('textbox')).toHaveCount(0)
+    await expect(page.getByRole('textbox')).toHaveCount(1)
   }
+  for (const [hash, path] of [['text-statistics', '/office/text-statistics/'], ['json-formatter', '/developer/json-formatter/'], ['url-encoder', '/developer/url-encoder/']]) {
+    await page.goto('/#' + hash, { waitUntil: 'commit' })
+    await expect(page).toHaveURL(origin + path)
+    await hydrated(page)
+    await expect(page.locator('.tool-page h1')).toHaveCount(1)
+  }
+
 })
 
 for (const path of ['/missing/', '/office/missing/', '/developer/missing/']) {
@@ -123,16 +135,16 @@ for (const path of ['/missing/', '/office/missing/', '/developer/missing/']) {
 test('E08 实际静态资源与禁止泄漏文件', async ({ request }) => {
   const files = await fs.readdir('dist-ssg', { recursive: true })
   const htmlFiles = files.filter(file => file.endsWith('.html'))
-  expect(htmlFiles).toHaveLength(9)
+  expect(htmlFiles).toHaveLength(27)
   const resources = new Set<string>()
   for (const file of htmlFiles) {
     const html = await fs.readFile('dist-ssg/' + file, 'utf8')
-    for (const match of html.matchAll(/(?:src|href)="(\/assets\/[^"#?]+|\/favicon.ico)"/g)) resources.add(match[1]!)
+    for (const match of html.matchAll(/(?:src|href)="(\/assets\/[^"#?]+|\/favicon\.(?:ico|svg))"/g)) resources.add(match[1]!)
   }
   const manifest = JSON.parse(await fs.readFile('.ssg-build/client/.vite/ssr-manifest.json', 'utf8')) as Record<string, string[]>
   for (const resource of Object.values(manifest).flat()) resources.add(resource)
   for (const resource of resources) {
-    expect(resource.startsWith('/assets/') || resource === '/favicon.ico').toBe(true)
+    expect(resource.startsWith('/assets/') || ['/favicon.ico', '/favicon.svg'].includes(resource)).toBe(true)
     await fs.access('dist-ssg' + resource)
     const response = await request.get(origin + resource, { maxRedirects: 0 })
     expect(response.status()).toBe(200)

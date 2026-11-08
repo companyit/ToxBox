@@ -1,0 +1,84 @@
+[
+  {
+    "project": "chromium",
+    "kind": "jpx",
+    "resources": [
+      "/pdf-assets/wasm/openjpeg.wasm"
+    ],
+    "external": [],
+    "pixels": {
+      "red": 20000,
+      "blue": 20000,
+      "dark": 0
+    }
+  },
+  {
+    "project": "chromium",
+    "kind": "cmyk",
+    "resources": [
+      "/pdf-assets/wasm/qcms_bg.wasm",
+      "/pdf-assets/iccs/CGATS001Compat-v2-micro.icc"
+    ],
+    "external": [],
+    "pixels": {
+      "red": 40000,
+      "blue": 0,
+      "dark": 0
+    }
+  },
+  {
+    "project": "chromium",
+    "kind": "cmap",
+    "resources": [
+      "/pdf-assets/cmaps/UniGB-UCS2-H.bcmap",
+      "/pdf-assets/cmaps/Adobe-GB1-UCS2.bcmap"
+    ],
+    "external": [],
+    "pixels": {
+      "red": 0,
+      "blue": 0,
+      "dark": 618
+    }
+  },
+  {
+    "project": "webkit",
+    "kind": "jpx",
+    "resources": [
+      "/pdf-assets/wasm/openjpeg.wasm"
+    ],
+    "external": [],
+    "pixels": {
+      "red": 20000,
+      "blue": 20000,
+      "dark": 0
+    }
+  },
+  {
+    "project": "webkit",
+    "kind": "cmyk",
+    "resources": [
+      "/pdf-assets/wasm/qcms_bg.wasm",
+      "/pdf-assets/iccs/CGATS001Compat-v2-micro.icc"
+    ],
+    "external": [],
+    "pixels": {
+      "red": 40000,
+      "blue": 0,
+      "dark": 0
+    }
+  },
+  {
+    "project": "webkit",
+    "kind": "cmap",
+    "resources": [
+      "/pdf-assets/cmaps/UniGB-UCS2-H.bcmap",
+      "/pdf-assets/cmaps/Adobe-GB1-UCS2.bcmap"
+    ],
+    "external": [],
+    "pixels": {
+      "red": 0,
+      "blue": 0,
+      "dark": 650
+    }
+  }
+]

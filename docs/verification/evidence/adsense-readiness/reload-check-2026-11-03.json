@@ -1,0 +1,58 @@
+{
+  "checkedUtc": "2026-11-03T13:33:06Z",
+  "method": "public curl GET, TLS verification enabled, no redirects followed",
+  "remoteChanges": false,
+  "checks": [
+    {
+      "path": "http://www.v7luck.com/",
+      "status": 301,
+      "location": "https://www.v7luck.com/"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ssgMarker": false,
+      "emptyAppContainer": true,
+      "staticH1": false,
+      "lastModified": "Mon, 02 Nov 2026 12:16:58 GMT"
+    },
+    {
+      "path": "/contact/",
+      "status": 404
+    },
+    {
+      "path": "/terms/",
+      "status": 404
+    },
+    {
+      "path": "/about/",
+      "status": 404
+    },
+    {
+      "path": "/privacy/",
+      "status": 404
+    },
+    {
+      "path": "/developer/base64/",
+      "status": 404
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 404
+    },
+    {
+      "path": "/nonexistent-reload-check-20261103/",
+      "status": 404
+    },
+    {
+      "path": "/404.html",
+      "status": 404
+    },
+    {
+      "url": "https://v7luck.com/",
+      "curlExit": 6,
+      "error": "Could not resolve host"
+    }
+  ],
+  "conclusion": "真实 404 规则已生效；首页仍为 CSR，无 SSG 正文，多条已知路径 404；需将生产 SSG 公开包部署到实际 root。根域 DNS 未解决。"
+}

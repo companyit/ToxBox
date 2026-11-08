@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-05",
+  "requirements": "SPLIT-01～10",
+  "toolCount": 10,
+  "sitePages": 17,
+  "htmlPages": 18,
+  "unitAndComponents": 226,
+  "ssg": 3,
+  "legacyIdentities": 154,
+  "browser": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 308,
+    "run": "docs/verification/evidence/m106c3/runs/2026-11-05T13-53-27.528Z-7631"
+  },
+  "snapshotMatch": true,
+  "dependencyLockUnchanged": true,
+  "indexablePaths": 8,
+  "visualReview": "实际下载 PDF 共六页独立渲染并逐页核对，页序/尺寸/旋转符合合成样例",
+  "limits": {
+    "firefox": "本轮未运行，已有启动问题",
+    "realDevices": "未验证",
+    "allDocumentAndReaderCombinations": "未验证",
+    "physicalDownloadSave": "未人工确认"
+  },
+  "productionCandidate": "未生成",
+  "deployment": "未执行",
+  "files": {
+    "src/utils/pdfSelection.ts": "7b99158dc5872cf2ef676814264beba67edf450b8c941662de3607ec0c6c7a38",
+    "src/utils/pdfSplit.ts": "effa9f2f470c8bfa8c607c976460ca8a5950ff95e94beea6f061a3879e6171ad",
+    "src/workers/pdfSplit.worker.ts": "df1e07fe3d754323ab5efe87aae1f62539dbf2c0048ac7eb4299f554f0f2a2ca",
+    "src/views/pages/PdfSplitPage.vue": "e5735bfc4aa9f2ff1114c3387dac52a1d37ba77ffc571a47b9eaf5e3193a2937",
+    "tests/unit/pdfSplit.test.ts": "67eb1eb2c6e360a1e562a02c7e887451ee646b10d887784e9351322261b33e97",
+    "tests/components/pdfSplit.test.ts": "e9f5b47707cfca066957ff21a558a348fdde24a849f027134eba249eadc852ea",
+    "e2e/pdf-split.spec.ts": "4437de20f8ceb33c6514b4b1c502d4d2d21f0fb85e2571744228e304c70681e8",
+    "package.json": "8c36e37b260df81176db0b865d8ea6965026f8e59943f28f1b9800b1c80f0e6a",
+    "package-lock.json": "0984677e7f89c1d558694fd6d2c524cabf61c228270a63aba09baa7ad53d0129",
+    "docs/verification/evidence/pdf-split/selected-page-1.png": "1d0f01c61016d52fdfce907b71dd4d741db066a23e4142f4734b7c6ae4d8f77f",
+    "docs/verification/evidence/pdf-split/selected-page-2.png": "72458e0ffbb9d50e3bdf842867a25b58edb1cde2934594ee42730eaaeddbe097",
+    "docs/verification/evidence/pdf-split/selected-page-3.png": "9440b6f1988babd63d070bc9d1b648e10c5d330d9738e6d3572996c60f1c6bb0",
+    "docs/verification/evidence/pdf-split/selected-page-4.png": "d58fdb3b8dc34e892ac3b480b6adb024264e8a0be162fd3d0bcd8cea8618d4fa",
+    "docs/verification/evidence/pdf-split/page-0003-1.png": "d58fdb3b8dc34e892ac3b480b6adb024264e8a0be162fd3d0bcd8cea8618d4fa",
+    "docs/verification/evidence/pdf-split/page-0001-1.png": "72458e0ffbb9d50e3bdf842867a25b58edb1cde2934594ee42730eaaeddbe097",
+    "docs/verification/evidence/m106c3/runs/2026-11-05T13-53-27.528Z-7631/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-chromium/selected.pdf": "ad755cb0bed12ecb5414ab46ceee6eef6497b78f69fca12ba47da6f9c968ed0a",
+    "docs/verification/evidence/m106c3/runs/2026-11-05T13-53-27.528Z-7631/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-chromium/page-0003.pdf": "f5617013fb256253befd5cec6a9096b7d61a7de61836dd7440b7e10c67816e43",
+    "docs/verification/evidence/m106c3/runs/2026-11-05T13-53-27.528Z-7631/artifacts/pdf-split-SPLIT-真实-Worker-两种下载与失效-375-chromium/page-0001.pdf": "bcb0adc4f932eeb10556ca88fea6f4f65460babfb597c6bcc7ed596efcc77bb8"
+  }
+}

@@ -1,0 +1,18 @@
+import { test, expect, hydrated } from './helpers'
+for(const colorScheme of ['light','dark'] as const)for(const width of [375,1440])test(`BRAND 双语名称与新图标 ${colorScheme} ${width}`,async({page},info)=>{
+ await page.emulateMedia({colorScheme});await page.setViewportSize({width,height:900})
+ await page.goto('/');await hydrated(page)
+ const brand=page.getByRole('link',{name:'顺手集 ToolHug，返回首页',exact:true})
+ await expect(brand.locator('.brand-name')).toHaveText('顺手集ToolHug');await expect(brand.locator('svg')).toHaveAttribute('aria-hidden','true')
+ expect((await brand.boundingBox())!.height).toBeGreaterThanOrEqual(44)
+ expect((await brand.locator('.brand-mark').boundingBox())!.width).toBe(36)
+ await expect(page).toHaveTitle('顺手集 ToolHug — 办公与开发者在线工具')
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
+ await page.screenshot({path:info.outputPath(`brand-home-${colorScheme}-${width}.png`),fullPage:true})
+ await page.getByRole('link',{name:'关于我们',exact:true}).click();await hydrated(page);await expect(page.locator('h1')).toHaveText('关于顺手集');await expect(page).toHaveTitle('关于顺手集｜顺手集 ToolHug')
+ await page.getByRole('link',{name:'顺手集 ToolHug，返回首页',exact:true}).click();await hydrated(page)
+ expect((await page.request.get('/favicon-other.svg')).status()).toBe(404)
+ const svg=await page.request.get('/favicon.svg');expect(svg.status()).toBe(200);expect(svg.headers()['content-type']).toContain('image/svg+xml')
+ await page.goto('/favicon.svg');await expect(page.locator('svg')).toBeVisible()
+ await expect(page.locator('svg > path')).toHaveCSS('stroke',colorScheme==='light'?'rgb(23, 99, 79)':'rgb(142, 220, 189)')
+})

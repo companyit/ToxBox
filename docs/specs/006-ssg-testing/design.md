@@ -206,3 +206,8 @@ www canonical决策不代表根`https://v7luck.com`到www的301/308已配置；D
 仅允许third-party-notices.txt额外公开，不放宽任意txt或其他资源白名单。客户端复制、输出审计及public输入递归同步调整。使用已有text/plain MIME映射和receipt文件摘要；不修改SEO、页面、旧候选或已通过证据。
 
 本段为拟议变更，不追认运行通过；历史状态原样保留。
+
+
+## REL-PACK-D01：部署包与交付边界
+
+对应REL-PACK-01。scripts/release-package.mjs提供create/verify，调用现有verifyCandidate，包根固定.ci/release-01/packages/<ID>/；site仅复制批准公开文件，metadata保存receipt与SSR manifest，根manifest记录全部payload大小及SHA。独立expected SHA和最后写入SUCCESS绑定清单。公开路径和目录类型逐项检查，拒绝symlink/越界。导出后重新verify来源，包校验不依赖源码变化，可交付冻结产物。真实托管404、HTTPS、CDN缓存、重定向与回滚按runbook人工验收，不由本地包校验替代。

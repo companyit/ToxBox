@@ -14,11 +14,11 @@ const page = getPage(props.category)
     <section aria-labelledby="category-tools"><h2 id="category-tools">可试用工具</h2>
       <ul class="category-grid"><li v-for="tool in tools.filter(t => t.category === category)" :key="tool.id"><ToolCard :tool="tool" /></li></ul>
     </section>
-    <p class="related-tools"><RouterLink :to="{ name: category === 'office' ? 'developer' : 'office' }">浏览{{ category === 'office' ? '开发者' : '办公' }}工具</RouterLink></p>
   </div>
 </template>
 
 <style scoped>
-.category-grid { grid-template-columns: minmax(0, 1fr); max-width: 420px; }
-@media (min-width: 640px) { .category-directory--developer .category-grid { max-width: 864px; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.category-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; max-width: none; }
+@media (min-width: 640px) { .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 </style>

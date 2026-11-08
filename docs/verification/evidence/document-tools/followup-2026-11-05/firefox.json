@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-05",
+  "result": "启动失败，未执行浏览器验收",
+  "attempts": [
+    {
+      "temporaryDirectory": "系统默认",
+      "message": "Could not find profile folder."
+    },
+    {
+      "temporaryDirectory": "/private/tmp",
+      "message": "Could not find profile folder."
+    }
+  ],
+  "installedBinary": "firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox",
+  "dependencyChanges": false,
+  "reinstallation": false
+}

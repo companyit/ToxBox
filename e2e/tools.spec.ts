@@ -162,7 +162,7 @@ for (const tool of toolCases) {
     await editor.fill(tool.id === 'json' ? '{}' : 'pending local')
     if (tool.action) await page.getByRole('button', { name: tool.action, exact: true }).click()
     await page.getByRole('button', { name: tool.copy, exact: true }).click()
-    await page.getByRole('link', { name: 'WorkDev Tools，返回首页' }).click()
+    await page.getByRole('link', { name: '顺手集 ToolHug，返回首页' }).click()
     await expect(page).toHaveURL(origin + '/')
     await finish()
     await page.goBack()

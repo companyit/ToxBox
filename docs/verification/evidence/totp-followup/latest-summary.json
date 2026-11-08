@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-02",
+  "inventory": "passed; original migration ledger retained; historical snapshot and current source checked",
+  "unit_components_ssg": {
+    "files": 14,
+    "passed": 168
+  },
+  "full_e2e": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 236,
+    "run": "docs/verification/evidence/m106c3/runs/2026-11-02T13-57-43.616Z-5743"
+  },
+  "firefox": "launch failed: Could not find profile folder; independent repository profile also failed",
+  "deployed": false
+}

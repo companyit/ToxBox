@@ -1,0 +1,19 @@
+{
+  "production": {
+    "candidateId": "release-1793709636258-22f72176-prod",
+    "receipt": ".ci/release-01/candidates/release-1793709636258-22f72176-prod/receipt.json",
+    "receiptSha256": "df049a7b63013be163bf4625f771afb132afb86dbe2a5cc7349308c51a7660fe"
+  },
+  "preview": {
+    "candidateId": "release-1793709636258-22f72176-preview",
+    "receipt": ".ci/release-01/candidates/release-1793709636258-22f72176-preview/receipt.json",
+    "receiptSha256": "0202fa0d4ae953740f53f87cdd6e17439d431b1c918557c01d6f74191b38fe98"
+  },
+  "package": {
+    "packageId": "release-1793709636258-22f72176",
+    "root": "/Users/user/development/ToxBox/ToxBox/.ci/release-01/packages/release-1793709636258-22f72176",
+    "site": "/Users/user/development/ToxBox/ToxBox/.ci/release-01/packages/release-1793709636258-22f72176/site",
+    "manifestSha256": "c7d2bed2218d1a120ea73dcb3bd1a01e123ec6ba25ee76d6f8b62e187be183e8",
+    "files": 54
+  }
+}

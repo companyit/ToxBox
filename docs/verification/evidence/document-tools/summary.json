@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "unitAndComponents": 201,
+  "ssg": 3,
+  "legacyIdentities": 154,
+  "browser": {
+    "projects": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 296,
+    "run": "docs/verification/evidence/m106c3/runs/2026-11-05T12-51-16.820Z-4190"
+  },
+  "currentSourceTestsAndOutputMatch": true,
+  "docsLinks": "passed",
+  "manualSystemPrint": "not verified",
+  "firefox": "not run",
+  "productionCandidate": "not built",
+  "deployment": "not performed"
+}

@@ -18,23 +18,22 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1280, 1440, 1920]) {
         expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(width)
       }
       if (path === '/') {
-        await expect(page.getByRole('textbox')).toHaveCount(0)
-        for (const name of ['打开文本统计', '打开JSON 格式化与校验', '打开URL 编解码']) {
+        await expect(page.getByRole('textbox')).toHaveCount(1)
+        for (const name of ['试用工具 ：文本统计', '试用工具 ：JSON 格式化与校验', '试用工具 ：URL 编解码', '试用工具 ：2FA 动态验证码']) {
           await expect(page.getByRole('link', { name, exact: true })).toHaveCount(1)
         }
         const cards = await page.locator('.tool-card').all()
-        expect(cards).toHaveLength(3)
+        expect(cards).toHaveLength(19)
         const boxes = await Promise.all(cards.map(card => card.boundingBox()))
-        if (width >= 1200) {
-          expect(Math.abs(boxes[0]!.y - boxes[1]!.y)).toBeLessThan(2)
-          expect(Math.abs(boxes[1]!.y - boxes[2]!.y)).toBeLessThan(2)
-          expect(Math.abs(boxes[0]!.width - boxes[2]!.width)).toBeLessThan(2)
-        } else if (width < 640) {
-          expect(boxes[2]!.y).toBeGreaterThan(boxes[1]!.y)
-        }
-      } else if (path === '/office/') {
-        const card = await page.locator('.tool-card').boundingBox()
-        expect(card!.width).toBeLessThanOrEqual(420)
+        const office = await page.locator('.office .tool-card').first().boundingBox()
+        const developer = await page.locator('.developer .tool-card').first().boundingBox()
+        expect(developer!.y).toBeGreaterThan(office!.y)
+        if (width < 640) expect(boxes[2]!.y).toBeGreaterThan(boxes[1]!.y)
+      }
+      // UI2 replaces the historical office single-column / home 1:2 split.
+      for (const grid of await page.locator('.tool-grid, .category-grid').all()) {
+        const columns = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns.split(' ').length)
+        expect(columns).toBe(width < 640 ? 1 : width < 1024 ? 2 : 3)
       }
     }
   })
@@ -472,8 +471,8 @@ for (const width of f44Widths) {
       expect(mark.width).toBe(36)
       expect(mark.height).toBe(36)
       await expect(brand).toHaveAttribute('href', '/')
-      await expect(brand).toHaveAttribute('aria-label', 'WorkDev Tools，返回首页')
-      await expect(brand.locator('span').nth(1)).toHaveText('WorkDev Tools')
+      await expect(brand).toHaveAttribute('aria-label', '顺手集 ToolHug，返回首页')
+      await expect(brand.locator('span').nth(1)).toHaveText('顺手集ToolHug')
       for (const link of await page.locator('.site-header nav a').all()) expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44)
       observations.push({ zone, box, mark, header: await page.locator('.site-header').boundingBox(), main: await page.locator('main').boundingBox() })
       if (zone === 'icon') await brand.locator('.brand-mark').click()
