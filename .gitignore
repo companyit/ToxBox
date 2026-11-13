@@ -64,3 +64,6 @@ error-context.md
 !.env.sample
 !.env.*.sample
 !.envrc.example
+
+# Explicit CSR experiments must not replace the complete production dist.
+dist-csr/

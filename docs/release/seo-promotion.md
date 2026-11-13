@@ -6,7 +6,7 @@
 
 正式origin保持`https://www.v7luck.com`。production模式的24个canonical为19工具加首页、办公目录、开发目录、关于和隐私；2FA、联系、条款和404不索引。具体清单以`src/data/indexing.ts`及`config/site-release.json`一致性校验为准。敏感文档工具即使可索引，仍不加载第三方脚本；公开的只是静态说明和空界面，输入不写入HTML或URL。
 
-默认`npm run build`/`npm run preview`仍为noindex预览，不能把`dist-ssg`当生产包上传。正式打包/部署与账号操作需要另行授权，本轮只使用隔离production候选测试。
+按037约定，`npm run build:preview`/`npm run preview:local`才是独立noindex预览，不能把`dist-ssg`当生产包上传。标准`npm run build`现按037授权输出生产dist，`npm run preview`读取同一份文件；构建不是部署，远端与账号操作仍另行授权。035阶段只用隔离production候选的记录保留为历史。
 
 ## 站内展示及推广优先级
 

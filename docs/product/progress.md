@@ -1,5 +1,11 @@
 # 顺手集 / ToolHug 当前进度
 
+## 最新状态：2026-11-08 标准构建入口修复
+
+037修复标准build只更新dist-ssg而dist残留旧单页的问题：build/build-only/build:release输出完整生产dist，preview读取同目录；noindex测试改用build:preview/preview:local，CSR隔离到dist-csr。实际生产构建完成，dist299公开文件/28HTML/20工具/24索引/188PDF资源与包摘要全等，旧dist备份保留。
+
+默认预览5项实际入口/新增Worker检查、332项单元组件、18项静态、154项身份审计、本地CI检查及noindex双引擎522项通过，见[037验证](../verification/037-build-entry.md)。本轮已生成本地正式产物，替代此前“正式dist未同步”状态；未部署、提交搜索平台或触发远端CI，真实环境/人工签收仍待完成。
+
 ## 最新状态：2026-11-08 图片工具性能
 
 036已将纯图片头/CRC/EXIF校验与PDF生成解耦，保留原导出和算法。图片共享JS421835→1469字节，裁剪Worker429086→6727，转换Worker525596→103622；两浏览器初始JS响应体约减少69.55%/68.72%，不代表相同比例的耗时改善。构建已设体积/PDF库混入门槛。

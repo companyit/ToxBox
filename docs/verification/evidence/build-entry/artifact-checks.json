@@ -1,0 +1,14 @@
+{
+  "id": "toolhug-20261108135426801-7c157f67",
+  "html": 28,
+  "canonical": 24,
+  "noindex": 4,
+  "pdfResources": 188,
+  "publicFiles": 299,
+  "archive": "/Users/user/development/ToxBox/ToxBox/.ci/handoff/toolhug-20261108135426801-7c157f67/toolhug-20261108135426801-7c157f67-site.tar.gz",
+  "archiveSha256": "7113683844319b50d798d6ef864cde4152dd6d06d01cbbcd661ab48eb47a75d4",
+  "distMatchesPackage": true,
+  "previousDist": "/Users/user/development/ToxBox/ToxBox/.ci/handoff/toolhug-20261108135426801-7c157f67/previous-dist",
+  "originalSinglePageBackup": ".ci/handoff/toolhug-20261108134752398-f94d7979/previous-dist",
+  "deployed": false
+}

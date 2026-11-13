@@ -40,7 +40,9 @@ const category = ['image-crop', 'pdf-organizer', 'text-workbench', 'text-diff', 
 .tool-guide h4 { font-size: 1rem; margin-top: 16px; }
 .tool-guide p, .tool-guide ol, .tool-guide ul { margin-top: 12px; }
 .tool-guide li + li { margin-top: 8px; }
-.tool-page .page-heading { max-width: var(--layout-prose-width); }
+.tool-page .page-heading { max-width: var(--layout-prose-width); margin-block: 12px 24px; }
+.tool-page .page-heading h1 { font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 8px; }
+.breadcrumbs { font-size: .875rem; }
 .tool-privacy { font-size: .875rem; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--color-border); }
 .hydration-controls :deep(input[type="file"]) { min-height: 44px; width: 100%; min-width: 0; max-width: 100%; color: var(--color-muted); font: inherit; }
 .hydration-controls :deep(input[type="file"]::file-selector-button) { min-height: 44px; margin-right: 12px; padding: 8px 16px; background: var(--color-surface); border: 1px solid var(--color-muted); border-radius: var(--ui-control-radius); color: var(--color-text); font: inherit; cursor: pointer; }

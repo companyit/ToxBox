@@ -1,3 +1,30 @@
+# 顺手集 / ToolHug
+
+## 当前构建与运行方式（2026-11-08）
+
+```sh
+npm run dev      # 开发调试，保存源码后自动更新
+npm run build    # 类型检查 + 完整生产SSG + 包/归档校验，更新 dist/
+npm run preview  # 使用HTTP服务查看同一份 dist/，按终端提示访问
+```
+
+`npm run build`成功后，`dist/`包含当前20个工具、28个HTML、24条正式索引和PDF等静态资源；可检查`dist/office/image-crop/index.html`等新增页面。请通过HTTP服务器访问，不能直接双击HTML用file://打开。构建和本地预览不等于已部署或被搜索引擎收录。
+
+| 命令 | 用途与目录 |
+| --- | --- |
+| `build`、`build-only`、`build:release` | 完整生产门禁并更新dist；build-only保留为兼容同义入口，同样含类型/包校验；旧dist在本次`.ci/handoff/<ID>/previous-dist`保留 |
+| `preview` | 读取dist生产文件；缺少dist时先运行build，使用终端显示的HTTP地址 |
+| `build:preview` | 类型检查并生成独立noindex测试站点dist-ssg，不改dist |
+| `build:preview-only` | 仅生成上述noindex SSG，作为内部构建子步骤 |
+| `preview:local` | 查看dist-ssg，供测试/人工预览，须先build:preview |
+| `build:csr` | 显式CSR实验，单独输出dist-csr，不覆盖完整生产dist；不作为静态托管发布物 |
+
+自动化验收仍采用`npm test`或`npm run test:e2e`；runner已明确使用build:preview和preview:local，不会把生产dist当作noindex测试产物。实际修复与验收见[037验证](docs/verification/037-build-entry.md)，发布操作另行授权。
+
+---
+
+以下保留初始化及旧阶段记录；其中build/preview与目录说明以本页上方037当前约定为准。
+
 > DEV-01 文档事实核对：项目现状与可用命令（拟议更新）
 >
 > 核对日期：2026-10-19；唯一开发仓库为 ToxBox仓库，基线 HEAD 为 `928491c9dd56f66494f47c7c8f914bb0c8deb5c4`。本说明只更新文档事实，不授权实现、依赖安装、Git 写操作、远端设置或部署。此前其他开发主线不作为当前进度与审批依据。

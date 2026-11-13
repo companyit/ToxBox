@@ -24,6 +24,7 @@ export default defineConfig(async ({ command, isPreview }): Promise<UserConfig> 
       if (context.candidate && path.resolve(config.root, config.build.outDir) !== publicRoot) throw Error('preview真实根与receipt不一致')
     } },
     { name: 'static-404-preview', configurePreviewServer(server) {
+      const previewRoot = path.resolve(server.config.root, server.config.build.outDir)
       server.middlewares.use(async (req, res, next) => {
         // Verified candidates serve only their exact public manifest; no build or SPA fallback.
         if (context.candidate) {
@@ -56,10 +57,10 @@ export default defineConfig(async ({ command, isPreview }): Promise<UserConfig> 
           }
         }
         const pathname = new URL(req.url ?? '/', 'http://localhost').pathname
-        if (pathname.startsWith('/assets/') || pathname.startsWith('/pdf-assets/') || ['/favicon.ico', '/favicon.svg'].includes(pathname)) return next()
+        if (pathname.startsWith('/assets/') || pathname.startsWith('/pdf-assets/') || ['/favicon.ico', '/favicon.svg', '/robots.txt', '/sitemap.xml', '/third-party-notices.txt'].includes(pathname)) return next()
         if (/^\/(?:[a-z0-9-]+\/)*[a-z0-9-]+$/.test(pathname)) {
           try {
-            await readFile(new URL(`./dist-ssg${pathname}/index.html`, import.meta.url))
+            await readFile(path.join(previewRoot, pathname.slice(1), 'index.html'))
             res.statusCode = 308
             res.setHeader('Location', pathname + '/' + new URL(req.url ?? '/', 'http://localhost').search)
             res.end(); return
@@ -67,10 +68,10 @@ export default defineConfig(async ({ command, isPreview }): Promise<UserConfig> 
         }
         const safePath = /^\/(?:[a-z0-9-]+\/)*$/.test(pathname)
         try {
-          const file = safePath ? `./dist-ssg${pathname}index.html` : './dist-ssg/404.html'
+          const file = safePath ? path.join(previewRoot, pathname.slice(1), 'index.html') : path.join(previewRoot, '404.html')
           let html: string
-          try { html = await readFile(new URL(file, import.meta.url), 'utf8'); res.statusCode = safePath ? 200 : 404 }
-          catch { html = await readFile(new URL('./dist-ssg/404.html', import.meta.url), 'utf8'); res.statusCode = 404 }
+          try { html = await readFile(file, 'utf8'); res.statusCode = safePath ? 200 : 404 }
+          catch { html = await readFile(path.join(previewRoot, '404.html'), 'utf8'); res.statusCode = 404 }
           res.setHeader('Content-Type', 'text/html; charset=utf-8'); res.end(html)
         } catch { next() }
       })

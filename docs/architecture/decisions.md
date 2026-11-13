@@ -336,3 +336,7 @@ Word 转 PDF 是独立文档排版问题，PDF 合并库不提供 Word 排版引
 ## ADR-036：图片校验与PDF生成解耦（2026-11-08）
 
 负责人要求其他优化，本轮依据本地构建实际资源归属，将现有imagePdf中的纯文件头/CRC/EXIF校验抽至独立imageInspect模块，保留旧导出和函数体；图片压缩/裁剪不再经该依赖加载PDF生成库。沿用既有Worker、工具链和本地处理边界，无新依赖或SSR/路由/缓存方案，不改变算法规则。以字节及冷上下文资源请求对比和全工具回归验收，不能将本机体积下降称为真实网络或Core Web Vitals达标。详见[036规格](../specs/036-image-performance/spec.md)。
+
+## ADR-037：标准构建与预览目录对齐（2026-11-08）
+
+负责人反馈npm run build后缺失新功能，本轮以037修正常用命令：build/build-only复用既有生产门禁输出dist；preview读取同一目录。原noindex构建/服务改为显式build:preview/preview:local供本地与CI使用；CSR隔离到dist-csr。preview中间件从实际outDir读取HTML，避免跨目录旧文件混用。沿用既有域名/索引/生产包备份方案，无新依赖、远端操作或部署。

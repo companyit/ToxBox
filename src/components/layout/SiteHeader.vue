@@ -41,13 +41,15 @@ function focusMain() {
 </template>
 
 <style scoped>
+.site-header { background: var(--header-surface); box-shadow: 0 1px 12px rgb(0 0 0 / .025); }
 .header-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4); padding-block: 12px; }
 .brand { display: inline-flex; align-items: center; min-height: 44px; gap: var(--space-3); color: var(--color-text); font-weight: 750; text-decoration: none; }
-.brand-mark { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; flex-shrink: 0; color: var(--color-accent); }
+.brand-mark { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; flex-shrink: 0; color: var(--color-accent); padding: 4px; background: var(--color-accent-soft); border: 1px solid var(--color-border); border-radius: 10px; }
 .brand-name { display: grid; gap: 1px; line-height: 1.25; font-size: 1rem; }
 .brand-name small { font-size: .6875rem; font-weight: 600; color: var(--color-muted); letter-spacing: .025em; }
 nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
 nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px; border-radius: var(--ui-control-radius); color: var(--color-muted); text-decoration: none; }
+nav a[aria-current="page"] { background: var(--color-accent-soft); color: var(--color-accent); }
 nav a:hover { color: var(--color-accent); background: var(--color-accent-soft); }
 @media (max-width: 639px) { nav { width: 100%; gap: 8px; } .header-content { gap: 8px; } }
 @media (min-width: 360px) and (max-width: 639px) {

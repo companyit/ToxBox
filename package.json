@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview --outDir dist-ssg",
-    "build-only": "node scripts/ssg.mjs",
+    "build": "node scripts/build-release.mjs",
+    "preview": "vite preview --outDir dist",
+    "build-only": "node scripts/build-release.mjs",
     "type-check": "vue-tsc --build && vue-tsc --noEmit -p tsconfig.tests.json",
-    "build:csr": "vite build",
+    "build:csr": "vite build --outDir dist-csr",
     "test": "node scripts/e2e-run.mjs chromium",
     "test:unit": "vitest run --project unit",
     "test:components": "vitest run --project components",
@@ -20,7 +20,10 @@
     "test:vitest": "vitest run --project unit --project components",
     "test:e2e": "node scripts/e2e-run.mjs chromium firefox webkit",
     "test:ci:e2e": "node scripts/e2e-run.mjs --prepared",
-    "build:release": "node scripts/build-release.mjs"
+    "build:release": "node scripts/build-release.mjs",
+    "build:preview": "run-p type-check \"build:preview-only {@}\" --",
+    "build:preview-only": "node scripts/ssg.mjs",
+    "preview:local": "vite preview --outDir dist-ssg"
   },
   "dependencies": {
     "jszip": "3.10.1",

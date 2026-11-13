@@ -1,0 +1,1989 @@
+{
+  "config": {
+    "argv": [
+      "/Users/user/.local/share/fnm/node-versions/v24.21.0/installation/bin/node",
+      "/Users/user/development/ToxBox/ToxBox/node_modules/@playwright/test/cli.js",
+      "test",
+      "e2e/tech-visual.spec.ts",
+      "e2e/page-polish.spec.ts",
+      "e2e/ui-layout.spec.ts",
+      "e2e/home-cleanup.spec.ts",
+      "--grep",
+      "VIS039|UI038|UI-B1 首页与目录布局|HOME 清理重复区域",
+      "--project",
+      "chromium",
+      "--project",
+      "webkit"
+    ],
+    "configFile": "/Users/user/development/ToxBox/ToxBox/playwright.config.ts",
+    "rootDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 900000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "snapshotDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4177",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "locale": "zh-CN",
+          "serviceWorkers": "block",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "video": "off",
+          "browserName": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "snapshotDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4177",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "locale": "zh-CN",
+          "serviceWorkers": "block",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "video": "off",
+          "browserName": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/evidence/tech-visual/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "docs/verification/evidence/tech-visual/html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview:local -- --host 127.0.0.1 --port 4177 --strictPort",
+      "url": "http://127.0.0.1:4177/",
+      "reuseExistingServer": false,
+      "timeout": 60000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "home-cleanup.spec.ts",
+      "file": "home-cleanup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "HOME 清理重复区域且保留普通入口 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 394,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:40.793Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d01513dba6fd770f95f2-aeeca3616bf53674b1ab",
+          "file": "home-cleanup.spec.ts",
+          "line": 6,
+          "column": 35
+        },
+        {
+          "title": "HOME 清理重复区域且保留普通入口 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 259,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:41.400Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d01513dba6fd770f95f2-8959d5290a9ca2df940c",
+          "file": "home-cleanup.spec.ts",
+          "line": 6,
+          "column": 35
+        },
+        {
+          "title": "HOME 清理重复区域且保留普通入口 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 418,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:41.664Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d01513dba6fd770f95f2-94713c788f62777a2944",
+          "file": "home-cleanup.spec.ts",
+          "line": 6,
+          "column": 35
+        },
+        {
+          "title": "HOME 清理重复区域且保留普通入口 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 617,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:51.385Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d01513dba6fd770f95f2-65a847f9531d977f6d5b",
+          "file": "home-cleanup.spec.ts",
+          "line": 6,
+          "column": 35
+        },
+        {
+          "title": "HOME 清理重复区域且保留普通入口 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 323,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:52.234Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d01513dba6fd770f95f2-511a60acd1430cb234a1",
+          "file": "home-cleanup.spec.ts",
+          "line": 6,
+          "column": 35
+        },
+        {
+          "title": "HOME 清理重复区域且保留普通入口 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 282,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:52.562Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d01513dba6fd770f95f2-90cea03f8e6d164056bc",
+          "file": "home-cleanup.spec.ts",
+          "line": 6,
+          "column": 35
+        }
+      ]
+    },
+    {
+      "title": "page-polish.spec.ts",
+      "file": "page-polish.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI038 展示文案、布局与搜索 320",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 906,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:42.090Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-ecce257f031b36420047",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "UI038 展示文案、布局与搜索 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:43.000Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-22daf990cb9408e8deee",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "UI038 展示文案、布局与搜索 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 752,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:43.694Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-94399d66c1cfc7fce4ce",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "UI038 展示文案、布局与搜索 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 811,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:44.450Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-ca4b5497f2212bdffa35",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "UI038 展示文案、布局与搜索 320",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 663,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:52.852Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-83217dc8031e3131769f",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "UI038 展示文案、布局与搜索 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:53.519Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-140e8fcec829b6b621c4",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "UI038 展示文案、布局与搜索 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 681,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:54.237Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-2dd30d93bf0b94138faf",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "UI038 展示文案、布局与搜索 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 723,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:54.922Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1e3959be1bdbe6aed604-98d6e3456f6f3b4eb775",
+          "file": "page-polish.spec.ts",
+          "line": 3,
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "tech-visual.spec.ts",
+      "file": "tech-visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "VIS039 light 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 143,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46",
+                    "location": {
+                      "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                      "column": 46,
+                      "line": 19
+                    },
+                    "snippet": "  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                        "column": 46,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n\n  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:45.267Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-375-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-375-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-375-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                    "column": 46,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-93d90e3edca515816cb4",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "VIS039 light 1440",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 211,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46",
+                    "location": {
+                      "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                      "column": 46,
+                      "line": 19
+                    },
+                    "snippet": "  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                        "column": 46,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n\n  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:45.625Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-1440-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-1440-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-1440-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                    "column": 46,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-632f3b6ce1afec30a2ed",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "VIS039 dark 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:46.127Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-65ab9174ba079106baac",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "VIS039 dark 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 446,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:46.600Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-d3495d338c3df48d79ed",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "VIS039 light 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 248,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46",
+                    "location": {
+                      "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                      "column": 46,
+                      "line": 19
+                    },
+                    "snippet": "  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                        "column": 46,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n\n  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:55.651Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-375-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-375-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-375-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                    "column": 46,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-784889ab5351c1f49ad9",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "VIS039 light 1440",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 385,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46",
+                    "location": {
+                      "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                      "column": 46,
+                      "line": 19
+                    },
+                    "snippet": "  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                        "column": 46,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4.5\u001b[39m\nReceived:    \u001b[31mNaN\u001b[39m\n\n  17 |    return [contrast('--color-text','--color-background'),contrast('--color-muted','--color-surface'),contrast('--color-accent','--color-accent-soft'),contrast('--color-on-accent','--color-accent')]\n  18 |   })\n> 19 |   for(const ratio of contrasts)expect(ratio).toBeGreaterThanOrEqual(4.5)\n     |                                              ^\n  20 |   const link=page.locator('.tool-card a').first()\n  21 |   await link.focus();await expect(link).toBeFocused()\n  22 |   expect(await link.evaluate(node=>getComputedStyle(node).outlineStyle)).not.toBe('none')\n    at /Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts:19:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:56.092Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-1440-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-1440-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/tech-visual/artifacts/tech-visual-VIS039-light-1440-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/user/development/ToxBox/ToxBox/e2e/tech-visual.spec.ts",
+                    "column": 46,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-0b362a46779d190f6436",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "VIS039 dark 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 530,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:56.828Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-13a00ac07781cf3a403c",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        },
+        {
+          "title": "VIS039 dark 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 463,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:57.509Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbf35e5ea5321e8d0ec3-19824316577e650e0906",
+          "file": "tech-visual.spec.ts",
+          "line": 3,
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "ui-layout.spec.ts",
+      "file": "ui-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UI-B1 首页与目录布局 320",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 485,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:47.059Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-3c47aa5c2cee4d0d9d41",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 448,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:47.548Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-86f16e21e4616c081c41",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 454,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:47.999Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-293e47c2cbe842aec5c2",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 430",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 475,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:48.457Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-113d15a2e3c8505e1477",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 461,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:48.935Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-68217363973ed911902a",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:49.400Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-f9c5e31aa1ff769d8404",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:49.848Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-86a1ef55bb4ce6467cc3",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 445,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:50.301Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-2bddd5607c3828a55954",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1920",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:50.749Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-5258107087c82a9efecd",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 320",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 650,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:57.985Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-3e5be53d90192afc16d4",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 626,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:58.639Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-60fe4daa20d62908358a",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:59.268Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-a437773534d034cd4df6",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 430",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 615,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:13:59.888Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-8eb9582d344fafbad8f1",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 628,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:14:00.507Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-cc6134b5ff8644243f79",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 644,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:14:01.139Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-5f07af178a5048460729",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 651,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:14:01.788Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-be7e9ef0ab5591926b8c",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 647,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:14:02.443Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-b562befa12d3eb8cbfb8",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "UI-B1 首页与目录布局 1920",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 683,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T12:14:03.094Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8d96ce8588ecc9b0472-39f89364d3e005fe631e",
+          "file": "ui-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-12T12:13:40.208Z",
+    "duration": 23599.826,
+    "expected": 36,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

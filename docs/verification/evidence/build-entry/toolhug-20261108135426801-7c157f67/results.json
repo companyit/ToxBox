@@ -1,0 +1,40 @@
+{
+  "handoff": {
+    "candidateId": "toolhug-20261108135426801-7c157f67",
+    "receipt": ".ci/release-01/candidates/toolhug-20261108135426801-7c157f67/receipt.json",
+    "receiptSha256": "ed8ac6ea814d993e141bc1ffd97aabf43a240ef3cdf00e6640d3f568b3e3ee12",
+    "packageId": "toolhug-20261108135426801-7c157f67",
+    "root": "/Users/user/development/ToxBox/ToxBox/.ci/release-01/packages/toolhug-20261108135426801-7c157f67",
+    "site": "/Users/user/development/ToxBox/ToxBox/.ci/release-01/packages/toolhug-20261108135426801-7c157f67/site",
+    "manifestSha256": "b518736cd9c111fcd62ff8838de73ecc735058c17599e58c5cc104378983c97d",
+    "files": 299,
+    "origin": "https://www.v7luck.com",
+    "archive": "/Users/user/development/ToxBox/ToxBox/.ci/handoff/toolhug-20261108135426801-7c157f67/toolhug-20261108135426801-7c157f67-site.tar.gz",
+    "archiveSha256": "7113683844319b50d798d6ef864cde4152dd6d06d01cbbcd661ab48eb47a75d4",
+    "dist": "/Users/user/development/ToxBox/ToxBox/dist",
+    "previousDist": "/Users/user/development/ToxBox/ToxBox/.ci/handoff/toolhug-20261108135426801-7c157f67/previous-dist"
+  },
+  "html": 28,
+  "tools": 20,
+  "results": [
+    {
+      "browser": "chromium",
+      "version": "156.0.8078.4",
+      "crop": true,
+      "pdfOrganizer": true,
+      "jsonYaml": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "webkit",
+      "version": "27.2",
+      "crop": true,
+      "pdfOrganizer": true,
+      "jsonYaml": true,
+      "errors": [],
+      "external": []
+    }
+  ],
+  "distMatchesPackage": true
+}

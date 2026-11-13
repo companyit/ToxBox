@@ -4,11 +4,11 @@
 
 ## 日常打包入口
 
-正式上线执行 `npm run build:release`，自动类型检查、生成唯一候选、构建 production 页面、导出并验证归档；正式域名读取 `config/site-release.json`。需要本机提供 `tar`。成功后终端输出 `.ci/handoff/<唯一ID>/<唯一ID>-site.tar.gz` 和 SHA256，同目录包含校验文件与 `handoff.json` 来源记录。历史包不会覆盖。
+标准构建执行 `npm run build`（`build-only`和`build:release`为完整门禁同义入口），自动类型检查、生成唯一候选、构建 production 页面、导出并验证归档；正式域名读取 `config/site-release.json`。需要本机提供 `tar`。成功后终端输出 `.ci/handoff/<唯一ID>/<唯一ID>-site.tar.gz` 和 SHA256，同目录包含校验文件与 `handoff.json` 来源记录。历史包不会覆盖。
 
-成功后根目录 `dist/` 即为本次校验通过的生产站点，可直接上传其中全部内容；也可使用 tar.gz。原有 dist 保留在本次移交目录的 `previous-dist/`，新 dist 不混入旧文件。不要上传包外记录。后续执行 `build:csr` 会重新把 dist 变成单入口 CSR；上线前请重新运行 `npm run build:release`。此命令不执行远端部署，也不代替完整测试或线上验收。失败非零退出，保留现场，修复后重新运行生成新 ID。
+成功后根目录 `dist/` 即为本次校验通过的生产站点，可直接上传其中全部内容；也可使用 tar.gz。原有 dist 保留在本次移交目录的 `previous-dist/`，新 dist 不混入旧文件。不要上传包外记录。`build:csr`现仅输出dist-csr，不再覆盖dist。此命令不执行远端部署，也不代替完整测试或线上验收。失败非零退出，保留现场，修复后重新运行生成新 ID。
 
-本地检查使用 `npm run build` 与 `npm run preview`，输出 `dist-ssg/`，默认 preview/noindex。`build:csr` 仅生成单入口 CSR，不适用当前真实 404 的静态托管部署。
+`npm run build`与`npm run preview`对齐生产dist，仍未部署；需要独立noindex测试站点时使用`npm run build:preview`和`npm run preview:local`，输出dist-ssg。`build:csr`仅输出dist-csr，不适用当前真实404静态托管。
 
 ## 冻结与导出
 
@@ -58,3 +58,7 @@ PDF页面整理新增`pdf-assets/`同源资源：当前批准包共188项，必�
 ## 035 SEO本地验收入口
 
 执行`node --test --test-concurrency=1 tests/release/package.test.mjs tests/release/seo-growth.test.mjs`：在隔离目录生成production/preview候选和测试包，另起本地4177端口校验production页面，要求已安装的Chromium/WebKit及空闲端口。实际检查24canonical/sitemap、结构化数据错误拒绝及两引擎各28页SSR/hydration，不修改根dist或连接线上账号。默认preview的完整工具回归仍使用现有`node scripts/e2e-run.mjs chromium webkit`入口。
+
+## 037 构建入口验证
+
+先执行`npm run build`，再执行`node --test --test-concurrency=1 tests/release/build-entry.test.mjs`，实际验证dist与正式包摘要、默认npm preview的新增Worker流程、独立preview:local和自定义outDir的404/308。该测试会启动本地4177端口，两浏览器须已安装；不操作服务器。原noindex完整回归仍使用现有e2e runner，内部已改为build:preview/preview:local。

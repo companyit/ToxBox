@@ -1,0 +1,16 @@
+{
+  "head": "8a8e89cf96c9aef521981180a49db26151d91298",
+  "run": "docs/verification/evidence/m106c3/runs/2026-11-08T13-56-07.115Z-9135",
+  "productionId": "toolhug-20261108135426801-7c157f67",
+  "standardBuildExit": 0,
+  "buildOnlyExit": 0,
+  "csrExit": 0,
+  "entryTests": 5,
+  "unitComponents": 332,
+  "static": 18,
+  "identityAudit": 154,
+  "browserTests": 522,
+  "ciLocalCheck": true,
+  "ciRemoteRun": false,
+  "deployed": false
+}

@@ -19,7 +19,7 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1280, 1440, 1920]) {
       }
       if (path === '/') {
         await expect(page.getByRole('textbox')).toHaveCount(1)
-        for (const name of ['试用工具 ：文本统计', '试用工具 ：JSON 格式化与校验', '试用工具 ：URL 编解码', '试用工具 ：2FA 动态验证码']) {
+        for (const name of ['打开工具 ：文本统计', '打开工具 ：JSON 格式化与校验', '打开工具 ：URL 编解码', '打开工具 ：2FA 动态验证码']) {
           await expect(page.getByRole('link', { name, exact: true })).toHaveCount(1)
         }
         const cards = await page.locator('.tool-card').all()
@@ -33,7 +33,7 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1280, 1440, 1920]) {
       // UI2 replaces the historical office single-column / home 1:2 split.
       for (const grid of await page.locator('.tool-grid, .category-grid').all()) {
         const columns = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns.split(' ').length)
-        expect(columns).toBe(width < 640 ? 1 : width < 1024 ? 2 : 3)
+        expect(columns).toBe(width < 640 ? 1 : width < 1024 ? 2 : width < 1280 ? 3 : 4)
       }
     }
   })

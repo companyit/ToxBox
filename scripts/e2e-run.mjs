@@ -50,7 +50,7 @@ try {
     await verify(true)
     result.buildMode = 'verified-artifact'
   } else {
-    result.buildExitCode = await run('npm', ['run', 'build'])
+    result.buildExitCode = await run('npm', ['run', 'build:preview'])
     if (result.buildExitCode !== 0) throw Error('本次完整构建失败，禁止使用旧产物')
   }
   const output = await digest('dist-ssg')
