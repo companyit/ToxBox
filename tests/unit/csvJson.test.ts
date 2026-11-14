@@ -32,20 +32,26 @@ test('尾逗号、单个末尾换行、连续空行及开头一个 BOM', () => {
 test('裸引号、不闭合、闭引号后垃圾或空白均拒绝', () => {
   for (const input of ['a"b', '"a', '"a"b', '"a" ', ' "a"', '"""', '"a"\t,b']) expect(csv(input)).toEqual({ status: 'error', code: 'invalid-csv' })
 })
-test('严格矩形，字段不自动转换类型', () => {
+test('CSV 保留严格矩形；JSON 扩展允许混合类型和缺列', () => {
   for (const input of ['a,b\nc', ',\n\n', 'a\nb,c']) expect(csv(input)).toEqual({ status: 'error', code: 'shape' })
-  for (const value of [{ a: 1 }, ['a'], [[]], [['a'], ['b', 'c']], [[1]], [[null]], [[true]], [[{ a: 'b' }]]]) expect(json(JSON.stringify(value)).status).toBe('error')
+  expect(json('[[]]')).toMatchObject({ status: 'error', code: 'no-columns' })
+  expect(success(json('[[1,true,null],["001"]]')).output).toBe('"1","true","null"\n"001","",""')
+  expect(success(json('[{"a":1}]')).output).toBe('"a"\n"1"')
   expect(success(json('[["001","a\\\"b"]]')).output).toBe('"001","a""b"')
 })
-test('JSON 严格语法和深度扫描，字符串中的转义/括号不计深度', () => {
-  for (const input of ['\uFEFF[]', '[["a",]]', '/*x*/[]', '[', ' ']) expect(json(input)).toEqual({ status: 'error', code: 'invalid-json' })
-  expect(json('[[["a"]]]')).toEqual({ status: 'error', code: 'depth' })
+test('JSON 兼容模式与严格模式分开，字符串中的转义/括号不计深度', () => {
+  for (const input of ['\uFEFF[]', '[["a",]]', '/*x*/[]']) {
+    expect(json(input).status).toBe('success')
+    expect(convertTable(input, 'json-to-csv', { jsonMode: 'strict' })).toMatchObject({ status: 'error', code: 'invalid-json' })
+  }
+  for (const input of ['[', ' ']) expect(json(input)).toMatchObject({ status: 'error', code: 'invalid-json' })
+  expect(json('['.repeat(31) + '"a"' + ']'.repeat(31))).toMatchObject({ status: 'error', code: 'depth' })
   expect(success(json(JSON.stringify([['[[{\\"', '\r\n\r']]))).output).toBe('"[[{\\""","\n\n"')
 })
 test('Unicode 拒绝覆盖原文和 JSON 转义后的字段，合法代理对保留', () => {
   for (const value of ['\u0000', '\uD800', '\uDC00', '\uD800a']) {
     expect(csv(value)).toEqual({ status: 'error', code: 'unicode' })
-    expect(json(JSON.stringify([[value]]))).toEqual({ status: 'error', code: 'unicode' })
+    expect(json(JSON.stringify([[value]]))).toMatchObject({ status: 'error', code: 'unicode' })
   }
   expect(JSON.parse(success(csv('😀,é\ne\u0301,𠀀')).output)).toEqual([['😀', 'é'], ['e\u0301', '𠀀']])
 })

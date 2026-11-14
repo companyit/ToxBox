@@ -31,7 +31,7 @@ const searchTitles: Readonly<Partial<Record<PageName, string>>> = {
   "text-cleanup": "文本整理：去空白、按行去重排序与批量替换",
   "text-diff": "文本差异对比：逐行比较、增删统计与变化报告",
   "text-workbench": "文本处理工作台：批量清理、去重、排序与替换",
-  "csv-json": "CSV与JSON在线互转：二维字符串表格转换",
+  "csv-json": "CSV与JSON在线互转：对象数组与表格转换",
   "date-calculator": "日期计算器：计算相差天数与日期加减"
 }
 const page = (routeName: PageName, path: string, heading: string, description: string): PageDefinition => ({
@@ -51,7 +51,7 @@ export const pages: readonly PageDefinition[] = [
   page('word-to-pdf', '/office/word-to-pdf/', 'Word 转 PDF（DOCX 简版）', '将DOCX在浏览器本地重排为简版预览，通过打印对话框另存PDF。不上传文件；不支持旧DOC，不保证还原Word原版式。'),
   page('pdf-split', '/office/pdf-split/', 'PDF 拆分与选页导出', '本地按指定页码顺序导出 PDF，或逐页拆分下载，不上传文件。'),
   page('text-cleanup', '/office/text-cleanup/', '文本整理', '本地清理行首尾空白、删除空白行、去重、排序及普通文本替换，保留原输入。'),
-  page('csv-json', '/office/csv-json/', 'CSV 与 JSON 表格互转', '本地转换逗号 CSV 与二维字符串数组，保留前导零，不推断表头或类型。'),
+  page('csv-json', '/office/csv-json/', 'CSV 与 JSON 表格互转', '本地将对象数组、嵌套 JSON 或二维表格转为 CSV，兼容注释与尾逗号，保留数字精度；CSV 转 JSON 不推断表头或类型。'),
   page('office', '/office/', '办公工具', '在线处理PDF合并、拆分和页面排序，转换或裁剪图片、图片转PDF、统计字数和整理文本。免费免登录，所选文档在浏览器本地处理，不上传内容。'),
   page('text-statistics', '/office/text-statistics/', '文本统计', '本地统计 Unicode 码点字符、去空白字符、词段、总行与非空行；词段不等于中文分词。'),
   page('developer', '/developer/', '开发者工具', '免费使用JSON格式化与校验、JSON/YAML互转、Base64、URL编解码、时间戳和UUID工具。支持中文提示，配置和文本在浏览器本地处理。'),

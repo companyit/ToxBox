@@ -31,7 +31,11 @@ for(const width of [375,768,1440])test(`CROP 原像素裁剪、比例、拖动�
  await expect(page.getByLabel('X 坐标',{exact:true})).toHaveValue('40');await expect(page.getByLabel('Y 坐标',{exact:true})).toHaveValue('30')
  const before=await box.boundingBox();const handle=page.locator('.crop-handle.se');await handle.scrollIntoViewIfNeeded();const hb=(await handle.boundingBox())!;await page.mouse.move(hb.x+22,hb.y+22);await page.mouse.down();await page.mouse.move(hb.x+22-bounds.width/10,hb.y+22-bounds.height/10,{steps:5});await page.mouse.up();expect((await box.boundingBox())!.width).toBeLessThan(before!.width)
  const xInput=page.getByLabel('X 坐标',{exact:true});await xInput.focus();await page.keyboard.press('ControlOrMeta+A');await page.keyboard.insertText('0');await page.keyboard.press('Tab');await expect(xInput).toHaveValue('0')
- for(const handle of await page.locator('.crop-handle').all()){const b=await handle.boundingBox();expect(b!.width).toBeGreaterThanOrEqual(44);expect(b!.height).toBeGreaterThanOrEqual(44)}
+ for(const handle of await page.locator('.crop-handle').all()){
+  await expect(handle).toHaveCSS('width','44px');await expect(handle).toHaveCSS('height','44px')
+  // Firefox can report 43.99998474121094 for a computed 44px edge.
+  const b=await handle.boundingBox();expect(b!.width).toBeGreaterThanOrEqual(44-0.0001);expect(b!.height).toBeGreaterThanOrEqual(44-0.0001)
+ }
  await page.screenshot({path:info.outputPath(`crop-${width}.png`),fullPage:true});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
  await page.getByRole('button',{name:'清空',exact:true}).click();await expect(page.getByLabel('选择待裁剪图片',{exact:true})).toBeFocused()
 })
@@ -63,7 +67,7 @@ test('CROP EXIF八方向的原图坐标与导出像素一致',async({page})=>{
 })
 test('CROP 拒绝损坏、动画、超限与本地隔离、取消和离页',async({page})=>{
  const external:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4177/')&&!r.url().startsWith('blob:'))external.push(r.url())})
- await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('图片尺寸');await page.getByRole('link',{name:'试用工具 ：图片尺寸与裁剪',exact:true}).click();await expect(page).toHaveURL('/office/image-crop/');await hydrated(page)
+ await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('图片尺寸');await page.getByRole('link',{name:'打开工具 ：图片尺寸与裁剪',exact:true}).click();await expect(page).toHaveURL('/office/image-crop/');await hydrated(page)
  const bytes=await fixture(page);await select(page,bytes)
  await page.evaluate(async()=>{(Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='生成裁剪图片') as HTMLButtonElement).click();await Promise.resolve();(Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='取消处理') as HTMLButtonElement).click()});await expect(page.getByRole('status')).toContainText('已取消');await expect(page.locator('a[download]')).toHaveCount(0)
  await page.getByLabel('选择待裁剪图片',{exact:true}).setInputFiles({name:'PRIVATE.png',mimeType:'image/png',buffer:Buffer.from('PRIVATE-BROKEN')});await expect(page.getByRole('status')).toContainText('损坏');await expect(page.getByRole('status')).not.toContainText('PRIVATE');await expect(page.locator('.crop-preview')).toHaveCount(0)

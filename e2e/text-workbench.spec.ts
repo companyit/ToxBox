@@ -23,7 +23,7 @@ for(const width of [375,768,1440])test(`WORKFLOW 真实Worker两预设、步骤�
 test('WORKFLOW 中间超限原子失败、复制失败及隐私清理',async({page})=>{
  await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('denied')}}}))
  const requests:string[]=[];page.on('request',r=>requests.push(r.url()))
- await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('文本处理工作台');await page.getByRole('link',{name:'试用工具 ：文本处理工作台',exact:true}).click();await expect(page).toHaveURL('/office/text-workbench/');await hydrated(page)
+ await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('文本处理工作台');await page.getByRole('link',{name:'打开工具 ：文本处理工作台',exact:true}).click();await expect(page).toHaveURL('/office/text-workbench/');await hydrated(page)
  const input=page.getByLabel('待处理文本',{exact:true}),run=page.getByRole('button',{name:'运行流程',exact:true}),output=page.getByLabel('最终文本（只读）',{exact:true}),report=page.getByLabel('流程报告（只读）',{exact:true})
  const storage=await page.evaluate(()=>[JSON.stringify(localStorage),JSON.stringify(sessionStorage)])
  await page.getByRole('button',{name:'文案整理替换',exact:true}).click();await input.fill('a'.repeat(101));await page.getByLabel('第 3 步查找',{exact:true}).fill('a');await page.getByLabel('第 3 步替换为',{exact:true}).fill('x'.repeat(1000));await run.click();await expect(page.getByRole('status')).toContainText('第 3 步');await expect(page.getByRole('status')).toContainText('100,000');await expect(page.locator('.workflow-result')).toHaveCount(0);await expect(input).toHaveValue('a'.repeat(101))

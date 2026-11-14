@@ -70,7 +70,8 @@ for (const width of [375,768,1440]) test(`UI4 顶部导航滚动常驻及返回�
  await expect(page).toHaveURL('/office/')
 })
 
-test('UI5 手机紧凑导航与卡片键盘反馈',async({page})=>{
+for (const theme of ['light', 'dark'] as const) test(`UI5 手机紧凑导航与卡片键盘反馈 ${theme}`,async({page})=>{
+ await page.emulateMedia({colorScheme:theme})
  await page.setViewportSize({width:375,height:812});await page.goto('/');await hydrated(page)
  const brand=await page.locator('.site-header .brand').boundingBox()
  for (const link of await page.locator('.site-header nav a').all()) {
@@ -79,6 +80,10 @@ test('UI5 手机紧凑导航与卡片键盘反馈',async({page})=>{
  }
  const entry=page.locator('.tool-card a').first();await entry.focus()
  await expect(entry).toBeFocused()
- const colors=await entry.evaluate(el=>({border:getComputedStyle(el.closest('.tool-card')!).borderTopColor,accent:getComputedStyle(el).getPropertyValue('--color-accent').trim()}))
- expect(colors.border).toBe('rgb(23, 99, 79)')
+ const accent=await entry.evaluate(el=>{
+  const probe=document.createElement('span');probe.style.color='var(--color-accent)';el.append(probe)
+  const color=getComputedStyle(probe).color;probe.remove();return color
+ })
+ await expect(page.locator('.tool-card').first()).toHaveCSS('border-top-color',accent)
+ expect(await entry.evaluate(el=>getComputedStyle(el).outlineStyle)).not.toBe('none')
 })

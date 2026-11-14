@@ -28,7 +28,7 @@ test('JY 独立文档隔离、复制失败与离页清理',async({page})=>{
  await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('denied')}}}))
  const requests:string[]=[];page.on('request',r=>requests.push(r.url()))
  await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('YAML')
- await page.getByRole('link',{name:'试用工具 ：JSON ↔ YAML 转换',exact:true}).click();await expect(page).toHaveURL('/developer/json-yaml/');await hydrated(page)
+ await page.getByRole('link',{name:'打开工具 ：JSON ↔ YAML 转换',exact:true}).click();await expect(page).toHaveURL('/developer/json-yaml/');await hydrated(page)
  const storage=await page.evaluate(()=>[JSON.stringify(localStorage),JSON.stringify(sessionStorage)])
  const input=page.getByLabel('待转换的 JSON 或 YAML',{exact:true}),output=page.getByLabel('转换结果（只读）',{exact:true})
  await input.fill('{"PRIVATE_VALUE":"secret"}');await page.getByRole('button',{name:'转换格式',exact:true}).click();await expect(page.getByRole('status')).toContainText('转换完成')

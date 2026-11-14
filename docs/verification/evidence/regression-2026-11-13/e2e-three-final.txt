@@ -1,0 +1,1312 @@
+
+> toxbox@0.0.0 build:preview
+> run-p type-check "build:preview-only {@}" --
+
+
+> toxbox@0.0.0 type-check
+> vue-tsc --build && vue-tsc --noEmit -p tsconfig.tests.json
+
+
+> toxbox@0.0.0 build:preview-only
+> node scripts/ssg.mjs
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../types/seo" without a file extension (src/utils/seo.ts:4:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seoEnvironment.ts:2:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seo.ts:5:37). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 250 modules transformed.
+rendering chunks...
+computing gzip size...
+.ssg-build/client/pdf-assets/cmaps/CNS2-V.bcmap                                0.09 kB
+.ssg-build/client/pdf-assets/cmaps/Roman.bcmap                                 0.09 kB
+.ssg-build/client/pdf-assets/cmaps/Katakana.bcmap                              0.10 kB
+.ssg-build/client/pdf-assets/cmaps/ETenms-B5-H.bcmap                           0.10 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-HW-H.bcmap                      0.11 kB
+.ssg-build/client/pdf-assets/cmaps/Hiragana.bcmap                              0.12 kB
+.ssg-build/client/pdf-assets/cmaps/Hankaku.bcmap                               0.13 kB
+.ssg-build/client/pdf-assets/cmaps/B5-V.bcmap                                  0.14 kB
+.ssg-build/client/pdf-assets/cmaps/CNS1-V.bcmap                                0.14 kB
+.ssg-build/client/pdf-assets/cmaps/B5pc-V.bcmap                                0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKdla-B5-V.bcmap                            0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKdlb-B5-V.bcmap                            0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKgccs-B5-V.bcmap                           0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKm314-B5-V.bcmap                           0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKm471-B5-V.bcmap                           0.14 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UCS2-V.bcmap                         0.15 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF16-V.bcmap                        0.15 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF8-V.bcmap                         0.15 kB
+.ssg-build/client/pdf-assets/cmaps/ETHK-B5-V.bcmap                             0.15 kB
+.ssg-build/client/pdf-assets/cmaps/ETen-B5-V.bcmap                             0.15 kB
+.ssg-build/client/pdf-assets/cmaps/HKscs-B5-V.bcmap                            0.15 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-V.bcmap                                 0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF32-V.bcmap                        0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-EUC-V.bcmap                             0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF16-V.bcmap                         0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-Johab-V.bcmap                           0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-V.bcmap                           0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSCpc-EUC-V.bcmap                           0.16 kB
+.ssg-build/client/pdf-assets/cmaps/V.bcmap                                     0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF32-V.bcmap                         0.16 kB
+.ssg-build/client/pdf-assets/cmaps/78-V.bcmap                                  0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-HW-V.bcmap                        0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF8-V.bcmap                          0.16 kB
+.ssg-build/client/pdf-assets/cmaps/EUC-V.bcmap                                 0.17 kB
+.ssg-build/client/pdf-assets/cmaps/RKSJ-V.bcmap                                0.17 kB
+.ssg-build/client/pdf-assets/cmaps/ETenms-B5-V.bcmap                           0.17 kB
+.ssg-build/client/pdf-assets/cmaps/78-EUC-V.bcmap                              0.17 kB
+.ssg-build/client/pdf-assets/cmaps/78-RKSJ-V.bcmap                             0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GB-V.bcmap                                  0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-V.bcmap                                 0.17 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF16-V.bcmap                         0.17 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UCS2-V.bcmap                          0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GB-EUC-V.bcmap                              0.17 kB
+.ssg-build/client/pdf-assets/cmaps/WP-Symbol.bcmap                             0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GBK-EUC-V.bcmap                             0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-EUC-V.bcmap                             0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBKp-EUC-V.bcmap                            0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBpc-EUC-V.bcmap                            0.18 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF8-V.bcmap                          0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBTpc-EUC-V.bcmap                           0.18 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF32-V.bcmap                         0.18 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UCS2-V.bcmap                          0.19 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-V.bcmap                                 0.21 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-0.bcmap                           0.21 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-RKSJ-V.bcmap                            0.21 kB
+.ssg-build/client/pdf-assets/cmaps/GBK2K-V.bcmap                               0.21 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-0.bcmap                        0.22 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-1.bcmap                        0.22 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-2.bcmap                        0.23 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-0.bcmap                        0.24 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-3.bcmap                        0.24 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-1.bcmap                           0.25 kB
+.ssg-build/client/pdf-assets/cmaps/NWP-V.bcmap                                 0.25 kB
+.ssg-build/client/pdf-assets/cmaps/90pv-RKSJ-V.bcmap                           0.26 kB
+.ssg-build/client/pdf-assets/cmaps/Add-V.bcmap                                 0.28 kB
+.ssg-build/client/pdf-assets/cmaps/Add-RKSJ-V.bcmap                            0.28 kB
+.ssg-build/client/pdf-assets/cmaps/78ms-RKSJ-V.bcmap                           0.29 kB
+.ssg-build/client/pdf-assets/cmaps/90ms-RKSJ-V.bcmap                           0.29 kB
+.ssg-build/client/pdf-assets/cmaps/90msp-RKSJ-V.bcmap                          0.29 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-0.bcmap                          0.31 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-4.bcmap                        0.33 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-1.bcmap                          0.37 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-2.bcmap                          0.37 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-1.bcmap                        0.38 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-2.bcmap                        0.39 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-3.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-4.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-5.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-6.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-5.bcmap                        0.43 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-2.bcmap                           0.46 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-3.bcmap                           0.47 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-6.bcmap                        0.48 kB
+.ssg-build/client/pdf-assets/cmaps/CNS2-H.bcmap                                0.50 kB
+.ssg-build/client/pdf-assets/cmaps/GB-H.bcmap                                  0.52 kB
+.ssg-build/client/pdf-assets/cmaps/RKSJ-H.bcmap                                0.53 kB
+.ssg-build/client/pdf-assets/cmaps/GB-EUC-H.bcmap                              0.54 kB
+.ssg-build/client/pdf-assets/cmaps/H.bcmap                                     0.55 kB
+.ssg-build/client/pdf-assets/cmaps/GBpc-EUC-H.bcmap                            0.55 kB
+.ssg-build/client/pdf-assets/cmaps/EUC-H.bcmap                                 0.57 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-4.bcmap                           0.60 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-5.bcmap                           0.62 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF16-V.bcmap                        0.64 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF16-V.bcmap                    0.64 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-V.bcmap                         0.66 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF32-V.bcmap                        0.67 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF8-V.bcmap                         0.67 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-HW-V.bcmap                      0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF32-V.bcmap                    0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF8-V.bcmap                     0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX0213-UTF32-V.bcmap                   0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX02132004-UTF32-V.bcmap               0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISPro-UCS2-V.bcmap                      0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISPro-UCS2-HW-V.bcmap                   0.70 kB
+.ssg-build/client/pdf-assets/cmaps/CNS1-H.bcmap                                0.70 kB
+.ssg-build/client/pdf-assets/cmaps/90msp-RKSJ-H.bcmap                          0.71 kB
+.ssg-build/client/pdf-assets/cmaps/90ms-RKSJ-H.bcmap                           0.72 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISPro-UTF8-V.bcmap                      0.72 kB
+.ssg-build/client/pdf-assets/cmaps/83pv-RKSJ-H.bcmap                           0.90 kB
+.ssg-build/client/pdf-assets/cmaps/90pv-RKSJ-H.bcmap                           0.98 kB
+.ssg-build/client/assets/textDiff.worker-BDjx5y31.js                           1.07 kB
+.ssg-build/client/pdf-assets/cmaps/B5-H.bcmap                                  1.08 kB
+.ssg-build/client/pdf-assets/cmaps/B5pc-H.bcmap                                1.09 kB
+.ssg-build/client/pdf-assets/cmaps/ETen-B5-H.bcmap                             1.12 kB
+.ssg-build/client/index.html                                                   1.54 kB │ gzip:   0.78 kB
+.ssg-build/client/pdf-assets/cmaps/HKm314-B5-H.bcmap                           1.77 kB
+.ssg-build/client/pdf-assets/cmaps/CNS-EUC-H.bcmap                             1.78 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-H.bcmap                                 1.83 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-EUC-H.bcmap                             1.84 kB
+.ssg-build/client/pdf-assets/cmaps/CNS-EUC-V.bcmap                             1.92 kB
+.ssg-build/client/pdf-assets/cmaps/KSCpc-EUC-H.bcmap                           2.02 kB
+.ssg-build/client/pdf-assets/cmaps/HKm471-B5-H.bcmap                           2.17 kB
+.ssg-build/client/pdf-assets/cmaps/HKgccs-B5-H.bcmap                           2.29 kB
+.ssg-build/client/pdf-assets/cmaps/78-H.bcmap                                  2.37 kB
+.ssg-build/client/pdf-assets/cmaps/78-RKSJ-H.bcmap                             2.39 kB
+.ssg-build/client/pdf-assets/cmaps/78-EUC-H.bcmap                              2.40 kB
+.ssg-build/client/pdf-assets/cmaps/Add-RKSJ-H.bcmap                            2.41 kB
+.ssg-build/client/pdf-assets/cmaps/HKdlb-B5-H.bcmap                            2.41 kB
+.ssg-build/client/pdf-assets/cmaps/Add-H.bcmap                                 2.41 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-H.bcmap                                 2.53 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-RKSJ-H.bcmap                            2.54 kB
+.ssg-build/client/pdf-assets/cmaps/78ms-RKSJ-H.bcmap                           2.65 kB
+.ssg-build/client/pdf-assets/cmaps/HKdla-B5-H.bcmap                            2.65 kB
+.ssg-build/client/pdf-assets/cmaps/NWP-H.bcmap                                 2.76 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-H.bcmap                           2.78 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-HW-H.bcmap                        2.78 kB
+.ssg-build/client/pdf-assets/cmaps/ETHK-B5-H.bcmap                             4.42 kB
+.ssg-build/client/assets/textWorkbench.worker-dGOF3Nya.js                      4.43 kB
+.ssg-build/client/pdf-assets/cmaps/HKscs-B5-H.bcmap                            4.43 kB
+.ssg-build/client/assets/imageCrop.worker-DKZFBYAg.js                          6.72 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-H.bcmap                                 7.26 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-EUC-H.bcmap                             7.29 kB
+.ssg-build/client/pdf-assets/cmaps/GBTpc-EUC-H.bcmap                           7.29 kB
+.ssg-build/client/pdf-assets/iccs/CGATS001Compat-v2-micro.icc                  8.46 kB
+.ssg-build/client/pdf-assets/cmaps/GBKp-EUC-H.bcmap                           14.68 kB
+.ssg-build/client/pdf-assets/cmaps/GBK-EUC-H.bcmap                            14.69 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSymbol.pfb                   16.72 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-Johab-H.bcmap                          16.79 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixed.pfb                    17.59 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixedBold.pfb                18.05 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixedItalic.pfb              18.74 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixedBoldItalic.pfb          19.15 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerifBold.pfb                19.39 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerif.pfb                    19.46 kB
+.ssg-build/client/pdf-assets/cmaps/GBK2K-H.bcmap                              19.66 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerifBoldItalic.pfb          20.73 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerifItalic.pfb              21.22 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-UCS2.bcmap                    23.29 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-H.bcmap                        25.43 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UCS2-H.bcmap                         25.78 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF16-H.bcmap                        26.32 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF32-H.bcmap                        26.45 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF8-H.bcmap                         27.79 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitDingbats.pfb                 29.51 kB
+.ssg-build/client/.vite/ssr-manifest.json                                     32.32 kB │ gzip:   3.07 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-UCS2.bcmap                       33.97 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF16-H.bcmap                       39.44 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF16-H.bcmap                   39.53 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX0213-UTF32-H.bcmap                  40.51 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF32-H.bcmap                       40.53 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX02132004-UTF32-H.bcmap              40.60 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF32-H.bcmap                   40.63 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-UCS2.bcmap                    40.95 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-UCS2.bcmap                      41.19 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF8-H.bcmap                        41.69 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF8-H.bcmap                    41.77 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UCS2-H.bcmap                         43.36 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF16-H.bcmap                        44.08 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF32-H.bcmap                        45.73 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF8-H.bcmap                         46.83 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UCS2-H.bcmap                        48.28 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF16-H.bcmap                       50.41 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF32-H.bcmap                       52.67 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF8-H.bcmap                        53.62 kB
+.ssg-build/client/pdf-assets/wasm/qcms_bg.wasm                                96.58 kB │ gzip:  36.09 kB
+.ssg-build/client/assets/jsonYaml.worker-Cw9imhi6.js                          99.54 kB
+.ssg-build/client/assets/imageConvert.worker-DEptmJWw.js                     103.62 kB
+.ssg-build/client/pdf-assets/wasm/jbig2.wasm                                 103.67 kB │ gzip:  41.64 kB
+.ssg-build/client/pdf-assets/wasm/jbig2_nowasm_fallback.js                   132.43 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-BoldItalic.ttf    135.12 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-Bold.ttf          137.05 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-Regular.ttf       139.51 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-Italic.ttf        162.03 kB
+.ssg-build/client/pdf-assets/wasm/openjpeg.wasm                              220.81 kB │ gzip:  71.92 kB
+.ssg-build/client/assets/docx.worker-BYOy2Okc.js                             315.48 kB
+.ssg-build/client/pdf-assets/wasm/openjpeg_nowasm_fallback.js                338.45 kB
+.ssg-build/client/assets/pdfMerge.worker-BLOmRTjN.js                         424.15 kB
+.ssg-build/client/assets/pdfOrganizer.worker-BHHalFvu.js                     425.02 kB
+.ssg-build/client/assets/pdfSplit.worker-BjP9wDNk.js                         425.21 kB
+.ssg-build/client/assets/imagesToPdf.worker-BPSTERK7.js                      426.96 kB
+.ssg-build/client/assets/pdfPreview.worker-Bh4UlBTe.js                     1,200.77 kB
+.ssg-build/client/assets/PdfMergePage-yT7FtkjS.css                             0.36 kB │ gzip:   0.20 kB
+.ssg-build/client/assets/CategoryPage-V2rYvaiE.css                             0.57 kB │ gzip:   0.24 kB
+.ssg-build/client/assets/PdfSplitPage-BRJ-zUu3.css                             0.68 kB │ gzip:   0.33 kB
+.ssg-build/client/assets/TotpPage-90WjePXy.css                                 0.88 kB │ gzip:   0.41 kB
+.ssg-build/client/assets/DiffTable-B8zPmwGX.css                                0.92 kB │ gzip:   0.39 kB
+.ssg-build/client/assets/WordToPdfPage-BBwsFYsO.css                            1.05 kB │ gzip:   0.48 kB
+.ssg-build/client/assets/CsvJsonPage-Bit-kk40.css                              1.10 kB │ gzip:   0.47 kB
+.ssg-build/client/assets/TextCleanupPage-UArNQbDU.css                          1.10 kB │ gzip:   0.47 kB
+.ssg-build/client/assets/ImagesToPdfPage-CG9wnID4.css                          1.13 kB │ gzip:   0.43 kB
+.ssg-build/client/assets/DateCalculatorPage-DQ7KozLo.css                       1.20 kB │ gzip:   0.48 kB
+.ssg-build/client/assets/JsonYamlPage-x-uoxTYY.css                             1.24 kB │ gzip:   0.50 kB
+.ssg-build/client/assets/LocalToolEditor-dnVJzCjg.css                          1.42 kB │ gzip:   0.54 kB
+.ssg-build/client/assets/PdfOrganizerPage-Dw4DPzzW.css                         1.55 kB │ gzip:   0.60 kB
+.ssg-build/client/assets/TextDiffPage-DayBnYB5.css                             1.64 kB │ gzip:   0.61 kB
+.ssg-build/client/assets/ToolPageLayout-DLcL-paU.css                           1.66 kB │ gzip:   0.55 kB
+.ssg-build/client/assets/ToolCard-MR7Dq_fB.css                                 1.67 kB │ gzip:   0.62 kB
+.ssg-build/client/assets/ImageConvertPage-D5NwVmqR.css                         1.98 kB │ gzip:   0.67 kB
+.ssg-build/client/assets/TextWorkbenchPage-GcJH4QFl.css                        2.52 kB │ gzip:   0.81 kB
+.ssg-build/client/assets/ImageCropPage-Ckll9jMm.css                            2.78 kB │ gzip:   0.95 kB
+.ssg-build/client/assets/UrlEncoderPage-Ce0VOWHr.css                           4.30 kB │ gzip:   1.18 kB
+.ssg-build/client/assets/JsonFormatterPage-BY8oimnM.css                        4.30 kB │ gzip:   1.18 kB
+.ssg-build/client/assets/HomeView-CmcwXNX2.css                                 4.33 kB │ gzip:   1.17 kB
+.ssg-build/client/assets/TextStatisticsPage-Cxg49-bx.css                       4.60 kB │ gzip:   1.09 kB
+.ssg-build/client/assets/index-BdMecmUv.css                                    6.83 kB │ gzip:   2.13 kB
+.ssg-build/client/assets/interactionReady-Bz8OmTHO.js                          0.04 kB │ gzip:   0.06 kB
+.ssg-build/client/assets/_plugin-vue_export-helper-BDNMzG2s.js                 0.08 kB │ gzip:   0.09 kB
+.ssg-build/client/assets/site-iaprMCuJ.js                                      0.16 kB │ gzip:   0.16 kB
+.ssg-build/client/assets/pdfLimits-B8-1c7wL.js                                 0.45 kB │ gzip:   0.36 kB
+.ssg-build/client/assets/NotFoundPage-Bx4acRbZ.js                              0.74 kB │ gzip:   0.48 kB
+.ssg-build/client/assets/CategoryPage-VsqdJ9V2.js                              1.23 kB │ gzip:   0.74 kB
+.ssg-build/client/assets/UuidPage-trOsJI8_.js                                  1.36 kB │ gzip:   0.93 kB
+.ssg-build/client/assets/imageConvert-CkUfKYUU.js                              1.46 kB │ gzip:   0.99 kB
+.ssg-build/client/assets/preload-helper-BLdHbfdN.js                            1.51 kB │ gzip:   0.79 kB
+.ssg-build/client/assets/DiffTable-BUG6BBgb.js                                 1.87 kB │ gzip:   1.14 kB
+.ssg-build/client/assets/Base64Page-Dy9JS5zI.js                                1.89 kB │ gzip:   1.21 kB
+.ssg-build/client/assets/ContactPage-BiF3Z17-.js                               1.89 kB │ gzip:   1.24 kB
+.ssg-build/client/assets/ToolCard-YlbgXjom.js                                  1.91 kB │ gzip:   1.12 kB
+.ssg-build/client/assets/AboutPage-Cw2S3dYo.js                                 2.62 kB │ gzip:   1.68 kB
+.ssg-build/client/assets/TermsPage-ByG9FoPL.js                                 2.71 kB │ gzip:   1.78 kB
+.ssg-build/client/assets/TimestampPage-bt0lvvPj.js                             3.02 kB │ gzip:   1.59 kB
+.ssg-build/client/assets/LocalToolEditor-p_LTiLJK.js                           3.31 kB │ gzip:   1.72 kB
+.ssg-build/client/assets/PdfMergePage-BEiXT4KB.js                              3.78 kB │ gzip:   2.08 kB
+.ssg-build/client/assets/HomeView-zmQIt8Z1.js                                  4.20 kB │ gzip:   2.24 kB
+.ssg-build/client/assets/tools-D5Md0p6j.js                                     4.40 kB │ gzip:   1.86 kB
+.ssg-build/client/assets/PrivacyPage-CBFxffGB.js                               5.36 kB │ gzip:   3.00 kB
+.ssg-build/client/assets/TextDiffPage-BGrTyAnT.js                              5.59 kB │ gzip:   2.81 kB
+.ssg-build/client/assets/TextStatisticsPage-DRT4mG2f.js                        5.66 kB │ gzip:   2.94 kB
+.ssg-build/client/assets/UrlEncoderPage-ojk7xLK2.js                            5.94 kB │ gzip:   2.88 kB
+.ssg-build/client/assets/ImageConvertPage-Cm-6HmpB.js                          6.16 kB │ gzip:   3.20 kB
+.ssg-build/client/assets/ImagesToPdfPage-Bh7Zvhtp.js                           6.17 kB │ gzip:   3.19 kB
+.ssg-build/client/assets/DateCalculatorPage-C_zGpVhP.js                        6.50 kB │ gzip:   2.94 kB
+.ssg-build/client/assets/WordToPdfPage-Ckay_KML.js                             6.61 kB │ gzip:   3.59 kB
+.ssg-build/client/assets/TextCleanupPage-DfK1bLlv.js                           6.87 kB │ gzip:   3.05 kB
+.ssg-build/client/assets/JsonFormatterPage-BOdNt2qJ.js                         7.09 kB │ gzip:   3.32 kB
+.ssg-build/client/assets/PdfSplitPage-BQnBEgF7.js                              7.17 kB │ gzip:   3.59 kB
+.ssg-build/client/assets/CsvJsonPage-Czns6n19.js                               7.53 kB │ gzip:   3.63 kB
+.ssg-build/client/assets/pages-SEA85xkx.js                                     8.02 kB │ gzip:   3.42 kB
+.ssg-build/client/assets/TotpPage-Dee8oCZB.js                                  8.59 kB │ gzip:   4.25 kB
+.ssg-build/client/assets/PdfOrganizerPage-CjRSiuFG.js                         10.03 kB │ gzip:   4.55 kB
+.ssg-build/client/assets/runtime-dom.esm-bundler-COrmyISh.js                  10.56 kB │ gzip:   4.54 kB
+.ssg-build/client/assets/TextWorkbenchPage-CLPq52-y.js                        10.92 kB │ gzip:   4.65 kB
+.ssg-build/client/assets/ImageCropPage-MSVSpFY-.js                            13.42 kB │ gzip:   6.03 kB
+.ssg-build/client/assets/index-JpnEsJPQ.js                                    20.07 kB │ gzip:   7.55 kB
+.ssg-build/client/assets/ToolPageLayout-CdobYzmI.js                           33.18 kB │ gzip:  14.08 kB
+.ssg-build/client/assets/JsonYamlPage-4v7WyDko.js                             35.10 kB │ gzip:  13.83 kB
+.ssg-build/client/assets/vue-router-3UNMMqEs.js                               98.33 kB │ gzip:  38.39 kB
+.ssg-build/client/assets/pdfPreview-D7nhrprL.js                              447.05 kB │ gzip: 134.75 kB
+
+✓ built in 661ms
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../types/seo" without a file extension (src/utils/seoEnvironment.ts:2:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seo.ts:4:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seo.ts:5:37). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 151 modules transformed.
+rendering chunks...
+computing gzip size...
+.ssg-build/server/assets/pdfLimits-DTz1_Tqd.js            0.67 kB │ gzip:  0.45 kB
+.ssg-build/server/assets/NotFoundPage-DhXjDGCo.js         2.19 kB │ gzip:  0.85 kB
+.ssg-build/server/assets/imageConvert-vo_gyyQ6.js         2.22 kB │ gzip:  1.21 kB
+.ssg-build/server/assets/CategoryPage-CqHzc3vx.js         2.73 kB │ gzip:  1.11 kB
+.ssg-build/server/assets/ContactPage-q4fvNbYD.js          3.11 kB │ gzip:  1.63 kB
+.ssg-build/server/assets/UuidPage-DfVOyw71.js             3.38 kB │ gzip:  1.42 kB
+.ssg-build/server/assets/DiffTable-vs2nD3a8.js            3.57 kB │ gzip:  1.57 kB
+.ssg-build/server/assets/TermsPage-CcLhysrh.js            3.98 kB │ gzip:  2.17 kB
+.ssg-build/server/assets/ToolCard-gu-ivJfo.js             4.05 kB │ gzip:  1.63 kB
+.ssg-build/server/assets/AboutPage-Bp14ILkX.js            4.26 kB │ gzip:  2.06 kB
+.ssg-build/server/assets/LocalToolEditor-CFZHDwZB.js      4.29 kB │ gzip:  1.65 kB
+.ssg-build/server/assets/Base64Page-BQC0MsfE.js           5.28 kB │ gzip:  1.88 kB
+.ssg-build/server/assets/pdfPreview-Dtc4odOk.js           5.97 kB │ gzip:  2.18 kB
+.ssg-build/server/assets/HomeView-DqTatB9c.js             6.55 kB │ gzip:  2.57 kB
+.ssg-build/server/assets/PrivacyPage-CROBpoEk.js          6.60 kB │ gzip:  3.36 kB
+.ssg-build/server/assets/UrlEncoderPage-BbMWwtB6.js       7.59 kB │ gzip:  2.71 kB
+.ssg-build/server/assets/JsonFormatterPage-D83Z-5xR.js    7.90 kB │ gzip:  2.74 kB
+.ssg-build/server/assets/TextStatisticsPage-l-1L4eAA.js   8.79 kB │ gzip:  3.25 kB
+.ssg-build/server/assets/TimestampPage-InhuM0Q3.js        9.14 kB │ gzip:  2.53 kB
+.ssg-build/server/assets/PdfMergePage-CXhqVswI.js         9.76 kB │ gzip:  3.18 kB
+.ssg-build/server/assets/TotpPage-DBX_RriQ.js            10.97 kB │ gzip:  4.10 kB
+.ssg-build/server/assets/JsonYamlPage-nklQ1X-q.js        13.10 kB │ gzip:  4.27 kB
+.ssg-build/server/assets/TextDiffPage-Bu2FBMJR.js        14.34 kB │ gzip:  4.11 kB
+.ssg-build/server/assets/WordToPdfPage-TW8Jlqes.js       14.64 kB │ gzip:  4.98 kB
+.ssg-build/server/assets/ImagesToPdfPage-DRBoIBvO.js     15.19 kB │ gzip:  4.66 kB
+.ssg-build/server/assets/DateCalculatorPage-8HCTYV61.js  15.31 kB │ gzip:  4.34 kB
+.ssg-build/server/assets/TextCleanupPage-C0Ch-ei4.js     15.53 kB │ gzip:  4.45 kB
+.ssg-build/server/assets/CsvJsonPage-C2MGnn1P.js         15.86 kB │ gzip:  5.10 kB
+.ssg-build/server/assets/ImageConvertPage-CJjs99Ck.js    16.66 kB │ gzip:  4.82 kB
+.ssg-build/server/assets/PdfSplitPage-D8pGzuP7.js        17.33 kB │ gzip:  5.16 kB
+.ssg-build/server/assets/PdfOrganizerPage-CFL0HyEI.js    24.07 kB │ gzip:  6.41 kB
+.ssg-build/server/assets/TextWorkbenchPage-DEtw-fyV.js   27.94 kB │ gzip:  6.78 kB
+.ssg-build/server/assets/ImageCropPage-Cp_yyprW.js       31.98 kB │ gzip:  8.55 kB
+.ssg-build/server/assets/ToolPageLayout-CbYiSx33.js      37.55 kB │ gzip: 14.86 kB
+.ssg-build/server/entry-server.js                        42.01 kB │ gzip: 12.63 kB
+
+✓ built in 92ms
+SSG成功：index.html, office/image-crop/index.html, office/pdf-organizer/index.html, office/text-workbench/index.html, office/text-diff/index.html, developer/json-yaml/index.html, office/image-convert/index.html, office/images-to-pdf/index.html, office/date-calculator/index.html, office/pdf-merge/index.html, office/word-to-pdf/index.html, office/pdf-split/index.html, office/text-cleanup/index.html, office/csv-json/index.html, office/index.html, office/text-statistics/index.html, developer/index.html, developer/json-formatter/index.html, developer/url-encoder/index.html, developer/2fa/index.html, developer/base64/index.html, developer/timestamp/index.html, developer/uuid/index.html, about/index.html, contact/index.html, terms/index.html, privacy/index.html, 404.html
+[WebServer] (node:6445) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+[WebServer]   - import "../types/seo" without a file extension (src/utils/seoEnvironment.ts:2:37). Add the file extension
+[WebServer]   - import "../types/seo" without a file extension (src/utils/seo.ts:4:37). Add the file extension
+[WebServer]   - import "../types/seo" without a file extension (src/utils/seo.ts:5:37). Add the file extension
+[WebServer] Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+
+Running 810 tests using 1 worker
+
+(node:6446) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/810] [chromium] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 375
+[2/810] [chromium] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 768
+[3/810] [chromium] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 1440
+[4/810] [chromium] › e2e/additional-tools.spec.ts:36:1 › 新增工具键盘与复制失败提示、离页清空
+[5/810] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 375
+[6/810] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 1440
+[7/810] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 375
+[8/810] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 1440
+[9/810] [chromium] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 375
+[10/810] [chromium] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 768
+[11/810] [chromium] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 1440
+[12/810] [chromium] › e2e/csv-json.spec.ts:43:1 › TABLE 键盘/组合输入、超限、复制失败与离页清理
+[13/810] [chromium] › e2e/csv-json.spec.ts:66:1 › TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求
+[14/810] [chromium] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 375
+[15/810] [chromium] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 768
+[16/810] [chromium] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 1440
+[17/810] [chromium] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 UTC
+[18/810] [chromium] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 America/Los_Angeles
+[19/810] [chromium] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 Asia/Shanghai
+[20/810] [chromium] › e2e/date-calculator.spec.ts:30:1 › DATE 首页搜索及办公分类接入
+[21/810] [chromium] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 375
+[22/810] [chromium] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375
+[23/810] [chromium] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 768
+[24/810] [chromium] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 768
+[25/810] [chromium] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 1440
+[26/810] [chromium] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 1440
+[27/810] [chromium] › e2e/document-tools.spec.ts:70:1 › DOC-LOCAL 敏感文档边界双向整页隔离及搜索入口
+[28/810] [chromium] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 375
+[29/810] [chromium] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 768
+[30/810] [chromium] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 1440
+[31/810] [chromium] › e2e/home-cleanup.spec.ts:13:1 › HOME 全14旧工具书签精确跳转，清理query/hash并使用目标SSG
+[32/810] [chromium] › e2e/home-cleanup.spec.ts:21:1 › HOME 未知/畸形hash保留首页，分区锚点和非根路径不误转
+[33/810] [chromium] › e2e/home-cleanup.spec.ts:28:1 › HOME 已挂载后旧hash也整页替换，敏感页不继承文档，返回不落回旧hash
+[34/810] [chromium] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 375
+[35/810] [chromium] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 768
+[36/810] [chromium] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 1440
+[37/810] [chromium] › e2e/image-convert.spec.ts:42:1 › CONVERT 本地隐私、参数校验、取消和pagehide清理
+[38/810] [chromium] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 375
+[39/810] [chromium] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 768
+[40/810] [chromium] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 1440
+[41/810] [chromium] › e2e/image-crop.spec.ts:42:1 › CROP 透明、JPG白底、WebP能力、原图与预览分离
+[42/810] [chromium] › e2e/image-crop.spec.ts:51:1 › CROP EXIF八方向的原图坐标与导出像素一致
+[43/810] [chromium] › e2e/image-crop.spec.ts:68:1 › CROP 拒绝损坏、动画、超限与本地隔离、取消和离页
+[44/810] [chromium] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 375
+[45/810] [chromium] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 768
+[46/810] [chromium] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 1440
+[47/810] [chromium] › e2e/images-to-pdf.spec.ts:49:1 › IMG EXIF 1～8 实际 Worker 方向解码及透明白底输出
+[48/810] [chromium] › e2e/images-to-pdf.spec.ts:56:1 › IMG 敏感文档导航、隐私、取消及离页清理
+[49/810] [chromium] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 375
+[50/810] [chromium] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 768
+[51/810] [chromium] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 1440
+[52/810] [chromium] › e2e/json-yaml.spec.ts:27:1 › JY 独立文档隔离、复制失败与离页清理
+[53/810] [chromium] › e2e/json-yaml.spec.ts:42:1 › JY 输入限额、取消、过期消息与超时
+[54/810] [chromium] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 320
+[55/810] [chromium] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 375
+[56/810] [chromium] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 768
+[57/810] [chromium] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 1440
+[58/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[59/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 image-crop
+[60/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-organizer
+[61/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-workbench
+[62/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-diff
+[63/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-yaml
+[64/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 image-convert
+[65/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 images-to-pdf
+[66/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 date-calculator
+[67/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-merge
+[68/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 word-to-pdf
+[69/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-split
+[70/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-cleanup
+[71/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 csv-json
+[72/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[73/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[74/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[75/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[76/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[77/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 totp
+[78/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 base64
+[79/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 timestamp
+[80/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 uuid
+[81/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[82/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 contact
+[83/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 terms
+[84/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[85/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[86/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[87/810] [chromium] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[88/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[89/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO image-crop
+[90/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-organizer
+[91/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-workbench
+[92/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-diff
+[93/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-yaml
+[94/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO image-convert
+[95/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO images-to-pdf
+[96/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO date-calculator
+[97/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-merge
+[98/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO word-to-pdf
+[99/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-split
+[100/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-cleanup
+[101/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO csv-json
+[102/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[103/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[104/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[105/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[106/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[107/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO totp
+[108/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO base64
+[109/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO timestamp
+[110/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO uuid
+[111/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[112/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO contact
+[113/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO terms
+[114/810] [chromium] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[115/810] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[116/810] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[117/810] [chromium] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[118/810] [chromium] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[119/810] [chromium] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[120/810] [chromium] › e2e/pages.spec.ts:101:1 › E06 无斜杠308与旧hash
+[121/810] [chromium] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /missing/
+[122/810] [chromium] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /office/missing/
+[123/810] [chromium] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /developer/missing/
+[124/810] [chromium] › e2e/pages.spec.ts:135:1 › E08 实际静态资源与禁止泄漏文件
+[125/810] [chromium] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实jpx解码与同源资源
+[126/810] [chromium] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实cmyk解码与同源资源
+[127/810] [chromium] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实cmap解码与同源资源
+[128/810] [chromium] › e2e/pdf-organizer-resources.spec.ts:32:57 › ORG oversize明确预览失败、可重试、清空不留旧图
+[129/810] [chromium] › e2e/pdf-organizer-resources.spec.ts:32:57 › ORG broken-jpx明确预览失败、可重试、清空不留旧图
+[130/810] [chromium] › e2e/pdf-organizer-resources.spec.ts:46:1 › ORG 合法空白页保持可预览与导出，不用白色像素判失败
+[131/810] [chromium] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 375
+[132/810] [chromium] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 768
+[133/810] [chromium] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 1440
+[134/810] [chromium] › e2e/pdf-organizer.spec.ts:50:1 › ORG 搜索及独立文档、单页保护、损坏/超限拒绝与离页清理
+[135/810] [chromium] › e2e/pdf-organizer.spec.ts:68:1 › ORG 按需渲染、缓存URL释放与100页滚动
+[136/810] [chromium] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 375
+[137/810] [chromium] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 768
+[138/810] [chromium] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 1440
+[139/810] [chromium] › e2e/pdf-split.spec.ts:44:1 › SPLIT 首页搜索、独立敏感文档及重选失败清理
+[140/810] [chromium] › e2e/seo-growth.spec.ts:2:31 › SEO 站内推广顺序与搜索保留、分类和preview隔离 375
+[141/810] [chromium] › e2e/seo-growth.spec.ts:2:31 › SEO 站内推广顺序与搜索保留、分类和preview隔离 1440
+[142/810] [chromium] › e2e/tech-visual.spec.ts:3:2 › VIS039 light 375
+[143/810] [chromium] › e2e/tech-visual.spec.ts:3:2 › VIS039 light 1440
+[144/810] [chromium] › e2e/tech-visual.spec.ts:3:2 › VIS039 dark 375
+[145/810] [chromium] › e2e/tech-visual.spec.ts:3:2 › VIS039 dark 1440
+[146/810] [chromium] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 375
+[147/810] [chromium] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 768
+[148/810] [chromium] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 1440
+[149/810] [chromium] › e2e/text-cleanup.spec.ts:47:1 › CLEAN 键盘、超限与复制失败、离页清理及搜索入口
+[150/810] [chromium] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 375
+[151/810] [chromium] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 768
+[152/810] [chromium] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 1440
+[153/810] [chromium] › e2e/text-diff.spec.ts:24:1 › DIFF 上限、复制失败及敏感文档/存储清理
+[154/810] [chromium] › e2e/text-diff.spec.ts:40:1 › DIFF 取消、修改输入后旧消息无效及超时
+[155/810] [chromium] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 375
+[156/810] [chromium] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 768
+[157/810] [chromium] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 1440
+[158/810] [chromium] › e2e/text-workbench.spec.ts:23:1 › WORKFLOW 中间超限原子失败、复制失败及隐私清理
+[159/810] [chromium] › e2e/text-workbench.spec.ts:37:1 › WORKFLOW 取消、配置变更后的迟到消息与超时
+[160/810] [chromium] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[161/810] [chromium] › e2e/tools.spec.ts:33:1 › E05 JSON格式压缩语法与安全边界
+[162/810] [chromium] › e2e/tools.spec.ts:74:1 › E05 URL两模式四操作单轮与错误恢复
+[163/810] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 text
+[164/810] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 json
+[165/810] [chromium] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 url
+[166/810] [chromium] › e2e/tools.spec.ts:174:1 › E09 键盘跳转焦点与基础语义
+[167/810] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 375
+[168/810] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 768
+[169/810] [chromium] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 1440
+[170/810] [chromium] › e2e/tools.spec.ts:227:5 › E10 locale en-US › E10 固定数字展示
+[171/810] [chromium] › e2e/tools.spec.ts:227:5 › E10 locale zh-CN › E10 固定数字展示
+[172/810] [chromium] › e2e/tools.spec.ts:239:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+[173/810] [chromium] › e2e/totp.spec.ts:3:1 › TOTP 标准时间向量、遮挡、校验与清空
+[174/810] [chromium] › e2e/totp.spec.ts:25:1 › TOTP 跨页导航隔离文档且返回不保留密钥
+[175/810] [chromium] › e2e/totp.spec.ts:48:1 › TOTP 安全计算不可用仍保留输入并提示
+[176/810] [chromium] › e2e/totp.spec.ts:59:1 › TOTP 导入链接识别参数，失败保留及清空
+[177/810] [chromium] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 375
+[178/810] [chromium] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 768
+[179/810] [chromium] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 1440
+[180/810] [chromium] › e2e/trust-pages.spec.ts:24:1 › 四页页脚入口可键盘聚焦并打开
+[181/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 320
+[182/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 375
+[183/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 390
+[184/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 430
+[185/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 768
+[186/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1024
+[187/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1280
+[188/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1440
+[189/810] [chromium] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1920
+[190/810] [chromium] › e2e/ui-layout.spec.ts:42:1 › UI-B1 跳转焦点及视口重排保持工具输入
+[191/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 320
+[192/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 375
+[193/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 390
+[194/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 430
+[195/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 768
+[196/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1024
+[197/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1280
+[198/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1440
+[199/810] [chromium] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1920
+[200/810] [chromium] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 text
+[201/810] [chromium] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 json
+[202/810] [chromium] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 url
+[203/810] [chromium] › e2e/ui-layout.spec.ts:148:1 › UI-B2 键盘焦点截图
+[204/810] [chromium] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 320
+[205/810] [chromium] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 375
+[206/810] [chromium] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 390
+[207/810] [chromium] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 430
+[208/810] [chromium] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 1440
+[209/810] [chromium] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 1920
+[210/810] [chromium] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 320
+[211/810] [chromium] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 375
+[212/810] [chromium] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 390
+[213/810] [chromium] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 430
+[214/810] [chromium] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 1440
+[215/810] [chromium] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 1920
+[216/810] [chromium] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 320
+[217/810] [chromium] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 375
+[218/810] [chromium] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 390
+[219/810] [chromium] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 430
+[220/810] [chromium] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 1440
+[221/810] [chromium] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 1920
+[222/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 320
+[223/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 320
+[224/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 375
+[225/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 375
+[226/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 390
+[227/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 390
+[228/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 430
+[229/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 430
+[230/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 639
+[231/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 639
+[232/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 640
+[233/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 640
+[234/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 768
+[235/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 768
+[236/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 820
+[237/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 820
+[238/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 959
+[239/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 959
+[240/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 960
+[241/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 960
+[242/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1024
+[243/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1024
+[244/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1199
+[245/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1199
+[246/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1200
+[247/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1200
+[248/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1440
+[249/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1440
+[250/810] [chromium] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1920
+[251/810] [chromium] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1920
+[252/810] [chromium] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 375
+[253/810] [chromium] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 375
+[254/810] [chromium] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 768
+[255/810] [chromium] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 768
+[256/810] [chromium] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 1440
+[257/810] [chromium] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 1440
+[258/810] [chromium] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 375
+[259/810] [chromium] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 375
+[260/810] [chromium] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 768
+[261/810] [chromium] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 768
+[262/810] [chromium] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 1440
+[263/810] [chromium] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 1440
+[264/810] [chromium] › e2e/ui-refinement.spec.ts:40:1 › UI2 长名称和200%字号重排，无截断或横向滚动
+[265/810] [chromium] › e2e/ui-refinement.spec.ts:49:1 › UI3 分类目录无重复底部入口，工具列表保留
+[266/810] [chromium] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 375
+[267/810] [chromium] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 768
+[268/810] [chromium] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 1440
+[269/810] [chromium] › e2e/ui-refinement.spec.ts:73:49 › UI5 手机紧凑导航与卡片键盘反馈 light
+[270/810] [chromium] › e2e/ui-refinement.spec.ts:73:49 › UI5 手机紧凑导航与卡片键盘反馈 dark
+(node:6816) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[271/810] [firefox] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 375
+[272/810] [firefox] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 768
+[273/810] [firefox] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 1440
+[274/810] [firefox] › e2e/additional-tools.spec.ts:36:1 › 新增工具键盘与复制失败提示、离页清空
+[275/810] [firefox] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 375
+[276/810] [firefox] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 1440
+[277/810] [firefox] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 375
+[278/810] [firefox] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 1440
+[279/810] [firefox] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 375
+[280/810] [firefox] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 768
+[281/810] [firefox] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 1440
+[282/810] [firefox] › e2e/csv-json.spec.ts:43:1 › TABLE 键盘/组合输入、超限、复制失败与离页清理
+[283/810] [firefox] › e2e/csv-json.spec.ts:66:1 › TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求
+[284/810] [firefox] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 375
+[285/810] [firefox] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 768
+[286/810] [firefox] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 1440
+[287/810] [firefox] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 UTC
+[288/810] [firefox] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 America/Los_Angeles
+[289/810] [firefox] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 Asia/Shanghai
+[290/810] [firefox] › e2e/date-calculator.spec.ts:30:1 › DATE 首页搜索及办公分类接入
+[291/810] [firefox] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 375
+[292/810] [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375
+  1) [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375 ────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })
+        - locator resolved to <button data-v-bbec516d="">打印 / 另存为 PDF</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+
+
+      53 |     window.addEventListener('afterprint', () => events.push('afterprint'))
+      54 |   })
+    > 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()
+         |                                                                   ^
+      56 |   await expect(page.getByRole('status')).toContainText('已请求打印')
+      57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')
+      58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)
+        at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:6875) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[293/810] [firefox] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 768
+[294/810] [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 768
+  2) [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 768 ────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })
+        - locator resolved to <button data-v-bbec516d="">打印 / 另存为 PDF</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+
+
+      53 |     window.addEventListener('afterprint', () => events.push('afterprint'))
+      54 |   })
+    > 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()
+         |                                                                   ^
+      56 |   await expect(page.getByRole('status')).toContainText('已请求打印')
+      57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')
+      58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)
+        at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-768-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-768-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-768-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-768-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:7003) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[295/810] [firefox] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 1440
+[296/810] [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 1440
+  3) [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 1440 ───────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })
+        - locator resolved to <button data-v-bbec516d="">打印 / 另存为 PDF</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+
+
+      53 |     window.addEventListener('afterprint', () => events.push('afterprint'))
+      54 |   })
+    > 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()
+         |                                                                   ^
+      56 |   await expect(page.getByRole('status')).toContainText('已请求打印')
+      57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')
+      58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)
+        at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-1440-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-1440-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-1440-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-1440-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:7029) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[297/810] [firefox] › e2e/document-tools.spec.ts:70:1 › DOC-LOCAL 敏感文档边界双向整页隔离及搜索入口
+[298/810] [firefox] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 375
+[299/810] [firefox] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 768
+[300/810] [firefox] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 1440
+[301/810] [firefox] › e2e/home-cleanup.spec.ts:13:1 › HOME 全14旧工具书签精确跳转，清理query/hash并使用目标SSG
+[302/810] [firefox] › e2e/home-cleanup.spec.ts:21:1 › HOME 未知/畸形hash保留首页，分区锚点和非根路径不误转
+[303/810] [firefox] › e2e/home-cleanup.spec.ts:28:1 › HOME 已挂载后旧hash也整页替换，敏感页不继承文档，返回不落回旧hash
+[304/810] [firefox] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 375
+[305/810] [firefox] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 768
+[306/810] [firefox] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 1440
+[307/810] [firefox] › e2e/image-convert.spec.ts:42:1 › CONVERT 本地隐私、参数校验、取消和pagehide清理
+[308/810] [firefox] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 375
+[309/810] [firefox] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 768
+[310/810] [firefox] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 1440
+[311/810] [firefox] › e2e/image-crop.spec.ts:42:1 › CROP 透明、JPG白底、WebP能力、原图与预览分离
+[312/810] [firefox] › e2e/image-crop.spec.ts:51:1 › CROP EXIF八方向的原图坐标与导出像素一致
+[313/810] [firefox] › e2e/image-crop.spec.ts:68:1 › CROP 拒绝损坏、动画、超限与本地隔离、取消和离页
+[314/810] [firefox] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 375
+[315/810] [firefox] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 768
+[316/810] [firefox] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 1440
+[317/810] [firefox] › e2e/images-to-pdf.spec.ts:49:1 › IMG EXIF 1～8 实际 Worker 方向解码及透明白底输出
+[318/810] [firefox] › e2e/images-to-pdf.spec.ts:56:1 › IMG 敏感文档导航、隐私、取消及离页清理
+[319/810] [firefox] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 375
+[320/810] [firefox] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 768
+[321/810] [firefox] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 1440
+[322/810] [firefox] › e2e/json-yaml.spec.ts:27:1 › JY 独立文档隔离、复制失败与离页清理
+[323/810] [firefox] › e2e/json-yaml.spec.ts:42:1 › JY 输入限额、取消、过期消息与超时
+[324/810] [firefox] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 320
+[325/810] [firefox] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 375
+[326/810] [firefox] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 768
+[327/810] [firefox] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 1440
+[328/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[329/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 image-crop
+[330/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-organizer
+[331/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-workbench
+[332/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-diff
+[333/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-yaml
+[334/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 image-convert
+[335/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 images-to-pdf
+[336/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 date-calculator
+[337/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-merge
+[338/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 word-to-pdf
+[339/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-split
+[340/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-cleanup
+[341/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 csv-json
+[342/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[343/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[344/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[345/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[346/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[347/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 totp
+[348/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 base64
+[349/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 timestamp
+[350/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 uuid
+[351/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[352/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 contact
+[353/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 terms
+[354/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[355/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[356/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[357/810] [firefox] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[358/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[359/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO image-crop
+[360/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-organizer
+[361/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-workbench
+[362/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-diff
+[363/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-yaml
+[364/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO image-convert
+[365/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO images-to-pdf
+[366/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO date-calculator
+[367/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-merge
+[368/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO word-to-pdf
+[369/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-split
+[370/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-cleanup
+[371/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO csv-json
+[372/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[373/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[374/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[375/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[376/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[377/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO totp
+[378/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO base64
+[379/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO timestamp
+[380/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO uuid
+[381/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[382/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO contact
+[383/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO terms
+[384/810] [firefox] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[385/810] [firefox] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[386/810] [firefox] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[387/810] [firefox] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[388/810] [firefox] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[389/810] [firefox] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[390/810] [firefox] › e2e/pages.spec.ts:101:1 › E06 无斜杠308与旧hash
+[391/810] [firefox] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /missing/
+[392/810] [firefox] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /office/missing/
+[393/810] [firefox] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /developer/missing/
+[394/810] [firefox] › e2e/pages.spec.ts:135:1 › E08 实际静态资源与禁止泄漏文件
+[395/810] [firefox] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实jpx解码与同源资源
+[396/810] [firefox] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实cmyk解码与同源资源
+[397/810] [firefox] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实cmap解码与同源资源
+[398/810] [firefox] › e2e/pdf-organizer-resources.spec.ts:32:57 › ORG oversize明确预览失败、可重试、清空不留旧图
+[399/810] [firefox] › e2e/pdf-organizer-resources.spec.ts:32:57 › ORG broken-jpx明确预览失败、可重试、清空不留旧图
+[400/810] [firefox] › e2e/pdf-organizer-resources.spec.ts:46:1 › ORG 合法空白页保持可预览与导出，不用白色像素判失败
+[401/810] [firefox] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 375
+[402/810] [firefox] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 768
+[403/810] [firefox] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 1440
+[404/810] [firefox] › e2e/pdf-organizer.spec.ts:50:1 › ORG 搜索及独立文档、单页保护、损坏/超限拒绝与离页清理
+[405/810] [firefox] › e2e/pdf-organizer.spec.ts:68:1 › ORG 按需渲染、缓存URL释放与100页滚动
+[406/810] [firefox] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 375
+[407/810] [firefox] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 768
+[408/810] [firefox] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 1440
+[409/810] [firefox] › e2e/pdf-split.spec.ts:44:1 › SPLIT 首页搜索、独立敏感文档及重选失败清理
+[410/810] [firefox] › e2e/seo-growth.spec.ts:2:31 › SEO 站内推广顺序与搜索保留、分类和preview隔离 375
+[411/810] [firefox] › e2e/seo-growth.spec.ts:2:31 › SEO 站内推广顺序与搜索保留、分类和preview隔离 1440
+[412/810] [firefox] › e2e/tech-visual.spec.ts:3:2 › VIS039 light 375
+[413/810] [firefox] › e2e/tech-visual.spec.ts:3:2 › VIS039 light 1440
+[414/810] [firefox] › e2e/tech-visual.spec.ts:3:2 › VIS039 dark 375
+[415/810] [firefox] › e2e/tech-visual.spec.ts:3:2 › VIS039 dark 1440
+[416/810] [firefox] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 375
+[417/810] [firefox] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 768
+[418/810] [firefox] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 1440
+[419/810] [firefox] › e2e/text-cleanup.spec.ts:47:1 › CLEAN 键盘、超限与复制失败、离页清理及搜索入口
+[420/810] [firefox] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 375
+[421/810] [firefox] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 768
+[422/810] [firefox] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 1440
+[423/810] [firefox] › e2e/text-diff.spec.ts:24:1 › DIFF 上限、复制失败及敏感文档/存储清理
+[424/810] [firefox] › e2e/text-diff.spec.ts:40:1 › DIFF 取消、修改输入后旧消息无效及超时
+[425/810] [firefox] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 375
+[426/810] [firefox] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 768
+[427/810] [firefox] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 1440
+[428/810] [firefox] › e2e/text-workbench.spec.ts:23:1 › WORKFLOW 中间超限原子失败、复制失败及隐私清理
+[429/810] [firefox] › e2e/text-workbench.spec.ts:37:1 › WORKFLOW 取消、配置变更后的迟到消息与超时
+[430/810] [firefox] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[431/810] [firefox] › e2e/tools.spec.ts:33:1 › E05 JSON格式压缩语法与安全边界
+[432/810] [firefox] › e2e/tools.spec.ts:74:1 › E05 URL两模式四操作单轮与错误恢复
+[433/810] [firefox] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 text
+[434/810] [firefox] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 json
+[435/810] [firefox] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 url
+[436/810] [firefox] › e2e/tools.spec.ts:174:1 › E09 键盘跳转焦点与基础语义
+[437/810] [firefox] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 375
+[438/810] [firefox] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 768
+[439/810] [firefox] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 1440
+[440/810] [firefox] › e2e/tools.spec.ts:227:5 › E10 locale en-US › E10 固定数字展示
+[441/810] [firefox] › e2e/tools.spec.ts:227:5 › E10 locale zh-CN › E10 固定数字展示
+[442/810] [firefox] › e2e/tools.spec.ts:239:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+[443/810] [firefox] › e2e/totp.spec.ts:3:1 › TOTP 标准时间向量、遮挡、校验与清空
+[444/810] [firefox] › e2e/totp.spec.ts:25:1 › TOTP 跨页导航隔离文档且返回不保留密钥
+[445/810] [firefox] › e2e/totp.spec.ts:48:1 › TOTP 安全计算不可用仍保留输入并提示
+[446/810] [firefox] › e2e/totp.spec.ts:59:1 › TOTP 导入链接识别参数，失败保留及清空
+[447/810] [firefox] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 375
+[448/810] [firefox] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 768
+[449/810] [firefox] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 1440
+[450/810] [firefox] › e2e/trust-pages.spec.ts:24:1 › 四页页脚入口可键盘聚焦并打开
+[451/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 320
+[452/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 375
+[453/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 390
+[454/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 430
+[455/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 768
+[456/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1024
+[457/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1280
+[458/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1440
+[459/810] [firefox] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1920
+[460/810] [firefox] › e2e/ui-layout.spec.ts:42:1 › UI-B1 跳转焦点及视口重排保持工具输入
+[461/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 320
+[462/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 375
+[463/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 390
+[464/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 430
+[465/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 768
+[466/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1024
+[467/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1280
+[468/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1440
+[469/810] [firefox] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1920
+[470/810] [firefox] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 text
+[471/810] [firefox] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 json
+[472/810] [firefox] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 url
+[473/810] [firefox] › e2e/ui-layout.spec.ts:148:1 › UI-B2 键盘焦点截图
+[474/810] [firefox] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 320
+[475/810] [firefox] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 375
+[476/810] [firefox] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 390
+[477/810] [firefox] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 430
+[478/810] [firefox] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 1440
+[479/810] [firefox] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 1920
+[480/810] [firefox] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 320
+[481/810] [firefox] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 375
+[482/810] [firefox] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 390
+[483/810] [firefox] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 430
+[484/810] [firefox] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 1440
+[485/810] [firefox] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 1920
+[486/810] [firefox] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 320
+[487/810] [firefox] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 375
+[488/810] [firefox] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 390
+[489/810] [firefox] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 430
+[490/810] [firefox] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 1440
+[491/810] [firefox] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 1920
+[492/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 320
+[493/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 320
+[494/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 375
+[495/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 375
+[496/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 390
+[497/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 390
+[498/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 430
+[499/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 430
+[500/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 639
+[501/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 639
+[502/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 640
+[503/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 640
+[504/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 768
+[505/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 768
+[506/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 820
+[507/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 820
+[508/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 959
+[509/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 959
+[510/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 960
+[511/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 960
+[512/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1024
+[513/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1024
+[514/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1199
+[515/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1199
+[516/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1200
+[517/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1200
+[518/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1440
+[519/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1440
+[520/810] [firefox] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1920
+[521/810] [firefox] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1920
+[522/810] [firefox] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 375
+[523/810] [firefox] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 375
+[524/810] [firefox] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 768
+[525/810] [firefox] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 768
+[526/810] [firefox] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 1440
+[527/810] [firefox] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 1440
+[528/810] [firefox] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 375
+[529/810] [firefox] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 375
+[530/810] [firefox] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 768
+[531/810] [firefox] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 768
+[532/810] [firefox] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 1440
+[533/810] [firefox] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 1440
+[534/810] [firefox] › e2e/ui-refinement.spec.ts:40:1 › UI2 长名称和200%字号重排，无截断或横向滚动
+[535/810] [firefox] › e2e/ui-refinement.spec.ts:49:1 › UI3 分类目录无重复底部入口，工具列表保留
+[536/810] [firefox] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 375
+[537/810] [firefox] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 768
+[538/810] [firefox] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 1440
+[539/810] [firefox] › e2e/ui-refinement.spec.ts:73:49 › UI5 手机紧凑导航与卡片键盘反馈 light
+[540/810] [firefox] › e2e/ui-refinement.spec.ts:73:49 › UI5 手机紧凑导航与卡片键盘反馈 dark
+(node:7447) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[541/810] [webkit] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 375
+[542/810] [webkit] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 768
+[543/810] [webkit] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 1440
+[544/810] [webkit] › e2e/additional-tools.spec.ts:36:1 › 新增工具键盘与复制失败提示、离页清空
+[545/810] [webkit] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 375
+[546/810] [webkit] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 1440
+[547/810] [webkit] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 375
+[548/810] [webkit] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 1440
+[549/810] [webkit] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 375
+[550/810] [webkit] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 768
+[551/810] [webkit] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 1440
+[552/810] [webkit] › e2e/csv-json.spec.ts:43:1 › TABLE 键盘/组合输入、超限、复制失败与离页清理
+[553/810] [webkit] › e2e/csv-json.spec.ts:66:1 › TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求
+[554/810] [webkit] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 375
+[555/810] [webkit] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 768
+[556/810] [webkit] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 1440
+[557/810] [webkit] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 UTC
+[558/810] [webkit] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 America/Los_Angeles
+[559/810] [webkit] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 Asia/Shanghai
+[560/810] [webkit] › e2e/date-calculator.spec.ts:30:1 › DATE 首页搜索及办公分类接入
+[561/810] [webkit] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 375
+[562/810] [webkit] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375
+[563/810] [webkit] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 768
+[564/810] [webkit] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 768
+[565/810] [webkit] › e2e/document-tools.spec.ts:11:2 › DOC-LOCAL PDF 合并真实 Worker 与下载 1440
+[566/810] [webkit] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 1440
+[567/810] [webkit] › e2e/document-tools.spec.ts:70:1 › DOC-LOCAL 敏感文档边界双向整页隔离及搜索入口
+[568/810] [webkit] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 375
+[569/810] [webkit] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 768
+[570/810] [webkit] › e2e/home-cleanup.spec.ts:6:35 › HOME 清理重复区域且保留普通入口 1440
+[571/810] [webkit] › e2e/home-cleanup.spec.ts:13:1 › HOME 全14旧工具书签精确跳转，清理query/hash并使用目标SSG
+[572/810] [webkit] › e2e/home-cleanup.spec.ts:21:1 › HOME 未知/畸形hash保留首页，分区锚点和非根路径不误转
+[573/810] [webkit] › e2e/home-cleanup.spec.ts:28:1 › HOME 已挂载后旧hash也整页替换，敏感页不继承文档，返回不落回旧hash
+[574/810] [webkit] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 375
+[575/810] [webkit] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 768
+[576/810] [webkit] › e2e/image-convert.spec.ts:4:35 › CONVERT 真实图片三格式、体积、ZIP与失效 1440
+[577/810] [webkit] › e2e/image-convert.spec.ts:42:1 › CONVERT 本地隐私、参数校验、取消和pagehide清理
+[578/810] [webkit] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 375
+[579/810] [webkit] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 768
+[580/810] [webkit] › e2e/image-crop.spec.ts:17:35 › CROP 原像素裁剪、比例、拖动和真实下载 1440
+[581/810] [webkit] › e2e/image-crop.spec.ts:42:1 › CROP 透明、JPG白底、WebP能力、原图与预览分离
+[582/810] [webkit] › e2e/image-crop.spec.ts:51:1 › CROP EXIF八方向的原图坐标与导出像素一致
+[583/810] [webkit] › e2e/image-crop.spec.ts:68:1 › CROP 拒绝损坏、动画、超限与本地隔离、取消和离页
+[584/810] [webkit] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 375
+[585/810] [webkit] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 768
+[586/810] [webkit] › e2e/images-to-pdf.spec.ts:34:35 › IMG 排序、参数、下载及白底 1440
+[587/810] [webkit] › e2e/images-to-pdf.spec.ts:49:1 › IMG EXIF 1～8 实际 Worker 方向解码及透明白底输出
+[588/810] [webkit] › e2e/images-to-pdf.spec.ts:56:1 › IMG 敏感文档导航、隐私、取消及离页清理
+[589/810] [webkit] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 375
+[590/810] [webkit] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 768
+[591/810] [webkit] › e2e/json-yaml.spec.ts:3:35 › JY 真实Worker双向转换、错误保留输入与界面 1440
+[592/810] [webkit] › e2e/json-yaml.spec.ts:27:1 › JY 独立文档隔离、复制失败与离页清理
+[593/810] [webkit] › e2e/json-yaml.spec.ts:42:1 › JY 输入限额、取消、过期消息与超时
+[594/810] [webkit] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 320
+[595/810] [webkit] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 375
+[596/810] [webkit] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 768
+[597/810] [webkit] › e2e/page-polish.spec.ts:3:2 › UI038 展示文案、布局与搜索 1440
+[598/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 home
+[599/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 image-crop
+[600/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-organizer
+[601/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-workbench
+[602/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-diff
+[603/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-yaml
+[604/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 image-convert
+[605/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 images-to-pdf
+[606/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 date-calculator
+[607/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-merge
+[608/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 word-to-pdf
+[609/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 pdf-split
+[610/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-cleanup
+[611/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 csv-json
+[612/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 office
+[613/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 text-statistics
+[614/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 developer
+[615/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 json-formatter
+[616/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 url-encoder
+[617/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 totp
+[618/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 base64
+[619/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 timestamp
+[620/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 uuid
+[621/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 about
+[622/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 contact
+[623/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 terms
+[624/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 privacy
+[625/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /missing/
+[626/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /office/missing/
+[627/810] [webkit] › e2e/pages.spec.ts:7:5 › E01 无JavaScript静态可读 › E01 /developer/missing/
+[628/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO home
+[629/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO image-crop
+[630/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-organizer
+[631/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-workbench
+[632/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-diff
+[633/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-yaml
+[634/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO image-convert
+[635/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO images-to-pdf
+[636/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO date-calculator
+[637/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-merge
+[638/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO word-to-pdf
+[639/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO pdf-split
+[640/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-cleanup
+[641/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO csv-json
+[642/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO office
+[643/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO text-statistics
+[644/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO developer
+[645/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO json-formatter
+[646/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO url-encoder
+[647/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO totp
+[648/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO base64
+[649/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO timestamp
+[650/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO uuid
+[651/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO about
+[652/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO contact
+[653/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO terms
+[654/810] [webkit] › e2e/pages.spec.ts:23:3 › E02 直达刷新与SEO privacy
+[655/810] [webkit] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 text
+[656/810] [webkit] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 json
+[657/810] [webkit] › e2e/pages.spec.ts:37:3 › E03 延迟脚本节点复用与禁用保护 url
+[658/810] [webkit] › e2e/pages.spec.ts:66:3 › E04 检测器负向夹具 › E04 结构破坏必须触发mismatch
+[659/810] [webkit] › e2e/pages.spec.ts:79:1 › E06 站内导航历史与状态卸载
+[660/810] [webkit] › e2e/pages.spec.ts:101:1 › E06 无斜杠308与旧hash
+[661/810] [webkit] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /missing/
+[662/810] [webkit] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /office/missing/
+[663/810] [webkit] › e2e/pages.spec.ts:123:3 › E07 真实HTTP404 /developer/missing/
+[664/810] [webkit] › e2e/pages.spec.ts:135:1 › E08 实际静态资源与禁止泄漏文件
+[665/810] [webkit] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实jpx解码与同源资源
+[666/810] [webkit] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实cmyk解码与同源资源
+[667/810] [webkit] › e2e/pdf-organizer-resources.spec.ts:3:54 › ORG 真实cmap解码与同源资源
+[668/810] [webkit] › e2e/pdf-organizer-resources.spec.ts:32:57 › ORG oversize明确预览失败、可重试、清空不留旧图
+[669/810] [webkit] › e2e/pdf-organizer-resources.spec.ts:32:57 › ORG broken-jpx明确预览失败、可重试、清空不留旧图
+[670/810] [webkit] › e2e/pdf-organizer-resources.spec.ts:46:1 › ORG 合法空白页保持可预览与导出，不用白色像素判失败
+[671/810] [webkit] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 375
+[672/810] [webkit] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 768
+[673/810] [webkit] › e2e/pdf-organizer.spec.ts:5:39 › ORG 本地缩略图、键盘/拖动、旋转删除与真实导出 1440
+[674/810] [webkit] › e2e/pdf-organizer.spec.ts:50:1 › ORG 搜索及独立文档、单页保护、损坏/超限拒绝与离页清理
+[675/810] [webkit] › e2e/pdf-organizer.spec.ts:68:1 › ORG 按需渲染、缓存URL释放与100页滚动
+[676/810] [webkit] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 375
+[677/810] [webkit] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 768
+[678/810] [webkit] › e2e/pdf-split.spec.ts:14:3 › SPLIT 真实 Worker 两种下载与失效 1440
+[679/810] [webkit] › e2e/pdf-split.spec.ts:44:1 › SPLIT 首页搜索、独立敏感文档及重选失败清理
+[680/810] [webkit] › e2e/seo-growth.spec.ts:2:31 › SEO 站内推广顺序与搜索保留、分类和preview隔离 375
+[681/810] [webkit] › e2e/seo-growth.spec.ts:2:31 › SEO 站内推广顺序与搜索保留、分类和preview隔离 1440
+[682/810] [webkit] › e2e/tech-visual.spec.ts:3:2 › VIS039 light 375
+[683/810] [webkit] › e2e/tech-visual.spec.ts:3:2 › VIS039 light 1440
+[684/810] [webkit] › e2e/tech-visual.spec.ts:3:2 › VIS039 dark 375
+[685/810] [webkit] › e2e/tech-visual.spec.ts:3:2 › VIS039 dark 1440
+[686/810] [webkit] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 375
+[687/810] [webkit] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 768
+[688/810] [webkit] › e2e/text-cleanup.spec.ts:4:3 › CLEAN 六种操作、输入保留与空结果 1440
+[689/810] [webkit] › e2e/text-cleanup.spec.ts:47:1 › CLEAN 键盘、超限与复制失败、离页清理及搜索入口
+[690/810] [webkit] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 375
+[691/810] [webkit] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 768
+[692/810] [webkit] › e2e/text-diff.spec.ts:2:35 › DIFF 真实Worker逐行、空白、筛选与交换 1440
+[693/810] [webkit] › e2e/text-diff.spec.ts:24:1 › DIFF 上限、复制失败及敏感文档/存储清理
+[694/810] [webkit] › e2e/text-diff.spec.ts:40:1 › DIFF 取消、修改输入后旧消息无效及超时
+[695/810] [webkit] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 375
+[696/810] [webkit] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 768
+[697/810] [webkit] › e2e/text-workbench.spec.ts:2:35 › WORKFLOW 真实Worker两预设、步骤顺序和组合结果 1440
+[698/810] [webkit] › e2e/text-workbench.spec.ts:23:1 › WORKFLOW 中间超限原子失败、复制失败及隐私清理
+[699/810] [webkit] › e2e/text-workbench.spec.ts:37:1 › WORKFLOW 取消、配置变更后的迟到消息与超时
+[700/810] [webkit] › e2e/tools.spec.ts:3:1 › E05 文本统计输入组合超限恢复与清空
+[701/810] [webkit] › e2e/tools.spec.ts:33:1 › E05 JSON格式压缩语法与安全边界
+[702/810] [webkit] › e2e/tools.spec.ts:74:1 › E05 URL两模式四操作单轮与错误恢复
+[703/810] [webkit] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 text
+[704/810] [webkit] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 json
+[705/810] [webkit] › e2e/tools.spec.ts:117:3 › E05 复制成功失败挂起与卸载 url
+[706/810] [webkit] › e2e/tools.spec.ts:174:1 › E09 键盘跳转焦点与基础语义
+[707/810] [webkit] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 375
+[708/810] [webkit] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 768
+[709/810] [webkit] › e2e/tools.spec.ts:203:3 › E09 响应式与本地内容隐私 1440
+[710/810] [webkit] › e2e/tools.spec.ts:227:5 › E10 locale en-US › E10 固定数字展示
+[711/810] [webkit] › e2e/tools.spec.ts:227:5 › E10 locale zh-CN › E10 固定数字展示
+[712/810] [webkit] › e2e/tools.spec.ts:239:3 › E09 外部请求保护负向夹具 › E09 非loopback请求在发送前被拒绝
+[713/810] [webkit] › e2e/totp.spec.ts:3:1 › TOTP 标准时间向量、遮挡、校验与清空
+[714/810] [webkit] › e2e/totp.spec.ts:25:1 › TOTP 跨页导航隔离文档且返回不保留密钥
+[715/810] [webkit] › e2e/totp.spec.ts:48:1 › TOTP 安全计算不可用仍保留输入并提示
+[716/810] [webkit] › e2e/totp.spec.ts:59:1 › TOTP 导入链接识别参数，失败保留及清空
+[717/810] [webkit] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 375
+[718/810] [webkit] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 768
+[719/810] [webkit] › e2e/trust-pages.spec.ts:3:2 › 信任页面、页脚与指南 1440
+[720/810] [webkit] › e2e/trust-pages.spec.ts:24:1 › 四页页脚入口可键盘聚焦并打开
+[721/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 320
+[722/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 375
+[723/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 390
+[724/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 430
+[725/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 768
+[726/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1024
+[727/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1280
+[728/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1440
+[729/810] [webkit] › e2e/ui-layout.spec.ts:4:3 › UI-B1 首页与目录布局 1920
+[730/810] [webkit] › e2e/ui-layout.spec.ts:42:1 › UI-B1 跳转焦点及视口重排保持工具输入
+[731/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 320
+[732/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 375
+[733/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 390
+[734/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 430
+[735/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 768
+[736/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1024
+[737/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1280
+[738/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1440
+[739/810] [webkit] › e2e/ui-layout.spec.ts:66:3 › UI-B2 三工具工作台几何与截图 1920
+[740/810] [webkit] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 text
+[741/810] [webkit] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 json
+[742/810] [webkit] › e2e/ui-layout.spec.ts:111:3 › UI-B2 长内容错误与重排完整性 url
+[743/810] [webkit] › e2e/ui-layout.spec.ts:148:1 › UI-B2 键盘焦点截图
+[744/810] [webkit] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 320
+[745/810] [webkit] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 375
+[746/810] [webkit] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 390
+[747/810] [webkit] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 430
+[748/810] [webkit] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 1440
+[749/810] [webkit] › e2e/ui-layout.spec.ts:177:3 › UI-B3-1 操作路径与内容保护 1920
+[750/810] [webkit] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 320
+[751/810] [webkit] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 375
+[752/810] [webkit] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 390
+[753/810] [webkit] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 430
+[754/810] [webkit] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 1440
+[755/810] [webkit] › e2e/ui-layout.spec.ts:247:3 › UI-B3-2A 统计卡可读性 1920
+[756/810] [webkit] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 320
+[757/810] [webkit] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 375
+[758/810] [webkit] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 390
+[759/810] [webkit] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 430
+[760/810] [webkit] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 1440
+[761/810] [webkit] › e2e/ui-layout.spec.ts:325:3 › UI-B3-2B 手机动作与错误状态 1920
+[762/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 320
+[763/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 320
+[764/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 375
+[765/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 375
+[766/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 390
+[767/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 390
+[768/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 430
+[769/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 430
+[770/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 639
+[771/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 639
+[772/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 640
+[773/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 640
+[774/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 768
+[775/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 768
+[776/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 820
+[777/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 820
+[778/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 959
+[779/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 959
+[780/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 960
+[781/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 960
+[782/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1024
+[783/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1024
+[784/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1199
+[785/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1199
+[786/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1200
+[787/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1200
+[788/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1440
+[789/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1440
+[790/810] [webkit] › e2e/ui-layout.spec.ts:460:3 › F44-BRAND 1920
+[791/810] [webkit] › e2e/ui-layout.spec.ts:506:3 › F44-SUMMARY 1920
+[792/810] [webkit] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 375
+[793/810] [webkit] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 375
+[794/810] [webkit] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 768
+[795/810] [webkit] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 768
+[796/810] [webkit] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 light 1440
+[797/810] [webkit] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 light 1440
+[798/810] [webkit] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 375
+[799/810] [webkit] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 375
+[800/810] [webkit] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 768
+[801/810] [webkit] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 768
+[802/810] [webkit] › e2e/ui-refinement.spec.ts:3:2 › UI2 精简首页、首屏与目录 dark 1440
+[803/810] [webkit] › e2e/ui-refinement.spec.ts:31:2 › UI2 共享工具层级与文件控件 dark 1440
+[804/810] [webkit] › e2e/ui-refinement.spec.ts:40:1 › UI2 长名称和200%字号重排，无截断或横向滚动
+[805/810] [webkit] › e2e/ui-refinement.spec.ts:49:1 › UI3 分类目录无重复底部入口，工具列表保留
+[806/810] [webkit] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 375
+[807/810] [webkit] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 768
+[808/810] [webkit] › e2e/ui-refinement.spec.ts:57:37 › UI4 顶部导航滚动常驻及返回首页 1440
+[809/810] [webkit] › e2e/ui-refinement.spec.ts:73:49 › UI5 手机紧凑导航与卡片键盘反馈 light
+[810/810] [webkit] › e2e/ui-refinement.spec.ts:73:49 › UI5 手机紧凑导航与卡片键盘反馈 dark
+  3 failed
+    [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375 ─────────────
+    [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 768 ─────────────
+    [firefox] › e2e/document-tools.spec.ts:31:2 › DOC-LOCAL DOCX 简版真实 Worker 与打印正文 1440 ────────────
+  807 passed (8.8m)
+本地E2E证据：docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359

@@ -340,3 +340,9 @@ Word 转 PDF 是独立文档排版问题，PDF 合并库不提供 Word 排版引
 ## ADR-037：标准构建与预览目录对齐（2026-11-08）
 
 负责人反馈npm run build后缺失新功能，本轮以037修正常用命令：build/build-only复用既有生产门禁输出dist；preview读取同一目录。原noindex构建/服务改为显式build:preview/preview:local供本地与CI使用；CSR隔离到dist-csr。preview中间件从实际outDir读取HTML，避免跨目录旧文件混用。沿用既有域名/索引/生产包备份方案，无新依赖、远端操作或部署。
+
+## ADR-038：JSON 转 CSV 的兼容读取与表格映射（2026-11-13）
+
+负责人明确要求完整JSON内容及非标准输入兼容，本轮按 [042规格](../specs/042-json-csv-compat/spec.md) 落实。仅在CSV/JSON模块新增有界纯TypeScript读取器：字符串外处理BOM/注释/尾逗号并提示，严格JSON文法保留双引号和明确分隔符；数值保存原始词元，Map保存字段顺序/检测重复键，避免原生Number舍入及对象原型赋值。对象映射合并表头、缺字段补空，嵌套内容保留JSON文本，包装数据用显式JSON Pointer选择，不自动猜测或丢字段。
+
+未引入JSON5/YAML/修复依赖、Worker或后端；原JSON格式化和JSON/YAML工具的严格规则不随本轮改变。CSV状态机、序列化预算和旧serializeTable契约保留；扩展限于042数据模型与深度/节点保护。语法和路径对照 [RFC8259](https://www.rfc-editor.org/rfc/rfc8259) 与 [RFC6901](https://www.rfc-editor.org/rfc/rfc6901)，兼容扩展单独说明，不宣称接受任意JS语法。实际行为通过精度/映射/错误/受控语法变异与真实浏览器验证。

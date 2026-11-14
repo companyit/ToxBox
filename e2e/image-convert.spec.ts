@@ -42,7 +42,7 @@ for(const width of [375,768,1440])test(`CONVERT 真实图片三格式、体积�
 test('CONVERT 本地隐私、参数校验、取消和pagehide清理',async({page})=>{
  const requests:string[]=[];page.on('request',r=>requests.push(r.url()))
  await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('图片压缩')
- await page.getByRole('link',{name:'试用工具 ：图片压缩与格式转换',exact:true}).click();await expect(page).toHaveURL('/office/image-convert/');await hydrated(page)
+ await page.getByRole('link',{name:'打开工具 ：图片压缩与格式转换',exact:true}).click();await expect(page).toHaveURL('/office/image-convert/');await hydrated(page)
  const png=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=10;c.height=10;return Array.from(Uint8Array.from(atob(c.toDataURL().split(',')[1]!),c=>c.charCodeAt(0)))})
  const picker=page.getByLabel('选择或追加图片',{exact:true});await picker.setInputFiles({name:'PRIVATE.png',mimeType:'image/png',buffer:Buffer.from(png)})
  await page.getByLabel('最长边（像素）',{exact:true}).fill('0');await page.getByRole('button',{name:'开始处理',exact:true}).click();await expect(page.getByRole('status')).toContainText('整数最长边')

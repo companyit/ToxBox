@@ -1,0 +1,12 @@
+{
+  "output": "/Users/user/development/ToxBox/.ci/native-print-041/probe-qn1mQ4/native.pdf",
+  "preferences": {
+    "print.always_print_silent": true,
+    "print_printer": "Mozilla Save to PDF",
+    "print.print_to_file": true,
+    "print.print_to_filename": "/Users/user/development/ToxBox/.ci/native-print-041/probe-qn1mQ4/native.pdf",
+    "print.printer_Mozilla_Save_to_PDF.print_to_file": true,
+    "print.printer_Mozilla_Save_to_PDF.print_to_filename": "/Users/user/development/ToxBox/.ci/native-print-041/probe-qn1mQ4/native.pdf"
+  },
+  "error": "browserType.launch: Failed to launch the browser process.\nBrowser logs:\n\n<launching> /Users/user/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/tv/50k8fyyn0vl2wb27bf8bnq_r0000gn/T/playwright_firefoxdev_profile-Dm3vdR -juggler-pipe -silent\n<launched> pid=10015\n[pid=10015][err] *** You are running in headless mode.\n[pid=10015] <process did exit: exitCode=null, signal=SIGABRT>\n[pid=10015] starting temporary directories cleanup\nCall log:\n\u001b[2m  - <launching> /Users/user/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/tv/50k8fyyn0vl2wb27bf8bnq_r0000gn/T/playwright_firefoxdev_profile-Dm3vdR -juggler-pipe -silent\u001b[22m\n\u001b[2m  - <launched> pid=10015\u001b[22m\n\u001b[2m  - [pid=10015][err] *** You are running in headless mode.\u001b[22m\n\u001b[2m  - [pid=10015] <process did exit: exitCode=null, signal=SIGABRT>\u001b[22m\n\u001b[2m  - [pid=10015] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=10015] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=10015] <kill>\u001b[22m\n\u001b[2m  - [pid=10015] <skipped force kill spawnedProcess.killed=false processClosed=true>\u001b[22m\n\u001b[2m  - [pid=10015] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=10015] <gracefully close end>\u001b[22m\n"
+}

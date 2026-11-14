@@ -1,0 +1,892 @@
+{
+  "baselineHead": "9e16e2a6d9f6a5ad953db6e692e00f5f1937de71",
+  "nodeVersion": "v24.21.0",
+  "packageUnchanged": true,
+  "lockfileUnchanged": true,
+  "checks": {
+    "typeCheckExit": 0,
+    "unitComponents": {
+      "files": 46,
+      "passed": 332,
+      "exit": 0
+    },
+    "ssg": {
+      "files": 16,
+      "passed": 18,
+      "exit": 0
+    },
+    "historicalInventory": {
+      "mapped": 154,
+      "exit": 0
+    }
+  },
+  "runs": [
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T12-19-45.541Z-3397",
+      "run": {
+        "projects": [
+          "chromium",
+          "webkit"
+        ],
+        "startedUtc": "2026-11-13T12:19:45.541Z",
+        "buildExitCode": null,
+        "testExitCode": null,
+        "portReleased": false,
+        "error": "listen EPERM: operation not permitted 127.0.0.1:4177",
+        "durationSeconds": 0.005
+      },
+      "runSha256": "031bcc283f90d6daa96476d7f3867b216a606ac8d64172e6ebc728ef22f6ee0c"
+    },
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513",
+      "run": {
+        "projects": [
+          "chromium",
+          "webkit"
+        ],
+        "startedUtc": "2026-11-13T12:20:09.866Z",
+        "buildExitCode": 0,
+        "testExitCode": 130,
+        "portReleased": true,
+        "durationSeconds": 58.289
+      },
+      "runSha256": "e0187b0a31cc6dff4429d1dc5357576faad37abdad3bf9d060e51a62367789ca",
+      "buildSha256FileSha256": "2bf4714f0fe9621f583da5f59efa6f154a951eadf1fc80d9961868984e07beaf",
+      "stats": {
+        "startTime": "2026-11-13T12:20:14.015Z",
+        "duration": 54065.619000000006,
+        "expected": 18,
+        "skipped": 519,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "resultsSha256": "adf5c009287c86c67541b5f70d60947fec35173536c0673e8897d3d1f9c114e8",
+      "projects": {
+        "chromium": {
+          "statuses": {
+            "passed": 18,
+            "timedOut": 1,
+            "interrupted": 1,
+            "not-run": 249
+          },
+          "versions": [
+            "156.0.8078.4"
+          ]
+        },
+        "webkit": {
+          "statuses": {
+            "not-run": 269
+          },
+          "versions": []
+        }
+      },
+      "failures": [
+        {
+          "project": "chromium",
+          "file": "csv-json.spec.ts",
+          "line": 66,
+          "title": "TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: '试用工具 ：CSV 与 JSON 表格互转', exact: true })\u001b[22m\n\n\n  70 |   await page.getByLabel('搜索工具', { exact: true }).fill('CSV')\n  71 |   await expect(page.locator('.tool-grid li')).toHaveCount(1)\n> 72 |   await page.getByRole('link', { name: '试用工具 ：CSV 与 JSON 表格互转', exact: true }).click(); await hydrated(page)\n     |                                                                                ^\n  73 |   const originalStorage = await page.evaluate(() => [JSON.stringify(localStorage), JSON.stringify(sessionStorage)])\n  74 |   const marker = 'TABLE_PRIVATE_019'\n  75 |   const input = page.getByLabel('待转换的表格文本', { exact: true }), result = page.getByLabel('表格结果（只读）', { exact: true })\n    at /Users/user/development/ToxBox/e2e/csv-json.spec.ts:72:80"
+          ]
+        }
+      ],
+      "contrasts": []
+    },
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T12-21-43.786Z-3784",
+      "run": {
+        "projects": [
+          "chromium",
+          "firefox",
+          "webkit"
+        ],
+        "startedUtc": "2026-11-13T12:21:43.786Z",
+        "buildExitCode": 0,
+        "testExitCode": 130,
+        "portReleased": true,
+        "durationSeconds": 188.451
+      },
+      "runSha256": "5c1503fa8c48be326af2856aee46ea3c05b79672b49f56289a229b7063f3a564",
+      "buildSha256FileSha256": "e995a671db2707b4f7fdd0668bb642182231973f951f9307a92ab7e1186c2539",
+      "stats": {
+        "startTime": "2026-11-13T12:21:47.402Z",
+        "duration": 184595.541,
+        "expected": 284,
+        "skipped": 515,
+        "unexpected": 8,
+        "flaky": 0
+      },
+      "resultsSha256": "f80a773a7448b84311223c33c63ba5c7a17db33295c6159ff83b8b4e1beb90cc",
+      "projects": {
+        "chromium": {
+          "statuses": {
+            "passed": 262,
+            "failed": 7
+          },
+          "versions": [
+            "156.0.8078.4"
+          ]
+        },
+        "firefox": {
+          "statuses": {
+            "passed": 22,
+            "timedOut": 1,
+            "interrupted": 1,
+            "not-run": 245
+          },
+          "versions": [
+            "157.0"
+          ]
+        },
+        "webkit": {
+          "statuses": {
+            "not-run": 269
+          },
+          "versions": []
+        }
+      },
+      "failures": [
+        {
+          "project": "firefox",
+          "file": "document-tools.spec.ts",
+          "line": 31,
+          "title": "DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-v-bbec516d=\"\">打印 / 另存为 PDF</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  53 |     window.addEventListener('afterprint', () => events.push('afterprint'))\n  54 |   })\n> 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()\n     |                                                                   ^\n  56 |   await expect(page.getByRole('status')).toContainText('已请求打印')\n  57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')\n  58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)\n    at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67"
+          ]
+        },
+        {
+          "project": "chromium",
+          "file": "ui-refinement.spec.ts",
+          "line": 3,
+          "title": "UI2 精简首页、首屏与目录 light 375",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m1.3547088579776312\u001b[39m\n\n  25 |    return {body:contrast(body.color,body.backgroundColor),description:contrast(text.color,card.backgroundColor),link:contrast(link.color,card.backgroundColor),input:contrast(input.borderTopColor,input.backgroundColor),focus:contrast(input.outlineColor,input.backgroundColor)}\n  26 |   })\n> 27 |   expect(colors.body).toBeGreaterThanOrEqual(4.5);expect(colors.description).toBeGreaterThanOrEqual(4.5);expect(colors.link).toBeGreaterThanOrEqual(4.5);expect(colors.input).toBeGreaterThanOrEqual(3);expect(colors.focus).toBeGreaterThanOrEqual(3)\n     |                                                                                                                                                                               ^\n  28 |   await info.attach('对比度',{body:JSON.stringify(colors),contentType:'application/json'})\n  29 |   await input.blur();await page.screenshot({path:info.outputPath(`home-${theme}-${width}.png`),fullPage:true})\n  30 |  })\n    at /Users/user/development/ToxBox/e2e/ui-refinement.spec.ts:27:175"
+          ]
+        },
+        {
+          "project": "chromium",
+          "file": "ui-refinement.spec.ts",
+          "line": 3,
+          "title": "UI2 精简首页、首屏与目录 light 768",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m1.3547088579776312\u001b[39m\n\n  25 |    return {body:contrast(body.color,body.backgroundColor),description:contrast(text.color,card.backgroundColor),link:contrast(link.color,card.backgroundColor),input:contrast(input.borderTopColor,input.backgroundColor),focus:contrast(input.outlineColor,input.backgroundColor)}\n  26 |   })\n> 27 |   expect(colors.body).toBeGreaterThanOrEqual(4.5);expect(colors.description).toBeGreaterThanOrEqual(4.5);expect(colors.link).toBeGreaterThanOrEqual(4.5);expect(colors.input).toBeGreaterThanOrEqual(3);expect(colors.focus).toBeGreaterThanOrEqual(3)\n     |                                                                                                                                                                               ^\n  28 |   await info.attach('对比度',{body:JSON.stringify(colors),contentType:'application/json'})\n  29 |   await input.blur();await page.screenshot({path:info.outputPath(`home-${theme}-${width}.png`),fullPage:true})\n  30 |  })\n    at /Users/user/development/ToxBox/e2e/ui-refinement.spec.ts:27:175"
+          ]
+        },
+        {
+          "project": "chromium",
+          "file": "ui-refinement.spec.ts",
+          "line": 3,
+          "title": "UI2 精简首页、首屏与目录 light 1440",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m1.3547088579776312\u001b[39m\n\n  25 |    return {body:contrast(body.color,body.backgroundColor),description:contrast(text.color,card.backgroundColor),link:contrast(link.color,card.backgroundColor),input:contrast(input.borderTopColor,input.backgroundColor),focus:contrast(input.outlineColor,input.backgroundColor)}\n  26 |   })\n> 27 |   expect(colors.body).toBeGreaterThanOrEqual(4.5);expect(colors.description).toBeGreaterThanOrEqual(4.5);expect(colors.link).toBeGreaterThanOrEqual(4.5);expect(colors.input).toBeGreaterThanOrEqual(3);expect(colors.focus).toBeGreaterThanOrEqual(3)\n     |                                                                                                                                                                               ^\n  28 |   await info.attach('对比度',{body:JSON.stringify(colors),contentType:'application/json'})\n  29 |   await input.blur();await page.screenshot({path:info.outputPath(`home-${theme}-${width}.png`),fullPage:true})\n  30 |  })\n    at /Users/user/development/ToxBox/e2e/ui-refinement.spec.ts:27:175"
+          ]
+        },
+        {
+          "project": "chromium",
+          "file": "ui-refinement.spec.ts",
+          "line": 3,
+          "title": "UI2 精简首页、首屏与目录 dark 375",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m1.6857824612077648\u001b[39m\n\n  25 |    return {body:contrast(body.color,body.backgroundColor),description:contrast(text.color,card.backgroundColor),link:contrast(link.color,card.backgroundColor),input:contrast(input.borderTopColor,input.backgroundColor),focus:contrast(input.outlineColor,input.backgroundColor)}\n  26 |   })\n> 27 |   expect(colors.body).toBeGreaterThanOrEqual(4.5);expect(colors.description).toBeGreaterThanOrEqual(4.5);expect(colors.link).toBeGreaterThanOrEqual(4.5);expect(colors.input).toBeGreaterThanOrEqual(3);expect(colors.focus).toBeGreaterThanOrEqual(3)\n     |                                                                                                                                                                               ^\n  28 |   await info.attach('对比度',{body:JSON.stringify(colors),contentType:'application/json'})\n  29 |   await input.blur();await page.screenshot({path:info.outputPath(`home-${theme}-${width}.png`),fullPage:true})\n  30 |  })\n    at /Users/user/development/ToxBox/e2e/ui-refinement.spec.ts:27:175"
+          ]
+        },
+        {
+          "project": "chromium",
+          "file": "ui-refinement.spec.ts",
+          "line": 3,
+          "title": "UI2 精简首页、首屏与目录 dark 768",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m1.6857824612077648\u001b[39m\n\n  25 |    return {body:contrast(body.color,body.backgroundColor),description:contrast(text.color,card.backgroundColor),link:contrast(link.color,card.backgroundColor),input:contrast(input.borderTopColor,input.backgroundColor),focus:contrast(input.outlineColor,input.backgroundColor)}\n  26 |   })\n> 27 |   expect(colors.body).toBeGreaterThanOrEqual(4.5);expect(colors.description).toBeGreaterThanOrEqual(4.5);expect(colors.link).toBeGreaterThanOrEqual(4.5);expect(colors.input).toBeGreaterThanOrEqual(3);expect(colors.focus).toBeGreaterThanOrEqual(3)\n     |                                                                                                                                                                               ^\n  28 |   await info.attach('对比度',{body:JSON.stringify(colors),contentType:'application/json'})\n  29 |   await input.blur();await page.screenshot({path:info.outputPath(`home-${theme}-${width}.png`),fullPage:true})\n  30 |  })\n    at /Users/user/development/ToxBox/e2e/ui-refinement.spec.ts:27:175"
+          ]
+        },
+        {
+          "project": "chromium",
+          "file": "ui-refinement.spec.ts",
+          "line": 3,
+          "title": "UI2 精简首页、首屏与目录 dark 1440",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m3\u001b[39m\nReceived:    \u001b[31m1.6857824612077648\u001b[39m\n\n  25 |    return {body:contrast(body.color,body.backgroundColor),description:contrast(text.color,card.backgroundColor),link:contrast(link.color,card.backgroundColor),input:contrast(input.borderTopColor,input.backgroundColor),focus:contrast(input.outlineColor,input.backgroundColor)}\n  26 |   })\n> 27 |   expect(colors.body).toBeGreaterThanOrEqual(4.5);expect(colors.description).toBeGreaterThanOrEqual(4.5);expect(colors.link).toBeGreaterThanOrEqual(4.5);expect(colors.input).toBeGreaterThanOrEqual(3);expect(colors.focus).toBeGreaterThanOrEqual(3)\n     |                                                                                                                                                                               ^\n  28 |   await info.attach('对比度',{body:JSON.stringify(colors),contentType:'application/json'})\n  29 |   await input.blur();await page.screenshot({path:info.outputPath(`home-${theme}-${width}.png`),fullPage:true})\n  30 |  })\n    at /Users/user/development/ToxBox/e2e/ui-refinement.spec.ts:27:175"
+          ]
+        },
+        {
+          "project": "chromium",
+          "file": "ui-refinement.spec.ts",
+          "line": 73,
+          "title": "UI5 手机紧凑导航与卡片键盘反馈",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"rgb(2\u001b[7m3, 99, 79\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(2\u001b[7m11, 223, 233\u001b[27m)\"\u001b[39m\n\n  81 |  await expect(entry).toBeFocused()\n  82 |  const colors=await entry.evaluate(el=>({border:getComputedStyle(el.closest('.tool-card')!).borderTopColor,accent:getComputedStyle(el).getPropertyValue('--color-accent').trim()}))\n> 83 |  expect(colors.border).toBe('rgb(23, 99, 79)')\n     |                        ^\n  84 | })\n  85 |\n    at /Users/user/development/ToxBox/e2e/ui-refinement.spec.ts:83:24"
+          ]
+        }
+      ],
+      "contrasts": []
+    },
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T12-25-48.826Z-4489",
+      "run": {
+        "projects": [
+          "chromium",
+          "webkit"
+        ],
+        "startedUtc": "2026-11-13T12:25:48.826Z",
+        "buildExitCode": 0,
+        "testExitCode": 0,
+        "portReleased": true,
+        "durationSeconds": 272.457
+      },
+      "runSha256": "bbcca03fd311e9179e2f21a8c32a7c188ae26cdc6ab2ef1272dccfd8b3476a8e",
+      "buildSha256FileSha256": "308a8eb42e7687a38c1481b890c348f9baa4a8fd0f5ab241568f98e4817ad55e",
+      "stats": {
+        "startTime": "2026-11-13T12:25:52.389Z",
+        "duration": 268543.133,
+        "expected": 540,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "resultsSha256": "4fca8d49ee574aa25742c9ce1f84ed573cc9c49cfdd57fb587402abcad1646de",
+      "projects": {
+        "chromium": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "156.0.8078.4"
+          ]
+        },
+        "webkit": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "27.2"
+          ]
+        }
+      },
+      "failures": [],
+      "contrasts": [
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 light 375",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 light 768",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 light 1440",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 dark 375",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 dark 768",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 dark 1440",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 light 375",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 light 768",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 light 1440",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 dark 375",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 dark 768",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 dark 1440",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        }
+      ]
+    },
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T12-30-37.922Z-5638",
+      "run": {
+        "projects": [
+          "firefox"
+        ],
+        "startedUtc": "2026-11-13T12:30:37.922Z",
+        "buildExitCode": 0,
+        "testExitCode": 1,
+        "portReleased": true,
+        "durationSeconds": 263.663
+      },
+      "runSha256": "dc34f336f8e3072568fa74361a5dacbe9cacf68c20322e27ca8a5b942fff58bd",
+      "buildSha256FileSha256": "308a8eb42e7687a38c1481b890c348f9baa4a8fd0f5ab241568f98e4817ad55e",
+      "stats": {
+        "startTime": "2026-11-13T12:30:41.526Z",
+        "duration": 259819.307,
+        "expected": 265,
+        "skipped": 0,
+        "unexpected": 5,
+        "flaky": 0
+      },
+      "resultsSha256": "774ae2f87cfad8b377491b8496fa6d3fbdcbb6935c37a2969da4244f2787123c",
+      "projects": {
+        "firefox": {
+          "statuses": {
+            "passed": 265,
+            "timedOut": 3,
+            "failed": 2
+          },
+          "versions": [
+            "157.0"
+          ]
+        }
+      },
+      "failures": [
+        {
+          "project": "firefox",
+          "file": "document-tools.spec.ts",
+          "line": 31,
+          "title": "DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-v-bbec516d=\"\">打印 / 另存为 PDF</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  53 |     window.addEventListener('afterprint', () => events.push('afterprint'))\n  54 |   })\n> 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()\n     |                                                                   ^\n  56 |   await expect(page.getByRole('status')).toContainText('已请求打印')\n  57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')\n  58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)\n    at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67"
+          ]
+        },
+        {
+          "project": "firefox",
+          "file": "document-tools.spec.ts",
+          "line": 31,
+          "title": "DOC-LOCAL DOCX 简版真实 Worker 与打印正文 768",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-v-bbec516d=\"\">打印 / 另存为 PDF</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  53 |     window.addEventListener('afterprint', () => events.push('afterprint'))\n  54 |   })\n> 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()\n     |                                                                   ^\n  56 |   await expect(page.getByRole('status')).toContainText('已请求打印')\n  57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')\n  58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)\n    at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67"
+          ]
+        },
+        {
+          "project": "firefox",
+          "file": "document-tools.spec.ts",
+          "line": 31,
+          "title": "DOC-LOCAL DOCX 简版真实 Worker 与打印正文 1440",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-v-bbec516d=\"\">打印 / 另存为 PDF</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  53 |     window.addEventListener('afterprint', () => events.push('afterprint'))\n  54 |   })\n> 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()\n     |                                                                   ^\n  56 |   await expect(page.getByRole('status')).toContainText('已请求打印')\n  57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')\n  58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)\n    at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67"
+          ]
+        },
+        {
+          "project": "firefox",
+          "file": "image-crop.spec.ts",
+          "line": 17,
+          "title": "CROP 原像素裁剪、比例、拖动和真实下载 1440",
+          "status": "failed",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m43.99998474121094\u001b[39m\n\n  32 |  const before=await box.boundingBox();const handle=page.locator('.crop-handle.se');await handle.scrollIntoViewIfNeeded();const hb=(await handle.boundingBox())!;await page.mouse.move(hb.x+22,hb.y+22);await page.mouse.down();await page.mouse.move(hb.x+22-bounds.width/10,hb.y+22-bounds.height/10,{steps:5});await page.mouse.up();expect((await box.boundingBox())!.width).toBeLessThan(before!.width)\n  33 |  const xInput=page.getByLabel('X 坐标',{exact:true});await xInput.focus();await page.keyboard.press('ControlOrMeta+A');await page.keyboard.insertText('0');await page.keyboard.press('Tab');await expect(xInput).toHaveValue('0')\n> 34 |  for(const handle of await page.locator('.crop-handle').all()){const b=await handle.boundingBox();expect(b!.width).toBeGreaterThanOrEqual(44);expect(b!.height).toBeGreaterThanOrEqual(44)}\n     |                                                                                                                                                                 ^\n  35 |  await page.screenshot({path:info.outputPath(`crop-${width}.png`),fullPage:true});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)\n  36 |  await page.getByRole('button',{name:'清空',exact:true}).click();await expect(page.getByLabel('选择待裁剪图片',{exact:true})).toBeFocused()\n  37 | })\n    at /Users/user/development/ToxBox/e2e/image-crop.spec.ts:34:161"
+          ]
+        },
+        {
+          "project": "firefox",
+          "file": "pages.spec.ts",
+          "line": 23,
+          "title": "E02 直达刷新与SEO home",
+          "status": "failed",
+          "errors": [
+            "Error: Hydration mismatch\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"warning\",\u001b[39m\n\u001b[31m+   \"error\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at helpers.ts:46\n\n  44 |     expect(diagnostics.resources, '静态资源加载失败').toEqual([])\n  45 |     if (expectHydrationMismatch) expect(diagnostics.mismatch.length, '负向夹具必须被公共检测器发现').toBeGreaterThan(0)\n> 46 |     else expect(diagnostics.mismatch, 'Hydration mismatch').toEqual([])\n     |                                                             ^\n  47 |   }, { auto: true }],\n  48 | })\n  49 |\n    at Object.base.extend.diagnostics.auto (/Users/user/development/ToxBox/e2e/helpers.ts:46:61)"
+          ]
+        }
+      ],
+      "contrasts": [
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 light 375",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 light 768",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 light 1440",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 dark 375",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 dark 768",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 dark 1440",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        }
+      ]
+    },
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T12-35-29.930Z-6359",
+      "run": {
+        "projects": [
+          "chromium",
+          "firefox",
+          "webkit"
+        ],
+        "startedUtc": "2026-11-13T12:35:29.930Z",
+        "buildExitCode": 0,
+        "testExitCode": 1,
+        "portReleased": true,
+        "durationSeconds": 532.552
+      },
+      "runSha256": "9690ce9dc40740d91d021e15175a265e64548e7c7240c5a56b6864ebd5291c18",
+      "buildSha256FileSha256": "17fdd5a26dbfbe15960c706ecd4341f40846cdf08a3cc71d23c80fe3731466dc",
+      "stats": {
+        "startTime": "2026-11-13T12:35:33.472Z",
+        "duration": 528450.126,
+        "expected": 807,
+        "skipped": 0,
+        "unexpected": 3,
+        "flaky": 0
+      },
+      "resultsSha256": "040c102c4fbeb4662f4b99fe35482fc2160adb1454f30127a41bdfe4ac9ab5c8",
+      "projects": {
+        "chromium": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "156.0.8078.4"
+          ]
+        },
+        "firefox": {
+          "statuses": {
+            "passed": 267,
+            "timedOut": 3
+          },
+          "versions": [
+            "157.0"
+          ]
+        },
+        "webkit": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "27.2"
+          ]
+        }
+      },
+      "failures": [
+        {
+          "project": "firefox",
+          "file": "document-tools.spec.ts",
+          "line": 31,
+          "title": "DOC-LOCAL DOCX 简版真实 Worker 与打印正文 375",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-v-bbec516d=\"\">打印 / 另存为 PDF</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  53 |     window.addEventListener('afterprint', () => events.push('afterprint'))\n  54 |   })\n> 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()\n     |                                                                   ^\n  56 |   await expect(page.getByRole('status')).toContainText('已请求打印')\n  57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')\n  58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)\n    at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67"
+          ]
+        },
+        {
+          "project": "firefox",
+          "file": "document-tools.spec.ts",
+          "line": 31,
+          "title": "DOC-LOCAL DOCX 简版真实 Worker 与打印正文 768",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-v-bbec516d=\"\">打印 / 另存为 PDF</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  53 |     window.addEventListener('afterprint', () => events.push('afterprint'))\n  54 |   })\n> 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()\n     |                                                                   ^\n  56 |   await expect(page.getByRole('status')).toContainText('已请求打印')\n  57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')\n  58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)\n    at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67"
+          ]
+        },
+        {
+          "project": "firefox",
+          "file": "document-tools.spec.ts",
+          "line": 31,
+          "title": "DOC-LOCAL DOCX 简版真实 Worker 与打印正文 1440",
+          "status": "timedOut",
+          "errors": [
+            "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '打印 / 另存为 PDF', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-v-bbec516d=\"\">打印 / 另存为 PDF</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  53 |     window.addEventListener('afterprint', () => events.push('afterprint'))\n  54 |   })\n> 55 |   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()\n     |                                                                   ^\n  56 |   await expect(page.getByRole('status')).toContainText('已请求打印')\n  57 |   await expect(page.getByRole('status')).not.toContainText('保存成功')\n  58 |   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)\n    at /Users/user/development/ToxBox/e2e/document-tools.spec.ts:55:67"
+          ]
+        }
+      ],
+      "contrasts": [
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 light 375",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 light 768",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 light 1440",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 dark 375",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 dark 768",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "chromium",
+          "title": "UI2 精简首页、首屏与目录 dark 1440",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 light 375",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 light 768",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 light 1440",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 dark 375",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 dark 768",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "firefox",
+          "title": "UI2 精简首页、首屏与目录 dark 1440",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 light 375",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 light 768",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 light 1440",
+          "values": {
+            "body": 14.016466200585283,
+            "description": 6.470347297765543,
+            "link": 6.024000178875599,
+            "input": 3.6872623542721588,
+            "focus": 5.474352417005371
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 dark 375",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 dark 768",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        },
+        {
+          "project": "webkit",
+          "title": "UI2 精简首页、首屏与目录 dark 1440",
+          "values": {
+            "body": 16.3166068594469,
+            "description": 8.740322425720835,
+            "link": 10.281434829031975,
+            "input": 4.5765411326560805,
+            "focus": 9.417084744841004
+          }
+        }
+      ]
+    }
+  ],
+  "evidenceFiles": {
+    "chromium-webkit-build-sha256.json": "308a8eb42e7687a38c1481b890c348f9baa4a8fd0f5ab241568f98e4817ad55e",
+    "dependencies-restored.txt": "724e224537049115650e0d70aed783b075c51ee6729e748f3e57f1629f224347",
+    "dependency-restore.txt": "fb3cfba98824fd18248d7032451834d7f944d0b3ea2a7c4b3c72087fabf29017",
+    "e2e-final.txt": "ea5dc2525ed41609758f08e183cbaa11dad1204ef69c19b585124dfde54c7035",
+    "e2e-first.txt": "72c341b33230b6752ce0647f27126774321391c1c8883b709972685c3a5a3c03",
+    "e2e-fixed.txt": "bb97cf44249c5643b3c8312edfe796c5f4fbac9d8c05aa2d879a1720c8287b29",
+    "e2e-restored.txt": "926e3ee285a8953c309213e931c070c1dc3a9c7168804f6d7874cf4987d68237",
+    "e2e-three-final.txt": "86c21a7a87ace23c96299a29743e8477a5aa7f4cd061e4d3eb9fd65fd7f922ce",
+    "final-build-sha256.json": "17fdd5a26dbfbe15960c706ecd4341f40846cdf08a3cc71d23c80fe3731466dc",
+    "final-dark-mobile.png": "617d1d082b1a1d5eea244ad7f90768715bfe84d3857841a31c02ad2f46837a0e",
+    "final-light-desktop.png": "b5d50c4af0fcf889b5246a098532326b20cdd07ce751d9c3bb0ddc1aaf564fcf",
+    "firefox-first.txt": "fd25a62ba2617385dfc7089d30a5e760092362874e7e6468c04aa00db994adce",
+    "firefox-full.txt": "972bceedb4623c9a54f871f64938a5edc039d560b9625b532dda5d5188d9160b",
+    "firefox-restored.txt": "05be8d76eef8b592c59b65d597aee0d55823d73f7ceaac2e1681e329544056ce",
+    "inventory-restored.txt": "57704e1cd1acad255903f246011892f7af9ad31a09b4e4288c3078b3d5d0fdf5",
+    "inventory.txt": "9248d98a7f0d9c6fbc19c5b1d4e280f75d902ad3339f5d06136abe27ed17126a",
+    "preview-dark-mobile.png": "f5d02c14af8c44cbb25b50fc057fce754247f0f8d19548658c57dd50d000f694",
+    "preview-light-desktop.png": "b5d50c4af0fcf889b5246a098532326b20cdd07ce751d9c3bb0ddc1aaf564fcf",
+    "ssg-current.txt": "0732f2d614119cab1643894cddc2cb863447f261a494972a39402240ce4c8d6e",
+    "ssg-final.txt": "b76f38f34c1618583bc1dd684fa221bdd8330dcdf6ee3377785463bd585a6d22",
+    "ssg.txt": "f1c86e4e19a86df50c797e3d2402b1a4446a2e0fa1f65fa20f4375b3ed9f6e9d",
+    "type-check-final.txt": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b",
+    "type-check-restored.txt": "df0deb3b240e8bcca7bef7a4ee4b8d3cf136753303695d3ec0512274db2a921b",
+    "type-check.txt": "4be81cc9af7c84e2a595bd0b27a5f339fc422956dbad02e7ea74eb726e0265a8",
+    "vitest-current.txt": "04a9e969c965f513ae9e0735ec985520a5743efbd4e4719b01bc9f365f867bc5",
+    "vitest-final.txt": "5f53672ca5eab1cfc73893bcd64ff55e3fbba6243aa18c6d5f6c3965ec4aadc4",
+    "vitest-restored.txt": "6ff5caff996c6d40bc0ec304a84f2f55b4dff06a8905bfa6c5336982dbddd669",
+    "vitest.txt": "ae40b05ebe8180b43d291958626bae23171142ebfa9b7cd5a4d139a4a79c33bc"
+  }
+}

@@ -10,7 +10,7 @@ const catalog: readonly Tool[] = [
   { id: 'image-convert', name: '图片压缩与格式转换', description: '本地批量转换 JPG/PNG/WebP，等比缩小、对比体积并打包下载。', category: 'office', status: 'preview', routeName: 'image-convert' },
   { id: 'images-to-pdf', name: '图片转 PDF', description: '本地 JPG/PNG 多图排序转 PDF，每图一页，选择 A4 方向与边距。', category: 'office', status: 'preview', routeName: 'images-to-pdf' },
   { id: 'date-calculator', name: '日期差与日期加减', description: '计算两个日期的有符号天数差，或日期加减整数天，不依赖时区。', category: 'office', status: 'preview', routeName: 'date-calculator' },
-  { id: 'csv-json', name: 'CSV 与 JSON 表格互转', description: '逗号 CSV 与二维字符串数组本地互转，保留前导零与字段内容。', category: 'office', status: 'preview', routeName: 'csv-json' },
+  { id: 'csv-json', name: 'CSV 与 JSON 表格互转', description: '对象数组、嵌套 JSON 与 CSV 本地转换，兼容常见格式并保留数字精度。', category: 'office', status: 'preview', routeName: 'csv-json' },
   { id: 'text-cleanup', name: '文本整理', description: '清理空白、按行去重排序及普通文本批量替换，保留原输入。', category: 'office', status: 'preview', routeName: 'text-cleanup' },
   { id: 'pdf-split', name: 'PDF 拆分与选页导出', description: '按页码选择并保序导出一份 PDF，或逐页拆分下载，全程本地处理。', category: 'office', status: 'preview', routeName: 'pdf-split' },
   { id: 'word-to-pdf', name: 'Word 转 PDF', description: '本地 DOCX 简版预览，通过浏览器打印另存 PDF，接受排版差异。', category: 'office', status: 'preview', routeName: 'word-to-pdf' },

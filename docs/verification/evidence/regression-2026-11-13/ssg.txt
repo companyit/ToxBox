@@ -1,0 +1,13 @@
+
+> toxbox@0.0.0 test:ssg
+> vitest run --project ssg
+
+
+ RUN  v4.1.11 /Users/user/development/ToxBox
+
+
+ Test Files  16 passed (16)
+      Tests  18 passed (18)
+   Start at  20:20:40
+   Duration  4.35s (transform 82ms, setup 0ms, import 246ms, tests 448ms, environment 2.81s)
+

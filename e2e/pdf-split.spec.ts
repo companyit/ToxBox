@@ -45,7 +45,7 @@ test('SPLIT 首页搜索、独立敏感文档及重选失败清理',async({page}
   await page.goto('/');await hydrated(page)
   await page.getByLabel('搜索工具',{exact:true}).fill('拆分');await expect(page.locator('.tool-grid li')).toHaveCount(1)
   await page.evaluate(()=>{(window as unknown as {splitMarker:boolean}).splitMarker=true})
-  await Promise.all([page.waitForURL('http://127.0.0.1:4177/office/pdf-split/',{waitUntil:'load'}),page.getByRole('link',{name:'试用工具 ：PDF 拆分与选页导出',exact:true}).click()]);await hydrated(page)
+  await Promise.all([page.waitForURL('http://127.0.0.1:4177/office/pdf-split/',{waitUntil:'load'}),page.getByRole('link',{name:'打开工具 ：PDF 拆分与选页导出',exact:true}).click()]);await hydrated(page)
   expect(await page.evaluate(()=>(window as unknown as {splitMarker?:boolean}).splitMarker)).toBeUndefined()
   await expect(page.locator('#workdev-google-tag')).toHaveCount(0)
   const picker=page.getByLabel('选择待拆分的 PDF',{exact:true})

@@ -81,7 +81,7 @@ test('E06 站内导航历史与状态卸载', async ({ page }) => {
   await hydrated(page)
   await page.getByLabel('输入或粘贴文本', { exact: true }).fill('synthetic local')
   await page.locator('header nav').getByRole('link', { name: '开发者工具', exact: true }).click()
-  await page.getByRole('link', { name: '试用工具 ：JSON 格式化与校验', exact: true }).click()
+  await page.getByRole('link', { name: '打开工具 ：JSON 格式化与校验', exact: true }).click()
   await expect(page).toHaveURL(origin + '/developer/json-formatter/')
   await expect(page.getByRole('heading', { level: 1 })).toBeFocused()
   await page.getByLabel('输入或粘贴 JSON', { exact: true }).fill('{}')
@@ -95,7 +95,7 @@ test('E06 站内导航历史与状态卸载', async ({ page }) => {
   await expect(page.getByLabel('输入或粘贴 JSON', { exact: true })).toHaveValue('')
   await page.getByRole('link', { name: '顺手集 ToolHug，返回首页' }).click()
   await expect(page).toHaveURL(origin + '/')
-  for (const name of ['试用工具 ：文本统计', '试用工具 ：JSON 格式化与校验', '试用工具 ：URL 编解码']) await expect(page.getByRole('link', { name, exact: true })).toBeVisible()
+  for (const name of ['打开工具 ：文本统计', '打开工具 ：JSON 格式化与校验', '打开工具 ：URL 编解码']) await expect(page.getByRole('link', { name, exact: true })).toBeVisible()
 })
 
 test('E06 无斜杠308与旧hash', async ({ page, request }) => {

@@ -1,0 +1,19 @@
+{
+  "output": "/Users/user/development/ToxBox/.ci/native-print-041/probe-iShTw8/native.pdf",
+  "preferences": {
+    "print.always_print_silent": true,
+    "print.printer_Mozilla_Save_to_PDF.print_paper_size_unit": 1,
+    "print.printer_Mozilla_Save_to_PDF.print_paper_width": "210",
+    "print.printer_Mozilla_Save_to_PDF.print_paper_height": "297",
+    "print.printer_Mozilla_Save_to_PDF.print_paper_id": "iso_a4",
+    "print_printer": "Mozilla Save to PDF",
+    "print.print_to_file": true,
+    "print.print_to_filename": "/Users/user/development/ToxBox/.ci/native-print-041/probe-iShTw8/native.pdf",
+    "print.printer_Mozilla_Save_to_PDF.print_to_file": true,
+    "print.printer_Mozilla_Save_to_PDF.print_to_filename": "/Users/user/development/ToxBox/.ci/native-print-041/probe-iShTw8/native.pdf"
+  },
+  "version": "157.0",
+  "bytes": 33738,
+  "pages": 2,
+  "ok": true
+}

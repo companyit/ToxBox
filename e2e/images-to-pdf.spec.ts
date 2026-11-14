@@ -56,7 +56,7 @@ test('IMG EXIF 1～8 实际 Worker 方向解码及透明白底输出',async({pag
 test('IMG 敏感文档导航、隐私、取消及离页清理',async({page})=>{
  const requests:string[]=[];page.on('request',r=>requests.push(r.url()))
  await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('图片转 PDF')
- await Promise.all([page.waitForURL('http://127.0.0.1:4177/office/images-to-pdf/',{waitUntil:'load'}),page.getByRole('link',{name:'试用工具 ：图片转 PDF',exact:true}).click()]);await hydrated(page)
+ await Promise.all([page.waitForURL('http://127.0.0.1:4177/office/images-to-pdf/',{waitUntil:'load'}),page.getByRole('link',{name:'打开工具 ：图片转 PDF',exact:true}).click()]);await hydrated(page)
  await expect(page.locator('.site-header nav a[href="/office/"]')).toHaveAttribute('aria-current','page')
  const data=await fixtures(page),storage=await page.evaluate(()=>[JSON.stringify(localStorage),JSON.stringify(sessionStorage)])
  await page.getByLabel('选择或追加 JPG/PNG 图片',{exact:true}).setInputFiles({name:'PRIVATE_IMAGE.png',mimeType:'image/png',buffer:Buffer.from(data.transparent)});await passed(page)

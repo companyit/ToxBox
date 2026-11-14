@@ -1,0 +1,38 @@
+[
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-13T14-11-13.112Z-11596/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-1440-firefox/docx-native-print.pdf",
+    "archived": "docs/verification/evidence/native-print-2026-11-13/final-documents/firefox-1440.pdf",
+    "sha256": "348a1989de26eabb926ed89e939957a0e1f9f0e52aa4e0db01c343b00c63ccde",
+    "pages": 3
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-13T14-11-13.112Z-11596/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-firefox/docx-native-print.pdf",
+    "archived": "docs/verification/evidence/native-print-2026-11-13/final-documents/firefox-375.pdf",
+    "sha256": "392f6c0026dd339b9db6ee8b13d80a9e998af5802abb681f622a31905c96e648",
+    "pages": 3
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-13T14-11-13.112Z-11596/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-768-firefox/docx-native-print.pdf",
+    "archived": "docs/verification/evidence/native-print-2026-11-13/final-documents/firefox-768.pdf",
+    "sha256": "1422e58d8aafdc03c0cbf1e185b1ef8b8646e284f626a014ab0d375a90d7a316",
+    "pages": 3
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-13T14-11-13.112Z-11596/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-1440-chromium/docx-print.pdf",
+    "archived": "docs/verification/evidence/native-print-2026-11-13/final-documents/chromium-1440.pdf",
+    "sha256": "302f2fa6893cb1eaa6eeb3b27fbe1f9d91cb0104733400eb11cb1a28d9f33906",
+    "pages": 3
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-13T14-11-13.112Z-11596/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-375-chromium/docx-print.pdf",
+    "archived": "docs/verification/evidence/native-print-2026-11-13/final-documents/chromium-375.pdf",
+    "sha256": "c2eb2423885b95b6e0aef3c2e153ac5eee52a118cd940bf30f3e6947c84e75ec",
+    "pages": 3
+  },
+  {
+    "input": "docs/verification/evidence/m106c3/runs/2026-11-13T14-11-13.112Z-11596/artifacts/document-tools-DOC-LOCAL-DOCX-简版真实-Worker-与打印正文-768-chromium/docx-print.pdf",
+    "archived": "docs/verification/evidence/native-print-2026-11-13/final-documents/chromium-768.pdf",
+    "sha256": "5a380aeb326bf6a20259436a7dc27f56206e6b94d6c7558ed59d56c2721bf7b1",
+    "pages": 3
+  }
+]

@@ -25,7 +25,7 @@ test('DIFF 上限、复制失败及敏感文档/存储清理',async({page})=>{
  await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('denied')}}}))
  const requests:string[]=[];page.on('request',r=>requests.push(r.url()))
  await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('文本差异')
- await page.getByRole('link',{name:'试用工具 ：文本差异对比',exact:true}).click();await expect(page).toHaveURL('/office/text-diff/');await hydrated(page)
+ await page.getByRole('link',{name:'打开工具 ：文本差异对比',exact:true}).click();await expect(page).toHaveURL('/office/text-diff/');await hydrated(page)
  const left=page.getByLabel('原文本',{exact:true}),right=page.getByLabel('新文本',{exact:true}),run=page.getByRole('button',{name:'开始对比',exact:true})
  const storage=await page.evaluate(()=>[JSON.stringify(localStorage),JSON.stringify(sessionStorage)])
  await left.fill('x'.repeat(100001));await run.click();await expect(page.getByRole('status')).toContainText('100,000');await expect(left).toHaveValue('x'.repeat(100001))

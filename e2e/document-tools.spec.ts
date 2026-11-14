@@ -2,6 +2,27 @@ import { test, expect, hydrated } from './helpers'
 import { PDFDocument, degrees } from 'pdf-lib'
 import { createDocxFixture as docx } from '../tests/helpers/documentFixtures'
 import fs from 'node:fs/promises'
+import path from 'node:path'
+
+const nativePrintPdf = path.join(process.env.WORKDEV_E2E_RUN_DIR!, 'firefox-native-print.pdf')
+// Only this spec's temporary Firefox profile uses the virtual PDF printer.
+test.use({ launchOptions: { firefoxUserPrefs: {
+ 'print.always_print_silent': true,
+ 'print_printer': 'Mozilla Save to PDF',
+ 'print.print_to_file': true,
+ 'print.print_to_filename': nativePrintPdf,
+ 'print.printer_Mozilla_Save_to_PDF.print_to_file': true,
+ 'print.printer_Mozilla_Save_to_PDF.print_to_filename': nativePrintPdf,
+ 'print.printer_Mozilla_Save_to_PDF.print_paper_size_unit': 1,
+ 'print.printer_Mozilla_Save_to_PDF.print_paper_width': '210',
+ 'print.printer_Mozilla_Save_to_PDF.print_paper_height': '297',
+ 'print.printer_Mozilla_Save_to_PDF.print_paper_id': 'iso_a4',
+ ...Object.fromEntries(['headerleft','headercenter','headerright','footerleft','footercenter','footerright'].flatMap(position => [
+  [`print.print_${position}`, ''],
+  [`print.printer_Mozilla_Save_to_PDF.print_${position}`, ''],
+ ])),
+} } })
+
 async function pdf(width: number, pages = 1) {
   const doc = await PDFDocument.create()
   for (let i=0;i<pages;i++) { const p=doc.addPage([width,400]); p.drawText(`Synthetic page ${width}-${i+1}`,{x:20,y:200,size:12}); if (i===1) p.setRotation(degrees(90)) }
@@ -52,10 +73,27 @@ for(const width of [375,768,1440]) {
     window.addEventListener('beforeprint', () => events.push('beforeprint'))
     window.addEventListener('afterprint', () => events.push('afterprint'))
   })
+  if(browserName==='firefox') await expect(fs.stat(nativePrintPdf)).rejects.toMatchObject({code:'ENOENT'})
   await page.getByRole('button',{name:'打印 / 另存为 PDF',exact:true}).click()
   await expect(page.getByRole('status')).toContainText('已请求打印')
   await expect(page.getByRole('status')).not.toContainText('保存成功')
   const printEvents = await page.evaluate(() => (window as unknown as { documentPrintEvents: string[] }).documentPrintEvents)
+  if(browserName==='firefox') {
+   await expect.poll(async()=>{
+    try {
+     const bytes=await fs.readFile(nativePrintPdf)
+     if(!bytes.toString('latin1').trimEnd().endsWith('%%EOF'))return 0
+     return (await PDFDocument.load(bytes)).getPageCount()
+    } catch { return 0 }
+   },{timeout:15000,message:'原生打印必须生成新的完整多页 PDF'}).toBeGreaterThan(1)
+   const nativePdf=await PDFDocument.load(await fs.readFile(nativePrintPdf))
+   for(const sheet of nativePdf.getPages()) {
+    expect(Math.abs(sheet.getWidth()-595.28)).toBeLessThan(1)
+    expect(Math.abs(sheet.getHeight()-841.89)).toBeLessThan(1)
+   }
+   expect(printEvents).toContain('beforeprint');expect(printEvents).toContain('afterprint')
+   await fs.rename(nativePrintPdf,info.outputPath('docx-native-print.pdf'))
+  }
   await info.attach('真实打印调用事件', { body: JSON.stringify({ browserName, width, printEvents, systemSaveVerified: false }), contentType: 'application/json' })
   const damaged = await docx(), checksum = new DataView(damaged.buffer,damaged.byteOffset,damaged.byteLength)
   for(let i=0;i<=damaged.length-46;i++) if(checksum.getUint32(i,true)===0x02014b50) {checksum.setUint32(i+16,checksum.getUint32(i+16,true)^1,true);break}
@@ -73,7 +111,7 @@ test('DOC-LOCAL 敏感文档边界双向整页隔离及搜索入口',async({page
  for(const name of ['PDF 合并','Word 转 PDF']) {
   await page.evaluate(()=>{(window as unknown as {sentinel?:boolean}).sentinel=true})
   const target = name === 'PDF 合并' ? '/office/pdf-merge/' : '/office/word-to-pdf/'
-  await Promise.all([page.waitForURL('http://127.0.0.1:4177'+target,{waitUntil:'load'}), page.getByRole('link',{name:`试用工具 ：${name}`,exact:true}).click()]);await hydrated(page)
+  await Promise.all([page.waitForURL('http://127.0.0.1:4177'+target,{waitUntil:'load'}), page.getByRole('link',{name:`打开工具 ：${name}`,exact:true}).click()]);await hydrated(page)
   expect(await page.evaluate(()=>(window as unknown as {sentinel?:boolean}).sentinel)).toBeUndefined()
   expect(await page.locator('#workdev-google-tag').count()).toBe(0)
   await page.evaluate(()=>{(window as unknown as {sentinel?:boolean}).sentinel=true})

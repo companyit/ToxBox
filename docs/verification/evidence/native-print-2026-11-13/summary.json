@@ -1,0 +1,196 @@
+{
+  "baselineHead": "9e16e2a6d9f6a5ad953db6e692e00f5f1937de71",
+  "nodeVersion": "v24.21.0",
+  "macOS": "26.4",
+  "architecture": "arm64",
+  "changedSince041Start": {
+    "src": [
+      "views/pages/WordToPdfPage.vue"
+    ],
+    "e2e": [
+      "document-tools.spec.ts"
+    ]
+  },
+  "packageMatchesHead": true,
+  "lockAndConfigUnchangedSinceStart": true,
+  "finalSourceTestFixtureOutputBindingVerified": true,
+  "unitComponents": {
+    "files": 46,
+    "passed": 332,
+    "exit": 0
+  },
+  "ssg": {
+    "files": 16,
+    "passed": 18,
+    "exit": 0
+  },
+  "runs": [
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T14-02-28.390Z-10119",
+      "run": {
+        "projects": [
+          "chromium",
+          "firefox",
+          "webkit"
+        ],
+        "startedUtc": "2026-11-13T14:02:28.390Z",
+        "buildExitCode": 0,
+        "testExitCode": 0,
+        "portReleased": true,
+        "durationSeconds": 443.202
+      },
+      "stats": {
+        "startTime": "2026-11-13T14:02:32.212Z",
+        "duration": 438872.632,
+        "expected": 810,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "resultsSha256": "27a2ae2246ae8507c4773cc747865bfcaaece2ec213316b767eb1626dadce326",
+      "projects": {
+        "chromium": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "156.0.8078.4"
+          ]
+        },
+        "firefox": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "157.0"
+          ]
+        },
+        "webkit": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "27.2"
+          ]
+        }
+      },
+      "nativePrintEvents": [
+        {
+          "browserName": "firefox",
+          "width": 375,
+          "printEvents": [
+            "beforeprint",
+            "afterprint"
+          ],
+          "systemSaveVerified": false
+        },
+        {
+          "browserName": "firefox",
+          "width": 768,
+          "printEvents": [
+            "beforeprint",
+            "afterprint"
+          ],
+          "systemSaveVerified": false
+        },
+        {
+          "browserName": "firefox",
+          "width": 1440,
+          "printEvents": [
+            "beforeprint",
+            "afterprint"
+          ],
+          "systemSaveVerified": false
+        }
+      ]
+    },
+    {
+      "directory": "docs/verification/evidence/m106c3/runs/2026-11-13T14-11-13.112Z-11596",
+      "run": {
+        "projects": [
+          "chromium",
+          "firefox",
+          "webkit"
+        ],
+        "startedUtc": "2026-11-13T14:11:13.112Z",
+        "buildExitCode": 0,
+        "testExitCode": 0,
+        "portReleased": true,
+        "durationSeconds": 446.104
+      },
+      "stats": {
+        "startTime": "2026-11-13T14:11:16.841Z",
+        "duration": 441877.063,
+        "expected": 810,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "resultsSha256": "bbae0100339eaa76f3f9aa39c2bccf6c1c20274c7645f612280466dd6b9890e5",
+      "projects": {
+        "chromium": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "156.0.8078.4"
+          ]
+        },
+        "firefox": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "157.0"
+          ]
+        },
+        "webkit": {
+          "statuses": {
+            "passed": 270
+          },
+          "versions": [
+            "27.2"
+          ]
+        }
+      },
+      "nativePrintEvents": [
+        {
+          "browserName": "firefox",
+          "width": 375,
+          "printEvents": [
+            "beforeprint",
+            "afterprint"
+          ],
+          "systemSaveVerified": false
+        },
+        {
+          "browserName": "firefox",
+          "width": 768,
+          "printEvents": [
+            "beforeprint",
+            "afterprint"
+          ],
+          "systemSaveVerified": false
+        },
+        {
+          "browserName": "firefox",
+          "width": 1440,
+          "printEvents": [
+            "beforeprint",
+            "afterprint"
+          ],
+          "systemSaveVerified": false
+        }
+      ]
+    }
+  ],
+  "independentPdfKit": {
+    "documents": 6,
+    "pages": 18,
+    "nativeDocuments": 3,
+    "paperChecked": "A4 portrait, tolerance 1pt",
+    "textNormalization": "NFKC, original text retained",
+    "systemSaveVerified": false,
+    "firstLetterFailureRetained": true
+  }
+}

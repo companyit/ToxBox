@@ -1,0 +1,2 @@
+listen EPERM: operation not permitted 127.0.0.1:4177
+本地E2E证据：docs/verification/evidence/m106c3/runs/2026-11-13T12-19-45.541Z-3397

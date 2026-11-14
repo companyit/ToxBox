@@ -5,6 +5,7 @@
   --color-text: #14273b;
   --color-muted: #4d6075;
   --color-border: #d3dfe9;
+  --color-control-border: #75879b;
   --color-accent: #08705d;
   --color-accent-soft: #e6f4f0;
   --color-on-accent: #ffffff;
@@ -35,6 +36,7 @@
     --color-text: #e8f0fc;
     --color-muted: #abbdd4;
     --color-border: #30445e;
+    --color-control-border: #7088a3;
     --color-accent: #64dfc4;
     --color-accent-soft: #153c3b;
     --color-on-accent: #09221f;

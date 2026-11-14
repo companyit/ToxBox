@@ -1,0 +1,124 @@
+
+> toxbox@0.0.0 test:vitest
+> vitest run --project unit --project components
+
+
+ RUN  v4.1.11 /Users/user/development/ToxBox
+
+ ❯ |unit| tests/unit/pdfSplit.test.ts (0 test)
+ ❯ |unit| tests/unit/documentTools.test.ts (0 test)
+ ❯ |unit| tests/unit/documentBoundaries.test.ts (0 test)
+ ❯ |unit| tests/unit/imagePdf.test.ts (0 test)
+ ❯ |unit| tests/unit/jsonYaml.test.ts (0 test)
+ ❯ |unit| tests/unit/pdfOrganizer.test.ts (0 test)
+ ❯ |unit| tests/unit/docxIntegrity.test.ts (0 test)
+ ❯ |unit| tests/unit/docxConversion.test.ts (0 test)
+ ❯ |unit| tests/unit/imagePerformance.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 9 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| tests/unit/documentBoundaries.test.ts [ tests/unit/documentBoundaries.test.ts ]
+Error: Cannot find package 'jszip' imported from /Users/user/development/ToxBox/tests/unit/documentBoundaries.test.ts
+ ❯ tests/unit/documentBoundaries.test.ts:2:1
+      1| import { expect, test } from 'vitest'
+      2| import JSZip from 'jszip'
+       | ^
+      3| import { PDFDocument } from 'pdf-lib'
+      4| import { processPdfs } from '../../src/utils/pdfMerge'
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/9]⎯
+
+ FAIL  |unit| tests/unit/documentTools.test.ts [ tests/unit/documentTools.test.ts ]
+Error: Cannot find package 'pdf-lib' imported from /Users/user/development/ToxBox/tests/unit/documentTools.test.ts
+ ❯ tests/unit/documentTools.test.ts:2:1
+      1| import { test, expect } from 'vitest'
+      2| import { PDFDocument, degrees } from 'pdf-lib'
+       | ^
+      3| import JSZip from 'jszip'
+      4| import { loadPdf, processPdfs } from '../../src/utils/pdfMerge'
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/9]⎯
+
+ FAIL  |unit| tests/unit/docxConversion.test.ts [ tests/unit/docxConversion.test.ts ]
+Error: Cannot find package 'mammoth' imported from /Users/user/development/ToxBox/tests/unit/docxConversion.test.ts
+ ❯ tests/unit/docxConversion.test.ts:2:1
+      1| import { test, expect } from 'vitest'
+      2| import mammoth from 'mammoth'
+       | ^
+      3| import { createDocxFixture } from '../helpers/documentFixtures'
+      4| import { imageDimensions } from '../../src/utils/docxLimits'
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/9]⎯
+
+ FAIL  |unit| tests/unit/docxIntegrity.test.ts [ tests/unit/docxIntegrity.test.ts ]
+Error: Cannot find package 'jszip' imported from /Users/user/development/ToxBox/tests/unit/docxIntegrity.test.ts
+ ❯ tests/unit/docxIntegrity.test.ts:2:1
+      1| import { expect, test } from 'vitest'
+      2| import JSZip from 'jszip'
+       | ^
+      3| import { inspectDocx } from '../../src/utils/docxValidation'
+      4| async function fixture(compression: 'STORE' | 'DEFLATE') {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/9]⎯
+
+ FAIL  |unit| tests/unit/imagePdf.test.ts [ tests/unit/imagePdf.test.ts ]
+Error: Cannot find package 'pdf-lib' imported from /Users/user/development/ToxBox/src/utils/imagePdf.ts
+ ❯ src/utils/imagePdf.ts:1:1
+      1| import { PDFDocument } from 'pdf-lib'
+       | ^
+      2| import { inspectImage, type ImageInfo } from './imageInspect'
+      3| export { inspectImage, type ImageInfo } from './imageInspect'
+ ❯ tests/unit/imagePdf.test.ts:2:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/9]⎯
+
+ FAIL  |unit| tests/unit/imagePerformance.test.ts [ tests/unit/imagePerformance.test.ts ]
+Error: Cannot find package 'pdf-lib' imported from /Users/user/development/ToxBox/src/utils/imagePdf.ts
+ ❯ src/utils/imagePdf.ts:1:1
+      1| import { PDFDocument } from 'pdf-lib'
+       | ^
+      2| import { inspectImage, type ImageInfo } from './imageInspect'
+      3| export { inspectImage, type ImageInfo } from './imageInspect'
+ ❯ tests/unit/imagePerformance.test.ts:3:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/9]⎯
+
+ FAIL  |unit| tests/unit/jsonYaml.test.ts [ tests/unit/jsonYaml.test.ts ]
+Error: Cannot find package 'yaml' imported from /Users/user/development/ToxBox/tests/unit/jsonYaml.test.ts
+ ❯ tests/unit/jsonYaml.test.ts:2:1
+      1| import { test, expect } from 'vitest'
+      2| import { parse } from 'yaml'
+       | ^
+      3| import { convertJsonYaml } from '../../src/utils/jsonYaml'
+      4| function success(input:string,direction:'json-to-yaml'|'yaml-to-json')…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/9]⎯
+
+ FAIL  |unit| tests/unit/pdfOrganizer.test.ts [ tests/unit/pdfOrganizer.test.ts ]
+Error: Cannot find package 'pdf-lib' imported from /Users/user/development/ToxBox/tests/unit/pdfOrganizer.test.ts
+ ❯ tests/unit/pdfOrganizer.test.ts:2:1
+      1| import { test, expect } from 'vitest'
+      2| import { PDFDocument, PDFName } from 'pdf-lib'
+       | ^
+      3| import { initialOrganizerPlan, moveOrganizerPage, validateOrganizerPla…
+      4| import { inspectOrganizerPdf, exportOrganizerPdf } from '../../src/uti…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/9]⎯
+
+ FAIL  |unit| tests/unit/pdfSplit.test.ts [ tests/unit/pdfSplit.test.ts ]
+Error: Cannot find package 'pdf-lib' imported from /Users/user/development/ToxBox/tests/unit/pdfSplit.test.ts
+ ❯ tests/unit/pdfSplit.test.ts:2:1
+      1| import { expect, test, vi } from 'vitest'
+      2| import { PDFDocument, degrees, PDFDict, PDFName, PDFRawStream } from '…
+       | ^
+      3| import { parsePdfSelection, validateSplitFile } from '../../src/utils/…
+      4| import { exportPdfSelection, inspectSplitPdf } from '../../src/utils/p…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/9]⎯
+
+
+ Test Files  9 failed | 37 passed (46)
+      Tests  290 passed (290)
+   Start at  20:18:11
+   Duration  7.61s (transform 2.24s, setup 0ms, import 3.00s, tests 1.57s, environment 4.09s)
+

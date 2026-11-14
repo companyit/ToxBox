@@ -58,7 +58,7 @@ onBeforeUnmount(() => { clear(); window.removeEventListener('pagehide', clear) }
 <p>仅支持本地 DOCX 简版重排，不上传文件。接受字体、表格和分页差异；不支持旧 DOC、宏或加密文件。</p>
 <label for="docx-file">选择 DOCX（最多 10 MiB）</label><input id="docx-file" ref="picker" type="file" accept=".docx" @change="select"><p v-if="file">已选：{{ file.name }}</p>
 <div class="actions"><button :disabled="busy || !file" @click="convert">转换并预览</button><button v-if="busy" @click="cancel">取消处理</button><button :disabled="!model.length || busy || printing" @click="print">打印 / 另存为 PDF</button><button @click="clear">清空</button></div>
-<p role="status" aria-live="polite">{{ status }}</p><p>在系统打印对话框选择“另存为 PDF”，并自行关闭网址/时间页眉页脚。只打印转换正文；不保留原始字体、页眉页脚、修订批注、文本框和原始分页，不承诺原版式。外链仅保留文字，不加载外部图片。</p>
+<p role="status" aria-live="polite">{{ status }}</p><p>在系统打印对话框选择“A4、纵向”和“另存为 PDF”，并自行关闭网址/时间页眉页脚。浏览器可能沿用上次纸张设置，请在保存前核对。只打印转换正文；不保留原始字体、页眉页脚、修订批注、文本框和原始分页，不承诺原版式。外链仅保留文字，不加载外部图片。</p>
 <section v-if="model.length" aria-label="简版文档预览"><DocxContent :nodes="model" :images="images" /></section>
 </section><Teleport v-if="model.length" to="body"><div id="docx-print"><DocxContent :nodes="model" :images="images" /></div></Teleport></ToolPageLayout></template>
 <style scoped>

@@ -1,0 +1,212 @@
+{
+  "baselineHead": "9e16e2a6d9f6a5ad953db6e692e00f5f1937de71",
+  "node": "v24.21.0",
+  "macOS": "26.4",
+  "architecture": "arm64",
+  "changedSince042Start": {
+    "src": [
+      "data/pages.ts",
+      "data/toolGuides.ts",
+      "data/tools.ts",
+      "utils/csvJson.ts",
+      "utils/jsonTable.ts",
+      "views/pages/CsvJsonPage.vue"
+    ],
+    "e2e": [
+      "csv-json.spec.ts"
+    ],
+    "tests": [
+      "components/csvJson.test.ts",
+      "ssg/csvJson.test.ts",
+      "unit/csvJson.test.ts",
+      "unit/jsonTableCompat.test.ts"
+    ]
+  },
+  "packageLockAndRootTestConfigUnchanged": true,
+  "csvParserBodyMatchesHead": true,
+  "sourceTestFixtureOutputBindingVerified": true,
+  "unitComponents": {
+    "files": 47,
+    "passed": 356,
+    "exit": 0
+  },
+  "ssg": {
+    "files": 16,
+    "passed": 18,
+    "exit": 0
+  },
+  "historicalInventory": {
+    "mapped": 154,
+    "exit": 0
+  },
+  "runDirectory": "docs/verification/evidence/m106c3/runs/2026-11-13T14-52-42.848Z-14381",
+  "run": {
+    "projects": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "startedUtc": "2026-11-13T14:52:42.848Z",
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "portReleased": true,
+    "durationSeconds": 456.278
+  },
+  "stats": {
+    "startTime": "2026-11-13T14:52:46.929Z",
+    "duration": 451670.998,
+    "expected": 819,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "resultsSha256": "05611fe0cd55338afc3103bcc1a5a683832c9c9f9b69c827129eea8a135c1177",
+  "projects": {
+    "chromium": {
+      "statuses": {
+        "passed": 273
+      },
+      "versions": [
+        "156.0.8078.4"
+      ]
+    },
+    "firefox": {
+      "statuses": {
+        "passed": 273
+      },
+      "versions": [
+        "157.0"
+      ]
+    },
+    "webkit": {
+      "statuses": {
+        "passed": 273
+      },
+      "versions": [
+        "27.2"
+      ]
+    }
+  },
+  "jsonCsvCases": [
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 375",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 768",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 1440",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 键盘/组合输入、超限、复制失败与离页清理",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 375",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 768",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 1440",
+      "project": "chromium",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 375",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 768",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 1440",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 键盘/组合输入、超限、复制失败与离页清理",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 375",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 768",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 1440",
+      "project": "firefox",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 375",
+      "project": "webkit",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 768",
+      "project": "webkit",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 双向转换、多行引号及错误保留 1440",
+      "project": "webkit",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 键盘/组合输入、超限、复制失败与离页清理",
+      "project": "webkit",
+      "status": "passed"
+    },
+    {
+      "title": "TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求",
+      "project": "webkit",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 375",
+      "project": "webkit",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 768",
+      "project": "webkit",
+      "status": "passed"
+    },
+    {
+      "title": "JCSV 完整JSON、兼容提示、路径和精度 1440",
+      "project": "webkit",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+browserType.launch: Failed to launch the browser process.
+Browser logs:
+
+<launching> /Users/user/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/tv/50k8fyyn0vl2wb27bf8bnq_r0000gn/T/playwright_firefoxdev_profile-O9FEd2 -juggler-pipe -silent
+<launched> pid=3401
+[pid=3401][err] *** You are running in headless mode.
+[pid=3401] <process did exit: exitCode=null, signal=SIGABRT>
+[pid=3401] starting temporary directories cleanup
+Call log:
+[2m  - <launching> /Users/user/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/tv/50k8fyyn0vl2wb27bf8bnq_r0000gn/T/playwright_firefoxdev_profile-O9FEd2 -juggler-pipe -silent[22m
+[2m  - <launched> pid=3401[22m
+[2m  - [pid=3401][err] *** You are running in headless mode.[22m
+[2m  - [pid=3401] <process did exit: exitCode=null, signal=SIGABRT>[22m
+[2m  - [pid=3401] starting temporary directories cleanup[22m
+[2m  - [pid=3401] <gracefully close start>[22m
+[2m  - [pid=3401] <kill>[22m
+[2m  - [pid=3401] <skipped force kill spawnedProcess.killed=false processClosed=true>[22m
+[2m  - [pid=3401] finished temporary directories cleanup[22m
+[2m  - [pid=3401] <gracefully close end>[22m
+

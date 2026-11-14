@@ -51,7 +51,7 @@ test('ORG 搜索及独立文档、单页保护、损坏/超限拒绝与离页清
   await page.goto('/'); await hydrated(page)
   await page.evaluate(() => { (window as unknown as { organizerMarker: boolean }).organizerMarker = true })
   await page.getByLabel('搜索工具', { exact: true }).fill('PDF 页面整理')
-  await Promise.all([page.waitForURL('http://127.0.0.1:4177/office/pdf-organizer/', { waitUntil: 'load' }), page.getByRole('link', { name: '试用工具 ：PDF 页面整理', exact: true }).click()]); await hydrated(page)
+  await Promise.all([page.waitForURL('http://127.0.0.1:4177/office/pdf-organizer/', { waitUntil: 'load' }), page.getByRole('link', { name: '打开工具 ：PDF 页面整理', exact: true }).click()]); await hydrated(page)
   expect(await page.evaluate(() => (window as unknown as { organizerMarker?: boolean }).organizerMarker)).toBeUndefined()
   await expect(page.locator('#workdev-google-tag')).toHaveCount(0)
   const picker = page.getByLabel('选择待整理的 PDF', { exact: true })

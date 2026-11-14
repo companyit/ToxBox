@@ -1,0 +1,15 @@
+{
+  "output": "/Users/user/development/ToxBox/.ci/native-print-041/probe-RItVQe/native.pdf",
+  "preferences": {
+    "print.always_print_silent": true,
+    "print_printer": "Mozilla Save to PDF",
+    "print.print_to_file": true,
+    "print.print_to_filename": "/Users/user/development/ToxBox/.ci/native-print-041/probe-RItVQe/native.pdf",
+    "print.printer_Mozilla_Save_to_PDF.print_to_file": true,
+    "print.printer_Mozilla_Save_to_PDF.print_to_filename": "/Users/user/development/ToxBox/.ci/native-print-041/probe-RItVQe/native.pdf"
+  },
+  "version": "157.0",
+  "bytes": 33297,
+  "pages": 2,
+  "ok": true
+}

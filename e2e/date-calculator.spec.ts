@@ -29,5 +29,5 @@ for(const timezoneId of ['UTC','America/Los_Angeles','Asia/Shanghai'])test(`DATE
 })
 test('DATE 首页搜索及办公分类接入',async({page})=>{
  await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('日期差');await expect(page.locator('.tool-grid li')).toHaveCount(1)
- await page.getByRole('link',{name:'试用工具 ：日期差与日期加减',exact:true}).click();await hydrated(page);await expect(page.locator('h1')).toHaveText('日期差与日期加减')
+ await page.getByRole('link',{name:'打开工具 ：日期差与日期加减',exact:true}).click();await hydrated(page);await expect(page.locator('h1')).toHaveText('日期差与日期加减')
 })

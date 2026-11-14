@@ -1,0 +1,457 @@
+
+> toxbox@0.0.0 build:preview
+> run-p type-check "build:preview-only {@}" --
+
+
+> toxbox@0.0.0 type-check
+> vue-tsc --build && vue-tsc --noEmit -p tsconfig.tests.json
+
+
+> toxbox@0.0.0 build:preview-only
+> node scripts/ssg.mjs
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../types/seo" without a file extension (src/utils/seoEnvironment.ts:2:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seo.ts:4:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seo.ts:5:37). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 250 modules transformed.
+rendering chunks...
+computing gzip size...
+.ssg-build/client/pdf-assets/cmaps/CNS2-V.bcmap                                0.09 kB
+.ssg-build/client/pdf-assets/cmaps/Roman.bcmap                                 0.09 kB
+.ssg-build/client/pdf-assets/cmaps/Katakana.bcmap                              0.10 kB
+.ssg-build/client/pdf-assets/cmaps/ETenms-B5-H.bcmap                           0.10 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-HW-H.bcmap                      0.11 kB
+.ssg-build/client/pdf-assets/cmaps/Hiragana.bcmap                              0.12 kB
+.ssg-build/client/pdf-assets/cmaps/Hankaku.bcmap                               0.13 kB
+.ssg-build/client/pdf-assets/cmaps/B5-V.bcmap                                  0.14 kB
+.ssg-build/client/pdf-assets/cmaps/CNS1-V.bcmap                                0.14 kB
+.ssg-build/client/pdf-assets/cmaps/B5pc-V.bcmap                                0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKdla-B5-V.bcmap                            0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKdlb-B5-V.bcmap                            0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKgccs-B5-V.bcmap                           0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKm314-B5-V.bcmap                           0.14 kB
+.ssg-build/client/pdf-assets/cmaps/HKm471-B5-V.bcmap                           0.14 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UCS2-V.bcmap                         0.15 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF16-V.bcmap                        0.15 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF8-V.bcmap                         0.15 kB
+.ssg-build/client/pdf-assets/cmaps/ETHK-B5-V.bcmap                             0.15 kB
+.ssg-build/client/pdf-assets/cmaps/ETen-B5-V.bcmap                             0.15 kB
+.ssg-build/client/pdf-assets/cmaps/HKscs-B5-V.bcmap                            0.15 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-V.bcmap                                 0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF32-V.bcmap                        0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-EUC-V.bcmap                             0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF16-V.bcmap                         0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-Johab-V.bcmap                           0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-V.bcmap                           0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSCpc-EUC-V.bcmap                           0.16 kB
+.ssg-build/client/pdf-assets/cmaps/V.bcmap                                     0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF32-V.bcmap                         0.16 kB
+.ssg-build/client/pdf-assets/cmaps/78-V.bcmap                                  0.16 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-HW-V.bcmap                        0.16 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF8-V.bcmap                          0.16 kB
+.ssg-build/client/pdf-assets/cmaps/EUC-V.bcmap                                 0.17 kB
+.ssg-build/client/pdf-assets/cmaps/RKSJ-V.bcmap                                0.17 kB
+.ssg-build/client/pdf-assets/cmaps/ETenms-B5-V.bcmap                           0.17 kB
+.ssg-build/client/pdf-assets/cmaps/78-EUC-V.bcmap                              0.17 kB
+.ssg-build/client/pdf-assets/cmaps/78-RKSJ-V.bcmap                             0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GB-V.bcmap                                  0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-V.bcmap                                 0.17 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF16-V.bcmap                         0.17 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UCS2-V.bcmap                          0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GB-EUC-V.bcmap                              0.17 kB
+.ssg-build/client/pdf-assets/cmaps/WP-Symbol.bcmap                             0.17 kB
+.ssg-build/client/pdf-assets/cmaps/GBK-EUC-V.bcmap                             0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-EUC-V.bcmap                             0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBKp-EUC-V.bcmap                            0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBpc-EUC-V.bcmap                            0.18 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF8-V.bcmap                          0.18 kB
+.ssg-build/client/pdf-assets/cmaps/GBTpc-EUC-V.bcmap                           0.18 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF32-V.bcmap                         0.18 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UCS2-V.bcmap                          0.19 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-V.bcmap                                 0.21 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-0.bcmap                           0.21 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-RKSJ-V.bcmap                            0.21 kB
+.ssg-build/client/pdf-assets/cmaps/GBK2K-V.bcmap                               0.21 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-0.bcmap                        0.22 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-1.bcmap                        0.22 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-2.bcmap                        0.23 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-0.bcmap                        0.24 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-3.bcmap                        0.24 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-1.bcmap                           0.25 kB
+.ssg-build/client/pdf-assets/cmaps/NWP-V.bcmap                                 0.25 kB
+.ssg-build/client/pdf-assets/cmaps/90pv-RKSJ-V.bcmap                           0.26 kB
+.ssg-build/client/pdf-assets/cmaps/Add-V.bcmap                                 0.28 kB
+.ssg-build/client/pdf-assets/cmaps/Add-RKSJ-V.bcmap                            0.28 kB
+.ssg-build/client/pdf-assets/cmaps/78ms-RKSJ-V.bcmap                           0.29 kB
+.ssg-build/client/pdf-assets/cmaps/90ms-RKSJ-V.bcmap                           0.29 kB
+.ssg-build/client/pdf-assets/cmaps/90msp-RKSJ-V.bcmap                          0.29 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-0.bcmap                          0.31 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-4.bcmap                        0.33 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-1.bcmap                          0.37 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-2.bcmap                          0.37 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-1.bcmap                        0.38 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-2.bcmap                        0.39 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-3.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-4.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-5.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-6.bcmap                          0.40 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-5.bcmap                        0.43 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-2.bcmap                           0.46 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-3.bcmap                           0.47 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-6.bcmap                        0.48 kB
+.ssg-build/client/pdf-assets/cmaps/CNS2-H.bcmap                                0.50 kB
+.ssg-build/client/pdf-assets/cmaps/GB-H.bcmap                                  0.52 kB
+.ssg-build/client/pdf-assets/cmaps/RKSJ-H.bcmap                                0.53 kB
+.ssg-build/client/pdf-assets/cmaps/GB-EUC-H.bcmap                              0.54 kB
+.ssg-build/client/pdf-assets/cmaps/H.bcmap                                     0.55 kB
+.ssg-build/client/pdf-assets/cmaps/GBpc-EUC-H.bcmap                            0.55 kB
+.ssg-build/client/pdf-assets/cmaps/EUC-H.bcmap                                 0.57 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-4.bcmap                           0.60 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-5.bcmap                           0.62 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF16-V.bcmap                        0.64 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF16-V.bcmap                    0.64 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-V.bcmap                         0.66 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF32-V.bcmap                        0.67 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF8-V.bcmap                         0.67 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-HW-V.bcmap                      0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF32-V.bcmap                    0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF8-V.bcmap                     0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX0213-UTF32-V.bcmap                   0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX02132004-UTF32-V.bcmap               0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISPro-UCS2-V.bcmap                      0.68 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISPro-UCS2-HW-V.bcmap                   0.70 kB
+.ssg-build/client/pdf-assets/cmaps/CNS1-H.bcmap                                0.70 kB
+.ssg-build/client/pdf-assets/cmaps/90msp-RKSJ-H.bcmap                          0.71 kB
+.ssg-build/client/pdf-assets/cmaps/90ms-RKSJ-H.bcmap                           0.72 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISPro-UTF8-V.bcmap                      0.72 kB
+.ssg-build/client/pdf-assets/cmaps/83pv-RKSJ-H.bcmap                           0.90 kB
+.ssg-build/client/pdf-assets/cmaps/90pv-RKSJ-H.bcmap                           0.98 kB
+.ssg-build/client/assets/textDiff.worker-BDjx5y31.js                           1.07 kB
+.ssg-build/client/pdf-assets/cmaps/B5-H.bcmap                                  1.08 kB
+.ssg-build/client/pdf-assets/cmaps/B5pc-H.bcmap                                1.09 kB
+.ssg-build/client/pdf-assets/cmaps/ETen-B5-H.bcmap                             1.12 kB
+.ssg-build/client/index.html                                                   1.54 kB │ gzip:   0.78 kB
+.ssg-build/client/pdf-assets/cmaps/HKm314-B5-H.bcmap                           1.77 kB
+.ssg-build/client/pdf-assets/cmaps/CNS-EUC-H.bcmap                             1.78 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-H.bcmap                                 1.83 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-EUC-H.bcmap                             1.84 kB
+.ssg-build/client/pdf-assets/cmaps/CNS-EUC-V.bcmap                             1.92 kB
+.ssg-build/client/pdf-assets/cmaps/KSCpc-EUC-H.bcmap                           2.02 kB
+.ssg-build/client/pdf-assets/cmaps/HKm471-B5-H.bcmap                           2.17 kB
+.ssg-build/client/pdf-assets/cmaps/HKgccs-B5-H.bcmap                           2.29 kB
+.ssg-build/client/pdf-assets/cmaps/78-H.bcmap                                  2.37 kB
+.ssg-build/client/pdf-assets/cmaps/78-RKSJ-H.bcmap                             2.39 kB
+.ssg-build/client/pdf-assets/cmaps/78-EUC-H.bcmap                              2.40 kB
+.ssg-build/client/pdf-assets/cmaps/Add-RKSJ-H.bcmap                            2.41 kB
+.ssg-build/client/pdf-assets/cmaps/HKdlb-B5-H.bcmap                            2.41 kB
+.ssg-build/client/pdf-assets/cmaps/Add-H.bcmap                                 2.41 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-H.bcmap                                 2.53 kB
+.ssg-build/client/pdf-assets/cmaps/Ext-RKSJ-H.bcmap                            2.54 kB
+.ssg-build/client/pdf-assets/cmaps/78ms-RKSJ-H.bcmap                           2.65 kB
+.ssg-build/client/pdf-assets/cmaps/HKdla-B5-H.bcmap                            2.65 kB
+.ssg-build/client/pdf-assets/cmaps/NWP-H.bcmap                                 2.76 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-H.bcmap                           2.78 kB
+.ssg-build/client/pdf-assets/cmaps/KSCms-UHC-HW-H.bcmap                        2.78 kB
+.ssg-build/client/pdf-assets/cmaps/ETHK-B5-H.bcmap                             4.42 kB
+.ssg-build/client/assets/textWorkbench.worker-dGOF3Nya.js                      4.43 kB
+.ssg-build/client/pdf-assets/cmaps/HKscs-B5-H.bcmap                            4.43 kB
+.ssg-build/client/assets/imageCrop.worker-DKZFBYAg.js                          6.72 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-H.bcmap                                 7.26 kB
+.ssg-build/client/pdf-assets/cmaps/GBT-EUC-H.bcmap                             7.29 kB
+.ssg-build/client/pdf-assets/cmaps/GBTpc-EUC-H.bcmap                           7.29 kB
+.ssg-build/client/pdf-assets/iccs/CGATS001Compat-v2-micro.icc                  8.46 kB
+.ssg-build/client/pdf-assets/cmaps/GBKp-EUC-H.bcmap                           14.68 kB
+.ssg-build/client/pdf-assets/cmaps/GBK-EUC-H.bcmap                            14.69 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSymbol.pfb                   16.72 kB
+.ssg-build/client/pdf-assets/cmaps/KSC-Johab-H.bcmap                          16.79 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixed.pfb                    17.59 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixedBold.pfb                18.05 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixedItalic.pfb              18.74 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitFixedBoldItalic.pfb          19.15 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerifBold.pfb                19.39 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerif.pfb                    19.46 kB
+.ssg-build/client/pdf-assets/cmaps/GBK2K-H.bcmap                              19.66 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerifBoldItalic.pfb          20.73 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitSerifItalic.pfb              21.22 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Korea1-UCS2.bcmap                    23.29 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UCS2-H.bcmap                        25.43 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UCS2-H.bcmap                         25.78 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF16-H.bcmap                        26.32 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF32-H.bcmap                        26.45 kB
+.ssg-build/client/pdf-assets/cmaps/UniKS-UTF8-H.bcmap                         27.79 kB
+.ssg-build/client/pdf-assets/standard_fonts/FoxitDingbats.pfb                 29.51 kB
+.ssg-build/client/.vite/ssr-manifest.json                                     32.32 kB │ gzip:   3.07 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-GB1-UCS2.bcmap                       33.97 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF16-H.bcmap                       39.44 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF16-H.bcmap                   39.53 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX0213-UTF32-H.bcmap                  40.51 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF32-H.bcmap                       40.53 kB
+.ssg-build/client/pdf-assets/cmaps/UniJISX02132004-UTF32-H.bcmap              40.60 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF32-H.bcmap                   40.63 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-Japan1-UCS2.bcmap                    40.95 kB
+.ssg-build/client/pdf-assets/cmaps/Adobe-CNS1-UCS2.bcmap                      41.19 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS-UTF8-H.bcmap                        41.69 kB
+.ssg-build/client/pdf-assets/cmaps/UniJIS2004-UTF8-H.bcmap                    41.77 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UCS2-H.bcmap                         43.36 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF16-H.bcmap                        44.08 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF32-H.bcmap                        45.73 kB
+.ssg-build/client/pdf-assets/cmaps/UniGB-UTF8-H.bcmap                         46.83 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UCS2-H.bcmap                        48.28 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF16-H.bcmap                       50.41 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF32-H.bcmap                       52.67 kB
+.ssg-build/client/pdf-assets/cmaps/UniCNS-UTF8-H.bcmap                        53.62 kB
+.ssg-build/client/pdf-assets/wasm/qcms_bg.wasm                                96.58 kB │ gzip:  36.09 kB
+.ssg-build/client/assets/jsonYaml.worker-Cw9imhi6.js                          99.54 kB
+.ssg-build/client/assets/imageConvert.worker-DEptmJWw.js                     103.62 kB
+.ssg-build/client/pdf-assets/wasm/jbig2.wasm                                 103.67 kB │ gzip:  41.64 kB
+.ssg-build/client/pdf-assets/wasm/jbig2_nowasm_fallback.js                   132.43 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-BoldItalic.ttf    135.12 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-Bold.ttf          137.05 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-Regular.ttf       139.51 kB
+.ssg-build/client/pdf-assets/standard_fonts/LiberationSans-Italic.ttf        162.03 kB
+.ssg-build/client/pdf-assets/wasm/openjpeg.wasm                              220.81 kB │ gzip:  71.92 kB
+.ssg-build/client/assets/docx.worker-BYOy2Okc.js                             315.48 kB
+.ssg-build/client/pdf-assets/wasm/openjpeg_nowasm_fallback.js                338.45 kB
+.ssg-build/client/assets/pdfMerge.worker-BLOmRTjN.js                         424.15 kB
+.ssg-build/client/assets/pdfOrganizer.worker-BHHalFvu.js                     425.02 kB
+.ssg-build/client/assets/pdfSplit.worker-BjP9wDNk.js                         425.21 kB
+.ssg-build/client/assets/imagesToPdf.worker-BPSTERK7.js                      426.96 kB
+.ssg-build/client/assets/pdfPreview.worker-Bh4UlBTe.js                     1,200.77 kB
+.ssg-build/client/assets/PdfMergePage-yT7FtkjS.css                             0.36 kB │ gzip:   0.20 kB
+.ssg-build/client/assets/CategoryPage-V2rYvaiE.css                             0.57 kB │ gzip:   0.24 kB
+.ssg-build/client/assets/PdfSplitPage-BRJ-zUu3.css                             0.68 kB │ gzip:   0.33 kB
+.ssg-build/client/assets/TotpPage-90WjePXy.css                                 0.88 kB │ gzip:   0.41 kB
+.ssg-build/client/assets/DiffTable-B8zPmwGX.css                                0.92 kB │ gzip:   0.39 kB
+.ssg-build/client/assets/WordToPdfPage-BBwsFYsO.css                            1.05 kB │ gzip:   0.48 kB
+.ssg-build/client/assets/CsvJsonPage-Bit-kk40.css                              1.10 kB │ gzip:   0.47 kB
+.ssg-build/client/assets/TextCleanupPage-UArNQbDU.css                          1.10 kB │ gzip:   0.47 kB
+.ssg-build/client/assets/ImagesToPdfPage-CG9wnID4.css                          1.13 kB │ gzip:   0.43 kB
+.ssg-build/client/assets/DateCalculatorPage-DQ7KozLo.css                       1.20 kB │ gzip:   0.48 kB
+.ssg-build/client/assets/JsonYamlPage-x-uoxTYY.css                             1.24 kB │ gzip:   0.50 kB
+.ssg-build/client/assets/LocalToolEditor-dnVJzCjg.css                          1.42 kB │ gzip:   0.54 kB
+.ssg-build/client/assets/PdfOrganizerPage-Dw4DPzzW.css                         1.55 kB │ gzip:   0.60 kB
+.ssg-build/client/assets/TextDiffPage-DayBnYB5.css                             1.64 kB │ gzip:   0.61 kB
+.ssg-build/client/assets/ToolPageLayout-DLcL-paU.css                           1.66 kB │ gzip:   0.55 kB
+.ssg-build/client/assets/ToolCard-MR7Dq_fB.css                                 1.67 kB │ gzip:   0.62 kB
+.ssg-build/client/assets/ImageConvertPage-D5NwVmqR.css                         1.98 kB │ gzip:   0.67 kB
+.ssg-build/client/assets/TextWorkbenchPage-GcJH4QFl.css                        2.52 kB │ gzip:   0.81 kB
+.ssg-build/client/assets/ImageCropPage-Ckll9jMm.css                            2.78 kB │ gzip:   0.95 kB
+.ssg-build/client/assets/HomeView-CDtzXSDf.css                                 4.29 kB │ gzip:   1.16 kB
+.ssg-build/client/assets/UrlEncoderPage-Ce0VOWHr.css                           4.30 kB │ gzip:   1.18 kB
+.ssg-build/client/assets/JsonFormatterPage-BY8oimnM.css                        4.30 kB │ gzip:   1.18 kB
+.ssg-build/client/assets/TextStatisticsPage-Cxg49-bx.css                       4.60 kB │ gzip:   1.09 kB
+.ssg-build/client/assets/index-Dlh9kmZU.css                                    6.77 kB │ gzip:   2.11 kB
+.ssg-build/client/assets/interactionReady-Bz8OmTHO.js                          0.04 kB │ gzip:   0.06 kB
+.ssg-build/client/assets/_plugin-vue_export-helper-BDNMzG2s.js                 0.08 kB │ gzip:   0.09 kB
+.ssg-build/client/assets/site-iaprMCuJ.js                                      0.16 kB │ gzip:   0.16 kB
+.ssg-build/client/assets/pdfLimits-B8-1c7wL.js                                 0.45 kB │ gzip:   0.36 kB
+.ssg-build/client/assets/NotFoundPage-Bx4acRbZ.js                              0.74 kB │ gzip:   0.48 kB
+.ssg-build/client/assets/CategoryPage-VsqdJ9V2.js                              1.23 kB │ gzip:   0.74 kB
+.ssg-build/client/assets/UuidPage-trOsJI8_.js                                  1.36 kB │ gzip:   0.93 kB
+.ssg-build/client/assets/imageConvert-CkUfKYUU.js                              1.46 kB │ gzip:   0.99 kB
+.ssg-build/client/assets/preload-helper-BLdHbfdN.js                            1.51 kB │ gzip:   0.79 kB
+.ssg-build/client/assets/DiffTable-BUG6BBgb.js                                 1.87 kB │ gzip:   1.14 kB
+.ssg-build/client/assets/Base64Page-Dy9JS5zI.js                                1.89 kB │ gzip:   1.21 kB
+.ssg-build/client/assets/ContactPage-BiF3Z17-.js                               1.89 kB │ gzip:   1.24 kB
+.ssg-build/client/assets/ToolCard-YlbgXjom.js                                  1.91 kB │ gzip:   1.12 kB
+.ssg-build/client/assets/AboutPage-Cw2S3dYo.js                                 2.62 kB │ gzip:   1.68 kB
+.ssg-build/client/assets/TermsPage-ByG9FoPL.js                                 2.71 kB │ gzip:   1.78 kB
+.ssg-build/client/assets/TimestampPage-bt0lvvPj.js                             3.02 kB │ gzip:   1.59 kB
+.ssg-build/client/assets/LocalToolEditor-p_LTiLJK.js                           3.31 kB │ gzip:   1.72 kB
+.ssg-build/client/assets/PdfMergePage-BEiXT4KB.js                              3.78 kB │ gzip:   2.08 kB
+.ssg-build/client/assets/HomeView-DkhF7YE1.js                                  4.18 kB │ gzip:   2.23 kB
+.ssg-build/client/assets/tools-D5Md0p6j.js                                     4.40 kB │ gzip:   1.86 kB
+.ssg-build/client/assets/PrivacyPage-CBFxffGB.js                               5.36 kB │ gzip:   3.00 kB
+.ssg-build/client/assets/TextDiffPage-BGrTyAnT.js                              5.59 kB │ gzip:   2.81 kB
+.ssg-build/client/assets/TextStatisticsPage-DRT4mG2f.js                        5.66 kB │ gzip:   2.94 kB
+.ssg-build/client/assets/UrlEncoderPage-ojk7xLK2.js                            5.94 kB │ gzip:   2.88 kB
+.ssg-build/client/assets/ImageConvertPage-Cm-6HmpB.js                          6.16 kB │ gzip:   3.20 kB
+.ssg-build/client/assets/ImagesToPdfPage-Bh7Zvhtp.js                           6.17 kB │ gzip:   3.19 kB
+.ssg-build/client/assets/DateCalculatorPage-C_zGpVhP.js                        6.50 kB │ gzip:   2.94 kB
+.ssg-build/client/assets/WordToPdfPage-Ckay_KML.js                             6.61 kB │ gzip:   3.59 kB
+.ssg-build/client/assets/TextCleanupPage-DfK1bLlv.js                           6.87 kB │ gzip:   3.05 kB
+.ssg-build/client/assets/JsonFormatterPage-BOdNt2qJ.js                         7.09 kB │ gzip:   3.32 kB
+.ssg-build/client/assets/PdfSplitPage-BQnBEgF7.js                              7.17 kB │ gzip:   3.59 kB
+.ssg-build/client/assets/CsvJsonPage-Czns6n19.js                               7.53 kB │ gzip:   3.63 kB
+.ssg-build/client/assets/pages-SEA85xkx.js                                     8.02 kB │ gzip:   3.42 kB
+.ssg-build/client/assets/TotpPage-Dee8oCZB.js                                  8.59 kB │ gzip:   4.25 kB
+.ssg-build/client/assets/PdfOrganizerPage-CjRSiuFG.js                         10.03 kB │ gzip:   4.55 kB
+.ssg-build/client/assets/runtime-dom.esm-bundler-COrmyISh.js                  10.56 kB │ gzip:   4.54 kB
+.ssg-build/client/assets/TextWorkbenchPage-CLPq52-y.js                        10.92 kB │ gzip:   4.65 kB
+.ssg-build/client/assets/ImageCropPage-MSVSpFY-.js                            13.42 kB │ gzip:   6.03 kB
+.ssg-build/client/assets/index-CXNbtELt.js                                    20.07 kB │ gzip:   7.55 kB
+.ssg-build/client/assets/ToolPageLayout-CdobYzmI.js                           33.18 kB │ gzip:  14.08 kB
+.ssg-build/client/assets/JsonYamlPage-4v7WyDko.js                             35.10 kB │ gzip:  13.83 kB
+.ssg-build/client/assets/vue-router-3UNMMqEs.js                               98.33 kB │ gzip:  38.39 kB
+.ssg-build/client/assets/pdfPreview-D7nhrprL.js                              447.05 kB │ gzip: 134.75 kB
+
+✓ built in 893ms
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../types/seo" without a file extension (src/utils/seoEnvironment.ts:2:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seo.ts:4:37). Add the file extension
+  - import "../types/seo" without a file extension (src/utils/seo.ts:5:37). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 151 modules transformed.
+rendering chunks...
+computing gzip size...
+.ssg-build/server/assets/pdfLimits-DTz1_Tqd.js            0.67 kB │ gzip:  0.45 kB
+.ssg-build/server/assets/NotFoundPage-DhXjDGCo.js         2.19 kB │ gzip:  0.85 kB
+.ssg-build/server/assets/imageConvert-vo_gyyQ6.js         2.22 kB │ gzip:  1.21 kB
+.ssg-build/server/assets/CategoryPage-CqHzc3vx.js         2.73 kB │ gzip:  1.11 kB
+.ssg-build/server/assets/ContactPage-q4fvNbYD.js          3.11 kB │ gzip:  1.63 kB
+.ssg-build/server/assets/UuidPage-DfVOyw71.js             3.38 kB │ gzip:  1.42 kB
+.ssg-build/server/assets/DiffTable-vs2nD3a8.js            3.57 kB │ gzip:  1.57 kB
+.ssg-build/server/assets/TermsPage-CcLhysrh.js            3.98 kB │ gzip:  2.17 kB
+.ssg-build/server/assets/ToolCard-gu-ivJfo.js             4.05 kB │ gzip:  1.63 kB
+.ssg-build/server/assets/AboutPage-Bp14ILkX.js            4.26 kB │ gzip:  2.06 kB
+.ssg-build/server/assets/LocalToolEditor-CFZHDwZB.js      4.29 kB │ gzip:  1.65 kB
+.ssg-build/server/assets/Base64Page-BQC0MsfE.js           5.28 kB │ gzip:  1.88 kB
+.ssg-build/server/assets/pdfPreview-Dtc4odOk.js           5.97 kB │ gzip:  2.18 kB
+.ssg-build/server/assets/HomeView-9SuvU6CD.js             6.53 kB │ gzip:  2.57 kB
+.ssg-build/server/assets/PrivacyPage-CROBpoEk.js          6.60 kB │ gzip:  3.36 kB
+.ssg-build/server/assets/UrlEncoderPage-BbMWwtB6.js       7.59 kB │ gzip:  2.71 kB
+.ssg-build/server/assets/JsonFormatterPage-D83Z-5xR.js    7.90 kB │ gzip:  2.74 kB
+.ssg-build/server/assets/TextStatisticsPage-l-1L4eAA.js   8.79 kB │ gzip:  3.25 kB
+.ssg-build/server/assets/TimestampPage-InhuM0Q3.js        9.14 kB │ gzip:  2.53 kB
+.ssg-build/server/assets/PdfMergePage-CXhqVswI.js         9.76 kB │ gzip:  3.18 kB
+.ssg-build/server/assets/TotpPage-DBX_RriQ.js            10.97 kB │ gzip:  4.10 kB
+.ssg-build/server/assets/JsonYamlPage-nklQ1X-q.js        13.10 kB │ gzip:  4.27 kB
+.ssg-build/server/assets/TextDiffPage-Bu2FBMJR.js        14.34 kB │ gzip:  4.11 kB
+.ssg-build/server/assets/WordToPdfPage-TW8Jlqes.js       14.64 kB │ gzip:  4.98 kB
+.ssg-build/server/assets/ImagesToPdfPage-DRBoIBvO.js     15.19 kB │ gzip:  4.66 kB
+.ssg-build/server/assets/DateCalculatorPage-8HCTYV61.js  15.31 kB │ gzip:  4.34 kB
+.ssg-build/server/assets/TextCleanupPage-C0Ch-ei4.js     15.53 kB │ gzip:  4.45 kB
+.ssg-build/server/assets/CsvJsonPage-C2MGnn1P.js         15.86 kB │ gzip:  5.10 kB
+.ssg-build/server/assets/ImageConvertPage-CJjs99Ck.js    16.66 kB │ gzip:  4.82 kB
+.ssg-build/server/assets/PdfSplitPage-D8pGzuP7.js        17.33 kB │ gzip:  5.16 kB
+.ssg-build/server/assets/PdfOrganizerPage-CFL0HyEI.js    24.07 kB │ gzip:  6.41 kB
+.ssg-build/server/assets/TextWorkbenchPage-DEtw-fyV.js   27.94 kB │ gzip:  6.78 kB
+.ssg-build/server/assets/ImageCropPage-Cp_yyprW.js       31.98 kB │ gzip:  8.55 kB
+.ssg-build/server/assets/ToolPageLayout-CbYiSx33.js      37.55 kB │ gzip: 14.86 kB
+.ssg-build/server/entry-server.js                        42.01 kB │ gzip: 12.63 kB
+
+✓ built in 108ms
+SSG成功：index.html, office/image-crop/index.html, office/pdf-organizer/index.html, office/text-workbench/index.html, office/text-diff/index.html, developer/json-yaml/index.html, office/image-convert/index.html, office/images-to-pdf/index.html, office/date-calculator/index.html, office/pdf-merge/index.html, office/word-to-pdf/index.html, office/pdf-split/index.html, office/text-cleanup/index.html, office/csv-json/index.html, office/index.html, office/text-statistics/index.html, developer/index.html, developer/json-formatter/index.html, developer/url-encoder/index.html, developer/2fa/index.html, developer/base64/index.html, developer/timestamp/index.html, developer/uuid/index.html, about/index.html, contact/index.html, terms/index.html, privacy/index.html, 404.html
+npm notice
+npm notice New major version of npm available! 11.19.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+[WebServer] (node:3615) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+[WebServer]   - import "../types/seo" without a file extension (src/utils/seoEnvironment.ts:2:37). Add the file extension
+[WebServer]   - import "../types/seo" without a file extension (src/utils/seo.ts:4:37). Add the file extension
+[WebServer]   - import "../types/seo" without a file extension (src/utils/seo.ts:5:37). Add the file extension
+[WebServer] Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+
+Running 538 tests using 1 worker
+
+(node:3619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/538] [chromium] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 375
+[2/538] [chromium] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 768
+[3/538] [chromium] › e2e/additional-tools.spec.ts:3:2 › 新增工具与搜索 1440
+[4/538] [chromium] › e2e/additional-tools.spec.ts:36:1 › 新增工具键盘与复制失败提示、离页清空
+[5/538] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 375
+[6/538] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 light 1440
+[7/538] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 375
+[8/538] [chromium] › e2e/brand.spec.ts:2:82 › BRAND 双语名称与新图标 dark 1440
+[9/538] [chromium] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 375
+[10/538] [chromium] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 768
+[11/538] [chromium] › e2e/csv-json.spec.ts:3:3 › TABLE 双向转换、多行引号及错误保留 1440
+[12/538] [chromium] › e2e/csv-json.spec.ts:43:1 › TABLE 键盘/组合输入、超限、复制失败与离页清理
+[13/538] [chromium] › e2e/csv-json.spec.ts:66:1 › TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求
+  1) [chromium] › e2e/csv-json.spec.ts:66:1 › TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求 ────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: '试用工具 ：CSV 与 JSON 表格互转', exact: true })
+
+
+      70 |   await page.getByLabel('搜索工具', { exact: true }).fill('CSV')
+      71 |   await expect(page.locator('.tool-grid li')).toHaveCount(1)
+    > 72 |   await page.getByRole('link', { name: '试用工具 ：CSV 与 JSON 表格互转', exact: true }).click(); await hydrated(page)
+         |                                                                                ^
+      73 |   const originalStorage = await page.evaluate(() => [JSON.stringify(localStorage), JSON.stringify(sessionStorage)])
+      74 |   const marker = 'TABLE_PRIVATE_019'
+      75 |   const input = page.getByLabel('待转换的表格文本', { exact: true }), result = page.getByLabel('表格结果（只读）', { exact: true })
+        at /Users/user/development/ToxBox/e2e/csv-json.spec.ts:72:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/csv-json-TABLE-搜索、办公入口、文本绑定与内容不写-URL-存储-请求-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/csv-json-TABLE-搜索、办公入口、文本绑定与内容不写-URL-存储-请求-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/csv-json-TABLE-搜索、办公入口、文本绑定与内容不写-URL-存储-请求-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/csv-json-TABLE-搜索、办公入口、文本绑定与内容不写-URL-存储-请求-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:3697) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[14/538] [chromium] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 375
+[15/538] [chromium] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 768
+[16/538] [chromium] › e2e/date-calculator.spec.ts:2:36 › DATE 双模式、键盘、校验、复制失败和清理 1440
+[17/538] [chromium] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 UTC
+[18/538] [chromium] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 America/Los_Angeles
+[19/538] [chromium] › e2e/date-calculator.spec.ts:22:71 › DATE 时区无关 Asia/Shanghai
+[20/538] [chromium] › e2e/date-calculator.spec.ts:30:1 › DATE 首页搜索及办公分类接入
+  2) [chromium] › e2e/date-calculator.spec.ts:30:1 › DATE 首页搜索及办公分类接入 ──────────────────────────────
+
+    Test was interrupted.
+
+    Error: locator.click: Test ended.
+    Call log:
+      - waiting for getByRole('link', { name: '试用工具 ：日期差与日期加减', exact: true })
+
+
+      30 | test('DATE 首页搜索及办公分类接入',async({page})=>{
+      31 |  await page.goto('/');await hydrated(page);await page.getByLabel('搜索工具',{exact:true}).fill('日期差');await expect(page.locator('.tool-grid li')).toHaveCount(1)
+    > 32 |  await page.getByRole('link',{name:'试用工具 ：日期差与日期加减',exact:true}).click();await hydrated(page);await expect(page.locator('h1')).toHaveText('日期差与日期加减')
+         |                                                                  ^
+      33 | })
+      34 |
+        at /Users/user/development/ToxBox/e2e/date-calculator.spec.ts:32:66
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/date-calculator-DATE-首页搜索及办公分类接入-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/date-calculator-DATE-首页搜索及办公分类接入-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/date-calculator-DATE-首页搜索及办公分类接入-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513/artifacts/date-calculator-DATE-首页搜索及办公分类接入-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    [chromium] › e2e/csv-json.spec.ts:66:1 › TABLE 搜索、办公入口、文本绑定与内容不写 URL/存储/请求 ─────────────────────
+  1 interrupted
+    [chromium] › e2e/date-calculator.spec.ts:30:1 › DATE 首页搜索及办公分类接入 ───────────────────────────────
+  518 did not run
+  18 passed (54.1s)
+本地E2E证据：docs/verification/evidence/m106c3/runs/2026-11-13T12-20-09.866Z-3513

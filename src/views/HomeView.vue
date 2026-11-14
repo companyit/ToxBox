@@ -34,7 +34,7 @@ const categories = [
     <label for="tool-search" class="sr-only">搜索工具</label>
     <div class="search-controls">
     <input id="tool-search" ref="searchInput" v-model="query" type="text" :disabled="!ready" autocomplete="off" :spellcheck="false" :aria-invalid="!!searchError" aria-describedby="search-status" placeholder="搜索工具名称或用途" />
-    <button type="button" :disabled="!ready" @click="clearSearch">清除搜索</button>
+    <button type="button" autocomplete="off" :disabled="!ready" @click="clearSearch">清除搜索</button>
     </div>
     <p id="search-status" role="status" aria-live="polite">{{ searchError || `找到 ${matches.length} 个工具` }}</p>
     <p v-if="!searchError && !matches.length">没有找到匹配工具，请调整关键词或清除搜索条件。</p>
@@ -77,7 +77,7 @@ h1 { margin-bottom: 12px; font-size: clamp(1.75rem, 3.4vw, 3rem); line-height: 1
 .tool-search { max-width: 720px; margin: 0 auto 24px; }
 .search-controls { display: flex; align-items: stretch; gap: 8px; }
 .tool-search input, .tool-search button { min-height: 48px; min-width: 0; padding: 10px 16px; border: 1px solid var(--color-border); border-radius: var(--ui-control-radius); background: var(--color-surface); color: var(--color-text); font: inherit; }
-.tool-search input { flex: 1; width: 100%; }
+.tool-search input { flex: 1; width: 100%; border-color: var(--color-control-border); }
 .tool-search button { flex-shrink: 0; cursor: pointer; }
 .tool-search input:hover { border-color: var(--color-accent); }
 .tool-search button { background: var(--color-accent); color: var(--color-on-accent); border-color: var(--color-accent); }

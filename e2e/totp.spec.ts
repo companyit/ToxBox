@@ -28,7 +28,7 @@ test('TOTP 跨页导航隔离文档且返回不保留密钥', async ({ page }) =
   await page.evaluate(() => { Reflect.set(window, '__totpDocumentProbe', 'public') })
   await Promise.all([
     page.waitForURL('**/developer/2fa/', { waitUntil: 'load' }),
-    page.getByRole('link', { name: '试用工具 ：2FA 动态验证码', exact: true }).click(),
+    page.getByRole('link', { name: '打开工具 ：2FA 动态验证码', exact: true }).click(),
   ])
   await hydrated(page)
   expect(await page.evaluate(() => Reflect.get(window, '__totpDocumentProbe'))).toBeUndefined()
