@@ -1,5 +1,31 @@
 # AdSense 接入前与后续上线清单
 
+## 2026-11-14 当前接入：正式4页启用加载器（048）
+
+负责人已明确授权开启广告，048替代下方047“只meta、广告关闭”的阶段状态。正式production仅 /、/office/、/developer/、/about/ 输出提供的async/crossorigin脚本；保留首页元标记。全部工具页与preview无广告，跨广告边界完整导航。源码配置stage=integration表示代码接入，不代表Google审核通过或线上已投放。
+
+本地标准`npm run build`生成生产dist及移交归档；实际本轮结果和路径见[048验证](../verification/048-adsense-script.md)。发布仍需独立授权，当前没有部署。发布后在AdSense核对站点/账号状态，并按需要开启后台自动广告、核对4页投放及工具页排除；仅接入加载器无法证明广告实际出现。[Google自动广告设置说明](https://support.google.com/adsense/answer/9261307?hl=en)。
+
+按实际服务地区核对Google的同意管理要求，EEA/英国/瑞士的个性化广告需要Google认证且集成TCF的CMP，后台可选择Google或其他支持方案；本轮没有设置CMP或代签已同意，见[Google官方要求](https://support.google.com/adsense/answer/13554116?hl=en)。没有提供广告单元或ads.txt内容，本轮不生成手工广告位/ads.txt；后续按真实账号信息及另行授权处理。
+
+生产审计用`node scripts/check-adsense-readiness.mjs production dist`，preview用默认命令；只放行配置4页的精确加载器，其他远端脚本、重复/错ID/错页脚本或手工广告位继续拒绝。以下保留历史。
+
+## 2026-11-14 所有权验证当前步骤
+
+负责人已选择并授权047元标记方式。正式production构建仅在首页head输出：
+
+```html
+<meta name="google-adsense-account" content="ca-pub-2420716265318225">
+```
+
+preview工具预览不输出此标记；未加载广告脚本、未生成ads.txt或广告位。当前21工具/29HTML/21指南，正式24页索引不变。历史“ID缺失/七工具/八页索引”保留为当时记录。
+
+本轮只生成隔离生产测试候选，未更新正式dist/移交包或部署。后续获准正式构建/交付时使用现有`npm run build`流程；部署后检查`https://www.v7luck.com/`的原始HTML head中只有一份上述标签，其他页/preview无标记，再由负责人进入AdSense对应站点选择“元标记”并点击验证/申请审核。此验证代码应随生产发布保留，不在审核后擅自移除。
+
+本地审计：`node scripts/check-adsense-readiness.mjs`默认审计preview；正式产物用`node scripts/check-adsense-readiness.mjs production dist`（须已生成本轮正式dist）。审计产物须与命令模式匹配，不以preview通过代表正式站点通过。部署和Google后台操作未授权、未执行；验证不等于审核获批或广告投放。
+
+实际本地证据与限制见[047验证](../verification/047-adsense-ownership.md)。官方方式见[关联网站说明](https://support.google.com/adsense/answer/7584263?hl=zh-Hans)；后续正式投放仍需按实际地区/配置另审广告与同意策略。以下保留历史记录。
+
 日期：2026-11-03。当前范围为四个信任页面、七工具原创使用指南及本地准备配置，负责人已明确暂不加载广告。
 
 ## 当前部署配置边界

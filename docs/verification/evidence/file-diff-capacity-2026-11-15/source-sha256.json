@@ -1,0 +1,14 @@
+{
+  "src/utils/fileDiff.ts": "4cf019d3a5339e0e1d9c617954b1fae2a3727c5cc3f2330019dba6dc07c6a5bd",
+  "src/utils/fileText.ts": "b473b4b07a994455df467ff6e2acfd676c7774d0a854b4cfafe745de422a5ea5",
+  "src/workers/fileDiff.worker.ts": "8c898ef84da43a835ebb8ffdd5cbee38223aaba2548a25892f2e263764ce0288",
+  "src/workers/fileText.worker.ts": "5d0fb4a5978c8d5e95c38ae4d034384040c1246bb9213ba58a527d9d0fdf82cd",
+  "src/views/pages/FileDiffPage.vue": "abaa230494e5053d2c68f0e6c0507f736071c52e9ab92d04acb38273df7651f6",
+  "src/data/toolGuides.ts": "07ce3f812e56e0d9e68eebe1bfaeee9ffa449c6e42cb38e0b70bc6d2b5c37216",
+  "tests/unit/fileDiff.test.ts": "5ea4169089be264b96f0fb5e4d1a2c6bded41c6b122b02e33b7404dcd4802bcc",
+  "tests/unit/fileText.test.ts": "b8f1faf2bb561a934f648c15bb5682c039612459a6565d50f085be9994309d75",
+  "tests/components/fileDiff.test.ts": "72ce4b8aa15938a18bf88b64b9d73a994061e2733eba0c046914d8e7b5e8847d",
+  "e2e/file-diff.spec.ts": "0e11a525e8d84ded9ae253ae598ec281d21fe640beba458e11460599df9bcb00",
+  "package.json": "474e654426c481dd01bc4882bc4ceca4b0023dfc7db13f160c8f580e00180499",
+  "package-lock.json": "c493c61d1e03e3bf982e936cab3c16e9b53aaa242016381db0b82ee13e04bfd4"
+}

@@ -1,0 +1,13 @@
+# 047 设计
+
+日期：2026-11-14。待负责人选择验证方式并授权。推荐无执行脚本的首页meta路线。
+
+正式SSG生产渲染阶段按mode=production及routeName=home输出唯一验证meta；preview渲染不输出。不得直接写共享index.html，避免开发/preview与所有敏感页继承。沿用独立SEO/head构建机制，先检查生产模板与校验链路，再做最小改动。
+
+config/adsense-readiness.json记录publisherId及verificationMethod，不以stage/preparation或ID有值推断广告已启用。audit应区分production首页meta与preview全无广告：仅允许精确meta值、唯一数量和固定页面，其余脚本/广告位/路径隔离检查保持。
+
+无需新依赖或后端。类型/静态及构建测试分别验证生产和preview，不发请求到广告服务、不调用Google账号接口。发布包及部署须另有授权，核对实际托管原始HTML后才能向负责人报告可点击验证；不能代称Google审核通过。
+
+## 实际接入
+
+发布商配置由seo.ts纯head模型读取，只有production且approvedOrigin等于配置正式origin、routeName为home且path为/时输出adsenseAccount。生产SSG写入head，客户端applyPageHead去重并在其他页清理。通用index.html不变，preview不包含标记。独立validateAdSenseDocument审计完整文档标记数量、位置/ID、无广告位/执行脚本，接入生产候选语义校验与准备审计；后者支持显式preview/production及仓库内输出目录。

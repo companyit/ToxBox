@@ -1,31 +1,34 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import ToolPageLayout from '@/components/layout/ToolPageLayout.vue'
-import { convertTable, tableErrors, type TableDirection, type TableError } from '@/utils/csvJson'
+import { convertTable, tableErrors, type CsvOutput, type TableDirection, type TableError } from '@/utils/csvJson'
 import { jsonTableNotices, type JsonTableNotice } from '@/utils/jsonTable'
 
 const direction = ref<TableDirection>('csv-to-json'), input = ref(''), output = ref('')
 const message = ref(''), error = ref(''), dimensions = ref(''), composing = ref(false), copying = ref(false)
 const jsonMode = ref<'compatible' | 'strict'>('compatible'), recordPath = ref(''), notices = ref<JsonTableNotice[]>([]), format = ref(''), errorCode = ref<TableError | ''>('')
+const csvOutput = ref<CsvOutput>('matrix')
+const recordScope = ref<'root' | 'each'>('root'), flattenObjects = ref(false)
 const jsonExamples = {
   objects: { label: '对象数组：自动表头与不同字段', input: JSON.stringify([{ id: '001', name: '甲', active: true, tags: ['A', 'B'], profile: { city: '上海' }, note: null }, { id: '002', name: '乙', score: 98.5 }], null, 2), path: '' },
   object: { label: '单个对象：嵌套信息保留', input: JSON.stringify({ name: '甲', active: true, address: { city: '上海' }, tags: ['A', 'B'], note: null }, null, 2), path: '' },
   matrix: { label: '二维数组：混合类型与大整数', input: '[[9007199254740993, true, null], ["001", {"city":"上海"}]]', path: '' },
   values: { label: '混合数组：value 单列保留', input: '["001", 9007199254740993, true, null, {"name":"甲"}, [1,2]]', path: '' },
+  wrapped: { label: '接口对象数组：逐条提取 data 并展开', input: JSON.stringify(Array.from({ length: 2 }, () => ({ code: 200, message: '操作成功', data: { id: 1001, name: '示例名称', isActive: true, score: 95.5, tags: ['标签一', '标签二', '标签三'], profile: { email: 'example@domain.com', phone: '13800138000' }, createdAt: '2026-11-14T08:00:00Z' } })), null, 2), path: '/data' },
   response: { label: '接口返回：选择 /data/items', input: JSON.stringify({ code: 0, data: { items: [{ id: '001', name: '甲' }, { id: '002', name: '乙', active: false }] } }, null, 2), path: '/data/items' },
 }
 const exampleKind = ref<keyof typeof jsonExamples>('objects')
 const editor = ref<HTMLTextAreaElement>(), resultEditor = ref<HTMLTextAreaElement>()
 const rules = computed(() => direction.value === 'csv-to-json'
-  ? '英文逗号分隔；引号字段可含逗号或换行，字段内双引号写成两个双引号。闭引号后仅允许逗号、换行或结束，不自动 trim。首行是普通数据，单元格全部保留为字符串。'
-  : '支持对象数组、单个对象、二维混合类型数组和基本值。对象按字段首次出现顺序合并表头，缺失字段/短行补空；普通或混合数组使用 value 单列。数字保留原始精度，布尔值写成 true/false，null 写成 null；嵌套内容保留为 JSON 文本。CSV 不保存 JSON 类型。所有字段加双引号，记录用 LF 分隔；[] 得到空结果。')
+  ? '英文逗号分隔；引号字段可含逗号或换行，字段内双引号写成两个双引号。闭引号后仅允许逗号、换行或结束，不自动 trim。' + (csvOutput.value === 'objects' ? '首行作为字段名，不能空白或重复；字段名不去除前后空白。值全部保留为字符串，字段文本顺序不作保证。' : '首行是普通数据，单元格全部保留为字符串。') + ''
+  : '支持对象数组、单个对象、二维混合类型数组和基本值。对象按字段首次出现顺序合并表头，缺失字段/短行补空；普通或混合数组使用 value 单列。数字保留原始精度，布尔值写成 true/false，null 写成 null；嵌套内容默认保留为 JSON 文本，可选择展开对象为独立列，数组仍保留 JSON 文本。CSV 不保存 JSON 类型。所有字段加双引号，记录用 LF 分隔；[] 得到空结果。')
 let version = 0, disposed = false
 function invalidate() { version++; output.value = ''; dimensions.value = ''; message.value = ''; error.value = ''; errorCode.value = ''; notices.value = []; format.value = '' }
-watch([input, direction, jsonMode, recordPath], invalidate, { flush: 'sync' })
+watch([input, direction, jsonMode, recordPath, recordScope, flattenObjects, csvOutput], invalidate, { flush: 'sync' })
 function run() {
   if (composing.value) return
   invalidate()
-  const result = convertTable(input.value, direction.value, { jsonMode: jsonMode.value, recordPath: recordPath.value })
+  const result = convertTable(input.value, direction.value, { csvOutput: csvOutput.value, jsonMode: jsonMode.value, recordPath: recordPath.value, recordScope: recordScope.value, flattenObjects: flattenObjects.value })
   if (result.status === 'empty') message.value = '暂无内容。'
   else if (result.status === 'error') {
     errorCode.value = result.code
@@ -40,15 +43,15 @@ function run() {
     format.value = result.format ? formats[result.format] : ''
   }
 }
-function releaseContent() { composing.value = false; input.value = ''; direction.value = 'csv-to-json'; jsonMode.value = 'compatible'; recordPath.value = ''; exampleKind.value = 'objects'; invalidate() }
+function releaseContent() { composing.value = false; csvOutput.value = 'matrix'; input.value = ''; direction.value = 'csv-to-json'; jsonMode.value = 'compatible'; recordPath.value = ''; recordScope.value = 'root'; flattenObjects.value = false; exampleKind.value = 'objects'; invalidate() }
 function clear() { if (composing.value) return; releaseContent(); editor.value?.focus() }
 function example() {
   if (composing.value) return
-  if (input.value) { message.value = '请先清空现有输入，再填入示例。'; return }
-  if (direction.value === 'csv-to-json') input.value = '001,"甲,乙"\n002,"他说""好"""'
+  if (input.value) { error.value = ''; errorCode.value = ''; message.value = '请先清空现有输入，再填入示例。'; return }
+  if (direction.value === 'csv-to-json') input.value = (csvOutput.value === 'objects' ? 'id,name\n' : '') + '001,"甲,乙"\n002,"他说""好"""'
   else {
     const sample = jsonExamples[exampleKind.value]
-    recordPath.value = sample.path; input.value = sample.input
+    recordPath.value = sample.path; recordScope.value = exampleKind.value === 'wrapped' ? 'each' : 'root'; flattenObjects.value = exampleKind.value === 'wrapped'; input.value = sample.input
   }
   editor.value?.focus()
 }
@@ -79,6 +82,15 @@ onBeforeUnmount(() => { disposed = true; window.removeEventListener('pagehide', 
         <option value="csv-to-json">CSV → JSON</option>
         <option value="json-to-csv">JSON → CSV</option>
       </select>
+      <fieldset v-if="direction === 'csv-to-json'" class="json-options">
+        <legend>CSV 输出选项</legend>
+        <label for="table-csv-output">JSON 输出格式</label>
+        <select id="table-csv-output" v-model="csvOutput" :disabled="composing" aria-describedby="table-csv-help">
+          <option value="matrix">二维字符串数组（保留首行）</option>
+          <option value="objects">对象数组（首行作字段名）</option>
+        </select>
+        <p id="table-csv-help">对象模式的记录统计不含表头，最多 1,000 条数据记录；二维模式最多 1,000 条总记录。不推断数字、布尔或日期类型；只有表头时输出 []。</p>
+      </fieldset>
       <fieldset v-if="direction === 'json-to-csv'" class="json-options">
         <legend>JSON 输入选项</legend>
         <label for="table-json-mode">JSON 解析方式</label>
@@ -87,9 +99,20 @@ onBeforeUnmount(() => { disposed = true; window.removeEventListener('pagehide', 
           <option value="strict">严格 JSON 语法</option>
         </select>
         <p id="table-json-help">兼容处理会明确提示，不修改原输入。不猜测单引号、裸键或缺失值，也不覆盖重复字段。可选择下方完整示例，再点击“填入示例”。</p>
+        <label for="table-nested-mode">嵌套对象处理</label>
+        <select id="table-nested-mode" v-model="flattenObjects" :disabled="composing" aria-describedby="table-nested-help">
+          <option :value="false">保留为 JSON 文本</option>
+          <option :value="true">展开为独立列</option>
+        </select>
+        <p id="table-nested-help">展开仅用于对象记录，例如 data.profile.email；数组和空对象保留为 JSON 文本。字段名中的点以反斜杠转义，反斜杠写成两个，避免不同路径混淆。</p>
+        <label for="table-record-scope">路径作用范围</label>
+        <select id="table-record-scope" v-model="recordScope" :disabled="composing" aria-describedby="table-path-help">
+          <option value="root">从整个 JSON 选择</option>
+          <option value="each">从数组每条对象记录选择</option>
+        </select>
         <label for="table-record-path">记录路径（可选）</label>
         <input id="table-record-path" v-model="recordPath" type="text" autocomplete="off" :spellcheck="false" placeholder="例如 /data/items，留空使用根数据" :aria-invalid="errorCode === 'record-path'" aria-describedby="table-path-help table-status" @compositionstart="compositionStart" @compositionend="composing = false" />
-        <p id="table-path-help">接口数据可用 /data 或 /data/items 选择记录；路径中的 ~0 表示 ~，~1 表示 /。不会自动猜测或删除包装字段，路径最多 1,000 个码元。</p>
+        <p id="table-path-help">接口数据可用 /data 或 /data/items 选择记录；路径中的 ~0 表示 ~，~1 表示 /。逐条模式可用 /data 提取数组中每条记录的对象；每条都必须存在该路径且结果为对象，否则整次报错。不会自动猜测或删除包装字段，路径最多 1,000 个码元。</p>
         <label for="table-json-example">JSON 示例格式</label>
         <select id="table-json-example" v-model="exampleKind" :disabled="composing">
           <option v-for="(sample, key) in jsonExamples" :key="key" :value="key">{{ sample.label }}</option>

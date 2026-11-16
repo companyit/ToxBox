@@ -130,3 +130,37 @@ test('严格语法与原生JSON解析器进行受控字符变异对照，不接�
     } else if(result.status==='error')expect(['no-columns','duplicate-key'],source).toContain(result.code)
   }
 })
+
+
+test('接口对象数组支持保留包装展开及逐条提取data，数组不拆行且保留数字词元', () => {
+  const source = '[{"code":200,"data":{"id":9007199254740993,"profile":{"email":"a@b"},"tags":["甲","乙"]}},{"code":200,"data":{"id":"001","profile":{"phone":"138"},"tags":[]}}]'
+  expect(cells(source, { flattenObjects: true })).toEqual([
+    ['code','data.id','data.profile.email','data.tags','data.profile.phone'],
+    ['200','9007199254740993','a@b','["甲","乙"]',''], ['200','001','','[]','138'],
+  ])
+  expect(cells(source, { flattenObjects: true, recordScope: 'each', recordPath: '/data' })).toEqual([
+    ['id','profile.email','tags','profile.phone'], ['9007199254740993','a@b','["甲","乙"]',''], ['001','','[]','138'],
+  ])
+  expect(cells(source)[0]).toEqual(['code','data'])
+})
+test('展开字段转义点及反斜杠，空键/空对象/null/原型字段安全保留', () => {
+  expect(cells('{"a.b":1,"a":{"b":2},"x\\\\y":3,"":{},"__proto__":{"safe":true},"n":null}', { flattenObjects: true })).toEqual([
+    ['a\\.b','a.b','x\\\\y','','__proto__.safe','n'], ['1','2','3','{}','true','null'],
+  ])
+  expect(Object.hasOwn(Object.prototype, 'safe')).toBe(false)
+  expect(json('{"a":{"b\\r\\nc":1,"b\\nc":2}}', { flattenObjects: true })).toMatchObject({status:'error',code:'header-collision'})
+})
+test('逐条路径不跳过失败记录，非对象拒绝，空数组保留空结果', () => {
+  for (const source of ['{}','[1]','[{"data":{ "id":1}},{}]','[{"data":null}]','[{"data":[]}]']) {
+    expect(json(source, {recordScope:'each',recordPath:'/data'})).toMatchObject({status:'error',code:'record-path'})
+  }
+  expect(success(json('[]',{recordScope:'each',recordPath:'/data'}))).toMatchObject({rows:0,output:''})
+  expect(cells('[{"a/b":{"~x":{"id":1}}}]', {recordScope:'each',recordPath:'/a~1b/~0x'})).toEqual([['id'],['1']])
+})
+test('展开后的列并集及逐条记录数量仍有界', () => {
+  for (const count of [100,101]) {
+    const source=JSON.stringify({data:Object.fromEntries(Array.from({length:count},(_,i)=>['k'+i,i]))})
+    expect(json(source,{flattenObjects:true}).status).toBe(count===100?'success':'error')
+  }
+  expect(json(JSON.stringify(Array.from({length:1001},()=>({data:{id:1}}))),{recordScope:'each',recordPath:'/data'})).toMatchObject({status:'error',code:'row-limit'})
+})

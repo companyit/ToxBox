@@ -7,14 +7,14 @@ for (const width of [320,375,768,1440]) {
    await expect(page.locator('main')).not.toContainText('试用')
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
    if(path==='/') {
-    await expect(page.locator('.tool-card a')).toHaveCount(20)
+    await expect(page.locator('.tool-card a')).toHaveCount(22)
     await expect(page.getByRole('navigation',{name:'工具分类快捷入口'}).getByRole('link')).toHaveCount(2)
     await page.getByLabel('搜索工具',{exact:true}).fill('Base64')
     await expect(page.locator('.tool-card')).toHaveCount(1)
     await expect(page.getByRole('navigation',{name:'工具分类快捷入口'}).getByRole('link')).toHaveCount(1)
     await page.getByRole('button',{name:'清除搜索',exact:true}).click()
     await expect(page.getByLabel('搜索工具',{exact:true})).toBeFocused()
-    await expect(page.locator('.tool-card')).toHaveCount(20)
+    await expect(page.locator('.tool-card')).toHaveCount(22)
    }
    if(path==='/' || path==='/office/')await page.screenshot({path:info.outputPath(`polish-${path==='/'?'home':'office'}-${width}.png`),fullPage:true})
   }

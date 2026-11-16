@@ -1,0 +1,13 @@
+{
+  "config/adsense-readiness.json": "7225d57b11353a43cf038094f5f8a27ea0261c33f09825310c4c2bf5b753bffe",
+  "src/utils/seo.ts": "d1bf3e90bc93c0bf453163cbb28d7ccc5042074d04b869a5b2868cde39222939",
+  "scripts/ssg.mjs": "18af54769497eae6205590bfaad9b9f6306bf38befccd8f3de5c0e6a8da7471d",
+  "scripts/adsense-ownership.mjs": "f9b53e43da25c8631e7cc3385016414d32b4f6ff44899e7aaa0163347d3a3276",
+  "scripts/check-adsense-readiness.mjs": "ac4fda1a6b5d168755088c528f3b547d9763cfe1961607d235b2654991e55edc",
+  "tests/unit/adsenseOwnership.test.ts": "fba8dad3caa67d965eb5e4c6b59e569024c3ba76bde2471f35a3b570765de2b6",
+  "tests/components/adsenseOwnership.test.ts": "4c983045152383da00ec9008a09e210ab5d0ccc482f93c62345113bee62b9821",
+  "tests/ssg/seoGrowth.test.ts": "a3d0763ac37633041d23c8bd865b9e24be5b031f90477fec3dd9d36fe4e83bd4",
+  "tests/release/seo-growth.test.mjs": "06b866025b785ab7a0ca6819cd80acf97b286bf25e16b725b9373b88e361a6d8",
+  "package.json": "474e654426c481dd01bc4882bc4ceca4b0023dfc7db13f160c8f580e00180499",
+  "package-lock.json": "c493c61d1e03e3bf982e936cab3c16e9b53aaa242016381db0b82ee13e04bfd4"
+}

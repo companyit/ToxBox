@@ -1,0 +1,108 @@
+{
+  "kind": "Node algorithm timing; desktop browser/total memory not implied",
+  "node": "v24.21.0",
+  "samples": [
+    {
+      "name": "identical",
+      "codeUnits": [
+        500000,
+        500000
+      ],
+      "ms": [
+        0.641,
+        0.574,
+        0.693
+      ],
+      "rows": 5000,
+      "added": 0,
+      "removed": 0,
+      "unchanged": 5000
+    },
+    {
+      "name": "oneChange",
+      "codeUnits": [
+        500000,
+        500000
+      ],
+      "ms": [
+        44.244,
+        52.255,
+        63.033
+      ],
+      "rows": 5001,
+      "added": 1,
+      "removed": 1,
+      "unchanged": 4999
+    },
+    {
+      "name": "allDifferent",
+      "codeUnits": [
+        500000,
+        500000
+      ],
+      "ms": [
+        63.791,
+        52.887,
+        52.31
+      ],
+      "rows": 10000,
+      "added": 5000,
+      "removed": 5000,
+      "unchanged": 0
+    },
+    {
+      "name": "repeated",
+      "codeUnits": [
+        9999,
+        9999
+      ],
+      "ms": [
+        49.128,
+        47.579,
+        48.468
+      ],
+      "rows": 10000,
+      "added": 5000,
+      "removed": 5000,
+      "unchanged": 0
+    },
+    {
+      "name": "skewed",
+      "codeUnits": [
+        500000,
+        8
+      ],
+      "ms": [
+        17.857,
+        5.074,
+        1.625
+      ],
+      "rows": 5001,
+      "added": 1,
+      "removed": 5000,
+      "unchanged": 0
+    },
+    {
+      "name": "empty",
+      "codeUnits": [
+        500000,
+        0
+      ],
+      "ms": [
+        1.284,
+        1.279,
+        1.284
+      ],
+      "rows": 5000,
+      "added": 0,
+      "removed": 5000,
+      "unchanged": 0
+    }
+  ],
+  "typedArrayAllocationAt5000": {
+    "decisionBytes": 3125000,
+    "rollingRowBytes": 20004,
+    "lineIdBytes": 40000,
+    "previousLengthMatrixBytes": 50020002
+  }
+}

@@ -93,3 +93,40 @@ test('受控多样本规范化往返保留单元格，不依赖相同序列化�
     expect(JSON.parse(success(csv(encoded.output)).output)).toEqual(values.map(row => row.map(cell => cell.replace(/\r\n?/g, '\n'))))
   }
 })
+
+test('对象模式保留字段空白、空值、数字与公式文字，安全输出原型字段', () => {
+  const result = success(convertTable('id, name ,__proto__,constructor,prototype\n001,9007199254740993,true,=1+2,', 'csv-to-json', { csvOutput: 'objects' }))
+  expect(JSON.parse(result.output)).toEqual([JSON.parse('{"id":"001"," name ":"9007199254740993","__proto__":"true","constructor":"=1+2","prototype":""}')])
+  expect(Object.prototype).not.toHaveProperty('id')
+  expect(result).toMatchObject({ rows: 1, columns: 5 })
+})
+test('对象模式拒绝空白及规范化重复字段，错误不回显输入', () => {
+  for (const source of [',a\nx,y', ' \nx', '"\t"\nx']) expect(convertTable(source, 'csv-to-json', { csvOutput: 'objects' })).toEqual({ status: 'error', code: 'empty-header' })
+  for (const source of ['private,private\na,b', '"a\rb","a\r\nb"\nx,y']) expect(convertTable(source, 'csv-to-json', { csvOutput: 'objects' })).toEqual({ status: 'error', code: 'duplicate-header' })
+  expect(success(convertTable('a, a\nx,y', 'csv-to-json', { csvOutput: 'objects' })).rows).toBe(1)
+})
+test('对象模式空源、仅表头、多行引号与严格矩形', () => {
+  const convert = (source: string) => convertTable(source, 'csv-to-json', { csvOutput: 'objects' })
+  expect(convert('')).toEqual({ status: 'empty' })
+  expect(convert('\uFEFF')).toEqual({ status: 'empty' })
+  expect(success(convert('id,name\n'))).toMatchObject({ output: '[]', rows: 0, columns: 2 })
+  expect(JSON.parse(success(convert('id,note\n001,"甲,乙\r\n他说""好"""')).output)).toEqual([{ id: '001', note: '甲,乙\n他说"好"' }])
+  expect(convert('a,b\nx')).toEqual({ status: 'error', code: 'shape' })
+  expect(convert('a\n"x')).toEqual({ status: 'error', code: 'invalid-csv' })
+  expect(convert('a\n\uD800')).toEqual({ status: 'error', code: 'unicode' })
+})
+test('对象模式独立行列预算、重复字段名输出预算与转义长度', () => {
+  const convert = (source: string) => convertTable(source, 'csv-to-json', { csvOutput: 'objects' })
+  expect(success(convert('id\n' + Array(1000).fill('x').join('\n'))).rows).toBe(1000)
+  expect(convert('id\n' + Array(1001).fill('x').join('\n'))).toEqual({ status: 'error', code: 'row-limit' })
+  for (const count of [100, 101]) expect(convert(Array.from({ length: count }, (_, i) => `k${i}`).join(',')).status).toBe(count === 100 ? 'success' : 'error')
+  expect(convert('k'.repeat(1100) + '\n' + Array(1000).fill('x').join('\n'))).toEqual({ status: 'error', code: 'output-limit' })
+  // For 1000 single-field rows, pretty JSON adds 21002 characters beyond keys and values.
+  expect(success(convert('k'.repeat(978) + '\n' + Array(1000).fill('x').join('\n'))).output).toHaveLength(999002)
+  const exactRows = Array<string>(1000).fill('x'); exactRows[0] = '""'; exactRows[1] = '""'
+  expect(success(convert('k'.repeat(979) + '\n' + exactRows.join('\n'))).output).toHaveLength(1000000)
+  exactRows[0] = 'x'
+  expect(convert('k'.repeat(979) + '\n' + exactRows.join('\n'))).toEqual({ status: 'error', code: 'output-limit' })
+  expect(convert('k'.repeat(979) + '\n' + Array(1000).fill('x').join('\n'))).toEqual({ status: 'error', code: 'output-limit' })
+  expect(success(convert('"2",a\n"\\""\t",😀')).output).toBe(JSON.stringify([{ '2': '\\"\t', a: '😀' }], null, 2))
+})

@@ -1,3 +1,5 @@
+import { adSenseDocumentTransition } from '../utils/adsense'
+import { siteSeoEnvironment } from '../config/seo'
 import { legacyToolPath } from '../utils/legacyToolLinks'
 import { isSensitivePath, isSensitiveRoute } from '../utils/sensitivePages'
 import { nextTick } from 'vue'
@@ -19,7 +21,8 @@ const router = createRouter({
   },
 })
 // 敏感页面必须使用独立文档，防止继承其他页面已经执行的 GA 脚本。
-const documentIsSensitive = browser && isSensitivePath(window.location.pathname)
+const documentPath = browser ? window.location.pathname : ''
+const documentIsSensitive = browser && isSensitivePath(documentPath)
 if (browser) router.beforeEach(to => {
   const legacyPath = legacyToolPath(to.path, to.hash)
   if (legacyPath) {
@@ -29,6 +32,10 @@ if (browser) router.beforeEach(to => {
     return new Promise<never>(() => {})
   }
 
+  if (adSenseDocumentTransition(documentPath, to.path, siteSeoEnvironment)) {
+    window.location.assign(to.fullPath)
+    return new Promise<never>(() => {})
+  }
   if (isSensitiveRoute(to.name) !== documentIsSensitive) {
     window.location.assign(to.fullPath)
     return false

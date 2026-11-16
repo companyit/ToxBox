@@ -1,5 +1,30 @@
 # 顺手集 / ToolHug
 
+## CSV转JSON对象数组（2026-11-15）
+
+`/office/csv-json/`新增“对象数组（首行作字段名）”模式，值保持字符串，保留前导零及大整数文字；拒绝空白/重复字段名，默认二维数组及JSON转CSV行为保持。401项单元/组件、20项静态与双引擎586项通过，Firefox及人工限制见[043验证](docs/verification/043-csv-object-output.md)。使用`npm run preview:local`查看本地测试产物；正式dist和部署未更新。
+
+
+## JSON结构对比（2026-11-15）
+
+当前源码和无广告测试预览新增 `/developer/json-diff/`：按字段路径查看JSON新增/删除/修改，忽略对象键顺序，数组按索引，数字按任意精度十进制比较。提供类型筛选、100项分页、完整报告复制及可取消Worker；新页noindex、无统计/广告。当前22工具、30HTML、22指南，24页正式索引保持。实际结果与限制见 [051验证](docs/verification/051-json-structural-diff.md)。
+
+本轮未更新正式dist或部署；使用`npm run preview:local`查看本轮已生成的dist-ssg。默认`npm run preview`仍读取此前048正式dist，不包含050/051变更。以下保留历史阶段记录。
+
+## 文件对比扩容（2026-11-15）
+
+当前源码支持每侧2 MiB、500000个UTF-16码元、5000行，三项须同时满足。文件对比结果每页200行，完整报告按需生成、复制包含当前筛选全部结果；中文选择按钮消除文件状态歧义。类型、单元/组件、静态及Chromium/WebKit回归通过，Firefox和人工限制见 [050验证](docs/verification/050-file-diff-capacity.md)。
+
+本轮仅更新无广告测试产物dist-ssg，运行`npm run preview:local`可查看。默认`npm run preview`仍读取此前048正式dist，尚不包含050扩容；本轮没有正式打包或部署。下方历史功能/产物状态按对应日期理解。
+
+## AdSense脚本接入（2026-11-14）
+
+正式构建已配置4页AdSense加载器：首页、办公/开发分类、关于页；首页所有权meta保留，全部工具页及preview不加载广告。`npm run build`生成可本地预览的生产dist，跨广告边界整页导航。实际验证、构建结果及未完成的后台/发布事项见[048验证](docs/verification/048-adsense-script.md)。代码接入不等于线上投放，本轮不部署；下方“仅元标记/未更新dist”等按各历史阶段理解。
+
+## 文件对比更新（2026-11-14）
+
+已新增 `/office/file-diff/`：本地比较两份UTF-8的TXT、Markdown、CSV、JSON文件，支持只读预览、逐行差异、交换、筛选和复制报告。每份最多1 MiB、解码后100000码元/1000行，文件不上传。当前源码21工具/29HTML/21指南，正式24页索引政策保持，新工具noindex。最新仅更新本地preview，正式dist与部署未更新；验证与限制见[045报告](docs/verification/045-file-diff.md)。文件翻译仍为待服务确认方案。下方11月8日工具数量为历史构建记录；命令入口约定仍有效。
+
 ## 当前构建与运行方式（2026-11-08）
 
 ```sh

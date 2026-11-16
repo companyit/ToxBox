@@ -20,3 +20,7 @@
 - [x] T10：导出仅公开静态文件的归档，逐文件与 manifest 核对并提供独立 SHA 和移交材料。
 
 证据见[生产移交材料](../../release/adsense-handoff-2026-11-03.md)。T07 及真实远端上线条件保持未完成，本轮没有业务代码变更或广告启用。
+
+## 2026-11-14 所有权元标记扩展
+
+负责人提供真实ID并在047元标记方案后要求“开动”，已按[047规格](../047-adsense-ownership/spec.md)实现正式首页静态google-adsense-account元标记，广告脚本仍关闭，无广告位/ads.txt。此项替代014中“发布商ID缺失/禁止全部验证meta”的历史事实，未授权投放/部署；Google实际验证及审核状态仍待负责人操作，见[047验证](../../verification/047-adsense-ownership.md)。

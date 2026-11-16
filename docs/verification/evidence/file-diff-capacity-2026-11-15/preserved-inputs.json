@@ -1,0 +1,13 @@
+{
+  "preserved": {
+    "config/adsense-readiness.json": true,
+    "src/utils/adsense.ts": true,
+    "src/utils/seo.ts": true,
+    "src/router/index.ts": true,
+    "src/views/pages/PrivacyPage.vue": true,
+    "package.json": true,
+    "package-lock.json": true,
+    "src/utils/textDiff.ts": true
+  },
+  "productionDistFilesVerified": 303
+}

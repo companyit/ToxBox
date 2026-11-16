@@ -2,6 +2,8 @@ import type { Tool } from '@/types/tool'
 import { orderTools } from '../utils/toolOrder'
 
 const catalog: readonly Tool[] = [
+  { id: 'json-diff', name: 'JSON 结构对比', description: '本地按字段路径查看JSON增删修改，忽略键顺序并保留数字精度。', category: 'developer', status: 'preview', routeName: 'json-diff' },
+  { id: 'file-diff', name: '文件对比', description: '本地比较两份UTF-8文本文件，逐行查看变化并复制报告。', category: 'office', status: 'preview', routeName: 'file-diff' },
   { id: 'image-crop', name: '图片尺寸与裁剪', description: '本地拖动或填写坐标裁剪图片，选择固定比例并等比缩小后下载。', category: 'office', status: 'preview', routeName: 'image-crop' },
   { id: 'pdf-organizer', name: 'PDF 页面整理', description: '本地查看缩略图，排序、旋转和删除 PDF 页面后导出。', category: 'office', status: 'preview', routeName: 'pdf-organizer' },
   { id: 'text-workbench', name: '文本处理工作台', description: '串联清理、去重、排序与替换，一次查看步骤统计、最终文本及差异。', category: 'office', status: 'preview', routeName: 'text-workbench' },

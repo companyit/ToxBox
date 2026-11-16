@@ -1,0 +1,58 @@
+{
+  "kind": "Node algorithm timings, not browser/device or total memory evidence",
+  "node": "v24.21.0",
+  "samples": [
+    {
+      "name": "maxStrings",
+      "codeUnits": [
+        100000,
+        100000
+      ],
+      "ms": [
+        1.4,
+        1.142,
+        1.01
+      ],
+      "changes": 0
+    },
+    {
+      "name": "maxDifferences",
+      "codeUnits": [
+        4001,
+        4001
+      ],
+      "ms": [
+        2.839,
+        1.576,
+        1.458
+      ],
+      "changes": 2000
+    },
+    {
+      "name": "largeExponent",
+      "codeUnits": [
+        100000,
+        100000
+      ],
+      "ms": [
+        17.121,
+        16.577,
+        16.06
+      ],
+      "changes": 0
+    },
+    {
+      "name": "deep",
+      "codeUnits": [
+        61,
+        61
+      ],
+      "ms": [
+        0.02,
+        0.008,
+        0.006
+      ],
+      "changes": 1
+    }
+  ]
+}

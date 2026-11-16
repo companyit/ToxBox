@@ -1,13 +1,17 @@
 import { parseJsonTable, validTableUnicode, type JsonTableError, type JsonTableFormat, type JsonTableNotice, type JsonTableOptions } from './jsonTable'
 
+export type CsvOutput = 'matrix' | 'objects'
+export type TableOptions = JsonTableOptions & { csvOutput?: CsvOutput }
 export type TableDirection = 'csv-to-json' | 'json-to-csv'
-export type TableError = 'input-limit' | 'output-limit' | 'invalid-csv' | 'shape' | JsonTableError
+export type TableError = 'input-limit' | 'output-limit' | 'invalid-csv' | 'shape' | 'empty-header' | 'duplicate-header' | JsonTableError
 export type TableResult = { status: 'empty' } | { status: 'error'; code: TableError; line?: number; column?: number } | { status: 'success'; output: string; rows: number; columns: number; format?: JsonTableFormat; notices?: JsonTableNotice[] }
 export const TABLE_INPUT_LIMIT = 100000
 export const TABLE_ROW_LIMIT = 1000
 export const TABLE_COLUMN_LIMIT = 100
 export const TABLE_OUTPUT_LIMIT = 1000000
 export const tableErrors: Record<TableError, string> = {
+  'empty-header': '字段名不能为空或仅含空白，请检查首行字段名。',
+  'duplicate-header': '首行存在重复字段名，请调整后重试；不会覆盖字段。',
   'input-limit': '输入超过 100,000 个 UTF-16 码元，请缩短后重试。',
   'row-limit': '表格最多 1,000 条记录，请减少记录后重试。',
   'column-limit': '表格最多 100 列，请减少列数后重试。',
@@ -25,7 +29,7 @@ export const tableErrors: Record<TableError, string> = {
 }
 const error = (code: TableError): TableResult => ({ status: 'error', code })
 const normalize = (text: string) => text.replace(/\r\n?/g, '\n')
-function parseCsv(text: string): string[][] | TableError {
+function parseCsv(text: string, rowLimit = TABLE_ROW_LIMIT): string[][] | TableError {
   const rows: string[][] = []
   let row: string[] = [], field = '', state: 'start' | 'plain' | 'quoted' | 'closed' = 'start'
   function endField(): TableError | undefined {
@@ -35,7 +39,7 @@ function parseCsv(text: string): string[][] | TableError {
   function endRow(): TableError | undefined {
     const failure = endField()
     if (failure) return failure
-    if (rows.length >= TABLE_ROW_LIMIT) return 'row-limit'
+    if (rows.length >= rowLimit) return 'row-limit'
     if (rows.length && row.length !== rows[0]!.length) return 'shape'
     rows.push(row); row = []
   }
@@ -108,17 +112,42 @@ function serializeRows(value: unknown, direction: TableDirection, rowLimit: numb
   return { status: 'success', output, rows: table.length, columns }
 }
 
+function serializeObjects(table: string[][]): TableResult {
+  const headers = table[0]!
+  if (headers.some(header => !header.trim())) return error('empty-header')
+  if (new Set(headers).size !== headers.length) return error('duplicate-header')
+  const records: Record<string, string>[] = []
+  let size = table.length > 1 ? 4 + 2 * (table.length - 2) : 2
+  const headerSizes = headers.map(jsonStringLength)
+  for (const row of table.slice(1)) {
+    // Object braces, indentation, separators, and each escaped key/value.
+    size += 8 + 2 * (headers.length - 1)
+    const record: Record<string, string> = Object.create(null)
+    for (let column = 0; column < headers.length; column++) {
+      const value = row[column]!
+      size += 6 + headerSizes[column]! + jsonStringLength(value)
+      if (size > TABLE_OUTPUT_LIMIT) return error('output-limit')
+      record[headers[column]!] = value
+    }
+    records.push(record)
+  }
+  const output = JSON.stringify(records, null, 2)
+  if (output.length !== size || output.length > TABLE_OUTPUT_LIMIT) return error('output-limit')
+  return { status: 'success', output, rows: records.length, columns: headers.length }
+}
+
 export function serializeTable(value: unknown, direction: TableDirection): TableResult {
   return serializeRows(value, direction, TABLE_ROW_LIMIT)
 }
 
-export function convertTable(input: string, direction: TableDirection, options: JsonTableOptions = {}): TableResult {
+export function convertTable(input: string, direction: TableDirection, options: TableOptions = {}): TableResult {
   if (input.length > TABLE_INPUT_LIMIT) return error('input-limit')
   if (direction === 'csv-to-json') {
     const source = input.startsWith('\uFEFF') ? input.slice(1) : input
     if (!source) return { status: 'empty' }
     if (!validTableUnicode(source)) return error('unicode')
-    const parsed = parseCsv(normalize(source))
+    const parsed = parseCsv(normalize(source), TABLE_ROW_LIMIT + (options.csvOutput === 'objects' ? 1 : 0))
+    if (typeof parsed !== 'string' && options.csvOutput === 'objects') return serializeObjects(parsed)
     return typeof parsed === 'string' ? error(parsed) : serializeTable(parsed, direction)
   }
   if (!input) return { status: 'empty' }

@@ -1,9 +1,10 @@
+import { JsonReader, JsonNumber, JsonFailure, encodeJsonValue as encodeJson, validJsonUnicode as validTableUnicode, type JsonValue } from './jsonReader'
+export { JSON_TABLE_DEPTH, JSON_TABLE_NODES, validJsonUnicode as validTableUnicode } from './jsonReader'
 export type JsonTableError = 'invalid-json' | 'depth' | 'nodes' | 'unicode' | 'duplicate-key' | 'record-path' | 'no-columns' | 'header-collision' | 'row-limit' | 'column-limit'
 export type JsonTableFormat = 'matrix' | 'objects' | 'object' | 'values' | 'value'
-export type JsonTableOptions = { jsonMode?: 'compatible' | 'strict'; recordPath?: string }
-export const JSON_TABLE_DEPTH = 30
-export const JSON_TABLE_NODES = 50_000
+export type JsonTableOptions = { jsonMode?: 'compatible' | 'strict'; recordPath?: string; recordScope?: 'root' | 'each'; flattenObjects?: boolean }
 export const jsonTableNotices = {
+  'flattened-objects': '嵌套对象已展开为点分字段；字段名中的点和反斜杠已转义，数组及空对象保留为 JSON 文本。',
   bom: '已兼容开头的 BOM，原输入保持不变。',
   comments: '已忽略 JSON 注释，原输入保持不变。',
   'trailing-comma': '已兼容末尾逗号，原输入保持不变。',
@@ -15,24 +16,10 @@ export type JsonTableNotice = keyof typeof jsonTableNotices
 type ParsedTable = { status: 'success'; table: string[][]; records: number; header: boolean; format: JsonTableFormat; notices: JsonTableNotice[] }
 export type JsonTableResult = ParsedTable | { status: 'error'; code: JsonTableError; line?: number; column?: number }
 
-class JsonFailure extends Error {
+class TableFailure extends Error {
   constructor(readonly code: JsonTableError, readonly offset?: number) { super(code) }
 }
-class JsonNumber { constructor(readonly source: string) {} }
-type JsonValue = string | boolean | null | JsonNumber | JsonValue[] | Map<string, JsonValue>
 const whitespace = (ch: string) => ch === ' ' || ch === '\t' || ch === '\r' || ch === '\n'
-
-export function validTableUnicode(text: string): boolean {
-  for (let i = 0; i < text.length; i++) {
-    const code = text.charCodeAt(i)
-    if (code === 0) return false
-    if (code >= 0xd800 && code <= 0xdbff) {
-      const next = text.charCodeAt(++i)
-      if (!(next >= 0xdc00 && next <= 0xdfff)) return false
-    } else if (code >= 0xdc00 && code <= 0xdfff) return false
-  }
-  return true
-}
 
 // Replace supported syntax extensions with spaces so original line/column offsets survive.
 function compatibleSource(input: string, notices: Set<JsonTableNotice>): string {
@@ -53,7 +40,7 @@ function compatibleSource(input: string, notices: Set<JsonTableNotice>): string 
       notices.add('comments'); i = end - 1
     } else if (ch === '/' && input[i + 1] === '*') {
       const end = input.indexOf('*/', i + 2)
-      if (end < 0) throw new JsonFailure('invalid-json', i)
+      if (end < 0) throw new TableFailure('invalid-json', i)
       for (let k = i; k < end + 2; k++) if (input[k] !== '\r' && input[k] !== '\n') chars[k] = ' '
       notices.add('comments'); i = end + 1
     }
@@ -79,86 +66,9 @@ function compatibleSource(input: string, notices: Set<JsonTableNotice>): string 
   return chars.join('')
 }
 
-class JsonReader {
-  private index = 0
-  private nodes = 0
-  private readonly numberPattern = /-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/y
-  constructor(private readonly source: string) {}
-  private fail(code: JsonTableError = 'invalid-json'): never { throw new JsonFailure(code, this.index) }
-  private space() { while (this.index < this.source.length && whitespace(this.source[this.index]!)) this.index++ }
-  private node() { if (++this.nodes > JSON_TABLE_NODES) this.fail('nodes') }
-  private string(): string {
-    const start = this.index++
-    while (this.index < this.source.length) {
-      const ch = this.source[this.index++]
-      if (ch === '\\') this.index++
-      else if (ch === '"') {
-        let value: string
-        try { value = JSON.parse(this.source.slice(start, this.index)) as string }
-        catch { throw new JsonFailure('invalid-json', start) }
-        if (!validTableUnicode(value)) throw new JsonFailure('unicode', start)
-        return value
-      }
-    }
-    return this.fail()
-  }
-  private value(depth: number): JsonValue {
-    this.space(); this.node()
-    const ch = this.source[this.index]
-    if (ch === '"') return this.string()
-    if (ch === '{' || ch === '[') {
-      if (depth >= JSON_TABLE_DEPTH) this.fail('depth')
-      this.index++; this.space()
-      if (ch === '[') {
-        const values: JsonValue[] = []
-        if (this.source[this.index] === ']') { this.index++; return values }
-        while (true) {
-          values.push(this.value(depth + 1)); this.space()
-          if (this.source[this.index] === ']') { this.index++; return values }
-          if (this.source[this.index] !== ',') this.fail()
-          this.index++
-        }
-      }
-      const values = new Map<string, JsonValue>()
-      if (this.source[this.index] === '}') { this.index++; return values }
-      while (true) {
-        this.space(); this.node()
-        if (this.source[this.index] !== '"') this.fail()
-        const offset = this.index, key = this.string()
-        if (values.has(key)) throw new JsonFailure('duplicate-key', offset)
-        this.space()
-        if (this.source[this.index] !== ':') this.fail()
-        this.index++
-        values.set(key, this.value(depth + 1)); this.space()
-        if (this.source[this.index] === '}') { this.index++; return values }
-        if (this.source[this.index] !== ',') this.fail()
-        this.index++
-      }
-    }
-    for (const [token, value] of [['true', true], ['false', false], ['null', null]] as const) {
-      if (this.source.startsWith(token, this.index)) { this.index += token.length; return value }
-    }
-    this.numberPattern.lastIndex = this.index
-    const number = this.numberPattern.exec(this.source)
-    if (number) { this.index += number[0].length; return new JsonNumber(number[0]) }
-    return this.fail()
-  }
-  read(): JsonValue {
-    const value = this.value(0); this.space()
-    if (this.index !== this.source.length) this.fail()
-    return value
-  }
-}
-
-function encodeJson(value: JsonValue): string {
-  if (value instanceof JsonNumber) return value.source
-  if (value instanceof Map) return '{' + Array.from(value, ([key, item]) => JSON.stringify(key) + ':' + encodeJson(item)).join(',') + '}'
-  if (Array.isArray(value)) return '[' + value.map(encodeJson).join(',') + ']'
-  return JSON.stringify(value)
-}
 function selectValue(value: JsonValue, pointer: string): JsonValue {
   if (!pointer) return value
-  const fail = (): never => { throw new JsonFailure('record-path') }
+  const fail = (): never => { throw new TableFailure('record-path') }
   if (pointer.length > 1000 || !pointer.startsWith('/')) return fail()
   for (const part of pointer.slice(1).split('/')) {
     if (/~(?:[^01]|$)/.test(part)) return fail()
@@ -172,20 +82,49 @@ function selectValue(value: JsonValue, pointer: string): JsonValue {
 
 export function parseJsonTable(input: string, options: JsonTableOptions, rowLimit: number, columnLimit: number): JsonTableResult {
   try {
-    if (!validTableUnicode(input)) throw new JsonFailure('unicode')
+    if (!validTableUnicode(input)) throw new TableFailure('unicode')
     const notices = new Set<JsonTableNotice>()
     const source = options.jsonMode === 'strict' ? input : compatibleSource(input, notices)
-    const value = selectValue(new JsonReader(source).read(), options.recordPath ?? '')
+    const root = new JsonReader(source).read()
+    let value: JsonValue
+    if (options.recordScope === 'each') {
+      if (!Array.isArray(root) || !root.every(item => item instanceof Map)) throw new TableFailure('record-path')
+      if (root.length > rowLimit) throw new TableFailure('row-limit')
+      value = root.map(item => {
+        const selected = selectValue(item, options.recordPath ?? '')
+        if (!(selected instanceof Map)) throw new TableFailure('record-path')
+        return selected
+      })
+    } else value = selectValue(root, options.recordPath ?? '')
     const cell = (item: JsonValue): string => {
       if (typeof item === 'string') return item
-      if (item instanceof Map || Array.isArray(item)) notices.add('nested-values')
+      if ((item instanceof Map || Array.isArray(item)) && !options.flattenObjects) notices.add('nested-values')
       return encodeJson(item)
     }
     const done = (table: string[][], records: number, header: boolean, format: JsonTableFormat): ParsedTable => ({ status: 'success', table, records, header, format, notices: [...notices] })
-    const fail = (code: JsonTableError): never => { throw new JsonFailure(code) }
+    const fail = (code: JsonTableError): never => { throw new TableFailure(code) }
     if (Array.isArray(value) && value.length > rowLimit) return fail('row-limit')
     if (value instanceof Map || (Array.isArray(value) && value.length && value.every(item => item instanceof Map))) {
-      const objects = value instanceof Map ? [value] : value as Map<string, JsonValue>[]
+      let objects = value instanceof Map ? [value] : value as Map<string, JsonValue>[]
+      if (options.flattenObjects) {
+        const segment = (key: string) => key.replace(/\\/g, '\\\\').replace(/\./g, '\\.')
+        objects = objects.map(object => {
+          const flattened = new Map<string, JsonValue>()
+          const visit = (current: Map<string, JsonValue>, prefix: string[]) => {
+            for (const [key, item] of current) {
+              const path = [...prefix, segment(key)]
+              if (item instanceof Map && item.size) visit(item, path)
+              else {
+                flattened.set(path.join('.'), item)
+                if (flattened.size > columnLimit) throw new TableFailure('column-limit')
+              }
+            }
+          }
+          visit(object, [])
+          return flattened
+        })
+        notices.add('flattened-objects')
+      }
       const keys: string[] = [], seen = new Set<string>(), normalized = new Set<string>()
       for (const object of objects) for (const key of object.keys()) if (!seen.has(key)) {
         const name = key.replace(/\r\n?/g, '\n')
@@ -218,7 +157,7 @@ export function parseJsonTable(input: string, options: JsonTableOptions, rowLimi
     }
     return done([['value'], [cell(value)]], 1, true, 'value')
   } catch (failure) {
-    if (!(failure instanceof JsonFailure)) throw failure
+    if (!(failure instanceof TableFailure) && !(failure instanceof JsonFailure)) throw failure
     if (failure.offset === undefined) return { status: 'error', code: failure.code }
     const lines = input.slice(0, failure.offset).split(/\r\n|\r|\n/)
     return { status: 'error', code: failure.code, line: lines.length, column: lines.at(-1)!.length + 1 }

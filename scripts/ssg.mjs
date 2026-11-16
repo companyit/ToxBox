@@ -1,3 +1,4 @@
+import { validateAdSenseDocument } from './adsense-ownership.mjs'
 import { build } from 'vite'
 import { pdfResourceFiles } from './pdf-resources.mjs'
 import { collectImageResourceSizes, validateImageResourceBudgets } from './image-resource-budget.mjs'
@@ -19,7 +20,7 @@ export function validatePages(pages) {
     if (!p.title || !p.description) throw Error('页面元数据缺失')
     names.add(p.routeName); paths.add(p.path)
   }
-  if (pages.length !== 27) throw Error('正式页面数量不符合已批准清单')
+  if (pages.length !== 29) throw Error('正式页面数量不符合已批准清单')
 }
 export async function validateHtml(html, directory) {
   if ((html.match(/<h1(?:\s|>)/g) ?? []).length !== 1 || (html.match(/<main(?:\s|>)/g) ?? []).length !== 1 || !html.includes('data-render-mode="ssg"')) throw Error('静态正文结构缺失')
@@ -76,7 +77,7 @@ async function generateLegacyPreview() {
       await fs.writeFile(destination, html)
       generated.push(filename)
     }
-    if (new Set(generated).size !== 28) throw Error('页面遗漏或输出重复')
+    if (new Set(generated).size !== 30) throw Error('页面遗漏或输出重复')
     validateImageResourceBudgets(await collectImageResourceSizes(candidate, path.join(client, '.vite/ssr-manifest.json')))
     await fs.rename(candidate, output)
     console.log('SSG成功：' + generated.join(', '))
@@ -122,7 +123,7 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
   const resources = manifestResources(manifest)
   const expectedHtml = [...approvedPages.map(p => p.path.slice(1) + 'index.html'), '404.html'].sort()
   const files = await digestDirectory(directory)
-  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选28HTML清单不一致')
+  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选30HTML清单不一致')
   const production = environment.mode === 'production'
   const allowedSeo = production ? ['robots.txt', 'sitemap.xml'] : []
   const noticesName = 'third-party-notices.txt'
@@ -143,6 +144,7 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
     try {
       const doc = dom.window.document
       const head = createPageHead(page, environment)
+      validateAdSenseDocument(doc, { mode: environment.mode, isHome: page.routeName === 'home' && page.path === '/', pagePath: page.path })
       const single = (selector, attribute, expected) => {
         const nodes = doc.head.querySelectorAll(selector)
         if (expected === undefined) { if (nodes.length) throw Error('出现不允许的SEO标签'); return }
@@ -162,6 +164,7 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
       for (const node of doc.querySelectorAll('[src], link[href]')) {
         const resource = node.getAttribute('src') ?? node.getAttribute('href')
         if (node.matches('link[rel="canonical"]')) continue
+        if (node.matches('script#workdev-adsense') && resource === head.adsenseScript) continue
         if (!resource || resource.startsWith('#')) continue
         if (!['/favicon.ico', '/favicon.svg'].includes(resource) && !/^\/assets\/[A-Za-z0-9_.-]+\.(?:js|css|svg|png|jpg|webp|woff2?)$/.test(resource)) throw Error('静态资源URL未批准')
         const name = resource.slice(1)
@@ -246,7 +249,9 @@ export async function generateCandidate({ candidateRoot, envelope }) {
     const expectedHead = createPageHead(page, environment)
     if (!equal(result.head, expectedHead) || !equal(result.seoEnvironment, environment)) throw Error('SSR/client SEO配置或head不一致')
     const styles = [...new Set(result.modules.flatMap(id => manifest[id] ?? []).filter(file => file.endsWith('.css')))]
-    const seo = (expectedHead.canonical ? `<link rel="canonical" href="${escape(expectedHead.canonical)}">` : '')
+    const seo = (expectedHead.adsenseScript ? `<script id="workdev-adsense" async src="${escape(expectedHead.adsenseScript)}" crossorigin="anonymous"></script>` : '')
+      + (expectedHead.adsenseAccount ? `<meta name="google-adsense-account" content="${escape(expectedHead.adsenseAccount)}">` : '')
+      + (expectedHead.canonical ? `<link rel="canonical" href="${escape(expectedHead.canonical)}">` : '')
       + (expectedHead.structuredData ? `<script type="application/ld+json" data-workdev-structured-data>${serializeStructuredData(expectedHead.structuredData)}</script>` : '')
       + Object.entries(expectedHead.openGraph ?? {}).map(([property, value]) => `<meta property="${escape(property)}" content="${escape(value)}">`).join('')
     const html = template.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escape(expectedHead.title)}</title>`)

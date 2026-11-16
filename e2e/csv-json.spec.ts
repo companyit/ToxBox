@@ -114,3 +114,78 @@ for(const width of [375,768,1440])test(`JCSV 完整JSON、兼容提示、路径�
  await page.reload();await hydrated(page);await expect(input).toHaveValue('');await expect(output).toHaveValue('')
  await expect(page.getByLabel('转换方向',{exact:true})).toHaveValue('csv-to-json')
 })
+
+
+for (const width of [375,768,1440]) test(`NCSV 嵌套对象逐条提取与展开 ${width}`, async ({page}) => {
+  await page.setViewportSize({width,height:900});await page.goto('/office/csv-json/');await hydrated(page)
+  await page.getByLabel('转换方向',{exact:true}).selectOption('json-to-csv')
+  await page.getByLabel('JSON 示例格式',{exact:true}).selectOption('wrapped')
+  await page.getByRole('button',{name:'填入示例',exact:true}).click()
+  const run=page.getByRole('button',{name:'转换表格',exact:true}), output=page.getByLabel('表格结果（只读）',{exact:true})
+  await run.click()
+  await expect(output).toHaveValue(/"id","name","isActive","score","tags","profile.email","profile.phone","createdAt"/)
+  await expect(page.locator('#table-status')).toContainText('2 条记录，8 列')
+  await page.getByLabel('路径作用范围',{exact:true}).selectOption('root');await expect(output).toHaveValue('')
+  await run.click();await expect(page.locator('#table-status')).toContainText('记录路径无效')
+  await page.getByLabel('记录路径（可选）',{exact:true}).fill('');await run.click()
+  await expect(output).toHaveValue(/"code","message","data.id"/)
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
+  await page.getByLabel('嵌套对象处理',{exact:true}).focus();await expect(page.getByLabel('嵌套对象处理',{exact:true})).toBeFocused()
+  await page.reload();await hydrated(page)
+  await page.getByLabel('转换方向',{exact:true}).selectOption('json-to-csv')
+  await expect(page.getByLabel('路径作用范围',{exact:true})).toHaveValue('root')
+  await expect(page.getByLabel('嵌套对象处理',{exact:true})).toHaveValue('false')
+})
+
+for (const width of [375, 768, 1440]) test(`COBJ 对象数组、表头错误恢复和模式清理 ${width}`, async ({ page }, info) => {
+  await page.setViewportSize({ width, height: 900 })
+  await page.goto('/office/csv-json/'); await hydrated(page)
+  const input = page.locator('#table-input'), output = page.locator('#table-result'), mode = page.getByLabel('JSON 输出格式', { exact: true }), run = page.getByRole('button', { name: '转换表格', exact: true })
+  await input.fill('id,name,__proto__\n001,"甲,乙",9007199254740993')
+  await mode.selectOption('objects'); await run.click()
+  await expect(output).toHaveValue(JSON.stringify([JSON.parse('{"id":"001","name":"甲,乙","__proto__":"9007199254740993"}')], null, 2))
+  await expect(page.locator('#table-status')).toContainText('1 条记录，3 列')
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  await info.attach(`csv-objects-${width}`, { body: await page.screenshot({ fullPage: true }), contentType: 'image/png' })
+  await mode.selectOption('matrix'); await expect(output).toHaveValue('')
+  await expect(input).toHaveValue('id,name,__proto__\n001,"甲,乙",9007199254740993')
+  await mode.selectOption('objects'); await input.fill('PRIVATE,PRIVATE\na,b'); await run.click()
+  await expect(page.locator('#table-status')).toContainText('重复字段名')
+  await expect(page.locator('#table-status')).not.toContainText('PRIVATE')
+  await input.fill(' ,id\nx,y'); await run.click(); await expect(page.locator('#table-status')).toContainText('不能为空')
+  await input.fill('id,name'); await run.click(); await expect(output).toHaveValue('[]')
+  await expect(page.getByRole('button', { name: '复制结果', exact: true })).toBeEnabled()
+  await page.getByRole('button', { name: '清空', exact: true }).click()
+  await expect(mode).toHaveValue('matrix'); await expect(input).toBeFocused()
+  await mode.focus(); await page.keyboard.press('Tab'); await expect(input).toBeFocused()
+  await input.dispatchEvent('compositionstart'); await expect(mode).toBeDisabled()
+  await input.dispatchEvent('compositionend'); await mode.selectOption('objects')
+  await page.getByRole('button', { name: '填入示例', exact: true }).click(); await run.click()
+  await expect(output).toHaveValue(JSON.stringify([{ id: '001', name: '甲,乙' }, { id: '002', name: '他说"好"' }], null, 2))
+  await page.reload(); await hydrated(page); await expect(mode).toHaveValue('matrix'); await expect(input).toHaveValue('')
+})
+
+
+test('COBJ 错误后的示例保护提示可见且保留内容和选项', async ({ page }) => {
+  await page.goto('/office/csv-json/'); await hydrated(page)
+  const input = page.locator('#table-input'), status = page.locator('#table-status')
+  const run = page.getByRole('button', { name: '转换表格', exact: true })
+  const example = page.getByRole('button', { name: '填入示例', exact: true })
+  for (const mode of ['matrix', 'objects']) {
+    await page.locator('#table-csv-output').selectOption(mode)
+    const source = mode === 'matrix' ? '"PRIVATE' : 'PRIVATE,PRIVATE\na,b'
+    await input.fill(source); await run.click(); await expect(input).toHaveAttribute('aria-invalid', 'true')
+    await example.click(); await expect(status).toHaveText('请先清空现有输入，再填入示例。')
+    await expect(input).toHaveAttribute('aria-invalid', 'false'); await expect(input).toHaveValue(source)
+    await expect(page.locator('#table-csv-output')).toHaveValue(mode)
+  }
+  await page.locator('#table-direction').selectOption('json-to-csv')
+  for (const path of ['', '/PRIVATE_PATH']) {
+    const source = path ? '{"id":1}' : 'PRIVATE_JSON'
+    await input.fill(source); await page.locator('#table-record-path').fill(path); await run.click()
+    await example.click(); await expect(status).toHaveText('请先清空现有输入，再填入示例。')
+    await expect(input).toHaveValue(source); await expect(input).toHaveAttribute('aria-invalid', 'false')
+    await expect(page.locator('#table-record-path')).toHaveValue(path)
+    await expect(page.locator('#table-record-path')).toHaveAttribute('aria-invalid', 'false')
+  }
+})

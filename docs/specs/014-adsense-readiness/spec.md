@@ -23,3 +23,11 @@
 Google 官方要求强调有用原创内容与可用导航，不将四页组合、固定字数、固定页数或 HTTPS 配置当作获批保证。广告隐私披露及适用地区的同意管理须在实际接入前落实。
 
 关联：[设计](design.md)、[任务](tasks.md)、[ADR-024](../../architecture/decisions.md)、[接入清单](../../release/adsense-readiness.md)。
+
+## 2026-11-14 所有权元标记扩展
+
+负责人提供真实ID并在047元标记方案后要求“开动”，已按[047规格](../047-adsense-ownership/spec.md)实现正式首页静态google-adsense-account元标记，广告脚本仍关闭，无广告位/ads.txt。此项替代014中“发布商ID缺失/禁止全部验证meta”的历史事实，未授权投放/部署；Google实际验证及审核状态仍待负责人操作，见[047验证](../../verification/047-adsense-ownership.md)。
+
+## 2026-11-14 后续开启授权
+
+负责人在047完成后明确要求“开启广告，为了接入adsense”，按[048规格](../048-adsense-script/spec.md)实施。广告开关、4页正式加载器、文档隔离及隐私说明以048为当前约定；本篇广告关闭措辞保留为历史阶段。首页meta、无依赖/部署/后台操作及工具隔离保持，实际结果见[048验证](../../verification/048-adsense-script.md)。

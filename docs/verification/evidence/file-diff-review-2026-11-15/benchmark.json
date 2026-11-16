@@ -1,0 +1,123 @@
+{
+  "node": "v24.21.0",
+  "kind": "Node pure algorithm timing; not browser/UI evidence",
+  "samples": [
+    {
+      "name": "identical",
+      "chars": [
+        8889,
+        8889
+      ],
+      "lines": 1000,
+      "milliseconds": [
+        3.301,
+        3.343,
+        9.04,
+        8.938,
+        3.268
+      ],
+      "rows": 1000,
+      "added": 0,
+      "removed": 0,
+      "unchanged": 1000
+    },
+    {
+      "name": "oneChange",
+      "chars": [
+        8889,
+        8888
+      ],
+      "lines": 1000,
+      "milliseconds": [
+        3.189,
+        3.18,
+        3.855,
+        3.566,
+        9.01
+      ],
+      "rows": 1001,
+      "added": 1,
+      "removed": 1,
+      "unchanged": 999
+    },
+    {
+      "name": "allDifferent",
+      "chars": [
+        8889,
+        9889
+      ],
+      "lines": 1000,
+      "milliseconds": [
+        2.243,
+        2.079,
+        2.141,
+        2.096,
+        2.097
+      ],
+      "rows": 2000,
+      "added": 1000,
+      "removed": 1000,
+      "unchanged": 0
+    },
+    {
+      "name": "repeated",
+      "chars": [
+        1999,
+        1999
+      ],
+      "lines": 1000,
+      "milliseconds": [
+        2.577,
+        2.607,
+        2.493,
+        2.549,
+        2.503
+      ],
+      "rows": 2000,
+      "added": 1000,
+      "removed": 1000,
+      "unchanged": 0
+    },
+    {
+      "name": "longLines",
+      "chars": [
+        98999,
+        98999
+      ],
+      "lines": 1000,
+      "milliseconds": [
+        20.705,
+        21.421,
+        20.222,
+        19.936,
+        20.099
+      ],
+      "rows": 2000,
+      "added": 1000,
+      "removed": 1000,
+      "unchanged": 0
+    }
+  ],
+  "smallFileTooManyChars": {
+    "bytes": 100001,
+    "rejection": "input"
+  },
+  "smallFileTooManyLines": {
+    "bytes": 2000,
+    "rejection": "lines"
+  },
+  "matrixBytes": [
+    {
+      "linesEach": 1000,
+      "bytes": 2004002
+    },
+    {
+      "linesEach": 5000,
+      "bytes": 50020002
+    },
+    {
+      "linesEach": 10000,
+      "bytes": 200040002
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { adSenseScriptFor, ADSENSE_SCRIPT_ID } from './adsense.ts'
+import adsense from '../../config/adsense-readiness.json' with { type: 'json' }
 import { site } from '../data/site.ts'
 import type { PageDefinition, PageName } from '../data/pages.ts'
 import { approvedIndexablePages } from './seoEnvironment.ts'
@@ -5,7 +7,7 @@ import type { SeoEnvironment } from '../types/seo'
 export type { SeoEnvironment } from '../types/seo'
 export type OpenGraphProperty = 'og:title' | 'og:description' | 'og:url' | 'og:type' | 'og:site_name' | 'og:locale'
 export interface PageHead {
-  title: string; description: string; robots: string; canonical?: string
+  title: string; description: string; robots: string; canonical?: string; adsenseAccount?: string; adsenseScript?: string
   openGraph?: Readonly<Record<OpenGraphProperty, string>>
   structuredData?: Readonly<Record<string, unknown>>
 }
@@ -32,6 +34,9 @@ export function createPageHead(page: PageDefinition, environment: SeoEnvironment
   const structuredData = canonical ? createStructuredData(page, origin!) : undefined
   return {
     title: page.title, description: page.description,
+    ...(adSenseScriptFor(page.path, environment) ? { adsenseScript: adSenseScriptFor(page.path, environment) } : {}),
+    ...(origin === adsense.productionOrigin && page.routeName === 'home' && page.path === '/' && adsense.verificationMethod === 'meta-home'
+      && /^ca-pub-\d{16}$/.test(adsense.publisherId) ? { adsenseAccount: adsense.publisherId } : {}),
     ...(structuredData ? { structuredData } : {}),
     robots: indexable ? 'index,follow' : 'noindex,follow',
     ...(canonical ? { canonical, openGraph: {
@@ -66,6 +71,23 @@ export function applyPageHead(document: Document, head: PageHead): void {
     element.content = content!
     document.head.append(element)
   }
+  document.head.querySelectorAll('meta[name="google-adsense-account"]').forEach(node => node.remove())
+  if (head.adsenseAccount) {
+    const element = document.createElement('meta')
+    element.name = 'google-adsense-account'; element.content = head.adsenseAccount
+    document.head.append(element)
+  }
+  const ads = [...document.head.querySelectorAll<HTMLScriptElement>(`script[id="${ADSENSE_SCRIPT_ID}"]`)]
+  const existingAd = ads.shift()
+  ads.forEach(node => node.remove())
+  if (head.adsenseScript) {
+    if (!existingAd || existingAd.getAttribute('src') !== head.adsenseScript) {
+      existingAd?.remove()
+      const script = document.createElement('script')
+      script.id = ADSENSE_SCRIPT_ID; script.setAttribute('async', ''); script.crossOrigin = 'anonymous'; script.src = head.adsenseScript
+      document.head.append(script)
+    }
+  } else existingAd?.remove()
   const canonicals = [...document.head.querySelectorAll<HTMLLinkElement>('link[rel="canonical"]')]
   canonicals.forEach(node => node.remove())
   if (head.canonical) {

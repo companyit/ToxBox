@@ -1,0 +1,12 @@
+{
+  "preserved": {
+    "src/utils/fileDiff.ts": true,
+    "src/utils/fileText.ts": true,
+    "src/workers/fileDiff.worker.ts": true,
+    "src/workers/fileText.worker.ts": true,
+    "src/views/pages/FileDiffPage.vue": true,
+    "package.json": true,
+    "package-lock.json": true
+  },
+  "unchangedProductionDistFiles": 303
+}

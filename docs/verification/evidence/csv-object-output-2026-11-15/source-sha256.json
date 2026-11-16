@@ -1,0 +1,11 @@
+{
+  "src/utils/csvJson.ts": "98e286ef0f9696df16f4f44e58fcc98edb7cf738ab1b4c285172b3e4e4a58568",
+  "src/views/pages/CsvJsonPage.vue": "d3785aa014d89ceb9c24f3c48913bb216f038a3f7a5257a010286bd1a99e4ff9",
+  "src/data/pages.ts": "b2d84a4f6072533bc899e66373fc1e70e6b6dbce5b03dd45fe9acfcbb7e62abf",
+  "src/data/toolGuides.ts": "682567c8bd138dd770b270379b64c3ce7a0613e6425942cff7e45302595bcd22",
+  "tests/unit/csvJson.test.ts": "d4227982cc13c4c73e1b48b6bfd277a25c587cd12d5f4fcc92897e6ce11a1a81",
+  "tests/components/csvJson.test.ts": "9e4b8c94010e42c4250cf1328514f8ee78036292815fdab6ba3d74a42b040523",
+  "e2e/csv-json.spec.ts": "4e59aca54ec53d8cfb1364954b0dca120e6795608f72d336201f0f2481f0e266",
+  "package.json": "474e654426c481dd01bc4882bc4ceca4b0023dfc7db13f160c8f580e00180499",
+  "package-lock.json": "c493c61d1e03e3bf982e936cab3c16e9b53aaa242016381db0b82ee13e04bfd4"
+}

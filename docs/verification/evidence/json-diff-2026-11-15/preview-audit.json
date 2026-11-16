@@ -1,0 +1,13 @@
+{
+  "stage": "integration",
+  "mode": "preview",
+  "verificationMethod": "meta-home",
+  "adScriptEnabled": true,
+  "adScriptPages": [],
+  "htmlPages": 30,
+  "footerChecks": 120,
+  "guideChecks": 22,
+  "domainOwnership": "未验证",
+  "https": "另见公网检查记录",
+  "adsenseApproval": "未验证"
+}

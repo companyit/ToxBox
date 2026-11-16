@@ -1,7 +1,7 @@
 import { site } from './site.ts'
 import { indexablePages } from './indexing.ts'
-export type PageName = 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'home' | 'office' | 'text-statistics' | 'developer' | 'json-formatter' | 'url-encoder' | 'about' | 'privacy' | 'totp' | 'base64' | 'timestamp' | 'uuid' | 'contact' | 'terms'
-export type ToolPageName = Extract<PageName, 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'text-statistics' | 'json-formatter' | 'url-encoder' | 'totp' | 'base64' | 'timestamp' | 'uuid'>
+export type PageName = 'json-diff' | 'file-diff' | 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'home' | 'office' | 'text-statistics' | 'developer' | 'json-formatter' | 'url-encoder' | 'about' | 'privacy' | 'totp' | 'base64' | 'timestamp' | 'uuid' | 'contact' | 'terms'
+export type ToolPageName = Extract<PageName, 'json-diff' | 'file-diff' | 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'text-statistics' | 'json-formatter' | 'url-encoder' | 'totp' | 'base64' | 'timestamp' | 'uuid'>
 export interface PageDefinition {
   readonly routeName: PageName | 'not-found'
   readonly path: string
@@ -43,7 +43,9 @@ export const pages: readonly PageDefinition[] = [
   page('pdf-organizer', '/office/pdf-organizer/', 'PDF 页面整理', '在浏览器本地查看 PDF 缩略图，排序、旋转和删除页面后导出，不上传文档。'),
   page('text-workbench', '/office/text-workbench/', '文本处理工作台', '本地串联清理、去重、排序及替换，一次查看每步统计、最终文本和原文差异，不上传内容。'),
   page('text-diff', '/office/text-diff/', '文本差异对比', '在本地逐行对比两段文本，查看新增、删除和行号，支持仅看变化及复制报告，不上传内容。'),
+  page('file-diff', '/office/file-diff/', '文件对比', '本地比较两份UTF-8文本文件，查看逐行新增、删除与行号，支持TXT、Markdown、CSV、JSON，不上传或保存。'),
   page('json-yaml', '/developer/json-yaml/', 'JSON ↔ YAML 转换', '本地双向转换 JSON 与 YAML 1.2，检查语法和重复键，支持复制结果，不上传配置内容。'),
+  page('json-diff', '/developer/json-diff/', 'JSON 结构对比', '本地按字段路径比较JSON增删修改，忽略对象键顺序，保留数字精度，不上传数据。'),
   page('image-convert', '/office/image-convert/', '图片压缩与格式转换', '本地批量转换 JPG、PNG、WebP，等比缩小并对比体积，支持单张及 ZIP 下载，不上传图片。'),
   page('images-to-pdf', '/office/images-to-pdf/', '图片转 PDF', '本地将 JPG/PNG 按顺序转为每图一页 A4 PDF，支持方向和边距，不上传图片。'),
   page('date-calculator', '/office/date-calculator/', '日期差与日期加减', '本地计算有符号公历日期差或日期加减整数天，不依赖设备时区。'),
@@ -51,7 +53,7 @@ export const pages: readonly PageDefinition[] = [
   page('word-to-pdf', '/office/word-to-pdf/', 'Word 转 PDF（DOCX 简版）', '将DOCX在浏览器本地重排为简版预览，通过打印对话框另存PDF。不上传文件；不支持旧DOC，不保证还原Word原版式。'),
   page('pdf-split', '/office/pdf-split/', 'PDF 拆分与选页导出', '本地按指定页码顺序导出 PDF，或逐页拆分下载，不上传文件。'),
   page('text-cleanup', '/office/text-cleanup/', '文本整理', '本地清理行首尾空白、删除空白行、去重、排序及普通文本替换，保留原输入。'),
-  page('csv-json', '/office/csv-json/', 'CSV 与 JSON 表格互转', '本地将对象数组、嵌套 JSON 或二维表格转为 CSV，兼容注释与尾逗号，保留数字精度；CSV 转 JSON 不推断表头或类型。'),
+  page('csv-json', '/office/csv-json/', 'CSV 与 JSON 表格互转', '本地将对象数组、嵌套 JSON 或二维表格转为 CSV，兼容注释与尾逗号，保留数字精度；CSV 转 JSON 可选首行作字段名，值保持字符串。'),
   page('office', '/office/', '办公工具', '在线处理PDF合并、拆分和页面排序，转换或裁剪图片、图片转PDF、统计字数和整理文本。免费免登录，所选文档在浏览器本地处理，不上传内容。'),
   page('text-statistics', '/office/text-statistics/', '文本统计', '本地统计 Unicode 码点字符、去空白字符、词段、总行与非空行；词段不等于中文分词。'),
   page('developer', '/developer/', '开发者工具', '免费使用JSON格式化与校验、JSON/YAML互转、Base64、URL编解码、时间戳和UUID工具。支持中文提示，配置和文本在浏览器本地处理。'),

@@ -2,7 +2,7 @@ import {test,expect,hydrated} from './helpers'
 for(const width of [375,1440])test(`SEO 站内推广顺序与搜索保留、分类和preview隔离 ${width}`,async({page})=>{
  await page.setViewportSize({width,height:900});await page.goto('/');await hydrated(page)
  await expect(page.locator('.hero-description')).toContainText('PDF、图片、文本与开发工具')
- expect(await page.locator('.office .tool-card h3').allTextContents()).toEqual(['图片压缩与格式转换','PDF 合并','PDF 拆分与选页导出','图片转 PDF','图片尺寸与裁剪','PDF 页面整理','文本统计','文本整理','文本差异对比','CSV 与 JSON 表格互转','日期差与日期加减','文本处理工作台','Word 转 PDF'])
+ expect(await page.locator('.office .tool-card h3').allTextContents()).toEqual(['图片压缩与格式转换','PDF 合并','PDF 拆分与选页导出','图片转 PDF','图片尺寸与裁剪','PDF 页面整理','文本统计','文本整理','文本差异对比','文件对比','CSV 与 JSON 表格互转','日期差与日期加减','文本处理工作台','Word 转 PDF'])
  expect((await page.locator('.developer .tool-card h3').allTextContents()).slice(0,3)).toEqual(['JSON 格式化与校验','时间戳转换','Base64 编解码'])
  await page.getByLabel('搜索工具',{exact:true}).fill('PDF');expect(await page.locator('.tool-card h3').allTextContents()).toEqual(['PDF 合并','PDF 拆分与选页导出','图片转 PDF','PDF 页面整理','Word 转 PDF'])
  await expect(page).toHaveURL('http://127.0.0.1:4177/')

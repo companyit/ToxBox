@@ -3,12 +3,12 @@ import { test, expect } from 'vitest'
 import fs from 'node:fs/promises'
 import { pages, notFoundPage } from '../../src/data/pages'
 import { tools } from '../../src/data/tools'
-test('preview全部28HTML无索引泄露，首页/分类保留可抓取20入口与推广顺序',async()=>{
+test('preview全部29HTML无索引泄露，首页/分类保留可抓取21入口与推广顺序',async()=>{
  for(const p of [...pages,notFoundPage]){
   const html=await fs.readFile('dist-ssg/'+(p===notFoundPage?'404.html':p.path.slice(1)+'index.html'),'utf8')
   const doc=new DOMParser().parseFromString(html,'text/html')
   expect(doc.querySelector('meta[name=robots]')?.getAttribute('content')).toBe('noindex,follow')
-  expect(doc.querySelectorAll('link[rel=canonical],script[type="application/ld+json"]')).toHaveLength(0)
+  expect(doc.querySelectorAll('link[rel=canonical],script[type="application/ld+json"],meta[name="google-adsense-account"]')).toHaveLength(0)
   expect(doc.title).toBe(p.title)
  }
  const home=new DOMParser().parseFromString(await fs.readFile('dist-ssg/index.html','utf8'),'text/html')

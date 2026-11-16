@@ -1,0 +1,15 @@
+{
+  "config/adsense-readiness.json": "496c28a63566e8044a3eba4e8ef4a886bc43fb030a70cca82bac3e82fe41fba8",
+  "src/utils/adsense.ts": "b30697dfb510856c17791ff72809d7ac7674feea75c17df5d1d7704c9a40ea29",
+  "src/utils/seo.ts": "cc83b20d98f8644788542379118817d83673831552481f3542c8a54db99b9a6f",
+  "src/router/index.ts": "be1bd3f4acc3794f2c0435b89f94ebde1ac8fff19280e30b452366faeccd32e8",
+  "src/views/pages/PrivacyPage.vue": "fbca4e441334ae29c8089693a0eb0a4a60183a3fe84b66724017283017f4a607",
+  "scripts/ssg.mjs": "e12b1838adf99a2044dd4a1681cb85b165106a6df848038e509b9be602199075",
+  "scripts/adsense-ownership.mjs": "313ea1d55cc5ec89adecb0b6e5d6a92d6c84dffd48092bc880791d6bb9e535bb",
+  "scripts/check-adsense-readiness.mjs": "8bb246ac3d686670fa8d1ae0f16da67b63f91551b5f4d0b61bfdadfe674bca81",
+  "tests/unit/adsenseOwnership.test.ts": "6abf228cef4392c52091c481796a44b5615d9d0999aa2175bfc6f55ce1cf9644",
+  "tests/components/adsenseOwnership.test.ts": "1f800b0620675f48dbb306c173d7d2e5e36cd530a0cbd11cf00d26bf2fdddb2e",
+  "tests/release/seo-growth.test.mjs": "5ca60034e91a893d4c0336bea1e56385cf436d609267b99e7e9a3db54c9e013c",
+  "package.json": "474e654426c481dd01bc4882bc4ceca4b0023dfc7db13f160c8f580e00180499",
+  "package-lock.json": "c493c61d1e03e3bf982e936cab3c16e9b53aaa242016381db0b82ee13e04bfd4"
+}
