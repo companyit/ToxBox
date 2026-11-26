@@ -1,5 +1,20 @@
 # 顺手集 / ToolHug
 
+## JSON结构对比定位与跳转（2026-11-16）
+
+`/developer/json-diff/`新增字段路径文字查找、定位首处/上一处/下一处，跨页自动高亮、聚焦并滚动到目标。路径查找只用于定位，列表、统计和完整报告范围保持。420项单元/组件、20项静态与双引擎24项定向通过，限制见[054验证](docs/verification/054-json-diff-navigation.md)。npm run preview:local查看，正式dist未更新，未部署。
+
+
+## JSON结构对比导入文件（2026-11-16）
+
+`/developer/json-diff/`支持分别导入两份UTF-8 .json文件，每份400000字节/100000码元，可与粘贴混用；成功载入后可编辑、手动比较，失败/取消保留原输入。读取可取消且有10秒保护，旧任务不能覆盖后续编辑。413项单元/组件、20项静态、双引擎16项定向通过，见[053验证](docs/verification/053-json-diff-file-import.md)。使用`npm run preview:local`查看，正式dist未更新，未部署。
+
+
+## CSV/JSON结果下载（2026-11-16）
+
+`/office/csv-json/`转换成功后可下载UTF-8的`converted.json`或`converted.csv`，内容与结果框一致、不额外添加BOM或换行，合法空CSV可保存为零字节文件。编辑/换向/选项变化会撤销旧下载，内容仅本地处理。使用`npm run preview:local`查看本轮测试产物；正式dist未更新，未部署。实际验证与限制见[052报告](docs/verification/052-table-result-download.md)。
+
+
 ## CSV转JSON对象数组（2026-11-15）
 
 `/office/csv-json/`新增“对象数组（首行作字段名）”模式，值保持字符串，保留前导零及大整数文字；拒绝空白/重复字段名，默认二维数组及JSON转CSV行为保持。401项单元/组件、20项静态与双引擎586项通过，Firefox及人工限制见[043验证](docs/verification/043-csv-object-output.md)。使用`npm run preview:local`查看本地测试产物；正式dist和部署未更新。

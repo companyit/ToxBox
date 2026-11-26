@@ -56,7 +56,7 @@
 body { margin: 0; min-width: 0; background: var(--color-background); color: var(--color-text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 1rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, p, ul { margin: 0; }
 h1, h2, h3 { font-weight: 750; }
-a { color: var(--color-accent); }
+a { color: var(--color-accent); text-decoration: none; }
 :where(a, button, [tabindex]):focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
 
 /* B1角色Token：通用容器及旧间距保持不变。 */

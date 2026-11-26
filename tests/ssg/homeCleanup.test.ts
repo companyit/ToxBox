@@ -5,7 +5,7 @@ test('首页静态正文没有迁移区或隐藏重复入口，保留21工具与
  const doc=new DOMParser().parseFromString(await fs.readFile('dist-ssg/index.html','utf8'),'text/html')
  expect(doc.body.textContent).not.toContain('试用');
  expect(doc.body.textContent).not.toContain('工具入口已迁移');expect(doc.querySelectorAll('.migration-section, .migration-entry')).toHaveLength(0)
- expect(doc.querySelectorAll('.tool-card a')).toHaveLength(22);expect(doc.querySelectorAll('.office .tool-card')).toHaveLength(14);expect(doc.querySelectorAll('.developer .tool-card')).toHaveLength(8)
+ expect(doc.querySelectorAll('.tool-card a')).toHaveLength(27);expect(doc.querySelectorAll('.office .tool-card')).toHaveLength(14);expect(doc.querySelectorAll('.developer .tool-card')).toHaveLength(13)
  for(const id of ['office-tools','developer-tools','privacy'])expect(doc.getElementById(id)).not.toBeNull()
  expect(doc.querySelectorAll('.privacy-section a[href="/privacy/"]')).toHaveLength(1)
  expect(Array.from(doc.querySelectorAll('a')).some(a=>a.textContent?.startsWith('打开') && !a.closest('.tool-card'))).toBe(false)

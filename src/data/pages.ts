@@ -1,7 +1,7 @@
 import { site } from './site.ts'
 import { indexablePages } from './indexing.ts'
-export type PageName = 'json-diff' | 'file-diff' | 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'home' | 'office' | 'text-statistics' | 'developer' | 'json-formatter' | 'url-encoder' | 'about' | 'privacy' | 'totp' | 'base64' | 'timestamp' | 'uuid' | 'contact' | 'terms'
-export type ToolPageName = Extract<PageName, 'json-diff' | 'file-diff' | 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'text-statistics' | 'json-formatter' | 'url-encoder' | 'totp' | 'base64' | 'timestamp' | 'uuid'>
+export type PageName = 'ndjson' | 'cron-preview' | 'regex-tester' | 'url-query' | 'json-redact' | 'json-diff' | 'file-diff' | 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'home' | 'office' | 'text-statistics' | 'developer' | 'json-formatter' | 'url-encoder' | 'about' | 'privacy' | 'totp' | 'base64' | 'timestamp' | 'uuid' | 'contact' | 'terms'
+export type ToolPageName = Extract<PageName, 'ndjson' | 'cron-preview' | 'regex-tester' | 'url-query' | 'json-redact' | 'json-diff' | 'file-diff' | 'image-crop' | 'pdf-organizer' | 'text-workbench' | 'text-diff' | 'json-yaml' | 'image-convert' | 'images-to-pdf' | 'date-calculator' | 'csv-json' | 'text-cleanup' | 'pdf-split' | 'word-to-pdf' | 'pdf-merge' | 'text-statistics' | 'json-formatter' | 'url-encoder' | 'totp' | 'base64' | 'timestamp' | 'uuid'>
 export interface PageDefinition {
   readonly routeName: PageName | 'not-found'
   readonly path: string
@@ -45,6 +45,11 @@ export const pages: readonly PageDefinition[] = [
   page('text-diff', '/office/text-diff/', '文本差异对比', '在本地逐行对比两段文本，查看新增、删除和行号，支持仅看变化及复制报告，不上传内容。'),
   page('file-diff', '/office/file-diff/', '文件对比', '本地比较两份UTF-8文本文件，查看逐行新增、删除与行号，支持TXT、Markdown、CSV、JSON，不上传或保存。'),
   page('json-yaml', '/developer/json-yaml/', 'JSON ↔ YAML 转换', '本地双向转换 JSON 与 YAML 1.2，检查语法和重复键，支持复制结果，不上传配置内容。'),
+  page('ndjson', '/developer/ndjson/', 'NDJSON 与 JSON 数组互转', '在浏览器本地转换逐行 JSON 与 JSON 数组，保留数字精度，定位无效记录。'),
+  page('cron-preview', '/developer/cron-preview/', 'Cron 执行时间预览', '输入五字段 Cron 表达式和 UTC 起算时间，在浏览器本地预览接下来的触发时间。'),
+  page('regex-tester', '/developer/regex-tester/', '正则表达式测试', '在浏览器本地测试 JavaScript 正则表达式，查看匹配位置、编号和具名捕获组。'),
+  page('url-query', '/developer/url-query/', 'URL 参数解析', '在浏览器本地解析完整 URL 或查询字符串，按顺序查看参数名称和值。'),
+  page('json-redact', '/developer/json-redact/', 'JSON 字段脱敏', '按指定JSON Pointer路径在浏览器本地替换字段，保留未选结构和数字精度，支持复制与下载，不上传数据。'),
   page('json-diff', '/developer/json-diff/', 'JSON 结构对比', '本地按字段路径比较JSON增删修改，忽略对象键顺序，保留数字精度，不上传数据。'),
   page('image-convert', '/office/image-convert/', '图片压缩与格式转换', '本地批量转换 JPG、PNG、WebP，等比缩小并对比体积，支持单张及 ZIP 下载，不上传图片。'),
   page('images-to-pdf', '/office/images-to-pdf/', '图片转 PDF', '本地将 JPG/PNG 按顺序转为每图一页 A4 PDF，支持方向和边距，不上传图片。'),

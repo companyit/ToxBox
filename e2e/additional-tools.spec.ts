@@ -9,12 +9,30 @@ for(const width of [375,768,1440]) {
   ]) {
    await page.goto(`/developer/${path}/`); await hydrated(page)
    const editor=page.getByLabel(label!,{exact:true}), result=page.getByLabel('处理结果（只读）',{exact:true})
+   if (path !== 'timestamp') {
+    await expect(page.locator('#local-result-context')).toHaveText(path === 'base64' ? '标准 Base64' : 'UUID v4')
+    await expect(result).toHaveAttribute('rows', '7')
+    const inputBounds = (await editor.boundingBox())!
+    const resultBounds = (await result.boundingBox())!
+    expect(resultBounds.y).toBeGreaterThan(inputBounds.y + inputBounds.height)
+    expect(await result.evaluate(element => element.scrollHeight === element.clientHeight)).toBe(true)
+   }
    await editor.fill(input!)
    await page.getByRole('button',{name:path==='uuid'?'生成 UUID':'转换',exact:true}).click()
    if(path==='uuid') {
     const values=(await result.inputValue()).split('\n'); expect(values).toHaveLength(2)
     for(const value of values) expect(value).toMatch(/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/)
    } else await expect(result).toHaveValue(output!)
+   if (path === 'base64') {
+    await expect(editor).toHaveAttribute('rows', '7')
+    await expect(page.getByRole('button', { name: '复制结果' })).toBeEnabled()
+    await page.getByLabel('转换方向').selectOption('decode')
+    await expect(result).toHaveValue('')
+    await expect(page.locator('#local-result-context')).toHaveText('UTF-8 文本')
+    await editor.fill('5L2g5aW9')
+    await page.getByRole('button', { name: '转换', exact: true }).click()
+    await expect(result).toHaveValue('你好')
+   }
    await page.evaluate(() => window.dispatchEvent(new PageTransitionEvent('pagehide', {persisted:true})))
    await expect(editor).toHaveValue('')
    await expect(result).toHaveValue('')
@@ -30,7 +48,7 @@ for(const width of [375,768,1440]) {
   await search.fill('不存在的工具'); await expect(page.locator('.tool-grid li')).toHaveCount(0)
   await expect(page.getByText('没有找到匹配工具，请调整关键词或清除搜索条件。')).toBeVisible()
   await page.getByRole('button',{name:'清除搜索',exact:true}).click()
-  await expect(search).toBeFocused(); await expect(page.locator('.tool-grid li')).toHaveCount(22)
+  await expect(search).toBeFocused(); await expect(page.locator('.tool-grid li')).toHaveCount(27)
  })
 }
 test('新增工具键盘与复制失败提示、离页清空',async({page,browserName})=>{

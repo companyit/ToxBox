@@ -1,6 +1,11 @@
 import type { RouteRecordRaw, LocationQueryRaw } from 'vue-router'
 import { canonicalPath, pages } from '../data/pages.ts'
 const components = {
+  'ndjson': () => import('../views/pages/NdjsonPage.vue'),
+  'cron-preview': () => import('../views/pages/CronPreviewPage.vue'),
+  'regex-tester': () => import('../views/pages/RegexTesterPage.vue'),
+  'url-query': () => import('../views/pages/UrlQueryPage.vue'),
+  'json-redact': () => import('../views/pages/JsonRedactPage.vue'),
   'json-diff': () => import('../views/pages/JsonDiffPage.vue'),
   'file-diff': () => import('../views/pages/FileDiffPage.vue'),
   'image-crop': () => import('../views/pages/ImageCropPage.vue'),

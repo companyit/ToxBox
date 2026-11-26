@@ -3,7 +3,7 @@ import type { Tool } from '../types/tool'
 export const toolPriority: readonly string[] = Object.freeze([
   'image-convert', 'pdf-merge', 'pdf-split', 'images-to-pdf', 'image-crop', 'pdf-organizer',
   'text-statistics', 'text-cleanup', 'text-diff', 'file-diff', 'csv-json', 'date-calculator', 'text-workbench', 'word-to-pdf',
-  'json-formatter', 'timestamp', 'base64', 'json-yaml', 'json-diff', 'url-encoder', 'uuid', 'totp',
+  'json-formatter', 'timestamp', 'base64', 'json-yaml', 'json-diff', 'json-redact', 'ndjson', 'url-encoder', 'url-query', 'regex-tester', 'cron-preview', 'uuid', 'totp',
 ])
 export function orderTools(catalog: readonly Tool[]): readonly Tool[] {
   const rank = (tool: Tool) => tool.status === 'preview' ? toolPriority.indexOf(tool.routeName) : -1

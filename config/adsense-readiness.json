@@ -8,6 +8,6 @@
   "publisherId": "ca-pub-2420716265318225",
   "verificationMethod": "meta-home",
   "adsTxtConfigured": false,
-  "excludedPaths": ["/developer/json-diff/", "/office/file-diff/", "/developer/2fa/", "/office/pdf-merge/", "/office/word-to-pdf/", "/office/pdf-split/", "/office/images-to-pdf/", "/office/image-convert/", "/developer/json-yaml/", "/office/text-diff/", "/office/text-workbench/", "/office/pdf-organizer/", "/office/image-crop/"],
+  "excludedPaths": ["/developer/ndjson/", "/developer/cron-preview/", "/developer/regex-tester/", "/developer/url-query/", "/developer/json-redact/", "/developer/json-diff/", "/office/file-diff/", "/developer/2fa/", "/office/pdf-merge/", "/office/word-to-pdf/", "/office/pdf-split/", "/office/images-to-pdf/", "/office/image-convert/", "/developer/json-yaml/", "/office/text-diff/", "/office/text-workbench/", "/office/pdf-organizer/", "/office/image-crop/"],
   "trustPaths": ["/about/", "/contact/", "/privacy/", "/terms/"]
 }

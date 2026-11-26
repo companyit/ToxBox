@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import DiffTable from '@/components/tools/DiffTable.vue'
+import { diffErrors, type DiffCode, type DiffResult } from '@/utils/textDiff'
 import ToolPageLayout from '@/components/layout/ToolPageLayout.vue'
 import { cleanupText, type CleanupOperation } from '@/utils/textCleanup'
 
@@ -16,7 +18,76 @@ const output = ref(''), message = ref(''), error = ref(''), copying = ref(false)
 const editor = ref<HTMLTextAreaElement>(), resultEditor = ref<HTMLTextAreaElement>()
 const currentOperation = computed(() => operations.find(item => item.value === operation.value)!)
 let version = 0, disposed = false
-function invalidate() { version++; output.value = ''; message.value = ''; error.value = '' }
+const hasResult = ref(false)
+const comparison = ref<DiffResult>()
+const comparing = ref(false)
+const comparisonMessage = ref('')
+const compareButton = ref<HTMLButtonElement>()
+const previewLimit = 100
+const changes = computed(() => comparison.value?.rows.filter(row => row.kind !== 'same').slice(0, previewLimit) ?? [])
+let compareWorker: Worker | undefined
+let compareTimer: ReturnType<typeof setTimeout> | undefined
+
+function stopComparison() {
+  compareWorker?.terminate()
+  compareWorker = undefined
+  clearTimeout(compareTimer)
+  compareTimer = undefined
+  comparing.value = false
+}
+
+function compareResult() {
+  if (!hasResult.value || composing.value || comparing.value) return
+  comparison.value = undefined
+  comparisonMessage.value = '正在对比…'
+
+  function fail(text: string) {
+    stopComparison()
+    comparisonMessage.value = text
+  }
+
+  try {
+    const worker = new Worker(new URL('../../workers/textDiff.worker.ts', import.meta.url), { type: 'module' })
+    compareWorker = worker
+    comparing.value = true
+    compareTimer = setTimeout(() => fail('对比超过 10 秒，已停止。'), 10_000)
+    worker.onerror = event => {
+      event.preventDefault()
+      if (compareWorker === worker) fail(diffErrors.failed)
+    }
+    worker.onmessage = event => {
+      if (compareWorker !== worker) return
+      const data = event.data
+      if (!data.ok) {
+        fail(diffErrors[data.code as DiffCode] ?? diffErrors.failed)
+        return
+      }
+      stopComparison()
+      comparison.value = data.result
+      comparisonMessage.value = '对比完成。'
+    }
+    worker.postMessage({ before: input.value, after: output.value })
+  } catch {
+    fail(diffErrors.failed)
+  }
+}
+
+function cancelComparison() {
+  stopComparison()
+  comparisonMessage.value = '已取消对比。'
+  compareButton.value?.focus()
+}
+
+function invalidate() {
+  version++
+  hasResult.value = false
+  output.value = ''
+  message.value = ''
+  error.value = ''
+  stopComparison()
+  comparison.value = undefined
+  comparisonMessage.value = ''
+}
 watch([input, find, replacement, operation], invalidate, { flush: 'sync' })
 function run() {
   if (composing.value) return
@@ -26,7 +97,7 @@ function run() {
     : { input: input.value, operation: operation.value })
   if (result.status === 'error') error.value = result.message
   else if (result.status === 'empty') message.value = '暂无内容。'
-  else { output.value = result.output; message.value = result.output ? '处理完成。' : '结果为空。' }
+  else { hasResult.value = true; output.value = result.output; message.value = result.output ? '处理完成。' : '结果为空。' }
 }
 function releaseContent() { composing.value = false; input.value = ''; find.value = ''; replacement.value = ''; operation.value = 'trim'; invalidate() }
 function clear() { if (composing.value) return; releaseContent(); editor.value?.focus() }
@@ -79,12 +150,27 @@ onBeforeUnmount(() => { disposed = true; window.removeEventListener('pagehide', 
       <p id="cleanup-status" role="status" aria-live="polite">{{ error || message }}</p>
       <label for="cleanup-result">整理结果（只读）</label>
       <textarea id="cleanup-result" ref="resultEditor" :value="output" readonly rows="8" :spellcheck="false" aria-describedby="cleanup-status" />
-      <button type="button" :disabled="!output || copying || composing" @click="copy">复制结果</button>
+      <div class="actions">
+        <button type="button" :disabled="!output || copying || composing" @click="copy">复制结果</button>
+        <button v-if="hasResult" ref="compareButton" type="button" :aria-disabled="comparing"
+          @click="compareResult">查看原文与结果差异</button>
+        <button v-if="comparing" type="button" @click="cancelComparison">取消对比</button>
+      </div>
+      <p v-if="hasResult" role="status">{{ comparisonMessage }}</p>
+      <section v-if="comparison" class="cleanup-diff" aria-labelledby="cleanup-diff-heading">
+        <h2 id="cleanup-diff-heading">原文与结果差异</h2>
+        <p>新增 {{ comparison.added }} 行 · 删除 {{ comparison.removed }} 行</p>
+        <DiffTable v-if="changes.length" :rows="changes" />
+        <p v-else>原文与整理结果没有逐行变化。</p>
+        <p v-if="comparison.added + comparison.removed > previewLimit">仅显示前 {{ previewLimit }} 条变化。</p>
+      </section>
     </div>
   </ToolPageLayout>
 </template>
 
 <style scoped>
+.cleanup-diff { display: grid; gap: 12px; min-width: 0; }
+.cleanup-diff h2 { font-size: 1.25rem; }
 .cleanup-tool { display: grid; gap: 12px; min-width: 0; margin-block: 24px; }
 p { color: var(--color-muted); overflow-wrap: anywhere; line-height: 1.7; }
 label { font-weight: 650; }

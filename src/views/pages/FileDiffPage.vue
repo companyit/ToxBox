@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {computed,ref,watch,onMounted,onBeforeUnmount,nextTick} from 'vue'
 import DiffTable from '@/components/tools/DiffTable.vue'
+import { fileReadStatus } from '@/utils/fileReadStatus'
 import ToolPageLayout from '@/components/layout/ToolPageLayout.vue'
 import type { DiffResult } from '@/utils/textDiff'
 import {fileDiffLines,fileDiffErrors,fileDiffReport,FILE_DIFF_PAGE,type FileDiffCode} from '@/utils/fileDiff'
@@ -21,32 +22,31 @@ function stopRead(side: Side) {
   generations[side]++; readers[side]?.terminate(); delete readers[side]
   clearTimeout(readTimers[side]); delete readTimers[side]; reading.value[side] = false
 }
-function cancelRead(side: Side) { stopRead(side); fileErrors.value[side] = '已取消读取，请重新选择文件。' }
+function cancelRead(side: Side) { stopRead(side); fileErrors.value[side] = fileReadStatus.canceled; pickerButtons.value[side]?.focus() }
 function chooseFile(event: Event, side: Side) {
   const control = event.target as HTMLInputElement, file = control.files?.[0]
   control.value = ''
   if (!file) return
-  stopRead(side); invalidate(); loaded.value[side] = null; fileErrors.value[side] = ''
-  if (side === 'before') before.value = ''; else after.value = ''
+  stopRead(side); invalidate(); fileErrors.value[side] = ''
   try { validateTextFile(file.name, file.size) }
-  catch (failure) { fileErrors.value[side] = fileTextErrors[failure instanceof FileTextError ? failure.code : 'failed']; return }
+  catch (failure) { fileErrors.value[side] = (failure instanceof FileTextError && failure.code !== 'failed' ? fileTextErrors[failure.code] + fileReadStatus.retained : fileReadStatus.failed); return }
   const generation = generations[side]
   const fail = (text: string) => { if (generation !== generations[side]) return; stopRead(side); fileErrors.value[side] = text }
   try {
     const reader = new Worker(new URL('../../workers/fileText.worker.ts', import.meta.url), { type: 'module' })
     readers[side] = reader; reading.value[side] = true
-    readTimers[side] = setTimeout(() => fail('读取超过 10 秒，已停止，请缩小文件后重试。'), 10000)
-    reader.onerror = () => fail(fileTextErrors.failed)
+    readTimers[side] = setTimeout(() => fail(fileReadStatus.timeout), 10000)
+    reader.onerror = () => fail(fileReadStatus.failed)
     reader.onmessage = event => {
       if (generation !== generations[side]) return
       const data = event.data
-      if (!data.ok) { fail(fileTextErrors[data.code as FileTextCode] ?? fileTextErrors.failed); return }
+      if (!data.ok) { fail(data.code === 'failed' || !fileTextErrors[data.code as FileTextCode] ? fileReadStatus.failed : fileTextErrors[data.code as FileTextCode] + fileReadStatus.retained); return }
       stopRead(side)
       loaded.value[side] = { name: file.name, size: file.size, lines: data.lines, text: data.text }
       if (side === 'before') before.value = data.text; else after.value = data.text
     }
     reader.postMessage({ file })
-  } catch { fail(fileTextErrors.failed) }
+  } catch { fail(fileReadStatus.failed) }
 }
 const visibleRows=computed(()=>result.value?.rows.filter(row=>!changesOnly.value||row.kind!=='same')??[])
 const pages=computed(()=>Math.max(1,Math.ceil(visibleRows.value.length/FILE_DIFF_PAGE)))
@@ -106,14 +106,17 @@ onBeforeUnmount(()=>{disposed=true;window.removeEventListener('pagehide',release
 </script>
 <template>
  <ToolPageLayout page-name="file-diff"><section class="diff-tool" aria-label="文件对比操作">
-  <p id="diff-rules">选择两份 UTF-8 的 TXT、Markdown、CSV 或 JSON 文件，每份最多 2 MiB。仅逐行比较纯文本，不解析表格、JSON结构或Markdown排版；不支持PDF、Word或GBK编码。区分大小写、空格和制表符；CRLF/CR 统一为 LF，保留末尾空行。每侧最多 500,000 个 UTF-16 码元、5,000 行，不截断。仅本地处理，不上传或保存。</p>
+  <p id="diff-rules">选择两份文件。仅逐行比较纯文本，不解析表格、JSON结构或Markdown排版；不支持PDF、Word或GBK编码。区分大小写、空格和制表符；CRLF/CR 统一为 LF，保留末尾空行。仅本地处理，不上传或保存。</p>
   <div class="diff-editors">
    <section v-for="side in (['before','after'] as const)" :key="side" class="file-side" :aria-label="side === 'before' ? '原文件区域' : '新文件区域'">
     <label :for="'file-' + side">{{ side === 'before' ? '原文件' : '新文件' }}</label>
     <input :id="'file-' + side" :ref="element => { if(element) fileInputs[side] = element as HTMLInputElement }" type="file" hidden tabindex="-1" accept=".txt,.md,.markdown,.csv,.json" :aria-invalid="!!fileErrors[side]" :aria-describedby="'file-status-' + side + ' diff-rules'" @change="chooseFile($event, side)" />
-    <button :ref="element => {if(element) pickerButtons[side] = element as HTMLButtonElement}" type="button" :aria-describedby="'file-status-' + side + ' diff-rules'" @click="fileInputs[side]?.click()">{{ side === 'before' ? '选择原文件' : '选择新文件' }}</button>
-    <p :id="'file-status-' + side" role="status" aria-live="polite">{{ fileErrors[side] || (reading[side] ? '正在本地读取…' : loaded[side] ? '文件已读取。' : '请选择文件。') }}</p>
-    <button v-if="reading[side]" type="button" @click="cancelRead(side)">取消{{ side === 'before' ? '原文件' : '新文件' }}读取</button>
+    <div class="file-read-actions">
+     <button :ref="element => {if(element) pickerButtons[side] = element as HTMLButtonElement}" type="button" :aria-describedby="'file-status-' + side + ' file-limits-' + side" @click="fileInputs[side]?.click()">{{ side === 'before' ? '选择原文件' : '选择新文件' }}</button>
+     <button v-if="reading[side]" type="button" @click="cancelRead(side)">取消{{ side === 'before' ? '原文件' : '新文件' }}读取</button>
+    </div>
+    <p :id="'file-limits-' + side" class="file-read-limits">UTF-8 TXT、Markdown、CSV 或 JSON。每份最多 2 MiB，解码后最多 500,000 个 UTF-16 码元、5,000 行。</p>
+    <p :id="'file-status-' + side" role="status" aria-live="polite">{{ reading[side] ? fileReadStatus.reading : fileErrors[side] || (loaded[side] ? '文件已读取。' : '请选择文件。') }}</p>
     <p v-if="loaded[side]" class="file-meta">{{ loaded[side]!.name }} · {{ loaded[side]!.size }} 字节 · {{ loaded[side]!.lines }} 行</p>
     <label :for="'preview-' + side">{{ side === 'before' ? '原文件预览（只读）' : '新文件预览（只读）' }}</label>
     <textarea :id="'preview-' + side" :value="loaded[side]?.text ?? ''" readonly rows="9" :spellcheck="false" />

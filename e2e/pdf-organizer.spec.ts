@@ -85,3 +85,48 @@ test('ORG 按需渲染、缓存URL释放与100页滚动', async ({ page }) => {
   await page.getByRole('button', { name: '清空', exact: true }).click()
   await expect.poll(() => page.evaluate(() => (window as unknown as { organizerUrls: Set<string> }).organizerUrls.size)).toBe(0)
 })
+
+test('选页导出沿用整理后的顺序和旋转，保留全部页导出', async ({ page }, info) => {
+  await page.setViewportSize({ width: 375, height: 900 })
+  await page.goto('/office/pdf-organizer/')
+  await hydrated(page)
+  await page.getByLabel('选择待整理的 PDF').setInputFiles({
+    name: 'selection.pdf', mimeType: 'application/pdf', buffer: Buffer.from(await createOrganizerFixture()),
+  })
+  const all = page.getByRole('button', { name: '导出整理后的 PDF', exact: true })
+  const exportSelection = page.getByRole('button', { name: '导出所选页', exact: true })
+  await expect(all).toBeEnabled()
+  await expect(exportSelection).toBeDisabled()
+
+  const first = page.getByRole('checkbox', { name: '选择原第 1 页' })
+  const third = page.getByRole('checkbox', { name: '选择原第 3 页' })
+  await first.press('Space')
+  await third.check()
+  await page.getByRole('button', { name: '原第 3 页前移' }).click()
+  await page.getByRole('button', { name: '原第 3 页前移' }).click()
+  await page.getByRole('button', { name: '原第 3 页顺时针旋转' }).click()
+  await expect(third).toBeChecked()
+  await expect(page.locator('#organizer-order')).toHaveText('实际页序：3, 1, 2, 4, 5, 6')
+
+  await exportSelection.click()
+  const [download] = await Promise.all([
+    page.waitForEvent('download'),
+    page.getByRole('link', { name: '下载 selected-pages.pdf' }).click(),
+  ])
+  expect(download.suggestedFilename()).toBe('selected-pages.pdf')
+  const path = info.outputPath('selected-pages.pdf')
+  await download.saveAs(path)
+  const pdf = await PDFDocument.load(await fs.readFile(path))
+  expect(pdf.getPages().map(item => [item.getWidth(), item.getRotation().angle])).toEqual([[260, 180], [240, 0]])
+
+  await page.getByRole('button', { name: '删除原第 3 页' }).click()
+  await expect(page.getByRole('link', { name: '下载 selected-pages.pdf' })).toHaveCount(0)
+  await expect(page.locator('.organizer')).toContainText('已选 1 / 5 页')
+  await expect(first).toBeChecked()
+  await page.getByRole('button', { name: '恢复原始排列' }).click()
+  await page.getByRole('button', { name: '确认恢复' }).click()
+  await expect(exportSelection).toBeDisabled()
+  await expect(first).not.toBeChecked()
+  await expect(all).toBeEnabled()
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(375)
+})

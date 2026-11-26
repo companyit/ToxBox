@@ -24,10 +24,15 @@ export class JsonReader {
   private index = 0
   private nodes = 0
   private readonly numberPattern = /-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/y
-  constructor(private readonly source: string) {}
+  constructor(
+    private readonly source: string,
+    private readonly maxNodes = JSON_TABLE_NODES,
+    private readonly maxDepth = JSON_TABLE_DEPTH,
+  ) {}
+  get nodesRead() { return this.nodes }
   private fail(code: JsonReadCode = 'invalid-json'): never { throw new JsonFailure(code, this.index) }
   private space() { while (this.index < this.source.length && whitespace(this.source[this.index]!)) this.index++ }
-  private node() { if (++this.nodes > JSON_TABLE_NODES) this.fail('nodes') }
+  private node() { if (++this.nodes > this.maxNodes) this.fail('nodes') }
   private string(): string {
     const start = this.index++
     while (this.index < this.source.length) {
@@ -48,7 +53,7 @@ export class JsonReader {
     const ch = this.source[this.index]
     if (ch === '"') return this.string()
     if (ch === '{' || ch === '[') {
-      if (depth >= JSON_TABLE_DEPTH) this.fail('depth')
+      if (depth >= this.maxDepth) this.fail('depth')
       this.index++; this.space()
       if (ch === '[') {
         const values: JsonValue[] = []
@@ -96,4 +101,23 @@ export function encodeJsonValue(value: JsonValue): string {
   if (value instanceof Map) return '{' + Array.from(value, ([key, item]) => JSON.stringify(key) + ':' + encodeJsonValue(item)).join(',') + '}'
   if (Array.isArray(value)) return '[' + value.map(encodeJsonValue).join(',') + ']'
   return JSON.stringify(value)
+}
+
+// Callers supply their own output budget through the writer.
+export function writePrettyJson(value: JsonValue, write: (text: string) => void, depth = 0): void {
+  if (value instanceof Map || Array.isArray(value)) {
+    const object = value instanceof Map
+    write(object ? '{' : '[')
+    const entries = object ? value : value.entries()
+    let count = 0
+    for (const [key, child] of entries) {
+      write((count++ ? ',\n' : '\n') + '  '.repeat(depth + 1))
+      if (object) write(JSON.stringify(key) + ': ')
+      writePrettyJson(child, write, depth + 1)
+    }
+    if (count) write('\n' + '  '.repeat(depth))
+    write(object ? '}' : ']')
+    return
+  }
+  write(encodeJsonValue(value))
 }

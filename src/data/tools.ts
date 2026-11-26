@@ -2,6 +2,11 @@ import type { Tool } from '@/types/tool'
 import { orderTools } from '../utils/toolOrder'
 
 const catalog: readonly Tool[] = [
+  { id: 'ndjson', name: 'NDJSON 与 JSON 数组互转', description: '逐行转换日志与 JSON 数组，保留数字精度并定位错误行。', category: 'developer', status: 'preview', routeName: 'ndjson' },
+  { id: 'cron-preview', name: 'Cron 执行时间预览', description: '在浏览器本地计算五字段 Cron 表达式接下来最多十次 UTC 触发时间。', category: 'developer', status: 'preview', routeName: 'cron-preview' },
+  { id: 'regex-tester', name: '正则表达式测试', description: '在本地测试 JavaScript 正则并查看匹配位置与捕获组。', category: 'developer', status: 'preview', routeName: 'regex-tester' },
+  { id: 'url-query', name: 'URL 参数解析', description: '在本地查看链接的查询参数，保留重复项和空值。', category: 'developer', status: 'preview', routeName: 'url-query' },
+  { id: 'json-redact', name: 'JSON 字段脱敏', description: '按指定字段路径替换敏感值，保留其余结构及数字精度，本地复制或下载。', category: 'developer', status: 'preview', routeName: 'json-redact' },
   { id: 'json-diff', name: 'JSON 结构对比', description: '本地按字段路径查看JSON增删修改，忽略键顺序并保留数字精度。', category: 'developer', status: 'preview', routeName: 'json-diff' },
   { id: 'file-diff', name: '文件对比', description: '本地比较两份UTF-8文本文件，逐行查看变化并复制报告。', category: 'office', status: 'preview', routeName: 'file-diff' },
   { id: 'image-crop', name: '图片尺寸与裁剪', description: '本地拖动或填写坐标裁剪图片，选择固定比例并等比缩小后下载。', category: 'office', status: 'preview', routeName: 'image-crop' },

@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { ref, shallowRef, nextTick, onMounted, onBeforeUnmount, watch } from 'vue'
+import { computed, ref, shallowRef, nextTick, onMounted, onBeforeUnmount, watch } from 'vue'
 import ToolPageLayout from '@/components/layout/ToolPageLayout.vue'
 import { initialOrganizerPlan, moveOrganizerPage, validateOrganizerFile, type OrganizerPage, type OrganizerGeometry } from '@/utils/pdfOrganizerPlan'
 import type { PdfPreviewSession, PdfThumbnail } from '@/utils/pdfPreview'
 const file = shallowRef<File>(), plan = ref<OrganizerPage[]>([]), geometry = ref<OrganizerGeometry[]>([])
+const selected = ref(new Set<number>())
+const selectedPlan = computed(() => plan.value.filter(page => selected.value.has(page.sourceIndex)))
+const downloadName = ref('organized.pdf')
 const geometryReady = ref(false), previewChecking = ref(false)
 const status = ref('请选择本地 PDF。'), previewStatus = ref(''), phase = ref<'idle' | 'inspect' | 'export'>('idle')
 const picker = ref<HTMLInputElement>(), cards = ref<HTMLOListElement>(), download = ref(''), confirmRestore = ref(false)
@@ -16,6 +19,7 @@ function invalidate() {
   version++; processing?.terminate(); processing = undefined; clearTimeout(processingTimer); phase.value = 'idle'
   if (download.value) URL.revokeObjectURL(download.value)
   download.value = ''
+  downloadName.value = 'organized.pdf'
 }
 function refreshThumbnails() { thumbnails.value = new Map(preview?.cache); failures.value = new Set(preview?.failures) }
 function stopPreview() {
@@ -37,7 +41,7 @@ async function loadPreview(revision: number) {
   stopPreview(); const previewRevision = previewVersion; geometryReady.value = false; previewChecking.value = true; previewStatus.value = '正在检查缩略图页面…'
   const currentFile = file.value
   previewTimer = setTimeout(() => {
-    if (revision === fileVersion && previewRevision === previewVersion) { stopPreview(); plan.value = []; previewStatus.value = '预览检查超过 30 秒，已停止，请重新检查文件。' }
+    if (revision === fileVersion && previewRevision === previewVersion) { stopPreview(); selected.value.clear(); plan.value = []; previewStatus.value = '预览检查超过 30 秒，已停止，请重新检查文件。' }
   }, 30_000)
   try {
     const { PdfPreviewSession } = await import('@/utils/pdfPreview')
@@ -51,11 +55,11 @@ async function loadPreview(revision: number) {
     clearTimeout(previewTimer); previewChecking.value = false; geometryReady.value = true; previewStatus.value = '缩略图按需加载；仍可根据原页码整理。'
     await nextTick(); observeCards()
   } catch {
-    if (revision === fileVersion && previewRevision === previewVersion) { stopPreview(); previewStatus.value = '缩略图检查失败或页面几何不一致，请重新检查文件。'; plan.value = []; geometry.value = []; invalidate() }
+    if (revision === fileVersion && previewRevision === previewVersion) { stopPreview(); previewStatus.value = '缩略图检查失败或页面几何不一致，请重新检查文件。'; selected.value.clear(); plan.value = []; geometry.value = []; invalidate() }
   }
 }
 function clear(focus = false) {
-  fileVersion++; geometryReady.value = false; invalidate(); stopPreview(); file.value = undefined; plan.value = []; geometry.value = []; confirmRestore.value = false
+  fileVersion++; geometryReady.value = false; invalidate(); stopPreview(); file.value = undefined; selected.value.clear(); plan.value = []; geometry.value = []; confirmRestore.value = false
   previewStatus.value = ''; status.value = '已清空。'; dragging = undefined
   if (picker.value) picker.value.value = ''
   if (focus) void nextTick(() => picker.value?.focus())
@@ -63,21 +67,22 @@ function clear(focus = false) {
 function select(event: Event) {
   const next = (event.target as HTMLInputElement).files?.[0]
   if (!next) return
-  fileVersion++; invalidate(); stopPreview(); plan.value = []; geometry.value = []; file.value = next; confirmRestore.value = false; previewStatus.value = ''
+  fileVersion++; invalidate(); stopPreview(); selected.value.clear(); plan.value = []; geometry.value = []; file.value = next; confirmRestore.value = false; previewStatus.value = ''
   run('inspect')
 }
 function cancel() {
   const inspecting = phase.value === 'inspect' || (phase.value !== 'export' && previewChecking.value)
   invalidate()
-  if (inspecting) { geometryReady.value = false; fileVersion++; stopPreview(); plan.value = []; geometry.value = [] }
+  if (inspecting) { geometryReady.value = false; fileVersion++; stopPreview(); selected.value.clear(); plan.value = []; geometry.value = [] }
   status.value = '已取消，当前文件及编辑保留，可重试。'
 }
-function run(kind: 'inspect' | 'export') {
+function run(kind: 'inspect' | 'export', selectedOnly = false) {
   if (!file.value) return
   invalidate()
   try { validateOrganizerFile(file.value) } catch (error) { status.value = (error as Error).message; return }
-  if (kind === 'export' && !geometryReady.value) return
-  if (kind === 'inspect') { geometryReady.value = false; fileVersion++; stopPreview(); plan.value = []; geometry.value = [] }
+  const exportPlan = selectedOnly ? selectedPlan.value : plan.value
+  if (kind === 'export' && (!geometryReady.value || !exportPlan.length)) return
+  if (kind === 'inspect') { selected.value.clear(); geometryReady.value = false; fileVersion++; stopPreview(); plan.value = []; geometry.value = [] }
   const revision = version, sourceRevision = fileVersion
   phase.value = kind; status.value = kind === 'inspect' ? '正在检查 PDF…' : '正在导出整理后的 PDF…'
   try {
@@ -92,10 +97,10 @@ function run(kind: 'inspect' | 'export') {
         geometry.value = data.geometry; plan.value = initialOrganizerPlan(data.geometry.length)
         status.value = '文件检查通过，请整理页面后导出。'; void loadPreview(sourceRevision); return
       }
-      try { download.value = URL.createObjectURL(new Blob([data.bytes!], { type: 'application/pdf' })); status.value = '导出完成，请点击下载；是否保存由浏览器或系统处理。' }
+      try { downloadName.value = selectedOnly ? 'selected-pages.pdf' : 'organized.pdf'; download.value = URL.createObjectURL(new Blob([data.bytes!], { type: 'application/pdf' })); status.value = '导出完成，请点击下载；是否保存由浏览器或系统处理。' }
       catch { status.value = '无法创建下载链接，请重新导出。' }
     }
-    processing.postMessage(kind === 'inspect' ? { kind, file: file.value } : { kind, file: file.value, plan: plan.value.map(p => ({ ...p })) })
+    processing.postMessage(kind === 'inspect' ? { kind, file: file.value } : { kind, file: file.value, plan: exportPlan.map(p => ({ ...p })) })
   } catch { invalidate(); status.value = '无法启动 PDF 处理，请使用支持 Worker 的浏览器。' }
 }
 function edited(message: string, sourceIndex?: number) {
@@ -114,9 +119,16 @@ function rotate(item: OrganizerPage, delta: number) { item.rotationDelta = (item
 function remove(index: number) {
   if (plan.value.length <= 1) return
   const removed = plan.value.splice(index, 1)[0]!
+  selected.value.delete(removed.sourceIndex)
   edited(`已删除原第 ${removed.sourceIndex + 1} 页，至少保留一页。`, plan.value[Math.min(index, plan.value.length - 1)]!.sourceIndex)
 }
-function restore() { plan.value = initialOrganizerPlan(geometry.value.length); edited('已恢复全部原始页面、顺序及旋转。', 0) }
+function toggleSelection(sourceIndex: number, event: Event) {
+  if ((event.target as HTMLInputElement).checked) selected.value.add(sourceIndex)
+  else selected.value.delete(sourceIndex)
+  invalidate()
+  status.value = `已选 ${selectedPlan.value.length} 页。`
+}
+function restore() { selected.value.clear(); plan.value = initialOrganizerPlan(geometry.value.length); edited('已恢复全部原始页面、顺序及旋转。', 0) }
 function startDrag(event: DragEvent, sourceIndex: number) {
   dragging = sourceIndex
   if (event.dataTransfer) { event.dataTransfer.effectAllowed = 'move'; event.dataTransfer.setData('text/plain', String(sourceIndex)) }
@@ -131,16 +143,24 @@ onBeforeUnmount(() => { clear(); window.removeEventListener('pagehide', release)
 <p>本地整理 PDF，每份最多 20 MiB、100 页。不支持损坏、加密或带表单的文件。文件不会上传。</p>
 <label for="organizer-file">选择待整理的 PDF</label><input id="organizer-file" ref="picker" type="file" accept=".pdf,application/pdf" @change="select">
 <p v-if="file">已选：{{ file.name }}<span v-if="geometry.length"> · 原 {{ geometry.length }} 页，保留 {{ plan.length }} 页</span></p>
-<div class="actions"><button v-if="file && !plan.length && phase === 'idle'" @click="run('inspect')">重新检查文件</button><button :disabled="!plan.length || !geometryReady || phase !== 'idle'" class="primary" @click="run('export')">导出整理后的 PDF</button><button v-if="phase !== 'idle' || previewChecking" @click="cancel">取消处理</button><button @click="clear(true)">清空</button><button :disabled="!plan.length" @click="confirmRestore = true">恢复原始排列</button></div>
+<div class="actions"><button v-if="file && !plan.length && phase === 'idle'" @click="run('inspect')">重新检查文件</button><button :disabled="!plan.length || !geometryReady || phase !== 'idle'" class="primary" @click="run('export')">导出整理后的 PDF</button><button
+  :disabled="!selectedPlan.length || !geometryReady || phase !== 'idle'"
+  @click="run('export', true)">导出所选页</button><button v-if="phase !== 'idle' || previewChecking" @click="cancel">取消处理</button><button @click="clear(true)">清空</button><button :disabled="!plan.length" @click="confirmRestore = true">恢复原始排列</button></div>
 <div v-if="confirmRestore" class="restore-confirm"><p>将恢复全部原页、原始顺序及旋转，覆盖当前编辑。是否继续？</p><button @click="restore">确认恢复</button><button @click="confirmRestore = false">保留当前编辑</button></div>
 <p role="status">{{ status }}</p><p v-if="previewStatus" role="status">{{ previewStatus }}</p>
 <button v-if="plan.length" @click="loadPreview(fileVersion)">重新加载预览</button>
-<a v-if="download" :href="download" download="organized.pdf" class="download">下载 organized.pdf</a>
+<a v-if="download" :href="download" :download="downloadName" class="download">下载 {{ downloadName }}</a>
+<p v-if="plan.length">已选 {{ selectedPlan.length }} / {{ plan.length }} 页。所选页按当前排列导出。</p>
 <p v-if="plan.length" id="organizer-order">实际页序：{{ plan.map(p => p.sourceIndex + 1).join(', ') }}</p>
 <ol v-if="plan.length" ref="cards" class="page-grid" aria-label="PDF 页面排列">
 <li v-for="(item, index) in plan" :key="item.sourceIndex" :data-page="item.sourceIndex" draggable="true" @dragstart="startDrag($event, item.sourceIndex)" @dragend="dragging = undefined" @dragover.prevent @drop.prevent="drop(index)">
 <span class="drag-handle" draggable="true" @dragstart.stop="startDrag($event, item.sourceIndex)">拖动排序</span>
 <p class="page-label" tabindex="-1">第 {{ index + 1 }} 位 · 原第 {{ item.sourceIndex + 1 }} 页</p>
+<label class="page-select" @dragstart.stop>
+  <input type="checkbox" :checked="selected.has(item.sourceIndex)"
+    @change="toggleSelection(item.sourceIndex, $event)" />
+  选择原第 {{ item.sourceIndex + 1 }} 页
+</label>
 <div class="thumbnail"><img v-if="thumbnails.has(key(item))" :src="thumbnails.get(key(item))!.url" :width="thumbnails.get(key(item))!.width" :height="thumbnails.get(key(item))!.height" :alt="`原第 ${item.sourceIndex + 1} 页缩略图`" draggable="false"><template v-else-if="failures.has(key(item))"><p>缩略图不可用</p><button @click="loadPreview(fileVersion)">重试缩略图</button></template><span v-else>缩略图等待加载</span></div>
 <p>旋转增量 {{ item.rotationDelta }}°</p>
 <div class="page-actions"><button :disabled="index === 0" :aria-label="`原第 ${item.sourceIndex + 1} 页前移`" @click="move(index, index - 1)">前移</button><button :disabled="index === plan.length - 1" :aria-label="`原第 ${item.sourceIndex + 1} 页后移`" @click="move(index, index + 1)">后移</button><button :aria-label="`原第 ${item.sourceIndex + 1} 页逆时针旋转`" @click="rotate(item, -90)">逆时针90°</button><button :aria-label="`原第 ${item.sourceIndex + 1} 页顺时针旋转`" @click="rotate(item, 90)">顺时针90°</button><button :disabled="plan.length === 1" :aria-label="`删除原第 ${item.sourceIndex + 1} 页`" @click="remove(index)">删除</button></div>
@@ -152,5 +172,8 @@ onBeforeUnmount(() => { clear(); window.removeEventListener('pagehide', release)
 .actions,.page-actions { display: flex; flex-wrap: wrap; gap: 12px; } button,.download { min-height: 44px; padding: 8px 12px; font: inherit; border: 1px solid var(--color-border); border-radius: var(--ui-control-radius); color: var(--color-text); background: var(--color-surface); } button:disabled { opacity: .55; cursor: default; } .primary { background: var(--color-accent); color: var(--color-on-accent); }
 .drag-handle { cursor: grab; user-select: none; display: inline-block; padding: 8px; border: 1px dashed var(--color-border); border-radius: 6px; }
 .page-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,260px),1fr)); gap: 16px; list-style: none; padding: 0; min-width: 0; }.page-grid li { min-width: 0; border: 1px solid var(--color-border); border-radius: 12px; padding: 12px; display: grid; gap: 12px; }.page-label:focus { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.page-select { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; cursor: pointer; }
+.page-select input { accent-color: var(--color-accent); }
+.page-select input:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 .thumbnail { height: 320px; min-height: 320px; display: flex; align-items: center; justify-content: center; flex-direction: column; background: var(--color-surface); }.thumbnail img { display: block; max-width: 100%; height: auto; max-height: 320px; object-fit: contain; }.restore-confirm { border: 1px solid var(--color-border); padding: 12px; }.download { justify-self: start; display: inline-flex; align-items: center; }
 </style>

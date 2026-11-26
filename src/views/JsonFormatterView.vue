@@ -147,7 +147,7 @@ textarea { font-size: 16px; line-height: 1.7; border-radius: var(--ui-control-ra
 button, select { border-radius: var(--ui-control-radius); }
 button:not(:disabled):hover { border-color: var(--color-accent); background: var(--color-accent-soft); }
 button.action-primary { background: var(--color-accent); color: var(--color-on-accent); border-color: var(--color-accent); }
-button.action-primary:not(:disabled):hover { background: var(--color-accent); text-decoration: underline; }
+button.action-primary:not(:disabled):hover { background: var(--color-accent); box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--color-on-accent) 32%, transparent); }
 button.action-primary:disabled { background: var(--color-surface); color: var(--color-muted); border-color: var(--color-border); }
 button.action-quiet { background: transparent; }
 @media (min-width: 640px) { .editor-pane, .output-pane { padding: 24px; } }

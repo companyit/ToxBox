@@ -22,7 +22,7 @@ assert(['preview', 'production'].includes(mode), '模式仅支持preview或produ
 const output = path.resolve(root, process.argv[3] ?? 'dist-ssg')
 assert(output.startsWith(root + path.sep), '仅审计仓库内产物')
 assert.equal(config.adsTxtConfigured, false)
-assert.deepEqual(config.excludedPaths, ['/developer/json-diff/', '/office/file-diff/', '/developer/2fa/', '/office/pdf-merge/', '/office/word-to-pdf/', '/office/pdf-split/', '/office/images-to-pdf/', '/office/image-convert/', '/developer/json-yaml/', '/office/text-diff/', '/office/text-workbench/', '/office/pdf-organizer/', '/office/image-crop/'])
+assert.deepEqual(config.excludedPaths, ['/developer/ndjson/', '/developer/cron-preview/', '/developer/regex-tester/', '/developer/url-query/', '/developer/json-redact/', '/developer/json-diff/', '/office/file-diff/', '/developer/2fa/', '/office/pdf-merge/', '/office/word-to-pdf/', '/office/pdf-split/', '/office/images-to-pdf/', '/office/image-convert/', '/developer/json-yaml/', '/office/text-diff/', '/office/text-workbench/', '/office/pdf-organizer/', '/office/image-crop/'])
 assert.deepEqual(config.trustPaths, ['/about/', '/contact/', '/privacy/', '/terms/'])
 const expected = [...pages.map(p => p.path.slice(1) + 'index.html'), '404.html'].sort()
 const actual = (await fs.readdir(path.join(output), {recursive:true})).filter(p => p.endsWith('.html')).sort()
@@ -59,5 +59,5 @@ for (const name of await fs.readdir(path.join(output, 'assets'))) {
  assert(!/adsbygoogle\s*\.\s*push/.test(source), `${name} 含广告加载代码`)
  for (const id of source.match(/ca-pub-\d{16}/g) ?? []) assert.equal(id, config.publisherId, '包含未批准发布商ID')
 }
-assert.equal(guideChecks, 22)
+assert.equal(guideChecks, 27)
 console.log(JSON.stringify({stage:config.stage, mode, verificationMethod:config.verificationMethod, adScriptEnabled:config.adScriptEnabled, adScriptPages:mode === 'production' ? config.allowedPaths : [], htmlPages:expected.length, footerChecks, guideChecks, domainOwnership:'未验证', https:'另见公网检查记录', adsenseApproval:'未验证'}, null, 2))

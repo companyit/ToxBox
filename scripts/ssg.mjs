@@ -20,7 +20,7 @@ export function validatePages(pages) {
     if (!p.title || !p.description) throw Error('页面元数据缺失')
     names.add(p.routeName); paths.add(p.path)
   }
-  if (pages.length !== 29) throw Error('正式页面数量不符合已批准清单')
+  if (pages.length !== 34) throw Error('正式页面数量不符合已批准清单')
 }
 export async function validateHtml(html, directory) {
   if ((html.match(/<h1(?:\s|>)/g) ?? []).length !== 1 || (html.match(/<main(?:\s|>)/g) ?? []).length !== 1 || !html.includes('data-render-mode="ssg"')) throw Error('静态正文结构缺失')
@@ -77,7 +77,7 @@ async function generateLegacyPreview() {
       await fs.writeFile(destination, html)
       generated.push(filename)
     }
-    if (new Set(generated).size !== 30) throw Error('页面遗漏或输出重复')
+    if (new Set(generated).size !== 35) throw Error('页面遗漏或输出重复')
     validateImageResourceBudgets(await collectImageResourceSizes(candidate, path.join(client, '.vite/ssr-manifest.json')))
     await fs.rename(candidate, output)
     console.log('SSG成功：' + generated.join(', '))
@@ -123,7 +123,7 @@ export async function validateCandidateOutput(directory, envelope, manifestPath)
   const resources = manifestResources(manifest)
   const expectedHtml = [...approvedPages.map(p => p.path.slice(1) + 'index.html'), '404.html'].sort()
   const files = await digestDirectory(directory)
-  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选30HTML清单不一致')
+  if (!equal(Object.keys(files).filter(x => x.endsWith('.html')).sort(), expectedHtml)) throw Error('候选35HTML清单不一致')
   const production = environment.mode === 'production'
   const allowedSeo = production ? ['robots.txt', 'sitemap.xml'] : []
   const noticesName = 'third-party-notices.txt'

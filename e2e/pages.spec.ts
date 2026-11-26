@@ -13,7 +13,15 @@ test.describe('E01 无JavaScript静态可读', () => {
       // Playwright的通用elementText会跳过NOSCRIPT，直接验证解析后的子段落和DOM文本。
       await expect(page.locator('noscript > p')).toBeVisible()
       expect(await page.locator('noscript').evaluate(node => node.textContent)).toContain('工具交互需要 JavaScript')
-      for (const input of await page.getByRole('textbox').all()) { await expect(input).toHaveValue(definition.routeName === 'uuid' && await input.getAttribute('id') === 'local-input' ? '1' : ''); await expect(input).toBeDisabled() }
+      const defaults: Record<string, Record<string, string>> = {
+        uuid: { 'local-input': '1' },
+        'json-redact': { 'redact-paths': '[]', 'redact-replacement': '***' },
+      }
+      for (const input of await page.getByRole('textbox').all()) {
+        const id = await input.getAttribute('id')
+        await expect(input).toHaveValue(defaults[definition.routeName]?.[id ?? ''] ?? '')
+        await expect(input).toBeDisabled()
+      }
       await expect(page.getByRole('main')).not.toContainText('missing')
     })
   }
@@ -135,7 +143,7 @@ for (const path of ['/missing/', '/office/missing/', '/developer/missing/']) {
 test('E08 实际静态资源与禁止泄漏文件', async ({ request }) => {
   const files = await fs.readdir('dist-ssg', { recursive: true })
   const htmlFiles = files.filter(file => file.endsWith('.html'))
-  expect(htmlFiles).toHaveLength(30)
+  expect(htmlFiles).toHaveLength(35)
   const resources = new Set<string>()
   for (const file of htmlFiles) {
     const html = await fs.readFile('dist-ssg/' + file, 'utf8')

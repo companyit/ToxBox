@@ -33,7 +33,7 @@ function focusMain() {
       </RouterLink>
       <nav aria-label="主导航">
         <RouterLink :to="{ name: 'office' }" :aria-current="['image-crop', 'pdf-organizer', 'text-workbench', 'text-diff', 'file-diff', 'image-convert', 'images-to-pdf', 'date-calculator', 'office', 'text-statistics', 'text-cleanup', 'csv-json', 'pdf-merge', 'word-to-pdf', 'pdf-split'].includes(String(route.name)) ? 'page' : undefined">办公工具</RouterLink>
-        <RouterLink :to="{ name: 'developer' }" :aria-current="['developer', 'json-yaml', 'json-diff', 'json-formatter', 'url-encoder', 'totp', 'base64', 'timestamp', 'uuid'].includes(String(route.name)) ? 'page' : undefined">开发者工具</RouterLink>
+        <RouterLink :to="{ name: 'developer' }" :aria-current="['developer', 'json-redact', 'ndjson', 'json-yaml', 'json-diff', 'json-formatter', 'url-encoder', 'url-query', 'regex-tester', 'cron-preview', 'totp', 'base64', 'timestamp', 'uuid'].includes(String(route.name)) ? 'page' : undefined">开发者工具</RouterLink>
         <RouterLink :to="{ name: 'privacy' }">隐私说明</RouterLink>
       </nav>
     </div>

@@ -10,7 +10,7 @@ function setup() {
   wrappers.push(wrapper)
   return wrapper
 }
-afterEach(() => { wrappers.forEach(wrapper => wrapper.unmount()); wrappers.length = 0; vi.unstubAllGlobals() })
+afterEach(() => { wrappers.forEach(wrapper => wrapper.unmount()); wrappers.length = 0; vi.unstubAllGlobals(); vi.restoreAllMocks() })
 test('两方向转换保留输入，切换/编辑撤销结果及记录列数，空表格明确播报', async () => {
   const w = setup()
   await w.get('#table-input').setValue('001,"甲,乙"')
@@ -297,4 +297,91 @@ test('错误后点击示例显示输入保护提示并撤销旧错误标记，�
     expect(w.get('#table-record-path').element).toHaveProperty('value', path)
     expect(w.get('#table-input').element).toHaveProperty('value', path ? '{"id":1}' : 'PRIVATE_JSON')
   }
+})
+
+function mockDownloads() {
+  const create = vi.fn((_blob: Blob) => 'blob:table-result'), revoke = vi.fn()
+  vi.stubGlobal('URL', class extends URL { static createObjectURL = create; static revokeObjectURL = revoke })
+  const click = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => {})
+  return { create, revoke, click }
+}
+function blobText(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(new TextDecoder().decode(reader.result as ArrayBuffer))
+    reader.onerror = () => reject(Error('读取测试Blob失败'))
+    reader.readAsArrayBuffer(blob)
+  })
+}
+test('下载只允许成功结果，包括零字节CSV；UTF-8正文、MIME与文件名准确', async () => {
+  const { create, click } = mockDownloads(), w = setup()
+  const button = () => w.findAll('button')[4]!
+  expect(button().text()).toBe('下载 JSON')
+  expect(button().attributes('disabled')).toBeDefined()
+  await w.get('#table-input').setValue('id,name\n001,中文😀')
+  await w.get('button').trigger('click')
+  expect(create).not.toHaveBeenCalled()
+  await button().trigger('click')
+  const blob = create.mock.calls[0]![0] as unknown as Blob
+  expect(blob.type).toBe('application/json;charset=utf-8')
+  expect(await blobText(blob)).toBe((w.get('#table-result').element as HTMLTextAreaElement).value)
+  const link = click.mock.instances[0] as HTMLAnchorElement
+  expect(link.download).toBe('converted.json')
+  expect(document.querySelector('a[download]')).toBeNull()
+  await w.get('#table-direction').setValue('json-to-csv')
+  await w.get('#table-input').setValue('[]'); await w.get('button').trigger('click')
+  expect(button().text()).toBe('下载 CSV')
+  expect(button().attributes('disabled')).toBeUndefined()
+  await button().trigger('click')
+  const empty = create.mock.calls[1]![0] as unknown as Blob
+  expect(empty.size).toBe(0); expect(empty.type).toBe('text/csv;charset=utf-8')
+  expect((click.mock.instances[1] as HTMLAnchorElement).download).toBe('converted.csv')
+  await w.get('#table-input').setValue('INVALID'); await w.get('button').trigger('click')
+  expect(button().attributes('disabled')).toBeDefined()
+})
+test('下载URL重复复用，所有输入选项及重算、清空、离页、卸载均回收', async () => {
+  const { create, revoke, click } = mockDownloads(), w = setup()
+  const run = async () => { await w.get('button').trigger('click'); await w.findAll('button')[4]!.trigger('click') }
+  await w.get('#table-input').setValue('id\n001'); await run()
+  await w.findAll('button')[4]!.trigger('click')
+  expect(create).toHaveBeenCalledTimes(1); expect(click).toHaveBeenCalledTimes(2)
+  await w.get('#table-csv-output').setValue('objects'); expect(revoke).toHaveBeenCalledTimes(1)
+  await run(); await w.get('button').trigger('click'); expect(revoke).toHaveBeenCalledTimes(2)
+  await w.findAll('button')[4]!.trigger('click'); await w.get('#table-direction').setValue('json-to-csv')
+  expect(revoke).toHaveBeenCalledTimes(3)
+  await w.get('#table-input').setValue('{"data":{"id":1}}')
+  for (const [id, value] of [['table-json-mode', 'strict'], ['table-record-path', '/data'], ['table-nested-mode', 'true'], ['table-record-scope', 'each']]) {
+    await run(); const count = revoke.mock.calls.length
+    await w.get('#' + id).setValue(value)
+    expect(revoke).toHaveBeenCalledTimes(count + 1)
+    expect(w.findAll('button')[4]!.attributes('disabled')).toBeDefined()
+  }
+  await w.get('#table-record-scope').setValue('root'); await run()
+  const count = revoke.mock.calls.length
+  await w.get('#table-input').setValue('{"data":{"id":2}}'); expect(revoke).toHaveBeenCalledTimes(count + 1)
+  await run(); await w.findAll('button')[2]!.trigger('click'); expect(revoke).toHaveBeenCalledTimes(count + 2)
+  await w.get('#table-input').setValue('a'); await run()
+  window.dispatchEvent(new Event('pagehide')); await nextTick(); expect(revoke).toHaveBeenCalledTimes(count + 3)
+  await w.get('#table-input').setValue('b'); await run()
+  w.unmount(); wrappers.splice(wrappers.indexOf(w), 1); expect(revoke).toHaveBeenCalledTimes(count + 4)
+})
+test('下载失败保留输入与结果、可重试，触发异常也回收URL，不暴露异常正文', async () => {
+  const { create, revoke, click } = mockDownloads(), w = setup()
+  await w.get('#table-input').setValue('PRIVATE'); await w.get('button').trigger('click')
+  const expected = (w.get('#table-result').element as HTMLTextAreaElement).value
+  create.mockImplementationOnce(() => { throw Error('PRIVATE_ERROR') })
+  await w.findAll('button')[4]!.trigger('click')
+  expect(w.get('#table-status').text()).toContain('无法启动下载')
+  expect(w.get('#table-status').text()).not.toContain('PRIVATE')
+  expect(w.get('#table-input').element).toHaveProperty('value', 'PRIVATE')
+  expect(w.get('#table-result').element).toHaveProperty('value', expected)
+  expect(w.get('#table-input').attributes('aria-invalid')).toBe('false')
+  click.mockImplementationOnce(() => { throw Error('PRIVATE_ERROR') })
+  await w.findAll('button')[4]!.trigger('click')
+  expect(revoke).toHaveBeenCalledTimes(1); expect(document.querySelector('a[download]')).toBeNull()
+  await w.findAll('button')[4]!.trigger('click')
+  expect(w.get('#table-status').text()).toContain('已请求浏览器下载')
+  await w.get('#table-input').trigger('compositionstart')
+  expect(revoke).toHaveBeenCalledTimes(2)
+  expect(w.findAll('button')[4]!.attributes('disabled')).toBeDefined()
 })

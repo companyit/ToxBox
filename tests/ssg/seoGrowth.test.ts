@@ -3,7 +3,7 @@ import { test, expect } from 'vitest'
 import fs from 'node:fs/promises'
 import { pages, notFoundPage } from '../../src/data/pages'
 import { tools } from '../../src/data/tools'
-test('preview全部29HTML无索引泄露，首页/分类保留可抓取21入口与推广顺序',async()=>{
+test('preview全部35HTML无索引泄露，首页/分类保留可抓取27入口与推广顺序',async()=>{
  for(const p of [...pages,notFoundPage]){
   const html=await fs.readFile('dist-ssg/'+(p===notFoundPage?'404.html':p.path.slice(1)+'index.html'),'utf8')
   const doc=new DOMParser().parseFromString(html,'text/html')

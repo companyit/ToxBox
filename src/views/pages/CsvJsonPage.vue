@@ -5,6 +5,10 @@ import { convertTable, tableErrors, type CsvOutput, type TableDirection, type Ta
 import { jsonTableNotices, type JsonTableNotice } from '@/utils/jsonTable'
 
 const direction = ref<TableDirection>('csv-to-json'), input = ref(''), output = ref('')
+const hasResult = ref(false)
+const downloadName = computed(() => direction.value === 'csv-to-json' ? 'converted.json' : 'converted.csv')
+let downloadUrl = ''
+function releaseDownload() { if (downloadUrl) URL.revokeObjectURL(downloadUrl); downloadUrl = '' }
 const message = ref(''), error = ref(''), dimensions = ref(''), composing = ref(false), copying = ref(false)
 const jsonMode = ref<'compatible' | 'strict'>('compatible'), recordPath = ref(''), notices = ref<JsonTableNotice[]>([]), format = ref(''), errorCode = ref<TableError | ''>('')
 const csvOutput = ref<CsvOutput>('matrix')
@@ -23,7 +27,7 @@ const rules = computed(() => direction.value === 'csv-to-json'
   ? '英文逗号分隔；引号字段可含逗号或换行，字段内双引号写成两个双引号。闭引号后仅允许逗号、换行或结束，不自动 trim。' + (csvOutput.value === 'objects' ? '首行作为字段名，不能空白或重复；字段名不去除前后空白。值全部保留为字符串，字段文本顺序不作保证。' : '首行是普通数据，单元格全部保留为字符串。') + ''
   : '支持对象数组、单个对象、二维混合类型数组和基本值。对象按字段首次出现顺序合并表头，缺失字段/短行补空；普通或混合数组使用 value 单列。数字保留原始精度，布尔值写成 true/false，null 写成 null；嵌套内容默认保留为 JSON 文本，可选择展开对象为独立列，数组仍保留 JSON 文本。CSV 不保存 JSON 类型。所有字段加双引号，记录用 LF 分隔；[] 得到空结果。')
 let version = 0, disposed = false
-function invalidate() { version++; output.value = ''; dimensions.value = ''; message.value = ''; error.value = ''; errorCode.value = ''; notices.value = []; format.value = '' }
+function invalidate() { releaseDownload(); hasResult.value = false; version++; output.value = ''; dimensions.value = ''; message.value = ''; error.value = ''; errorCode.value = ''; notices.value = []; format.value = '' }
 watch([input, direction, jsonMode, recordPath, recordScope, flattenObjects, csvOutput], invalidate, { flush: 'sync' })
 function run() {
   if (composing.value) return
@@ -35,6 +39,7 @@ function run() {
     error.value = (result.line ? `第 ${result.line} 行，第 ${result.column} 列：` : '') + tableErrors[result.code]
   }
   else {
+    hasResult.value = true
     output.value = result.output
     dimensions.value = `${result.rows} 条记录，${result.columns} 列。`
     message.value = result.output ? '转换完成。' : '结果为空。'
@@ -67,6 +72,23 @@ async function copy() {
     if (!disposed && revision === version) { message.value = '无法自动复制，请选中结果后手动复制。'; resultEditor.value?.focus(); resultEditor.value?.select() }
   } finally { if (!disposed) copying.value = false }
 }
+function downloadResult() {
+  if (!hasResult.value || composing.value) return
+  let link: HTMLAnchorElement | undefined
+  try {
+    if (!downloadUrl) {
+      const type = direction.value === 'csv-to-json' ? 'application/json;charset=utf-8' : 'text/csv;charset=utf-8'
+      downloadUrl = URL.createObjectURL(new Blob([output.value], { type }))
+    }
+    link = document.createElement('a')
+    link.href = downloadUrl; link.download = downloadName.value; link.hidden = true
+    document.body.append(link); link.click()
+    message.value = '已请求浏览器下载，请确认实际保存。'
+  } catch {
+    releaseDownload()
+    message.value = '无法启动下载，请重试或复制结果后保存。'
+  } finally { link?.remove() }
+}
 function compositionStart() { composing.value = true; invalidate() }
 onMounted(() => window.addEventListener('pagehide', releaseContent))
 onBeforeUnmount(() => { disposed = true; window.removeEventListener('pagehide', releaseContent); releaseContent() })
@@ -76,7 +98,7 @@ onBeforeUnmount(() => { disposed = true; window.removeEventListener('pagehide', 
   <ToolPageLayout page-name="csv-json">
     <div class="table-tool">
       <p id="table-rules">{{ rules }}</p>
-      <p id="table-limits">输入最多 100,000、结果最多 1,000,000 个 UTF-16 码元，最多 1,000 条数据记录、100 列，不截断。JSON 嵌套最多 30 层、50,000 个节点。实际 CSV 字段中的 CRLF、CR 统一为 LF；嵌套 JSON 文本保留内部转义。CSV 只移除开头一个 BOM，空行保留，末尾单个换行不增加记录。不接受空字符或孤立代理项。内容仅在当前页面内存中处理，不上传或保存。</p>
+      <p id="table-limits">输入最多 100,000、结果最多 1,000,000 个 UTF-16 码元，最多 1,000 条数据记录、100 列，不截断。JSON 嵌套最多 30 层、50,000 个节点。实际 CSV 字段中的 CRLF、CR 统一为 LF；嵌套 JSON 文本保留内部转义。CSV 只移除开头一个 BOM，空行保留，末尾单个换行不增加记录。不接受空字符或孤立代理项。内容仅在当前页面内存中处理，不上传或自动保存。</p>
       <label for="table-direction">转换方向</label>
       <select id="table-direction" v-model="direction" :disabled="composing" aria-describedby="table-rules">
         <option value="csv-to-json">CSV → JSON</option>
@@ -132,7 +154,11 @@ onBeforeUnmount(() => { disposed = true; window.removeEventListener('pagehide', 
       </div>
       <label for="table-result">表格结果（只读）</label>
       <textarea id="table-result" ref="resultEditor" :value="output" readonly rows="9" :spellcheck="false" aria-describedby="table-status" />
-      <button type="button" :disabled="!output || copying || composing" @click="copy">复制结果</button>
+      <div class="actions">
+        <button type="button" :disabled="!output || copying || composing" @click="copy">复制结果</button>
+        <button type="button" :disabled="!hasResult || composing" aria-describedby="table-download-note" @click="downloadResult">{{ direction === 'csv-to-json' ? '下载 JSON' : '下载 CSV' }}</button>
+      </div>
+      <p id="table-download-note">下载为 UTF-8 文件，不额外添加 BOM 或换行，内容与结果框一致；空 CSV 结果保存为零字节文件。文件仅在本地生成，是否保存由浏览器和系统处理。</p>
     </div>
   </ToolPageLayout>
 </template>

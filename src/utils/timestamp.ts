@@ -18,12 +18,14 @@ export function convertTimestamp(input: string, options: TimestampOptions): stri
     formatDate(ms, 0)
     return formatDate(ms, offset)
   }
-  if (!/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3}$/.test(input)) throw new Error('日期格式应为 YYYY-MM-DD HH:mm:ss.SSS。')
-  const [year,month,day,hour,minute,second,millisecond] = input.split(/[- :.]/).map(Number) as [number,number,number,number,number,number,number]
+  const parts = /^(\d{4}-\d{2}-\d{2} \d{2}:\d{2})(?::(\d{2})(?:\.(\d{3}))?)?$/.exec(input)
+  if (!parts || parts[0] !== input) throw new Error('请输入 YYYY-MM-DD HH:mm，可附加秒和毫秒。')
+  const normalized = `${parts[1]}:${parts[2] ?? '00'}.${parts[3] ?? '000'}`
+  const [year,month,day,hour,minute,second,millisecond] = normalized.split(/[- :.]/).map(Number) as [number,number,number,number,number,number,number]
   const d = new Date(0)
   d.setUTCFullYear(year,month-1,day)
   d.setUTCHours(hour,minute,second,millisecond)
-  if (formatDate(d.getTime(),0) !== input) throw new Error('日期或时间无效，请检查闰年、天数和时间。')
+  if (formatDate(d.getTime(),0) !== normalized) throw new Error('日期或时间无效，请检查闰年、天数和时间。')
   const ms = d.getTime() - offset * 3600000
   formatDate(ms,0)
   return String(unit === 'seconds' ? Math.floor(ms/1000) : ms)

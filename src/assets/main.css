@@ -31,3 +31,6 @@ h1[tabindex="-1"]:focus-visible, #main-content:focus-visible { outline: 3px soli
 
 /* B2仅工具页消费宽屏工作台Token；B1角色及通用正文保持原样。 */
 .container--workspace { width: calc(100% - 2 * var(--ui-gutter)); max-width: var(--layout-workspace-width); }
+
+.file-read-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.file-read-limits { margin: 0; color: var(--color-muted); font-size: .875rem; }

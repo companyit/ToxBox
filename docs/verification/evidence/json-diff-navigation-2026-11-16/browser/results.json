@@ -1,0 +1,1180 @@
+{
+  "config": {
+    "argv": [
+      "/Users/user/.local/share/fnm/node-versions/v24.21.0/installation/bin/node",
+      "/Users/user/development/ToxBox/ToxBox/node_modules/.bin/playwright",
+      "test",
+      "e2e/json-diff.spec.ts",
+      "e2e/json-file-import.spec.ts",
+      "e2e/json-diff-navigation.spec.ts",
+      "--project=chromium",
+      "--project=webkit"
+    ],
+    "configFile": "/Users/user/development/ToxBox/ToxBox/playwright.config.ts",
+    "rootDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 900000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/json-diff-navigation-2026-11-16/browser/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/json-diff-navigation-2026-11-16/browser/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/json-diff-navigation-2026-11-16/browser/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/json-diff-navigation-2026-11-16/browser/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "snapshotDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4177",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "locale": "zh-CN",
+          "serviceWorkers": "block",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "video": "off",
+          "browserName": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/user/development/ToxBox/ToxBox/docs/verification/evidence/json-diff-navigation-2026-11-16/browser/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "snapshotDir": "/Users/user/development/ToxBox/ToxBox/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4177",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "locale": "zh-CN",
+          "serviceWorkers": "block",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "video": "off",
+          "browserName": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/evidence/json-diff-navigation-2026-11-16/browser/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "docs/verification/evidence/json-diff-navigation-2026-11-16/browser/html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview:local -- --host 127.0.0.1 --port 4177 --strictPort",
+      "url": "http://127.0.0.1:4177/",
+      "reuseExistingServer": false,
+      "timeout": 60000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "json-diff-navigation.spec.ts",
+      "file": "json-diff-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "JDN 跨页路径定位、焦点可见、报告范围与隐私 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 902,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:41.894Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-f08d4437029c5cd0edfe",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JDN 跨页路径定位、焦点可见、报告范围与隐私 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:43.019Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-bc00bb5e434ce4a9f37e",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JDN 跨页路径定位、焦点可见、报告范围与隐私 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:43.790Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-b5abcdfa1bd7be6042d5",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JDN 转义路径/大小写/字面量、根节点与查找IME",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 493,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:44.682Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-9dcf507b2bc76ec8096e",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "JDN 跨页路径定位、焦点可见、报告范围与隐私 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1274,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:51.922Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-b16d13f555bcaef71892",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JDN 跨页路径定位、焦点可见、报告范围与隐私 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 926,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:53.407Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-79c02b09a8b18b4f3658",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JDN 跨页路径定位、焦点可见、报告范围与隐私 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 927,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:54.339Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-91ee1d24218532e07805",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JDN 转义路径/大小写/字面量、根节点与查找IME",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 529,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:55.270Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "908292f815ad5b1c7c78-bc67a359db18eb2ce388",
+          "file": "json-diff-navigation.spec.ts",
+          "line": 34,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "json-diff.spec.ts",
+      "file": "json-diff.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "JD 结构路径、精度、筛选、错误和隐私 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:45.182Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-21504ab6a922553363fa",
+          "file": "json-diff.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JD 结构路径、精度、筛选、错误和隐私 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 975,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:46.149Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-3849580410f6eb29926e",
+          "file": "json-diff.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JD 结构路径、精度、筛选、错误和隐私 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1013,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:47.127Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-12bb9c660352cde6b127",
+          "file": "json-diff.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JD 2000差异、跨页报告、超限恢复和IME",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 755,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:48.144Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-0037fce36ffc51c4a7f9",
+          "file": "json-diff.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "JD 结构路径、精度、筛选、错误和隐私 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 876,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:55.807Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-823292c3bd8fb55ace29",
+          "file": "json-diff.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JD 结构路径、精度、筛选、错误和隐私 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 825,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:56.688Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-3f0629f0165fc81fd0a3",
+          "file": "json-diff.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JD 结构路径、精度、筛选、错误和隐私 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:57.517Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-7e79821473e02a2ca44c",
+          "file": "json-diff.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JD 2000差异、跨页报告、超限恢复和IME",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 696,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:58.413Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5a5d944e91362ac420b4-5febf693b34eea8b5e45",
+          "file": "json-diff.spec.ts",
+          "line": 34,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "json-file-import.spec.ts",
+      "file": "json-file-import.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "JFI 双侧文件、精度、混合编辑、键盘和隐私 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 662,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:48.910Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-5190e8df6155f77d9b6e",
+          "file": "json-file-import.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JFI 双侧文件、精度、混合编辑、键盘和隐私 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 596,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:49.579Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-3d3c8b3b9eff3ac1d92c",
+          "file": "json-file-import.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JFI 双侧文件、精度、混合编辑、键盘和隐私 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 624,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:50.179Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-5ff729512165eff93a7c",
+          "file": "json-file-import.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JFI 编码/资源错误保留输入，同名重选、BOM与非法JSON可修复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 902,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:50.806Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMTU2LjAuODA3OC40IiwicHJvamVjdCI6ImNocm9taXVtIiwibWlzbWF0Y2giOltdLCJlcnJvcnMiOltdLCJleHRlcm5hbCI6MCwicmVzb3VyY2VzIjpbXSwiZXhwZWN0ZWRCbG9ja0Vycm9ycyI6MH0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-18f4f6c4c40eceecc25c",
+          "file": "json-file-import.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "JFI 双侧文件、精度、混合编辑、键盘和隐私 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 528,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:59.117Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-680d4bfed554577c7afb",
+          "file": "json-file-import.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JFI 双侧文件、精度、混合编辑、键盘和隐私 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:16:59.649Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-078515038a03fb816b7b",
+          "file": "json-file-import.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JFI 双侧文件、精度、混合编辑、键盘和隐私 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 610,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:17:00.195Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-d5cfef93a526071bff8e",
+          "file": "json-file-import.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "JFI 编码/资源错误保留输入，同名重选、BOM与非法JSON可修复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 765,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T13:17:00.809Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "运行摘要",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiMjcuMiIsInByb2plY3QiOiJ3ZWJraXQiLCJtaXNtYXRjaCI6W10sImVycm9ycyI6W10sImV4dGVybmFsIjowLCJyZXNvdXJjZXMiOltdLCJleHBlY3RlZEJsb2NrRXJyb3JzIjowfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "68621d509fc33364f1a7-480dfb0522c2b83b2896",
+          "file": "json-file-import.spec.ts",
+          "line": 30,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T13:16:41.315Z",
+    "duration": 20306.453,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

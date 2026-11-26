@@ -11,4 +11,21 @@ function generate(input: string) {
  }
 }
 </script>
-<template><ToolPageLayout page-name="uuid"><LocalToolEditor label="生成数量（1～100）" rules="点击生成 UUID v4，每行一个；使用 Web Crypto 安全随机数。不承诺绝对唯一性，UUID 不应用作密码。数量为 1～100 的十进制整数，最多 3 字符。" example="1" initial-input="1" quantity :limit="3" action-label="生成 UUID" :transform="generate" /></ToolPageLayout></template>
+
+<template>
+  <ToolPageLayout page-name="uuid">
+    <LocalToolEditor
+      workspace
+      label="生成数量（1～100）"
+      rules="使用 Web Crypto 安全随机数。UUID 不应用作密码。"
+      input-hint="输入整数，批量结果每行一个。"
+      result-context="UUID v4"
+      example="1"
+      initial-input="1"
+      quantity
+      :limit="3"
+      action-label="生成 UUID"
+      :transform="generate"
+    />
+  </ToolPageLayout>
+</template>
