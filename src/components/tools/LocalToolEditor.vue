@@ -1,15 +1,26 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 const props = defineProps<{ label: string; rules: string; example: string; limit: number; transform: (input: string) => string | { output: string; message: string }; revisionKey?: string; actionLabel?: string; initialInput?: string; quantity?: boolean; inputContext?: string; workspace?: boolean; inputHint?: string; resultContext?: string; rows?: number }>()
-const emit = defineEmits<{ reset: []; invalidate: [] }>()
+const emit = defineEmits<{ reset: []; invalidate: []; run: [] }>()
 const input = ref(props.initialInput ?? ''), output = ref(''), error = ref(''), message = ref('')
 const editor = ref<HTMLTextAreaElement | HTMLInputElement>(), resultEditor = ref<HTMLTextAreaElement>()
 const copying = ref(false), composing = ref(false), hasOutput = ref(false)
 let version = 0, disposed = false
-function invalidate() { emit('invalidate'); version++; hasOutput.value = false; output.value = ''; message.value = ''; error.value = input.value.length > props.limit ? `输入超过 ${props.limit.toLocaleString('zh-CN')} 个 UTF-16 码元，请缩短后重试。` : '' }
+function clearResult() {
+  version++
+  hasOutput.value = false
+  output.value = ''
+  message.value = ''
+  error.value = input.value.length > props.limit ? `输入超过 ${props.limit.toLocaleString('zh-CN')} 个 UTF-16 码元，请缩短后重试。` : ''
+}
+function invalidate() {
+  emit('invalidate')
+  clearResult()
+}
 watch([input, () => props.revisionKey], invalidate, { flush: 'sync' })
 function run() {
-  invalidate()
+  emit('run')
+  clearResult()
   if (error.value || composing.value) return
   try {
     const result = props.transform(input.value)

@@ -34,6 +34,8 @@
 
 scrollBehavior：popstate 优先 savedPosition；其余有效 hash 等待目标渲染后滚动，缺失 hash 回顶部；普通新页面回顶部。客户端页面改变后把焦点放页面 h1（tabindex=-1）或 main，使用 preventScroll；有有效 hash 时聚焦对应目标。前进/后退仍通知页面标题、聚焦可定位主内容但 preventScroll 保留已恢复位置。仅 hash 变化以目标焦点为主，不把相同标题重复作为新页通知。保留唯一 polite live region，避免标题焦点和通知重复轰炸读屏；实际 VoiceOver 结果决定是否需要调整通知时序。禁 JS 时 anchor/页面导航仍由静态 HTML 提供（只有预渲染获批落地后才能验收）。
 
+短视口用媒体查询将页头放回普通文档流。原生锚点通过滚动内边距获得 24px 间距，客户端锚点根据实际页头定位决定是否附加页头高度。浏览器历史记录继续优先恢复原滚动位置。
+
 ## History、Cloudflare 与 404
 
 Router catch-all 仅解决站内 UI；Vite dev/preview 的回退不能证明 Cloudflare 行为。Cloudflare Pages 在没有顶层 404.html 时默认启用 SPA 回退；这会让未知地址也收到入口 HTML，不能作为真实 HTTP404 方案。

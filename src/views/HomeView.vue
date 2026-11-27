@@ -60,7 +60,7 @@ const categories = [
 
   <section id="privacy" class="privacy-section" aria-labelledby="privacy-title">
     <h2 id="privacy-title">在本地处理，放心完成。</h2>
-    <p>工具输入在浏览器本地处理，不上传、不自动保存，离开页面或刷新后清空。正式站点使用 Google Analytics 统计页面访问，不主动发送工具内容；文档与 2FA 页面隔离统计脚本，广告仍关闭。</p>
+    <p>工具输入在浏览器本地处理，不上传、不自动保存，离开页面或刷新后清空。正式站点在部分页面使用 Google Analytics 统计访问。AdSense 仅接入首页、办公工具分类、开发者工具分类和关于页。</p>
     <p><RouterLink :to="{ name: 'privacy' }">查看完整隐私说明</RouterLink></p>
   </section>
 </template>

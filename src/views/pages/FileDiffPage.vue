@@ -9,6 +9,7 @@ import { validateTextFile, fileTextErrors, FileTextError, type FileTextCode } fr
 const before=ref(''),after=ref(''),result=ref<DiffResult|null>(null),changesOnly=ref(false),busy=ref(false),composing=ref(false),copying=ref(false),message=ref(''),error=ref('')
 const reportEditor=ref<HTMLTextAreaElement>(), report=ref(''), reportOpen=ref(false), page=ref(1)
 const pickerButtons=ref<Partial<Record<Side,HTMLButtonElement>>>({})
+const cancelButtons=ref<Partial<Record<Side,HTMLButtonElement|null>>>({})
 type Side = 'before' | 'after'
 type LoadedFile = { name: string; size: number; lines: number; text: string }
 const loaded = ref<Record<Side, LoadedFile | null>>({ before: null, after: null })
@@ -22,6 +23,11 @@ function stopRead(side: Side) {
   generations[side]++; readers[side]?.terminate(); delete readers[side]
   clearTimeout(readTimers[side]); delete readTimers[side]; reading.value[side] = false
 }
+function finishRead(side: Side) {
+  stopRead(side)
+  const button = cancelButtons.value[side]
+  if (button && button.ownerDocument.activeElement === button) pickerButtons.value[side]?.focus()
+}
 function cancelRead(side: Side) { stopRead(side); fileErrors.value[side] = fileReadStatus.canceled; pickerButtons.value[side]?.focus() }
 function chooseFile(event: Event, side: Side) {
   const control = event.target as HTMLInputElement, file = control.files?.[0]
@@ -31,7 +37,7 @@ function chooseFile(event: Event, side: Side) {
   try { validateTextFile(file.name, file.size) }
   catch (failure) { fileErrors.value[side] = (failure instanceof FileTextError && failure.code !== 'failed' ? fileTextErrors[failure.code] + fileReadStatus.retained : fileReadStatus.failed); return }
   const generation = generations[side]
-  const fail = (text: string) => { if (generation !== generations[side]) return; stopRead(side); fileErrors.value[side] = text }
+  const fail = (text: string) => { if (generation !== generations[side]) return; finishRead(side); fileErrors.value[side] = text }
   try {
     const reader = new Worker(new URL('../../workers/fileText.worker.ts', import.meta.url), { type: 'module' })
     readers[side] = reader; reading.value[side] = true
@@ -41,7 +47,7 @@ function chooseFile(event: Event, side: Side) {
       if (generation !== generations[side]) return
       const data = event.data
       if (!data.ok) { fail(data.code === 'failed' || !fileTextErrors[data.code as FileTextCode] ? fileReadStatus.failed : fileTextErrors[data.code as FileTextCode] + fileReadStatus.retained); return }
-      stopRead(side)
+      finishRead(side)
       loaded.value[side] = { name: file.name, size: file.size, lines: data.lines, text: data.text }
       if (side === 'before') before.value = data.text; else after.value = data.text
     }
@@ -113,7 +119,7 @@ onBeforeUnmount(()=>{disposed=true;window.removeEventListener('pagehide',release
     <input :id="'file-' + side" :ref="element => { if(element) fileInputs[side] = element as HTMLInputElement }" type="file" hidden tabindex="-1" accept=".txt,.md,.markdown,.csv,.json" :aria-invalid="!!fileErrors[side]" :aria-describedby="'file-status-' + side + ' diff-rules'" @change="chooseFile($event, side)" />
     <div class="file-read-actions">
      <button :ref="element => {if(element) pickerButtons[side] = element as HTMLButtonElement}" type="button" :aria-describedby="'file-status-' + side + ' file-limits-' + side" @click="fileInputs[side]?.click()">{{ side === 'before' ? '选择原文件' : '选择新文件' }}</button>
-     <button v-if="reading[side]" type="button" @click="cancelRead(side)">取消{{ side === 'before' ? '原文件' : '新文件' }}读取</button>
+     <button v-if="reading[side]" :ref="element => { cancelButtons[side] = element as HTMLButtonElement | null }" type="button" @click="cancelRead(side)">取消{{ side === 'before' ? '原文件' : '新文件' }}读取</button>
     </div>
     <p :id="'file-limits-' + side" class="file-read-limits">UTF-8 TXT、Markdown、CSV 或 JSON。每份最多 2 MiB，解码后最多 500,000 个 UTF-16 码元、5,000 行。</p>
     <p :id="'file-status-' + side" role="status" aria-live="polite">{{ reading[side] ? fileReadStatus.reading : fileErrors[side] || (loaded[side] ? '文件已读取。' : '请选择文件。') }}</p>

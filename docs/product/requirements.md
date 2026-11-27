@@ -344,6 +344,8 @@ TIME-07 支持在同一日期转换界面选择或直接输入，同步日期和
 
 [060 工具页布局](../specs/060-tool-page-layout/spec.md)覆盖全部独立工具，统一操作区与指南结构，并提供同页键盘导航。
 
+全站体验迭代覆盖 27 个工具的指南分栏和示例结构，改善短视口锚点导航，并按已批准的广告接入范围同步首页隐私摘要。分别对应 [TPL-02／TPL-05](../specs/060-tool-page-layout/spec.md)、[RSEO-11](../specs/005-routing-seo/spec.md) 与 [ADSRUN-04](../specs/048-adsense-script/spec.md)。
+
 ## 2026-11-21 NDJSON 与 JSON 数组互转（061）
 
 [061 规格](../specs/061-ndjson-converter/spec.md)已按确认范围实现本地粘贴和双向转换，保留 JSON 数字词元并对 NDJSON 错误定位原始行。
@@ -353,6 +355,10 @@ TIME-07 支持在同一日期转换界面选择或直接输入，同步日期和
 061 增补 [NDJ-07](../specs/061-ndjson-converter/spec.md)，支持逐行校验并集中报告原始错误行号。
 
 [062 文件读取交互](../specs/062-file-import-consistency/spec.md)覆盖 NDJSON、JSON 结构对比和文件对比的格式提示、读取状态、取消与失败保留。
+
+NDJSON 按 FIC-02 继续读取已选文件。对编辑区当前内容执行转换或逐行校验时，读取状态与取消入口保持可用。
+
+文件对比和 JSON 结构对比按 FIC-02 保持键盘操作连续。读取结束时，若焦点仍在即将移除的取消按钮，焦点返回同侧文件选择按钮。
 
 061 增补 [NDJ-08](../specs/061-ndjson-converter/spec.md)，贯通校验、转数组和下载。
 

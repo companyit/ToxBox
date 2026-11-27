@@ -192,6 +192,51 @@ test('取消读取保留输入和原结果，并回焦文件按钮', async ({ pa
   await expect(input).toHaveValue('true')
 })
 
+test('处理当前草稿时继续读取文件，直到成功或用户取消', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.FileReader = class extends window.FileReader {
+      readAsArrayBuffer() {
+        document.addEventListener('complete-test-file-read', () => {
+          Object.defineProperty(this, 'result', { value: new TextEncoder().encode('false').buffer })
+          this.dispatchEvent(new ProgressEvent('load'))
+        }, { once: true })
+      }
+    }
+  })
+  await page.goto('/developer/ndjson/')
+  await hydrated(page)
+  const input = page.locator('#local-input')
+  const result = page.locator('#local-result')
+  const file = page.locator('#ndjson-file')
+  const status = page.locator('#ndjson-file-status')
+  const cancel = page.getByRole('button', { name: '取消读取' })
+  const payload = { name: 'pending.ndjson', mimeType: 'application/octet-stream', buffer: Buffer.from('false') }
+
+  await input.fill('true')
+  await file.setInputFiles(payload)
+  await page.getByRole('button', { name: '转换', exact: true }).press('Enter')
+  await expect(result).toHaveValue('[true]')
+  await expect(status).toHaveText('正在本地读取文件…')
+  await expect(cancel).toBeVisible()
+  await page.evaluate(() => document.dispatchEvent(new Event('complete-test-file-read')))
+  await expect(input).toHaveValue('false')
+  await expect(result).toHaveValue('')
+  await expect(status).toContainText('文件已载入')
+
+  await page.getByLabel('处理方式').selectOption('validate')
+  await input.fill('true')
+  await file.setInputFiles(payload)
+  await page.getByRole('button', { name: '逐行校验', exact: true }).press('Enter')
+  await expect(result).toHaveValue('通过 1 条，错误 0 条。')
+  await expect(status).toHaveText('正在本地读取文件…')
+  await cancel.press('Enter')
+  await page.evaluate(() => document.dispatchEvent(new Event('complete-test-file-read')))
+  await expect(page.getByRole('button', { name: '导入本地文件' })).toBeFocused()
+  await expect(input).toHaveValue('true')
+  await expect(result).toHaveValue('通过 1 条，错误 0 条。')
+  await expect(status).toContainText('当前输入已保留')
+})
+
 test('缩进选项应用到校验直转，下载与展示一致', async ({ page }) => {
   await page.goto('/developer/ndjson/')
   await hydrated(page)

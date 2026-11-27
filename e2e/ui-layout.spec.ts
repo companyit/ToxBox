@@ -116,7 +116,7 @@ for (const [name, path, prefix] of [
     const value = name === 'json' ? JSON.stringify({ text: '合成数据😀'.repeat(300) }) : '合成数据😀 / ? &='.repeat(300)
     await input.fill(value)
     if (name !== 'text') await page.getByRole('button', { name: name === 'json' ? '格式化' : '编码', exact: true }).click()
-    const result = name === 'text' ? page.locator('dd') : page.locator(`#${prefix}-output`)
+    const result = name === 'text' ? page.locator('.statistics dd') : page.locator(`#${prefix}-output`)
     const expected = name === 'text' ? await result.allTextContents() : await result.inputValue()
     if (name === 'text') expect(expected).toHaveLength(5)
     else expect(expected).not.toBe('')
@@ -213,7 +213,7 @@ for (const [width, height] of [[320, 812], [375, 812], [390, 844], [430, 932], [
       const value = name === 'json' ? JSON.stringify({ text: 'B3-1 合成数据😀'.repeat(200) }) : 'B3-1 合成数据😀 / ? &='.repeat(200)
       await input.fill(value)
       if (name !== 'text') await page.getByRole('button', { name: name === 'json' ? '格式化' : '编码', exact: true }).click()
-      const output = name === 'text' ? page.locator('dd') : result
+      const output = name === 'text' ? page.locator('.statistics dd') : result
       const expected = name === 'text' ? await output.allTextContents() : await output.inputValue()
       await input.click()
       for (const nextWidth of [320, 768, 1024, 1440, width!]) {

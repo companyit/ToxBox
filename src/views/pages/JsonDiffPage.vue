@@ -17,11 +17,17 @@ const reading=ref<Record<Side,boolean>>({before:false,after:false})
 const sources=ref<Record<Side,{name:string;size:number}|null>>({before:null,after:null})
 const fileMessages=ref<Record<Side,string>>({before:'',after:''})
 const pickerButtons=ref<Partial<Record<Side,HTMLButtonElement>>>({})
+const cancelButtons=ref<Partial<Record<Side,HTMLButtonElement|null>>>({})
 const fileInputs=ref<Partial<Record<Side,HTMLInputElement>>>({})
 const readers:Partial<Record<Side,Worker>>={},readTimers:Partial<Record<Side,ReturnType<typeof setTimeout>>>={}
 const generations={before:0,after:0}
 const loading=computed(()=>reading.value.before||reading.value.after)
 function stopRead(side:Side){generations[side]++;readers[side]?.terminate();delete readers[side];clearTimeout(readTimers[side]);delete readTimers[side];reading.value[side]=false}
+function finishRead(side: Side) {
+  stopRead(side)
+  const button = cancelButtons.value[side]
+  if (button && button.ownerDocument.activeElement === button) pickerButtons.value[side]?.focus()
+}
 function cancelRead(side:Side){stopRead(side);fileMessages.value[side]=fileReadStatus.canceled;pickerButtons.value[side]?.focus()}
 function edited(side:Side){stopRead(side);sources.value[side]=null;fileMessages.value[side]=''}
 function chooseFile(event:Event,side:Side){
@@ -30,7 +36,7 @@ function chooseFile(event:Event,side:Side){
  stopRead(side);invalidate();fileMessages.value[side]=''
  try{validateJsonFile(file.name,file.size)}catch(failure){fileMessages.value[side]=(failure instanceof JsonFileError && failure.code !== 'failed' ? jsonFileErrors[failure.code] + fileReadStatus.retained : fileReadStatus.failed);return}
  const generation=generations[side]
- const fail=(message:string)=>{if(generation!==generations[side])return;stopRead(side);fileMessages.value[side]=message}
+ const fail=(message:string)=>{if(generation!==generations[side])return;finishRead(side);fileMessages.value[side]=message}
  try{
   const reader=new Worker(new URL('../../workers/jsonFile.worker.ts',import.meta.url),{type:'module'})
   readers[side]=reader;reading.value[side]=true
@@ -40,7 +46,7 @@ function chooseFile(event:Event,side:Side){
    if(generation!==generations[side])return
    const data=event.data
    if(!data.ok){fail(data.code === 'failed' || !jsonFileErrors[data.code as JsonFileCode] ? fileReadStatus.failed : jsonFileErrors[data.code as JsonFileCode] + fileReadStatus.retained);return}
-   stopRead(side)
+   finishRead(side)
    if(side==='before')before.value=data.text;else after.value=data.text
    sources.value[side]={name:file.name,size:file.size};fileMessages.value[side]='文件已导入，可继续编辑；请手动对比。'
   }
@@ -130,7 +136,7 @@ onBeforeUnmount(()=>{disposed=true;window.removeEventListener('pagehide',release
      <input :id="'json-file-'+side" :ref="element=>{if(element)fileInputs[side]=element as HTMLInputElement}" type="file" hidden tabindex="-1" accept=".json" :aria-label="side==='before'?'原 JSON 文件':'新 JSON 文件'" @change="chooseFile($event,side)" />
      <div class="file-read-actions">
       <button :ref="element=>{if(element)pickerButtons[side]=element as HTMLButtonElement}" type="button" :disabled="composing" :aria-describedby="'json-file-help json-file-limits-'+side+' json-file-status-'+side" @click="fileInputs[side]?.click()">{{side==='before'?'导入原 JSON 文件':'导入新 JSON 文件'}}</button>
-      <button v-if="reading[side]" type="button" @click="cancelRead(side)">{{side==='before'?'取消原文件读取':'取消新文件读取'}}</button>
+      <button v-if="reading[side]" :ref="element => { cancelButtons[side] = element as HTMLButtonElement | null }" type="button" @click="cancelRead(side)">{{side==='before'?'取消原文件读取':'取消新文件读取'}}</button>
      </div>
      <p :id="'json-file-limits-'+side" class="file-read-limits">UTF-8 .json，每份最多 400,000 字节，解码后最多 100,000 个 UTF-16 码元。</p>
      <p :id="'json-file-status-'+side" role="status" aria-live="polite">{{reading[side]?fileReadStatus.reading:fileMessages[side]}}</p>

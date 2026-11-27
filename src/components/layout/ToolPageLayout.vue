@@ -38,16 +38,18 @@ const category = ['image-crop', 'pdf-organizer', 'text-workbench', 'text-diff', 
         <h2 id="guide-heading">使用指南</h2>
         <a class="tool-jump" href="#tool-operation">返回工具操作</a>
       </div>
-      <p>{{ guide.scenario }}</p>
       <div class="guide-grid">
         <div class="guide-block">
           <h3>使用步骤</h3>
+          <p>{{ guide.scenario }}</p>
           <ol><li v-for="step in guide.steps" :key="step">{{ step }}</li></ol>
         </div>
         <div class="guide-block">
           <h3>示例解读</h3>
-          <p><strong>输入或选择：</strong>{{ guide.example.input }}</p>
-          <p><strong>结果：</strong>{{ guide.example.result }}</p>
+          <dl class="guide-example">
+            <div><dt>输入或选择</dt><dd>{{ guide.example.input }}</dd></div>
+            <div><dt>结果</dt><dd>{{ guide.example.result }}</dd></div>
+          </dl>
           <p>{{ guide.example.explanation }}</p>
         </div>
         <div class="guide-block">
@@ -113,7 +115,13 @@ const category = ['image-crop', 'pdf-organizer', 'text-workbench', 'text-diff', 
 }
 .guide-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
 .guide-header h2 { font-size: 1.5rem; }
-.guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); gap: 12px; margin-top: 16px; }
+.guide-grid {
+  --guide-gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(26rem, calc((100% - var(--guide-gap)) / 2))), 1fr));
+  gap: var(--guide-gap);
+  margin-top: 16px;
+}
 .guide-block {
   min-width: 0;
   padding: clamp(12px, 2vw, 20px);
@@ -124,6 +132,9 @@ const category = ['image-crop', 'pdf-organizer', 'text-workbench', 'text-diff', 
 .guide-block h3 { font-size: 1.125rem; }
 .guide-block h4 { font-size: 1rem; margin-top: 12px; }
 .guide-block p, .guide-block ol, .guide-block ul { margin: 8px 0 0; }
+.guide-example { display: grid; gap: 8px; margin: 8px 0 0; }
+.guide-example dt { font-weight: 650; }
+.guide-example dd { margin: 4px 0 0; white-space: pre-wrap; }
 .guide-block :is(ol, ul) { padding-inline-start: 1.4rem; }
 .guide-block li + li { margin-top: 8px; }
 .tool-page .page-heading { max-width: var(--layout-prose-width); margin-block: 12px 24px; }
@@ -134,6 +145,9 @@ const category = ['image-crop', 'pdf-organizer', 'text-workbench', 'text-diff', 
 .hydration-controls :deep(input[type="file"]::file-selector-button) { min-height: 44px; margin-right: 12px; padding: 8px 16px; background: var(--color-surface); border: 1px solid var(--color-muted); border-radius: var(--ui-control-radius); color: var(--color-text); font: inherit; cursor: pointer; }
 .hydration-controls :deep(input[type="file"]:disabled) { opacity: .6; }
 .hydration-controls :deep(input[type="file"]:focus-visible) { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+@media screen and (max-height: 400px) {
+  .tool-guide { padding-top: 12px; scroll-margin-top: 0; }
+}
 @media print {
   .tool-jump, .tool-guide, .tool-privacy { display: none; }
   .tool-operation-panel { padding: 0; border: 0; background: transparent; }

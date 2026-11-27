@@ -27,3 +27,14 @@ test('四页页脚入口可键盘聚焦并打开',async({page})=>{
  await link.focus(); await expect(link).toBeFocused(); await page.keyboard.press('Enter')
  await expect(page).toHaveURL(origin+'/contact/')
 })
+
+test('首页隐私摘要说明正式广告范围，并可打开完整政策', async ({ page }) => {
+  await page.goto('/')
+  await hydrated(page)
+  const summary = page.locator('#privacy')
+  await expect(summary).toContainText('AdSense 仅接入首页、办公工具分类、开发者工具分类和关于页')
+  await expect(page.locator('script#workdev-adsense')).toHaveCount(0)
+  await summary.getByRole('link', { name: '查看完整隐私说明' }).press('Enter')
+  await expect(page).toHaveURL('/privacy/')
+  await expect(page.getByRole('heading', { name: 'Google AdSense 广告' })).toBeVisible()
+})

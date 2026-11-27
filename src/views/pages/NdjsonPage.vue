@@ -46,13 +46,17 @@ function cancelRead() {
   pickerButton.value?.focus()
 }
 
-function invalidate() {
+function resetOutputActions() {
   canConvertValidated.value = false
-  stopRead()
   if (downloadUrl) URL.revokeObjectURL(downloadUrl)
   downloadUrl = undefined
-  fileStatus.value = ''
   downloadStatus.value = ''
+}
+
+function invalidate() {
+  resetOutputActions()
+  stopRead()
+  fileStatus.value = ''
 }
 
 function importFile(event: Event, setInput: (value: string) => void) {
@@ -154,6 +158,7 @@ onBeforeUnmount(() => {
       :revision-key="validating ? direction : `${direction}/${format}`"
       :transform="transform"
       @invalidate="invalidate"
+      @run="resetOutputActions"
     >
       <div class="direction-field">
         <label for="ndjson-direction">处理方式</label>

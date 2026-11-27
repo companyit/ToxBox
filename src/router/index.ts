@@ -17,7 +17,10 @@ const router = createRouter({
     if (router.currentRoute.value.fullPath !== to.fullPath) return false
     if (savedPosition) return savedPosition
     const target = hashTarget(to.hash)
-    return target ? { el: target, top: (document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0) + 24 } : { top: 0, left: 0 }
+    if (!target) return { top: 0, left: 0 }
+    const header = document.querySelector('.site-header')
+    const headerOffset = header && getComputedStyle(header).position === 'sticky' ? header.getBoundingClientRect().height : 0
+    return { el: target, top: headerOffset + 24 }
   },
 })
 // 敏感页面必须使用独立文档，防止继承其他页面已经执行的 GA 脚本。
